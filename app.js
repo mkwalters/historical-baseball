@@ -85,11 +85,10 @@ async function init() {
   renderPicker();
   renderLeague();
   $$(".tab").forEach((b) => (b.onclick = () => showView(b.dataset.view)));
+  $("#home-link").onclick = (e) => { e.preventDefault(); goHome(); };
 
   const params = new URLSearchParams(location.hash.slice(1));
-  let saved = null;
-  try { saved = localStorage.getItem("dtm:team"); } catch {}
-  const teamId = +(params.get("team") || saved || 0);
+  const teamId = +(params.get("team") || 0);
   if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId, +params.get("season") || null);
   if (params.get("view") === "league") showView("league");
 }
@@ -102,6 +101,17 @@ function renderPicker() {
     b.onclick = () => { showView("franchise"); selectTeam(t.id); };
     el.append(b);
   }
+}
+
+// Back to the front page: no club selected, team picker on top.
+function goHome() {
+  Object.assign(state, { team: null, seasons: [], selected: null, pinned: null });
+  $$(".team-btn").forEach((b) => b.classList.remove("active"));
+  $("#franchise").hidden = true;
+  $("#franchise-empty").hidden = false;
+  showView("franchise");
+  try { history.replaceState(null, "", location.pathname + location.search); } catch {}
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function showView(v) {
@@ -127,7 +137,6 @@ async function selectTeam(id, season = null) {
   Object.assign(state, { team, selected: null, pinned: null, seasons: [] });
   await ensureBundle(id);
   if (state.team?.id !== id) return;
-  try { localStorage.setItem("dtm:team", id); } catch {}
   document.documentElement.style.setProperty("--team", COLORS[id] || "#1e3557");
   $$(".team-btn").forEach((b) => b.classList.toggle("active", +b.dataset.id === id));
   $("#franchise-empty").hidden = true;
