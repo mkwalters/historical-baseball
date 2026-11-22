@@ -1,0 +1,5756 @@
+{
+ "133": {
+  "ballparks": [
+   {
+    "id": 3118,
+    "from": 1901,
+    "to": 1908,
+    "name": "Columbia Park",
+    "aka": []
+   },
+   {
+    "id": 3143,
+    "from": 1909,
+    "to": 1954,
+    "name": "Shibe Park",
+    "aka": [
+     "Connie Mack Stadium"
+    ]
+   },
+   {
+    "id": 3137,
+    "from": 1955,
+    "to": 1967,
+    "name": "Municipal Stadium",
+    "aka": []
+   },
+   {
+    "id": 10,
+    "from": 1968,
+    "to": 2024,
+    "name": "Oakland-Alameda County Coliseum",
+    "aka": [
+     "Network Associates Coliseum",
+     "McAfee Coliseum",
+     "Oakland Coliseum",
+     "O.co Coliseum"
+    ]
+   },
+   {
+    "id": 2529,
+    "from": 2025,
+    "to": 2026,
+    "name": "Sutter Health Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1931,
+    "id": 115201,
+    "name": "Lefty Grove"
+   },
+   {
+    "award": "MVP",
+    "season": 1932,
+    "id": 114367,
+    "name": "Jimmie Foxx"
+   },
+   {
+    "award": "MVP",
+    "season": 1933,
+    "id": 114367,
+    "name": "Jimmie Foxx"
+   },
+   {
+    "award": "MVP",
+    "season": 1952,
+    "id": 122060,
+    "name": "Bobby Shantz"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1952,
+    "id": 111835,
+    "name": "Harry Byrd"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1971,
+    "id": 111119,
+    "name": "Vida Blue"
+   },
+   {
+    "award": "MVP",
+    "season": 1971,
+    "id": 111119,
+    "name": "Vida Blue"
+   },
+   {
+    "award": "MVP",
+    "season": 1973,
+    "id": 116439,
+    "name": "Reggie Jackson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1974,
+    "id": 116334,
+    "name": "Catfish Hunter"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1986,
+    "id": 111962,
+    "name": "Jos\u00e9 Canseco"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1987,
+    "id": 118743,
+    "name": "Mark McGwire"
+   },
+   {
+    "award": "MVP",
+    "season": 1988,
+    "id": 111962,
+    "name": "Jos\u00e9 Canseco"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1988,
+    "id": 124054,
+    "name": "Walt Weiss"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1990,
+    "id": 124064,
+    "name": "Bob Welch"
+   },
+   {
+    "award": "MVP",
+    "season": 1990,
+    "id": 115749,
+    "name": "Rickey Henderson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1992,
+    "id": 113726,
+    "name": "Dennis Eckersley"
+   },
+   {
+    "award": "MVP",
+    "season": 1992,
+    "id": 113726,
+    "name": "Dennis Eckersley"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1998,
+    "id": 115132,
+    "name": "Ben Grieve"
+   },
+   {
+    "award": "MVP",
+    "season": 2000,
+    "id": 114739,
+    "name": "Jason Giambi"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2002,
+    "id": 217096,
+    "name": "Barry Zito"
+   },
+   {
+    "award": "MVP",
+    "season": 2002,
+    "id": 123173,
+    "name": "Miguel Tejada"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2004,
+    "id": 425853,
+    "name": "Bobby Crosby"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2005,
+    "id": 434718,
+    "name": "Huston Street"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2009,
+    "id": 457732,
+    "name": "Andrew Bailey"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2025,
+    "id": 701762,
+    "name": "Nick Kurtz"
+   }
+  ],
+  "hof": [
+   {
+    "id": 118082,
+    "name": "Connie Mack",
+    "inducted": 1937,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 120616,
+    "name": "Eddie Plank",
+    "inducted": 1946,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 123767,
+    "name": "Rube Waddell",
+    "inducted": 1946,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 122240,
+    "name": "Al Simmons",
+    "inducted": 1953,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 110850,
+    "name": "Chief Bender",
+    "inducted": 1953,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 110480,
+    "name": "Home Run Baker",
+    "inducted": 1955,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 114129,
+    "name": "Rollie Fingers",
+    "inducted": 1992,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 113726,
+    "name": "Dennis Eckersley",
+    "inducted": 2004,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 124335,
+    "name": "Dick Williams",
+    "inducted": 2008,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 115749,
+    "name": "Rickey Henderson",
+    "inducted": 2009,
+    "pos": "OF",
+    "note": null
+   }
+  ]
+ },
+ "134": {
+  "ballparks": [
+   {
+    "id": 3124,
+    "from": 1901,
+    "to": 1908,
+    "name": "Exposition Park",
+    "aka": []
+   },
+   {
+    "id": 3125,
+    "from": 1909,
+    "to": 1969,
+    "name": "Forbes Field",
+    "aka": []
+   },
+   {
+    "id": 27,
+    "from": 1970,
+    "to": 2000,
+    "name": "Three Rivers Stadium",
+    "aka": []
+   },
+   {
+    "id": 31,
+    "from": 2001,
+    "to": 2026,
+    "name": "PNC Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "Cy Young",
+    "season": 1960,
+    "id": 117552,
+    "name": "Vern Law"
+   },
+   {
+    "award": "MVP",
+    "season": 1960,
+    "id": 115176,
+    "name": "Dick Groat"
+   },
+   {
+    "award": "MVP",
+    "season": 1966,
+    "id": 112391,
+    "name": "Roberto Clemente"
+   },
+   {
+    "award": "MVP",
+    "season": 1978,
+    "id": 120225,
+    "name": "Dave Parker"
+   },
+   {
+    "award": "MVP",
+    "season": 1979,
+    "id": 122685,
+    "name": "Willie Stargell"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1990,
+    "id": 113538,
+    "name": "Doug Drabek"
+   },
+   {
+    "award": "MVP",
+    "season": 1990,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "MVP",
+    "season": 1992,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2004,
+    "id": 424726,
+    "name": "Jason Bay"
+   },
+   {
+    "award": "MVP",
+    "season": 2013,
+    "id": 457705,
+    "name": "Andrew McCutchen"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2024,
+    "id": 694973,
+    "name": "Paul Skenes"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2025,
+    "id": 694973,
+    "name": "Paul Skenes"
+   }
+  ],
+  "hof": [
+   {
+    "id": 123784,
+    "name": "Honus Wagner",
+    "inducted": 1936,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 112352,
+    "name": "Fred Clarke",
+    "inducted": 1945,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 123446,
+    "name": "Pie Traynor",
+    "inducted": 1948,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 123905,
+    "name": "Paul Waner",
+    "inducted": 1952,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 111989,
+    "name": "Max Carey",
+    "inducted": 1961,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 123904,
+    "name": "Lloyd Waner",
+    "inducted": 1967,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 110776,
+    "name": "Jake Beckley",
+    "inducted": 1971,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 112391,
+    "name": "Roberto Clemente",
+    "inducted": 1973,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 117072,
+    "name": "Ralph Kiner",
+    "inducted": 1975,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 123671,
+    "name": "Arky Vaughan",
+    "inducted": 1985,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 122685,
+    "name": "Willie Stargell",
+    "inducted": 1988,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 118497,
+    "name": "Bill Mazeroski",
+    "inducted": 2001,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 120225,
+    "name": "Dave Parker",
+    "inducted": 2025,
+    "pos": "OF",
+    "note": "Classic Era Ballot Selection"
+   }
+  ]
+ },
+ "135": {
+  "ballparks": [
+   {
+    "id": 28,
+    "from": 1969,
+    "to": 2003,
+    "name": "Jack Murphy Stadium",
+    "aka": [
+     "San Diego Stadium",
+     "Qualcomm Stadium"
+    ]
+   },
+   {
+    "id": 2680,
+    "from": 2004,
+    "to": 2026,
+    "name": "Petco Park",
+    "aka": [
+     "PETCO Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Cy Young",
+    "season": 1976,
+    "id": 116715,
+    "name": "Randy Jones"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1976,
+    "id": 119000,
+    "name": "Butch Metzger"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1978,
+    "id": 120438,
+    "name": "Gaylord Perry"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1987,
+    "id": 121693,
+    "name": "Benito Santiago"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1989,
+    "id": 113126,
+    "name": "Mark Davis"
+   },
+   {
+    "award": "MVP",
+    "season": 1996,
+    "id": 111908,
+    "name": "Ken Caminiti"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2007,
+    "id": 408241,
+    "name": "Jake Peavy"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2023,
+    "id": 605483,
+    "name": "Blake Snell"
+   }
+  ],
+  "hof": [
+   {
+    "id": 124448,
+    "name": "Dave Winfield",
+    "inducted": 2001,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 115270,
+    "name": "Tony Gwynn",
+    "inducted": 2007,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116034,
+    "name": "Trevor Hoffman",
+    "inducted": 2018,
+    "pos": "P",
+    "note": null
+   }
+  ]
+ },
+ "136": {
+  "ballparks": [
+   {
+    "id": 11,
+    "from": 1977,
+    "to": 1998,
+    "name": "The Kingdome",
+    "aka": []
+   },
+   {
+    "id": 680,
+    "from": 1999,
+    "to": 2026,
+    "name": "T-Mobile Park",
+    "aka": [
+     "Safeco Field"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1984,
+    "id": 113096,
+    "name": "Alvin Davis"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1995,
+    "id": 116615,
+    "name": "Randy Johnson"
+   },
+   {
+    "award": "MVP",
+    "season": 1997,
+    "id": 115135,
+    "name": "Ken Griffey Jr."
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2000,
+    "id": 277408,
+    "name": "Kazuhiro Sasaki"
+   },
+   {
+    "award": "MVP",
+    "season": 2001,
+    "id": 400085,
+    "name": "Ichiro Suzuki"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2001,
+    "id": 400085,
+    "name": "Ichiro Suzuki"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2010,
+    "id": 433587,
+    "name": "F\u00e9lix Hern\u00e1ndez"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2020,
+    "id": 641786,
+    "name": "Kyle Lewis"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2022,
+    "id": 677594,
+    "name": "Julio Rodr\u00edguez"
+   }
+  ],
+  "hof": [
+   {
+    "id": 115135,
+    "name": "Ken Griffey Jr.",
+    "inducted": 2016,
+    "pos": "CF",
+    "note": null
+   },
+   {
+    "id": 118365,
+    "name": "Edgar Martinez",
+    "inducted": 2019,
+    "pos": "DH",
+    "note": null
+   },
+   {
+    "id": 400085,
+    "name": "Ichiro Suzuki",
+    "inducted": 2025,
+    "pos": "OF",
+    "note": null
+   }
+  ]
+ },
+ "137": {
+  "ballparks": [
+   {
+    "id": 3140,
+    "from": 1901,
+    "to": 1957,
+    "name": "Polo Grounds",
+    "aka": []
+   },
+   {
+    "id": 3142,
+    "from": 1958,
+    "to": 1959,
+    "name": "Seals Stadium",
+    "aka": []
+   },
+   {
+    "id": 29,
+    "from": 1960,
+    "to": 1999,
+    "name": "Candlestick Park",
+    "aka": [
+     "3Com Park at Candlestick Point"
+    ]
+   },
+   {
+    "id": 2395,
+    "from": 2000,
+    "to": 2026,
+    "name": "Oracle Park",
+    "aka": [
+     "PacBell Park",
+     "SBC Park",
+     "AT&T Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1933,
+    "id": 116249,
+    "name": "Carl Hubbell"
+   },
+   {
+    "award": "MVP",
+    "season": 1936,
+    "id": 116249,
+    "name": "Carl Hubbell"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1951,
+    "id": 118495,
+    "name": "Willie Mays"
+   },
+   {
+    "award": "MVP",
+    "season": 1954,
+    "id": 118495,
+    "name": "Willie Mays"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1958,
+    "id": 112157,
+    "name": "Orlando Cepeda"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1959,
+    "id": 118605,
+    "name": "Willie McCovey"
+   },
+   {
+    "award": "MVP",
+    "season": 1965,
+    "id": 118495,
+    "name": "Willie Mays"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1967,
+    "id": 118598,
+    "name": "Mike McCormick"
+   },
+   {
+    "award": "MVP",
+    "season": 1969,
+    "id": 118605,
+    "name": "Willie McCovey"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1973,
+    "id": 118433,
+    "name": "Gary Matthews Sr."
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1975,
+    "id": 119261,
+    "name": "John Montefusco"
+   },
+   {
+    "award": "MVP",
+    "season": 1989,
+    "id": 119195,
+    "name": "Kevin Mitchell"
+   },
+   {
+    "award": "MVP",
+    "season": 1993,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "MVP",
+    "season": 2000,
+    "id": 116999,
+    "name": "Jeff Kent"
+   },
+   {
+    "award": "MVP",
+    "season": 2001,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "MVP",
+    "season": 2002,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "MVP",
+    "season": 2003,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "MVP",
+    "season": 2004,
+    "id": 111188,
+    "name": "Barry Bonds"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2008,
+    "id": 453311,
+    "name": "Tim Lincecum"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2009,
+    "id": 453311,
+    "name": "Tim Lincecum"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2010,
+    "id": 457763,
+    "name": "Buster Posey"
+   },
+   {
+    "award": "MVP",
+    "season": 2012,
+    "id": 457763,
+    "name": "Buster Posey"
+   }
+  ],
+  "hof": [
+   {
+    "id": 118422,
+    "name": "Christy Mathewson",
+    "inducted": 1936,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118726,
+    "name": "John McGraw",
+    "inducted": 1937,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 113959,
+    "name": "Buck Ewing",
+    "inducted": 1939,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 120054,
+    "name": "Jim O'Rourke",
+    "inducted": 1945,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 111433,
+    "name": "Roger Bresnahan",
+    "inducted": 1945,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 118713,
+    "name": "Joe McGinnity",
+    "inducted": 1946,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 116249,
+    "name": "Carl Hubbell",
+    "inducted": 1947,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 120117,
+    "name": "Mel Ott",
+    "inducted": 1951,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 123203,
+    "name": "Bill Terry",
+    "inducted": 1954,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 123921,
+    "name": "John Ward",
+    "inducted": 1964,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 116888,
+    "name": "Tim Keefe",
+    "inducted": 1964,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118295,
+    "name": "Rube Marquard",
+    "inducted": 1971,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 124717,
+    "name": "Ross Youngs",
+    "inducted": 1972,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116942,
+    "name": "George Kelly",
+    "inducted": 1973,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 124062,
+    "name": "Mickey Welch",
+    "inducted": 1973,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 116403,
+    "name": "Monte Irvin",
+    "inducted": 1973,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 117793,
+    "name": "Freddie Lindstrom",
+    "inducted": 1976,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 112589,
+    "name": "Roger Connor",
+    "inducted": 1976,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 121559,
+    "name": "Amos Rusie",
+    "inducted": 1977,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118495,
+    "name": "Willie Mays",
+    "inducted": 1979,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116445,
+    "name": "Travis Jackson",
+    "inducted": 1982,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 118283,
+    "name": "Juan Marichal",
+    "inducted": 1983,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 124261,
+    "name": "Hoyt Wilhelm",
+    "inducted": 1985,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118605,
+    "name": "Willie McCovey",
+    "inducted": 1986,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 120438,
+    "name": "Gaylord Perry",
+    "inducted": 1991,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 113106,
+    "name": "George Davis",
+    "inducted": 1998,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 112157,
+    "name": "Orlando Cepeda",
+    "inducted": 1999,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 116999,
+    "name": "Jeff Kent",
+    "inducted": 2026,
+    "pos": "2B",
+    "note": "Contemporary Era Ballot Selection"
+   }
+  ]
+ },
+ "138": {
+  "ballparks": [
+   {
+    "id": 3141,
+    "from": 1901,
+    "to": 1919,
+    "name": "Robison Field",
+    "aka": []
+   },
+   {
+    "id": 3168,
+    "from": 1920,
+    "to": 1965,
+    "name": "Sportsman's Park",
+    "aka": []
+   },
+   {
+    "id": 30,
+    "from": 1966,
+    "to": 2005,
+    "name": "Busch Stadium",
+    "aka": []
+   },
+   {
+    "id": 2889,
+    "from": 2006,
+    "to": 2026,
+    "name": "Busch Stadium",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1931,
+    "id": 114448,
+    "name": "Frankie Frisch"
+   },
+   {
+    "award": "MVP",
+    "season": 1934,
+    "id": 113168,
+    "name": "Dizzy Dean"
+   },
+   {
+    "award": "MVP",
+    "season": 1937,
+    "id": 118904,
+    "name": "Joe Medwick"
+   },
+   {
+    "award": "MVP",
+    "season": 1942,
+    "id": 112657,
+    "name": "Mort Cooper"
+   },
+   {
+    "award": "MVP",
+    "season": 1943,
+    "id": 119602,
+    "name": "Stan Musial"
+   },
+   {
+    "award": "MVP",
+    "season": 1944,
+    "id": 118286,
+    "name": "Marty Marion"
+   },
+   {
+    "award": "MVP",
+    "season": 1946,
+    "id": 119602,
+    "name": "Stan Musial"
+   },
+   {
+    "award": "MVP",
+    "season": 1948,
+    "id": 119602,
+    "name": "Stan Musial"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1954,
+    "id": 119279,
+    "name": "Wally Moon"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1955,
+    "id": 123734,
+    "name": "Bill Virdon"
+   },
+   {
+    "award": "MVP",
+    "season": 1964,
+    "id": 111321,
+    "name": "Ken Boyer"
+   },
+   {
+    "award": "MVP",
+    "season": 1967,
+    "id": 112157,
+    "name": "Orlando Cepeda"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1968,
+    "id": 114756,
+    "name": "Bob Gibson"
+   },
+   {
+    "award": "MVP",
+    "season": 1968,
+    "id": 114756,
+    "name": "Bob Gibson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1970,
+    "id": 114756,
+    "name": "Bob Gibson"
+   },
+   {
+    "award": "MVP",
+    "season": 1971,
+    "id": 123406,
+    "name": "Joe Torre"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1974,
+    "id": 118521,
+    "name": "Bake McBride"
+   },
+   {
+    "award": "MVP",
+    "season": 1979,
+    "id": 115826,
+    "name": "Keith Hernandez"
+   },
+   {
+    "award": "MVP",
+    "season": 1985,
+    "id": 118694,
+    "name": "Willie McGee"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1985,
+    "id": 112487,
+    "name": "Vince Coleman"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1986,
+    "id": 124581,
+    "name": "Todd Worrell"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2001,
+    "id": 405395,
+    "name": "Albert Pujols"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2005,
+    "id": 112020,
+    "name": "Chris Carpenter"
+   },
+   {
+    "award": "MVP",
+    "season": 2005,
+    "id": 405395,
+    "name": "Albert Pujols"
+   },
+   {
+    "award": "MVP",
+    "season": 2008,
+    "id": 405395,
+    "name": "Albert Pujols"
+   },
+   {
+    "award": "MVP",
+    "season": 2009,
+    "id": 405395,
+    "name": "Albert Pujols"
+   },
+   {
+    "award": "MVP",
+    "season": 2022,
+    "id": 502671,
+    "name": "Paul Goldschmidt"
+   }
+  ],
+  "hof": [
+   {
+    "id": 116156,
+    "name": "Rogers Hornsby",
+    "inducted": 1942,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 114448,
+    "name": "Frankie Frisch",
+    "inducted": 1947,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 113168,
+    "name": "Dizzy Dean",
+    "inducted": 1953,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118904,
+    "name": "Joe Medwick",
+    "inducted": 1968,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 119602,
+    "name": "Stan Musial",
+    "inducted": 1969,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 115314,
+    "name": "Jesse Haines",
+    "inducted": 1970,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 115295,
+    "name": "Chick Hafey",
+    "inducted": 1971,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 111266,
+    "name": "Jim Bottomley",
+    "inducted": 1974,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 114756,
+    "name": "Bob Gibson",
+    "inducted": 1981,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 119207,
+    "name": "Johnny Mize",
+    "inducted": 1981,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 122319,
+    "name": "Enos Slaughter",
+    "inducted": 1985,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 111495,
+    "name": "Lou Brock",
+    "inducted": 1985,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121851,
+    "name": "Red Schoendienst",
+    "inducted": 1989,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 122439,
+    "name": "Ozzie Smith",
+    "inducted": 2002,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 123004,
+    "name": "Bruce Sutter",
+    "inducted": 2006,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 122551,
+    "name": "Billy Southworth",
+    "inducted": 2008,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 115865,
+    "name": "Whitey Herzog",
+    "inducted": 2010,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 122247,
+    "name": "Ted Simmons",
+    "inducted": 2020,
+    "pos": "C",
+    "note": "Modern Baseball Committee Inductee"
+   },
+   {
+    "id": 121409,
+    "name": "Scott Rolen",
+    "inducted": 2023,
+    "pos": "3B",
+    "note": null
+   }
+  ]
+ },
+ "139": {
+  "ballparks": [
+   {
+    "id": 12,
+    "from": 1996,
+    "to": 2024,
+    "name": "Tropicana Field",
+    "aka": []
+   },
+   {
+    "id": 2523,
+    "from": 2025,
+    "to": 2025,
+    "name": "George M. Steinbrenner Field",
+    "aka": []
+   },
+   {
+    "id": 12,
+    "from": 2026,
+    "to": 2026,
+    "name": "Tropicana Field",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 2008,
+    "id": 446334,
+    "name": "Evan Longoria"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2011,
+    "id": 476451,
+    "name": "Jeremy Hellickson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2012,
+    "id": 456034,
+    "name": "David Price"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2013,
+    "id": 571976,
+    "name": "Wil Myers"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2018,
+    "id": 605483,
+    "name": "Blake Snell"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2021,
+    "id": 668227,
+    "name": "Randy Arozarena"
+   }
+  ],
+  "hof": []
+ },
+ "140": {
+  "ballparks": [
+   {
+    "id": 3126,
+    "from": 1961,
+    "to": 1961,
+    "name": "Griffith Stadium",
+    "aka": []
+   },
+   {
+    "id": 2721,
+    "from": 1962,
+    "to": 1971,
+    "name": "D.C. Stadium",
+    "aka": [
+     "Robert F. Kennedy Memorial Stadium"
+    ]
+   },
+   {
+    "id": 3111,
+    "from": 1972,
+    "to": 1993,
+    "name": "Arlington Stadium",
+    "aka": []
+   },
+   {
+    "id": 13,
+    "from": 1994,
+    "to": 2019,
+    "name": "The Ballpark at Arlington",
+    "aka": [
+     "Ameriquest Field",
+     "Rangers Ballpark in Arlington",
+     "Globe Life Park in Arlington"
+    ]
+   },
+   {
+    "id": 5325,
+    "from": 2020,
+    "to": 2026,
+    "name": "Globe Life Field",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1974,
+    "id": 111773,
+    "name": "Jeff Burroughs"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1974,
+    "id": 115474,
+    "name": "Mike Hargrove"
+   },
+   {
+    "award": "MVP",
+    "season": 1996,
+    "id": 114932,
+    "name": "Juan Gonzalez"
+   },
+   {
+    "award": "MVP",
+    "season": 1998,
+    "id": 114932,
+    "name": "Juan Gonzalez"
+   },
+   {
+    "award": "MVP",
+    "season": 1999,
+    "id": 121358,
+    "name": "Ivan Rodriguez"
+   },
+   {
+    "award": "MVP",
+    "season": 2003,
+    "id": 121347,
+    "name": "Alex Rodriguez"
+   },
+   {
+    "award": "MVP",
+    "season": 2010,
+    "id": 285078,
+    "name": "Josh Hamilton"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2010,
+    "id": 491703,
+    "name": "Neftal\u00ed Feliz"
+   }
+  ],
+  "hof": [
+   {
+    "id": 121597,
+    "name": "Nolan Ryan Jr.",
+    "inducted": 1999,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 121358,
+    "name": "Ivan Rodriguez",
+    "inducted": 2017,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 134181,
+    "name": "Adrian Beltr\u00e9",
+    "inducted": 2024,
+    "pos": "3B",
+    "note": null
+   }
+  ]
+ },
+ "141": {
+  "ballparks": [
+   {
+    "id": 3123,
+    "from": 1977,
+    "to": 1989,
+    "name": "Exhibition Stadium",
+    "aka": []
+   },
+   {
+    "id": 14,
+    "from": 1990,
+    "to": 2026,
+    "name": "Rogers Centre",
+    "aka": [
+     "SkyDome"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1979,
+    "id": 115137,
+    "name": "Alfredo Griffin"
+   },
+   {
+    "award": "MVP",
+    "season": 1987,
+    "id": 110823,
+    "name": "George Bell"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1996,
+    "id": 115797,
+    "name": "Pat Hentgen"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1997,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1998,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2002,
+    "id": 400134,
+    "name": "Eric Hinske"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2003,
+    "id": 136880,
+    "name": "Roy Halladay"
+   },
+   {
+    "award": "MVP",
+    "season": 2015,
+    "id": 518626,
+    "name": "Josh Donaldson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2021,
+    "id": 592662,
+    "name": "Robbie Ray"
+   }
+  ],
+  "hof": [
+   {
+    "id": 110183,
+    "name": "Roberto Alomar",
+    "inducted": 2011,
+    "pos": "2B",
+    "note": null
+   }
+  ]
+ },
+ "142": {
+  "ballparks": [
+   {
+    "id": 3109,
+    "from": 1901,
+    "to": 1910,
+    "name": "League Park",
+    "aka": []
+   },
+   {
+    "id": 3126,
+    "from": 1911,
+    "to": 1960,
+    "name": "Griffith Stadium",
+    "aka": [
+     "National Park"
+    ]
+   },
+   {
+    "id": 3135,
+    "from": 1961,
+    "to": 1981,
+    "name": "Metropolitan Stadium",
+    "aka": []
+   },
+   {
+    "id": 8,
+    "from": 1982,
+    "to": 2009,
+    "name": "Hubert H. Humphrey Metrodome",
+    "aka": []
+   },
+   {
+    "id": 3312,
+    "from": 2010,
+    "to": 2026,
+    "name": "Target Field",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1958,
+    "id": 120336,
+    "name": "Albie Pearson"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1959,
+    "id": 110176,
+    "name": "Bob Allison"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1964,
+    "id": 119980,
+    "name": "Tony Oliva"
+   },
+   {
+    "award": "MVP",
+    "season": 1965,
+    "id": 123713,
+    "name": "Zoilo Versalles"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1967,
+    "id": 111986,
+    "name": "Rod Carew"
+   },
+   {
+    "award": "MVP",
+    "season": 1969,
+    "id": 117051,
+    "name": "Harmon Killebrew"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1970,
+    "id": 120442,
+    "name": "Jim Perry"
+   },
+   {
+    "award": "MVP",
+    "season": 1977,
+    "id": 111986,
+    "name": "Rod Carew"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1979,
+    "id": 112120,
+    "name": "John Castino"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1988,
+    "id": 123732,
+    "name": "Frank Viola"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1991,
+    "id": 117197,
+    "name": "Chuck Knoblauch"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1995,
+    "id": 112682,
+    "name": "Marty Cordova"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2004,
+    "id": 276371,
+    "name": "Johan Santana"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2006,
+    "id": 276371,
+    "name": "Johan Santana"
+   },
+   {
+    "award": "MVP",
+    "season": 2006,
+    "id": 408047,
+    "name": "Justin Morneau"
+   },
+   {
+    "award": "MVP",
+    "season": 2009,
+    "id": 408045,
+    "name": "Joe Mauer"
+   }
+  ],
+  "hof": [
+   {
+    "id": 116635,
+    "name": "Walter Johnson",
+    "inducted": 1936,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 121137,
+    "name": "Sam Rice",
+    "inducted": 1963,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114987,
+    "name": "Goose Goslin",
+    "inducted": 1968,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 115534,
+    "name": "Bucky Harris",
+    "inducted": 1975,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 117051,
+    "name": "Harmon Killebrew",
+    "inducted": 1984,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 111986,
+    "name": "Rod Carew",
+    "inducted": 1991,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 120790,
+    "name": "Kirby Puckett",
+    "inducted": 2001,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 111126,
+    "name": "Bert Blyleven",
+    "inducted": 2011,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 116803,
+    "name": "Jim Kaat",
+    "inducted": 2021,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 119980,
+    "name": "Tony Oliva",
+    "inducted": 2021,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 408045,
+    "name": "Joe Mauer",
+    "inducted": 2024,
+    "pos": "C",
+    "note": null
+   }
+  ]
+ },
+ "143": {
+  "ballparks": [
+   {
+    "id": 3113,
+    "from": 1901,
+    "to": 1938,
+    "name": "Baker Bowl",
+    "aka": []
+   },
+   {
+    "id": 3143,
+    "from": 1939,
+    "to": 1970,
+    "name": "Connie Mack Stadium",
+    "aka": [
+     "Shibe Park"
+    ]
+   },
+   {
+    "id": 26,
+    "from": 1971,
+    "to": 2003,
+    "name": "Veterans Stadium",
+    "aka": []
+   },
+   {
+    "id": 2681,
+    "from": 2004,
+    "to": 2026,
+    "name": "Citizens Bank Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1932,
+    "id": 117141,
+    "name": "Chuck Klein"
+   },
+   {
+    "award": "MVP",
+    "season": 1950,
+    "id": 117250,
+    "name": "Jim Konstanty"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1957,
+    "id": 121684,
+    "name": "Jack Sanford"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1964,
+    "id": 110157,
+    "name": "Dick Allen"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1972,
+    "id": 112008,
+    "name": "Steve Carlton"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1977,
+    "id": 112008,
+    "name": "Steve Carlton"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1980,
+    "id": 112008,
+    "name": "Steve Carlton"
+   },
+   {
+    "award": "MVP",
+    "season": 1980,
+    "id": 121836,
+    "name": "Mike Schmidt"
+   },
+   {
+    "award": "MVP",
+    "season": 1981,
+    "id": 121836,
+    "name": "Mike Schmidt"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1982,
+    "id": 112008,
+    "name": "Steve Carlton"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1983,
+    "id": 113272,
+    "name": "John Denny"
+   },
+   {
+    "award": "MVP",
+    "season": 1986,
+    "id": 121836,
+    "name": "Mike Schmidt"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1987,
+    "id": 110786,
+    "name": "Steve Bedrosian"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1997,
+    "id": 121409,
+    "name": "Scott Rolen"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2005,
+    "id": 429667,
+    "name": "Ryan Howard"
+   },
+   {
+    "award": "MVP",
+    "season": 2006,
+    "id": 429667,
+    "name": "Ryan Howard"
+   },
+   {
+    "award": "MVP",
+    "season": 2007,
+    "id": 276519,
+    "name": "Jimmy Rollins"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2010,
+    "id": 136880,
+    "name": "Roy Halladay"
+   },
+   {
+    "award": "MVP",
+    "season": 2021,
+    "id": 547180,
+    "name": "Bryce Harper"
+   }
+  ],
+  "hof": [
+   {
+    "id": 110127,
+    "name": "Grover Alexander",
+    "inducted": 1938,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 113218,
+    "name": "Ed Delahanty",
+    "inducted": 1945,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 110524,
+    "name": "Dave Bancroft",
+    "inducted": 1971,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 123303,
+    "name": "Sam Thompson",
+    "inducted": 1974,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121283,
+    "name": "Robin Roberts",
+    "inducted": 1976,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 117141,
+    "name": "Chuck Klein",
+    "inducted": 1980,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 112008,
+    "name": "Steve Carlton",
+    "inducted": 1994,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 121836,
+    "name": "Mike Schmidt",
+    "inducted": 1995,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 110349,
+    "name": "Richie Ashburn",
+    "inducted": 1995,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 111691,
+    "name": "Jim Bunning",
+    "inducted": 1996,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 110157,
+    "name": "Dick Allen",
+    "inducted": 2025,
+    "pos": "1B",
+    "note": "Classic Era Ballot Selection"
+   }
+  ]
+ },
+ "144": {
+  "ballparks": [
+   {
+    "id": 3147,
+    "from": 1901,
+    "to": 1914,
+    "name": "South End Grounds",
+    "aka": []
+   },
+   {
+    "id": 3,
+    "from": 1915,
+    "to": 1915,
+    "name": "Fenway Park",
+    "aka": []
+   },
+   {
+    "id": 3115,
+    "from": 1916,
+    "to": 1952,
+    "name": "Braves Field",
+    "aka": []
+   },
+   {
+    "id": 23,
+    "from": 1953,
+    "to": 1965,
+    "name": "Milwaukee County Stadium",
+    "aka": []
+   },
+   {
+    "id": 3112,
+    "from": 1966,
+    "to": 1996,
+    "name": "Atlanta-Fulton County Stadium",
+    "aka": [
+     "Atlanta Stadium"
+    ]
+   },
+   {
+    "id": 16,
+    "from": 1997,
+    "to": 2016,
+    "name": "Turner Field",
+    "aka": []
+   },
+   {
+    "id": 4705,
+    "from": 2017,
+    "to": 2026,
+    "name": "Truist Park",
+    "aka": [
+     "SunTrust Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1947,
+    "id": 113813,
+    "name": "Bob Elliott"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1950,
+    "id": 116542,
+    "name": "Sam Jethroe"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1957,
+    "id": 122557,
+    "name": "Warren Spahn"
+   },
+   {
+    "award": "MVP",
+    "season": 1957,
+    "id": 110001,
+    "name": "Hank Aaron"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1971,
+    "id": 124304,
+    "name": "Earl Williams"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1978,
+    "id": 116154,
+    "name": "Bob Horner"
+   },
+   {
+    "award": "MVP",
+    "season": 1982,
+    "id": 119545,
+    "name": "Dale Murphy"
+   },
+   {
+    "award": "MVP",
+    "season": 1983,
+    "id": 119545,
+    "name": "Dale Murphy"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1990,
+    "id": 116798,
+    "name": "David Justice"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1991,
+    "id": 114849,
+    "name": "Tom Glavine"
+   },
+   {
+    "award": "MVP",
+    "season": 1991,
+    "id": 120381,
+    "name": "Terry Pendleton"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1993,
+    "id": 118120,
+    "name": "Greg Maddux"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1994,
+    "id": 118120,
+    "name": "Greg Maddux"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1995,
+    "id": 118120,
+    "name": "Greg Maddux"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1996,
+    "id": 122477,
+    "name": "John Smoltz"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1998,
+    "id": 114849,
+    "name": "Tom Glavine"
+   },
+   {
+    "award": "MVP",
+    "season": 1999,
+    "id": 116706,
+    "name": "Chipper Jones"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2000,
+    "id": 279577,
+    "name": "Rafael Furcal"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2011,
+    "id": 518886,
+    "name": "Craig Kimbrel"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2018,
+    "id": 660670,
+    "name": "Ronald Acu\u00f1a Jr."
+   },
+   {
+    "award": "MVP",
+    "season": 2020,
+    "id": 518692,
+    "name": "Freddie Freeman"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2022,
+    "id": 671739,
+    "name": "Michael Harris II"
+   },
+   {
+    "award": "MVP",
+    "season": 2023,
+    "id": 660670,
+    "name": "Ronald Acu\u00f1a Jr."
+   },
+   {
+    "award": "Cy Young",
+    "season": 2024,
+    "id": 519242,
+    "name": "Chris Sale"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2025,
+    "id": 686948,
+    "name": "Drake Baldwin"
+   }
+  ],
+  "hof": [
+   {
+    "id": 113598,
+    "name": "Hugh Duffy",
+    "inducted": 1945,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 118554,
+    "name": "Tommy McCarthy",
+    "inducted": 1946,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 119761,
+    "name": "Kid Nichols",
+    "inducted": 1949,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118276,
+    "name": "Rabbit Maranville",
+    "inducted": 1954,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 115386,
+    "name": "Billy Hamilton",
+    "inducted": 1961,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 112369,
+    "name": "John Clarkson",
+    "inducted": 1963,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 122557,
+    "name": "Warren Spahn",
+    "inducted": 1973,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118416,
+    "name": "Eddie Mathews",
+    "inducted": 1978,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 110001,
+    "name": "Hank Aaron",
+    "inducted": 1982,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 124364,
+    "name": "Vic Willis",
+    "inducted": 1995,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 119786,
+    "name": "Phil Niekro",
+    "inducted": 1997,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 492582,
+    "name": "Frank Selee",
+    "inducted": 1999,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 112764,
+    "name": "Bobby Cox",
+    "inducted": 2014,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 114849,
+    "name": "Tom Glavine",
+    "inducted": 2014,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 122477,
+    "name": "John Smoltz",
+    "inducted": 2015,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 116706,
+    "name": "Chipper Jones",
+    "inducted": 2018,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 116662,
+    "name": "Andruw Jones",
+    "inducted": 2026,
+    "pos": "OF",
+    "note": null
+   }
+  ]
+ },
+ "145": {
+  "ballparks": [
+   {
+    "id": 3148,
+    "from": 1901,
+    "to": 1909,
+    "name": "South Side Park",
+    "aka": []
+   },
+   {
+    "id": 3119,
+    "from": 1910,
+    "to": 1990,
+    "name": "Comiskey Park",
+    "aka": []
+   },
+   {
+    "id": 4,
+    "from": 1991,
+    "to": 2026,
+    "name": "Rate Field",
+    "aka": [
+     "Comiskey Park",
+     "U.S. Cellular Field",
+     "Guaranteed Rate Field"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1956,
+    "id": 110290,
+    "name": "Luis Aparicio"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1959,
+    "id": 124633,
+    "name": "Early Wynn"
+   },
+   {
+    "award": "MVP",
+    "season": 1959,
+    "id": 114361,
+    "name": "Nellie Fox"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1963,
+    "id": 120455,
+    "name": "Gary Peters"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1966,
+    "id": 110084,
+    "name": "Tommie Agee"
+   },
+   {
+    "award": "MVP",
+    "season": 1972,
+    "id": 110157,
+    "name": "Dick Allen"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1983,
+    "id": 116240,
+    "name": "LaMarr Hoyt"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1983,
+    "id": 117132,
+    "name": "Ron Kittle"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1985,
+    "id": 115230,
+    "name": "Ozzie Guillen"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1993,
+    "id": 118656,
+    "name": "Jack McDowell"
+   },
+   {
+    "award": "MVP",
+    "season": 1993,
+    "id": 123245,
+    "name": "Frank Thomas"
+   },
+   {
+    "award": "MVP",
+    "season": 1994,
+    "id": 123245,
+    "name": "Frank Thomas"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2014,
+    "id": 547989,
+    "name": "Jos\u00e9 Abreu"
+   },
+   {
+    "award": "MVP",
+    "season": 2020,
+    "id": 547989,
+    "name": "Jos\u00e9 Abreu"
+   }
+  ],
+  "hof": [
+   {
+    "id": 112506,
+    "name": "Eddie Collins Sr.",
+    "inducted": 1939,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 123878,
+    "name": "Ed Walsh",
+    "inducted": 1946,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 121766,
+    "name": "Ray Schalk",
+    "inducted": 1955,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 118055,
+    "name": "Ted Lyons",
+    "inducted": 1955,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 110297,
+    "name": "Luke Appling",
+    "inducted": 1964,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 113965,
+    "name": "Red Faber",
+    "inducted": 1964,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 110290,
+    "name": "Luis Aparicio",
+    "inducted": 1984,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 114361,
+    "name": "Nellie Fox",
+    "inducted": 1997,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 123245,
+    "name": "Frank Thomas",
+    "inducted": 2014,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 110456,
+    "name": "Harold Baines",
+    "inducted": 2019,
+    "pos": "DH",
+    "note": "Veterans Committee Inductee"
+   },
+   {
+    "id": 119176,
+    "name": "Minnie Minoso",
+    "inducted": 2021,
+    "pos": "OF",
+    "note": null
+   }
+  ]
+ },
+ "146": {
+  "ballparks": [
+   {
+    "id": 20,
+    "from": 1992,
+    "to": 2011,
+    "name": "Pro Player Stadium",
+    "aka": [
+     "Hard Rock Stadium",
+     "Joe Robbie Stadium",
+     "Dolphin Stadium",
+     "Land Shark Stadium",
+     "Sun Life Stadium"
+    ]
+   },
+   {
+    "id": 4169,
+    "from": 2012,
+    "to": 2026,
+    "name": "loanDepot park",
+    "aka": [
+     "Marlins Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 2003,
+    "id": 425883,
+    "name": "Dontrelle Willis"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2006,
+    "id": 434670,
+    "name": "Hanley Ramirez"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2009,
+    "id": 458085,
+    "name": "Chris Coghlan"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2013,
+    "id": 605228,
+    "name": "Jos\u00e9 Fern\u00e1ndez"
+   },
+   {
+    "award": "MVP",
+    "season": 2017,
+    "id": 519317,
+    "name": "Giancarlo Stanton"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2022,
+    "id": 645261,
+    "name": "Sandy Alcantara"
+   }
+  ],
+  "hof": []
+ },
+ "147": {
+  "ballparks": [
+   {
+    "id": 3127,
+    "from": 1903,
+    "to": 1912,
+    "name": "Hilltop Park",
+    "aka": []
+   },
+   {
+    "id": 3140,
+    "from": 1913,
+    "to": 1922,
+    "name": "Polo Grounds",
+    "aka": []
+   },
+   {
+    "id": 9,
+    "from": 1923,
+    "to": 1973,
+    "name": "Yankee Stadium",
+    "aka": []
+   },
+   {
+    "id": 25,
+    "from": 1974,
+    "to": 1975,
+    "name": "Shea Stadium",
+    "aka": []
+   },
+   {
+    "id": 9,
+    "from": 1976,
+    "to": 2008,
+    "name": "Yankee Stadium",
+    "aka": []
+   },
+   {
+    "id": 3313,
+    "from": 2009,
+    "to": 2026,
+    "name": "Yankee Stadium",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1936,
+    "id": 114680,
+    "name": "Lou Gehrig"
+   },
+   {
+    "award": "MVP",
+    "season": 1939,
+    "id": 113376,
+    "name": "Joe DiMaggio"
+   },
+   {
+    "award": "MVP",
+    "season": 1941,
+    "id": 113376,
+    "name": "Joe DiMaggio"
+   },
+   {
+    "award": "MVP",
+    "season": 1942,
+    "id": 114967,
+    "name": "Joe Gordon"
+   },
+   {
+    "award": "MVP",
+    "season": 1943,
+    "id": 112187,
+    "name": "Spud Chandler"
+   },
+   {
+    "award": "MVP",
+    "season": 1947,
+    "id": 113376,
+    "name": "Joe DiMaggio"
+   },
+   {
+    "award": "MVP",
+    "season": 1950,
+    "id": 121257,
+    "name": "Phil Rizzuto"
+   },
+   {
+    "award": "MVP",
+    "season": 1951,
+    "id": 110925,
+    "name": "Yogi Berra"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1951,
+    "id": 118655,
+    "name": "Gil McDougald"
+   },
+   {
+    "award": "MVP",
+    "season": 1954,
+    "id": 110925,
+    "name": "Yogi Berra"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1954,
+    "id": 115160,
+    "name": "Bob Grim"
+   },
+   {
+    "award": "MVP",
+    "season": 1955,
+    "id": 110925,
+    "name": "Yogi Berra"
+   },
+   {
+    "award": "MVP",
+    "season": 1956,
+    "id": 118258,
+    "name": "Mickey Mantle"
+   },
+   {
+    "award": "MVP",
+    "season": 1957,
+    "id": 118258,
+    "name": "Mickey Mantle"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1957,
+    "id": 117343,
+    "name": "Tony Kubek"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1958,
+    "id": 123509,
+    "name": "Bob Turley"
+   },
+   {
+    "award": "MVP",
+    "season": 1960,
+    "id": 118287,
+    "name": "Roger Maris"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1961,
+    "id": 114299,
+    "name": "Whitey Ford"
+   },
+   {
+    "award": "MVP",
+    "season": 1961,
+    "id": 118287,
+    "name": "Roger Maris"
+   },
+   {
+    "award": "MVP",
+    "season": 1962,
+    "id": 118258,
+    "name": "Mickey Mantle"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1962,
+    "id": 123461,
+    "name": "Tom Tresh"
+   },
+   {
+    "award": "MVP",
+    "season": 1963,
+    "id": 116204,
+    "name": "Elston Howard"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1968,
+    "id": 110434,
+    "name": "Stan Bahnsen"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1970,
+    "id": 119531,
+    "name": "Thurman Munson"
+   },
+   {
+    "award": "MVP",
+    "season": 1976,
+    "id": 119531,
+    "name": "Thurman Munson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1977,
+    "id": 118026,
+    "name": "Sparky Lyle"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1978,
+    "id": 115228,
+    "name": "Ron Guidry"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1981,
+    "id": 121201,
+    "name": "Dave Righetti"
+   },
+   {
+    "award": "MVP",
+    "season": 1985,
+    "id": 118443,
+    "name": "Don Mattingly"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1996,
+    "id": 116539,
+    "name": "Derek Jeter"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2001,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "MVP",
+    "season": 2005,
+    "id": 121347,
+    "name": "Alex Rodriguez"
+   },
+   {
+    "award": "MVP",
+    "season": 2007,
+    "id": 121347,
+    "name": "Alex Rodriguez"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2017,
+    "id": 592450,
+    "name": "Aaron Judge"
+   },
+   {
+    "award": "MVP",
+    "season": 2022,
+    "id": 592450,
+    "name": "Aaron Judge"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2023,
+    "id": 543037,
+    "name": "Gerrit Cole"
+   },
+   {
+    "award": "MVP",
+    "season": 2024,
+    "id": 592450,
+    "name": "Aaron Judge"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2024,
+    "id": 661563,
+    "name": "Luis Gil"
+   },
+   {
+    "award": "MVP",
+    "season": 2025,
+    "id": 592450,
+    "name": "Aaron Judge"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2026,
+    "id": 693645,
+    "name": "Cam Schlittler"
+   }
+  ],
+  "hof": [
+   {
+    "id": 121578,
+    "name": "Babe Ruth",
+    "inducted": 1936,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114680,
+    "name": "Lou Gehrig",
+    "inducted": 1939,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 112233,
+    "name": "Jack Chesbro",
+    "inducted": 1946,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 120386,
+    "name": "Herb Pennock",
+    "inducted": 1948,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 113340,
+    "name": "Bill Dickey",
+    "inducted": 1954,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 113376,
+    "name": "Joe DiMaggio",
+    "inducted": 1955,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 524329,
+    "name": "Joe McCarthy",
+    "inducted": 1957,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 116275,
+    "name": "Miller Huggins",
+    "inducted": 1964,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 122737,
+    "name": "Casey Stengel",
+    "inducted": 1966,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 121547,
+    "name": "Red Ruffing",
+    "inducted": 1967,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 116241,
+    "name": "Waite Hoyt",
+    "inducted": 1969,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 112533,
+    "name": "Earle Combs",
+    "inducted": 1970,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114917,
+    "name": "Lefty Gomez",
+    "inducted": 1972,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 118258,
+    "name": "Mickey Mantle",
+    "inducted": 1974,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114299,
+    "name": "Whitey Ford",
+    "inducted": 1974,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 117577,
+    "name": "Tony Lazzeri",
+    "inducted": 1991,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 116439,
+    "name": "Reggie Jackson",
+    "inducted": 1993,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121257,
+    "name": "Phil Rizzuto",
+    "inducted": 1994,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 114989,
+    "name": "Rich Gossage",
+    "inducted": 2008,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 114967,
+    "name": "Joe Gordon",
+    "inducted": 2009,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 123406,
+    "name": "Joe Torre",
+    "inducted": 2014,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 121250,
+    "name": "Mariano Rivera",
+    "inducted": 2019,
+    "pos": "P",
+    "note": "First unanimous inductee"
+   },
+   {
+    "id": 116539,
+    "name": "Derek Jeter",
+    "inducted": 2020,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 282332,
+    "name": "CC Sabathia",
+    "inducted": 2025,
+    "pos": "P",
+    "note": null
+   }
+  ]
+ },
+ "158": {
+  "ballparks": [
+   {
+    "id": 3144,
+    "from": 1968,
+    "to": 1969,
+    "name": "Sick's Stadium",
+    "aka": []
+   },
+   {
+    "id": 23,
+    "from": 1970,
+    "to": 2000,
+    "name": "Milwaukee County Stadium",
+    "aka": []
+   },
+   {
+    "id": 32,
+    "from": 2001,
+    "to": 2026,
+    "name": "American Family Field",
+    "aka": [
+     "Miller Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Cy Young",
+    "season": 1981,
+    "id": 114129,
+    "name": "Rollie Fingers"
+   },
+   {
+    "award": "MVP",
+    "season": 1981,
+    "id": 114129,
+    "name": "Rollie Fingers"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1982,
+    "id": 123762,
+    "name": "Pete Vuckovich"
+   },
+   {
+    "award": "MVP",
+    "season": 1982,
+    "id": 124721,
+    "name": "Robin Yount"
+   },
+   {
+    "award": "MVP",
+    "season": 1989,
+    "id": 124721,
+    "name": "Robin Yount"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1992,
+    "id": 117815,
+    "name": "Pat Listach"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2007,
+    "id": 460075,
+    "name": "Ryan Braun"
+   },
+   {
+    "award": "MVP",
+    "season": 2011,
+    "id": 460075,
+    "name": "Ryan Braun"
+   },
+   {
+    "award": "MVP",
+    "season": 2018,
+    "id": 592885,
+    "name": "Christian Yelich"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2020,
+    "id": 642207,
+    "name": "Devin Williams"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2021,
+    "id": 669203,
+    "name": "Corbin Burnes"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2026,
+    "id": 694819,
+    "name": "Jacob Misiorowski"
+   }
+  ],
+  "hof": [
+   {
+    "id": 124721,
+    "name": "Robin Yount",
+    "inducted": 1999,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 119236,
+    "name": "Paul Molitor",
+    "inducted": 2004,
+    "pos": "DH",
+    "note": null
+   }
+  ]
+ },
+ "108": {
+  "ballparks": [
+   {
+    "id": 3153,
+    "from": 1961,
+    "to": 1961,
+    "name": "Wrigley Field",
+    "aka": []
+   },
+   {
+    "id": 22,
+    "from": 1962,
+    "to": 1965,
+    "name": "Dodger Stadium",
+    "aka": []
+   },
+   {
+    "id": 1,
+    "from": 1966,
+    "to": 2026,
+    "name": "Angel Stadium",
+    "aka": [
+     "Anaheim Stadium",
+     "Edison International Field",
+     "Angel Stadium of Anaheim"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Cy Young",
+    "season": 1964,
+    "id": 112185,
+    "name": "Dean Chance"
+   },
+   {
+    "award": "MVP",
+    "season": 1979,
+    "id": 110719,
+    "name": "Don Baylor"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1993,
+    "id": 121640,
+    "name": "Tim Salmon"
+   },
+   {
+    "award": "MVP",
+    "season": 2004,
+    "id": 115223,
+    "name": "Vladimir Guerrero"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2005,
+    "id": 112526,
+    "name": "Bartolo Colon"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2012,
+    "id": 545361,
+    "name": "Mike Trout"
+   },
+   {
+    "award": "MVP",
+    "season": 2014,
+    "id": 545361,
+    "name": "Mike Trout"
+   },
+   {
+    "award": "MVP",
+    "season": 2016,
+    "id": 545361,
+    "name": "Mike Trout"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2018,
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   },
+   {
+    "award": "MVP",
+    "season": 2019,
+    "id": 545361,
+    "name": "Mike Trout"
+   },
+   {
+    "award": "MVP",
+    "season": 2021,
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   },
+   {
+    "award": "MVP",
+    "season": 2023,
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   }
+  ],
+  "hof": []
+ },
+ "109": {
+  "ballparks": [
+   {
+    "id": 15,
+    "from": 1996,
+    "to": 2026,
+    "name": "Bank One Ballpark",
+    "aka": [
+     "Chase Field"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Cy Young",
+    "season": 1999,
+    "id": 116615,
+    "name": "Randy Johnson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2000,
+    "id": 116615,
+    "name": "Randy Johnson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2001,
+    "id": 116615,
+    "name": "Randy Johnson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2002,
+    "id": 116615,
+    "name": "Randy Johnson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2006,
+    "id": 425630,
+    "name": "Brandon Webb"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2023,
+    "id": 682998,
+    "name": "Corbin Carroll"
+   }
+  ],
+  "hof": [
+   {
+    "id": 116615,
+    "name": "Randy Johnson",
+    "inducted": 2015,
+    "pos": "P",
+    "note": null
+   }
+  ]
+ },
+ "110": {
+  "ballparks": [
+   {
+    "id": 3132,
+    "from": 1901,
+    "to": 1901,
+    "name": "Lloyd Street Grounds",
+    "aka": []
+   },
+   {
+    "id": 3149,
+    "from": 1902,
+    "to": 1953,
+    "name": "Sportsman's Park",
+    "aka": []
+   },
+   {
+    "id": 3134,
+    "from": 1954,
+    "to": 1991,
+    "name": "Memorial Stadium",
+    "aka": []
+   },
+   {
+    "id": 2,
+    "from": 1992,
+    "to": 2026,
+    "name": "Oriole Park at Camden Yards",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1949,
+    "id": 122221,
+    "name": "Roy Sievers"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1960,
+    "id": 115440,
+    "name": "Ron Hansen"
+   },
+   {
+    "award": "MVP",
+    "season": 1964,
+    "id": 121301,
+    "name": "Brooks Robinson"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1965,
+    "id": 111096,
+    "name": "Curt Blefary"
+   },
+   {
+    "award": "MVP",
+    "season": 1966,
+    "id": 121311,
+    "name": "Frank Robinson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1969,
+    "id": 112915,
+    "name": "Mike Cuellar"
+   },
+   {
+    "award": "MVP",
+    "season": 1970,
+    "id": 120719,
+    "name": "Boog Powell"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1973,
+    "id": 120196,
+    "name": "Jim Palmer"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1973,
+    "id": 111687,
+    "name": "Al Bumbry"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1975,
+    "id": 120196,
+    "name": "Jim Palmer"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1976,
+    "id": 120196,
+    "name": "Jim Palmer"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1977,
+    "id": 119579,
+    "name": "Eddie Murray"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1979,
+    "id": 114216,
+    "name": "Mike Flanagan"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1980,
+    "id": 122830,
+    "name": "Steve Stone"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1982,
+    "id": 121222,
+    "name": "Cal Ripken Jr."
+   },
+   {
+    "award": "MVP",
+    "season": 1983,
+    "id": 121222,
+    "name": "Cal Ripken Jr."
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1989,
+    "id": 120002,
+    "name": "Gregg Olson"
+   },
+   {
+    "award": "MVP",
+    "season": 1991,
+    "id": 121222,
+    "name": "Cal Ripken Jr."
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2023,
+    "id": 683002,
+    "name": "Gunnar Henderson"
+   }
+  ],
+  "hof": [
+   {
+    "id": 122280,
+    "name": "George Sisler",
+    "inducted": 1939,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 123864,
+    "name": "Bobby Wallace",
+    "inducted": 1953,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 121311,
+    "name": "Frank Robinson",
+    "inducted": 1982,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121301,
+    "name": "Brooks Robinson",
+    "inducted": 1983,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 120196,
+    "name": "Jim Palmer",
+    "inducted": 1990,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 492586,
+    "name": "Earl Weaver",
+    "inducted": 1996,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 119579,
+    "name": "Eddie Murray",
+    "inducted": 2003,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 121222,
+    "name": "Cal Ripken Jr.",
+    "inducted": 2007,
+    "pos": "SS",
+    "note": null
+   }
+  ]
+ },
+ "111": {
+  "ballparks": [
+   {
+    "id": 3128,
+    "from": 1901,
+    "to": 1911,
+    "name": "Huntington Avenue Grounds",
+    "aka": []
+   },
+   {
+    "id": 3,
+    "from": 1912,
+    "to": 2026,
+    "name": "Fenway Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1938,
+    "id": 114367,
+    "name": "Jimmie Foxx"
+   },
+   {
+    "award": "MVP",
+    "season": 1946,
+    "id": 124341,
+    "name": "Ted Williams"
+   },
+   {
+    "award": "MVP",
+    "season": 1949,
+    "id": 124341,
+    "name": "Ted Williams"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1950,
+    "id": 113575,
+    "name": "Walt Dropo"
+   },
+   {
+    "award": "MVP",
+    "season": 1958,
+    "id": 116533,
+    "name": "Jackie Jensen"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1961,
+    "id": 121906,
+    "name": "Don Schwall"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1967,
+    "id": 117886,
+    "name": "Jim Lonborg"
+   },
+   {
+    "award": "MVP",
+    "season": 1967,
+    "id": 124650,
+    "name": "Carl Yastrzemski"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1972,
+    "id": 114182,
+    "name": "Carlton Fisk"
+   },
+   {
+    "award": "MVP",
+    "season": 1975,
+    "id": 118040,
+    "name": "Fred Lynn"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1975,
+    "id": 118040,
+    "name": "Fred Lynn"
+   },
+   {
+    "award": "MVP",
+    "season": 1978,
+    "id": 121140,
+    "name": "Jim Rice"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1986,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "MVP",
+    "season": 1986,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1987,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1991,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "MVP",
+    "season": 1995,
+    "id": 123678,
+    "name": "Mo Vaughn"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1997,
+    "id": 114596,
+    "name": "Nomar Garciaparra"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1999,
+    "id": 118377,
+    "name": "Pedro Mart\u00ednez"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2000,
+    "id": 118377,
+    "name": "Pedro Mart\u00ednez"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2007,
+    "id": 456030,
+    "name": "Dustin Pedroia"
+   },
+   {
+    "award": "MVP",
+    "season": 2008,
+    "id": 456030,
+    "name": "Dustin Pedroia"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2016,
+    "id": 519144,
+    "name": "Rick Porcello"
+   },
+   {
+    "award": "MVP",
+    "season": 2018,
+    "id": 605141,
+    "name": "Mookie Betts"
+   }
+  ],
+  "hof": [
+   {
+    "id": 112511,
+    "name": "Jimmy Collins",
+    "inducted": 1945,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 115201,
+    "name": "Lefty Grove",
+    "inducted": 1947,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 114367,
+    "name": "Jimmie Foxx",
+    "inducted": 1951,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 112854,
+    "name": "Joe Cronin",
+    "inducted": 1956,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 124341,
+    "name": "Ted Williams",
+    "inducted": 1966,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116127,
+    "name": "Harry Hooper",
+    "inducted": 1971,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114086,
+    "name": "Rick Ferrell",
+    "inducted": 1984,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 113419,
+    "name": "Bobby Doerr",
+    "inducted": 1986,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 124650,
+    "name": "Carl Yastrzemski",
+    "inducted": 1989,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114182,
+    "name": "Carlton Fisk",
+    "inducted": 2000,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 111153,
+    "name": "Wade Boggs",
+    "inducted": 2005,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 121140,
+    "name": "Jim Rice",
+    "inducted": 2009,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 118377,
+    "name": "Pedro Mart\u00ednez",
+    "inducted": 2015,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 120074,
+    "name": "David Ortiz",
+    "inducted": 2022,
+    "pos": "DH",
+    "note": null
+   }
+  ]
+ },
+ "112": {
+  "ballparks": [
+   {
+    "id": 3169,
+    "from": 1901,
+    "to": 1915,
+    "name": "West Side Park",
+    "aka": []
+   },
+   {
+    "id": 17,
+    "from": 1916,
+    "to": 2026,
+    "name": "Wrigley Field",
+    "aka": [
+     "Weeghman Park",
+     "Cubs Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1935,
+    "id": 115572,
+    "name": "Gabby Hartnett"
+   },
+   {
+    "award": "MVP",
+    "season": 1945,
+    "id": 112146,
+    "name": "Phil Cavarretta"
+   },
+   {
+    "award": "MVP",
+    "season": 1952,
+    "id": 121710,
+    "name": "Hank Sauer"
+   },
+   {
+    "award": "MVP",
+    "season": 1958,
+    "id": 110533,
+    "name": "Ernie Banks"
+   },
+   {
+    "award": "MVP",
+    "season": 1959,
+    "id": 110533,
+    "name": "Ernie Banks"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1961,
+    "id": 124290,
+    "name": "Billy Williams"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1962,
+    "id": 116251,
+    "name": "Ken Hubbs"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1971,
+    "id": 116522,
+    "name": "Fergie Jenkins"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1979,
+    "id": 123004,
+    "name": "Bruce Sutter"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1984,
+    "id": 122996,
+    "name": "Rick Sutcliffe"
+   },
+   {
+    "award": "MVP",
+    "season": 1984,
+    "id": 121665,
+    "name": "Ryne Sandberg"
+   },
+   {
+    "award": "MVP",
+    "season": 1987,
+    "id": 113151,
+    "name": "Andre Dawson"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1989,
+    "id": 123901,
+    "name": "Jerome Walton"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1992,
+    "id": 118120,
+    "name": "Greg Maddux"
+   },
+   {
+    "award": "MVP",
+    "season": 1998,
+    "id": 122544,
+    "name": "Sammy Sosa"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1998,
+    "id": 134268,
+    "name": "Kerry Wood"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2008,
+    "id": 434567,
+    "name": "Geovany Soto"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2015,
+    "id": 453562,
+    "name": "Jake Arrieta"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2015,
+    "id": 592178,
+    "name": "Kris Bryant"
+   },
+   {
+    "award": "MVP",
+    "season": 2016,
+    "id": 592178,
+    "name": "Kris Bryant"
+   },
+   {
+    "award": "MVP",
+    "season": 2026,
+    "id": 691718,
+    "name": "Pete Crow-Armstrong"
+   }
+  ],
+  "hof": [
+   {
+    "id": 110284,
+    "name": "Cap Anson",
+    "inducted": 1939,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 116953,
+    "name": "King Kelly",
+    "inducted": 1945,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 112183,
+    "name": "Frank Chance",
+    "inducted": 1946,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 123353,
+    "name": "Joe Tinker",
+    "inducted": 1946,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 113949,
+    "name": "Johnny Evers",
+    "inducted": 1946,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 111577,
+    "name": "Mordecai Brown",
+    "inducted": 1949,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 115572,
+    "name": "Gabby Hartnett",
+    "inducted": 1955,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 112979,
+    "name": "Kiki Cuyler",
+    "inducted": 1968,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 115809,
+    "name": "Billy Herman",
+    "inducted": 1975,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 110533,
+    "name": "Ernie Banks",
+    "inducted": 1977,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 124412,
+    "name": "Hack Wilson",
+    "inducted": 1979,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 124290,
+    "name": "Billy Williams",
+    "inducted": 1987,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116522,
+    "name": "Fergie Jenkins",
+    "inducted": 1991,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 121665,
+    "name": "Ryne Sandberg",
+    "inducted": 2005,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 121697,
+    "name": "Ron Santo",
+    "inducted": 2012,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 122426,
+    "name": "Lee Smith",
+    "inducted": 2019,
+    "pos": "P",
+    "note": "Veterans Committee Inductee"
+   }
+  ]
+ },
+ "113": {
+  "ballparks": [
+   {
+    "id": 3160,
+    "from": 1901,
+    "to": 1901,
+    "name": "League Park",
+    "aka": []
+   },
+   {
+    "id": 3138,
+    "from": 1902,
+    "to": 1911,
+    "name": "Palace of the Fans",
+    "aka": []
+   },
+   {
+    "id": 3120,
+    "from": 1912,
+    "to": 1969,
+    "name": "Crosley Field",
+    "aka": [
+     "Redland Field"
+    ]
+   },
+   {
+    "id": 18,
+    "from": 1970,
+    "to": 2002,
+    "name": "Riverfront Stadium",
+    "aka": [
+     "Cinergy Field"
+    ]
+   },
+   {
+    "id": 2602,
+    "from": 2003,
+    "to": 2026,
+    "name": "Great American Ball Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1938,
+    "id": 117880,
+    "name": "Ernie Lombardi"
+   },
+   {
+    "award": "MVP",
+    "season": 1939,
+    "id": 123898,
+    "name": "Bucky Walters"
+   },
+   {
+    "award": "MVP",
+    "season": 1940,
+    "id": 118593,
+    "name": "Frank McCormick"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1956,
+    "id": 121311,
+    "name": "Frank Robinson"
+   },
+   {
+    "award": "MVP",
+    "season": 1961,
+    "id": 121311,
+    "name": "Frank Robinson"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1963,
+    "id": 121454,
+    "name": "Pete Rose"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1966,
+    "id": 115731,
+    "name": "Tommy Helms"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1968,
+    "id": 110849,
+    "name": "Johnny Bench"
+   },
+   {
+    "award": "MVP",
+    "season": 1970,
+    "id": 110849,
+    "name": "Johnny Bench"
+   },
+   {
+    "award": "MVP",
+    "season": 1972,
+    "id": 110849,
+    "name": "Johnny Bench"
+   },
+   {
+    "award": "MVP",
+    "season": 1973,
+    "id": 121454,
+    "name": "Pete Rose"
+   },
+   {
+    "award": "MVP",
+    "season": 1975,
+    "id": 119371,
+    "name": "Joe Morgan"
+   },
+   {
+    "award": "MVP",
+    "season": 1976,
+    "id": 119371,
+    "name": "Joe Morgan"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1976,
+    "id": 124732,
+    "name": "Pat Zachry"
+   },
+   {
+    "award": "MVP",
+    "season": 1977,
+    "id": 114333,
+    "name": "George Foster"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1988,
+    "id": 121606,
+    "name": "Chris Sabo"
+   },
+   {
+    "award": "MVP",
+    "season": 1995,
+    "id": 117501,
+    "name": "Barry Larkin"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1999,
+    "id": 150182,
+    "name": "Scott Williamson"
+   },
+   {
+    "award": "MVP",
+    "season": 2010,
+    "id": 458015,
+    "name": "Joey Votto"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2020,
+    "id": 545333,
+    "name": "Trevor Bauer"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2021,
+    "id": 663697,
+    "name": "Jonathan India"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2026,
+    "id": 701398,
+    "name": "Sal Stewart"
+   }
+  ],
+  "hof": [
+   {
+    "id": 118766,
+    "name": "Bill McKechnie",
+    "inducted": 1962,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 121497,
+    "name": "Edd Roush",
+    "inducted": 1962,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121255,
+    "name": "Eppa Rixey",
+    "inducted": 1963,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 117880,
+    "name": "Ernie Lombardi",
+    "inducted": 1986,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 110849,
+    "name": "Johnny Bench",
+    "inducted": 1989,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 119371,
+    "name": "Joe Morgan",
+    "inducted": 1990,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 118860,
+    "name": "Bid McPhee",
+    "inducted": 2000,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 110238,
+    "name": "Sparky Anderson",
+    "inducted": 2000,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 120404,
+    "name": "Tony Perez",
+    "inducted": 2000,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 117501,
+    "name": "Barry Larkin",
+    "inducted": 2012,
+    "pos": "SS",
+    "note": null
+   }
+  ]
+ },
+ "114": {
+  "ballparks": [
+   {
+    "id": 3131,
+    "from": 1901,
+    "to": 1931,
+    "name": "League Park",
+    "aka": [
+     "Dunn Field"
+    ]
+   },
+   {
+    "id": 3116,
+    "from": 1932,
+    "to": 1993,
+    "name": "Cleveland Municipal Stadium",
+    "aka": []
+   },
+   {
+    "id": 5,
+    "from": 1994,
+    "to": 2026,
+    "name": "Progressive Field",
+    "aka": [
+     "Jacobs Field"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1948,
+    "id": 111272,
+    "name": "Lou Boudreau"
+   },
+   {
+    "award": "MVP",
+    "season": 1953,
+    "id": 121461,
+    "name": "Al Rosen"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1955,
+    "id": 121923,
+    "name": "Herb Score"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1971,
+    "id": 112180,
+    "name": "Chris Chambliss"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1972,
+    "id": 120438,
+    "name": "Gaylord Perry"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1980,
+    "id": 112210,
+    "name": "Joe Charboneau"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1990,
+    "id": 110184,
+    "name": "Sandy Alomar Jr."
+   },
+   {
+    "award": "Cy Young",
+    "season": 2007,
+    "id": 282332,
+    "name": "CC Sabathia"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2008,
+    "id": 424324,
+    "name": "Cliff Lee"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2014,
+    "id": 446372,
+    "name": "Corey Kluber"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2017,
+    "id": 446372,
+    "name": "Corey Kluber"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2020,
+    "id": 669456,
+    "name": "Shane Bieber"
+   }
+  ],
+  "hof": [
+   {
+    "id": 124692,
+    "name": "Cy Young",
+    "inducted": 1937,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 117414,
+    "name": "Nap Lajoie",
+    "inducted": 1937,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 122566,
+    "name": "Tristram Speaker",
+    "inducted": 1937,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 114055,
+    "name": "Bob Feller",
+    "inducted": 1962,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 114241,
+    "name": "Elmer Flick",
+    "inducted": 1963,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 112743,
+    "name": "Stan Coveleski",
+    "inducted": 1969,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 111272,
+    "name": "Lou Boudreau",
+    "inducted": 1970,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 124633,
+    "name": "Early Wynn",
+    "inducted": 1972,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 110396,
+    "name": "Earl Averill Sr.",
+    "inducted": 1975,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 117671,
+    "name": "Bob Lemon",
+    "inducted": 1976,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 117914,
+    "name": "Al Lopez",
+    "inducted": 1977,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 122023,
+    "name": "Joe Sewell",
+    "inducted": 1977,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 116772,
+    "name": "Addie Joss",
+    "inducted": 1978,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 113411,
+    "name": "Larry Doby",
+    "inducted": 1998,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 123272,
+    "name": "Jim Thome",
+    "inducted": 2018,
+    "pos": "1B",
+    "note": null
+   }
+  ]
+ },
+ "115": {
+  "ballparks": [
+   {
+    "id": 3136,
+    "from": 1992,
+    "to": 1994,
+    "name": "Mile High Stadium",
+    "aka": []
+   },
+   {
+    "id": 19,
+    "from": 1995,
+    "to": 2026,
+    "name": "Coors Field",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1997,
+    "id": 123833,
+    "name": "Larry Walker"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2002,
+    "id": 407298,
+    "name": "Jason Jennings"
+   }
+  ],
+  "hof": [
+   {
+    "id": 123833,
+    "name": "Larry Walker",
+    "inducted": 2020,
+    "pos": "RF",
+    "note": null
+   },
+   {
+    "id": 115732,
+    "name": "Todd Helton",
+    "inducted": 2024,
+    "pos": "1B",
+    "note": null
+   }
+  ]
+ },
+ "116": {
+  "ballparks": [
+   {
+    "id": 3114,
+    "from": 1901,
+    "to": 1911,
+    "name": "Bennett Park",
+    "aka": []
+   },
+   {
+    "id": 6,
+    "from": 1912,
+    "to": 1999,
+    "name": "Tiger Stadium",
+    "aka": [
+     "Navin Field",
+     "Briggs Stadium"
+    ]
+   },
+   {
+    "id": 2394,
+    "from": 2000,
+    "to": 2026,
+    "name": "Comerica Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1934,
+    "id": 112437,
+    "name": "Mickey Cochrane"
+   },
+   {
+    "award": "MVP",
+    "season": 1935,
+    "id": 115096,
+    "name": "Hank Greenberg"
+   },
+   {
+    "award": "MVP",
+    "season": 1937,
+    "id": 114682,
+    "name": "Charlie Gehringer"
+   },
+   {
+    "award": "MVP",
+    "season": 1940,
+    "id": 115096,
+    "name": "Hank Greenberg"
+   },
+   {
+    "award": "MVP",
+    "season": 1944,
+    "id": 119739,
+    "name": "Hal Newhouser"
+   },
+   {
+    "award": "MVP",
+    "season": 1945,
+    "id": 119739,
+    "name": "Hal Newhouser"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1953,
+    "id": 117354,
+    "name": "Harvey Kuenn"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1968,
+    "id": 118787,
+    "name": "Denny McLain"
+   },
+   {
+    "award": "MVP",
+    "season": 1968,
+    "id": 118787,
+    "name": "Denny McLain"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1969,
+    "id": 118787,
+    "name": "Denny McLain"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1976,
+    "id": 114102,
+    "name": "Mark Fidrych"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1978,
+    "id": 124154,
+    "name": "Lou Whitaker"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1984,
+    "id": 115822,
+    "name": "Willie Hernandez"
+   },
+   {
+    "award": "MVP",
+    "season": 1984,
+    "id": 115822,
+    "name": "Willie Hernandez"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2006,
+    "id": 434378,
+    "name": "Justin Verlander"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2011,
+    "id": 434378,
+    "name": "Justin Verlander"
+   },
+   {
+    "award": "MVP",
+    "season": 2011,
+    "id": 434378,
+    "name": "Justin Verlander"
+   },
+   {
+    "award": "MVP",
+    "season": 2012,
+    "id": 408234,
+    "name": "Miguel Cabrera"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2013,
+    "id": 453286,
+    "name": "Max Scherzer"
+   },
+   {
+    "award": "MVP",
+    "season": 2013,
+    "id": 408234,
+    "name": "Miguel Cabrera"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2016,
+    "id": 605242,
+    "name": "Michael Fulmer"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2024,
+    "id": 669373,
+    "name": "Tarik Skubal"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2025,
+    "id": 669373,
+    "name": "Tarik Skubal"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2026,
+    "id": 805808,
+    "name": "Kevin McGonigle"
+   }
+  ],
+  "hof": [
+   {
+    "id": 112431,
+    "name": "Ty Cobb",
+    "inducted": 1936,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116528,
+    "name": "Hughie Jennings",
+    "inducted": 1945,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 112437,
+    "name": "Mickey Cochrane",
+    "inducted": 1947,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 114682,
+    "name": "Charlie Gehringer",
+    "inducted": 1949,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 115705,
+    "name": "Harry Heilmann",
+    "inducted": 1952,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 115096,
+    "name": "Hank Greenberg",
+    "inducted": 1956,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 112806,
+    "name": "Sam Crawford",
+    "inducted": 1957,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 118265,
+    "name": "Heinie Manush",
+    "inducted": 1964,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116822,
+    "name": "Al Kaline",
+    "inducted": 1980,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 116913,
+    "name": "George Kell",
+    "inducted": 1983,
+    "pos": "3B",
+    "note": null
+   },
+   {
+    "id": 119739,
+    "name": "Hal Newhouser",
+    "inducted": 1992,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 123437,
+    "name": "Alan Trammell",
+    "inducted": 2018,
+    "pos": "SS",
+    "note": "Veterans Committee Inductee"
+   },
+   {
+    "id": 119399,
+    "name": "Jack Morris",
+    "inducted": 2018,
+    "pos": "P",
+    "note": "Veterans Committee Inductee"
+   }
+  ]
+ },
+ "117": {
+  "ballparks": [
+   {
+    "id": 3117,
+    "from": 1962,
+    "to": 1964,
+    "name": "Colt Stadium",
+    "aka": []
+   },
+   {
+    "id": 21,
+    "from": 1965,
+    "to": 1999,
+    "name": "Astrodome",
+    "aka": []
+   },
+   {
+    "id": 2392,
+    "from": 2000,
+    "to": 2026,
+    "name": "Daikin Park",
+    "aka": [
+     "Enron Field",
+     "Astros Field",
+     "Minute Maid Park"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Cy Young",
+    "season": 1986,
+    "id": 121941,
+    "name": "Mike Scott"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1991,
+    "id": 110432,
+    "name": "Jeff Bagwell"
+   },
+   {
+    "award": "MVP",
+    "season": 1994,
+    "id": 110432,
+    "name": "Jeff Bagwell"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2004,
+    "id": 112388,
+    "name": "Roger Clemens"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2015,
+    "id": 572971,
+    "name": "Dallas Keuchel"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2015,
+    "id": 621043,
+    "name": "Carlos Correa"
+   },
+   {
+    "award": "MVP",
+    "season": 2017,
+    "id": 514888,
+    "name": "Jose Altuve"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2019,
+    "id": 434378,
+    "name": "Justin Verlander"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2019,
+    "id": 670541,
+    "name": "Yordan Alvarez"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2022,
+    "id": 434378,
+    "name": "Justin Verlander"
+   },
+   {
+    "award": "MVP",
+    "season": 2026,
+    "id": 670541,
+    "name": "Yordan Alvarez"
+   }
+  ],
+  "hof": [
+   {
+    "id": 110987,
+    "name": "Craig Biggio",
+    "inducted": 2015,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 110432,
+    "name": "Jeff Bagwell",
+    "inducted": 2017,
+    "pos": "1B",
+    "note": null
+   },
+   {
+    "id": 123790,
+    "name": "Billy Wagner",
+    "inducted": 2025,
+    "pos": "RP",
+    "note": null
+   }
+  ]
+ },
+ "118": {
+  "ballparks": [
+   {
+    "id": 3137,
+    "from": 1968,
+    "to": 1972,
+    "name": "Municipal Stadium",
+    "aka": []
+   },
+   {
+    "id": 7,
+    "from": 1973,
+    "to": 2026,
+    "name": "Kauffman Stadium",
+    "aka": [
+     "Royals Stadium"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1969,
+    "id": 120586,
+    "name": "Lou Piniella"
+   },
+   {
+    "award": "MVP",
+    "season": 1980,
+    "id": 111437,
+    "name": "George Brett"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1985,
+    "id": 121604,
+    "name": "Bret Saberhagen"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1989,
+    "id": 121604,
+    "name": "Bret Saberhagen"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1994,
+    "id": 112552,
+    "name": "David Cone"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1994,
+    "id": 115376,
+    "name": "Bob Hamelin"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1999,
+    "id": 136860,
+    "name": "Carlos Beltr\u00e1n"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2003,
+    "id": 407556,
+    "name": "Angel Berroa"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2009,
+    "id": 425844,
+    "name": "Zack Greinke"
+   }
+  ],
+  "hof": [
+   {
+    "id": 111437,
+    "name": "George Brett",
+    "inducted": 1999,
+    "pos": "3B",
+    "note": null
+   }
+  ]
+ },
+ "119": {
+  "ballparks": [
+   {
+    "id": 3150,
+    "from": 1901,
+    "to": 1912,
+    "name": "Washington Park",
+    "aka": []
+   },
+   {
+    "id": 3121,
+    "from": 1913,
+    "to": 1957,
+    "name": "Ebbets Field",
+    "aka": []
+   },
+   {
+    "id": 3133,
+    "from": 1958,
+    "to": 1961,
+    "name": "Los Angeles Memorial Coliseum",
+    "aka": []
+   },
+   {
+    "id": 22,
+    "from": 1962,
+    "to": 2026,
+    "name": "UNIQLO Field at Dodger Stadium",
+    "aka": [
+     "Dodger Stadium"
+    ]
+   }
+  ],
+  "awards": [
+   {
+    "award": "MVP",
+    "season": 1941,
+    "id": 111905,
+    "name": "Dolph Camilli"
+   },
+   {
+    "award": "MVP",
+    "season": 1949,
+    "id": 121314,
+    "name": "Jackie Robinson"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1949,
+    "id": 119733,
+    "name": "Don Newcombe"
+   },
+   {
+    "award": "MVP",
+    "season": 1951,
+    "id": 111915,
+    "name": "Roy Campanella"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1952,
+    "id": 111037,
+    "name": "Joe Black"
+   },
+   {
+    "award": "MVP",
+    "season": 1953,
+    "id": 111915,
+    "name": "Roy Campanella"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1953,
+    "id": 114810,
+    "name": "Jim Gilliam"
+   },
+   {
+    "award": "MVP",
+    "season": 1955,
+    "id": 111915,
+    "name": "Roy Campanella"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1956,
+    "id": 119733,
+    "name": "Don Newcombe"
+   },
+   {
+    "award": "MVP",
+    "season": 1956,
+    "id": 119733,
+    "name": "Don Newcombe"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1960,
+    "id": 116205,
+    "name": "Frank Howard"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1962,
+    "id": 113581,
+    "name": "Don Drysdale"
+   },
+   {
+    "award": "MVP",
+    "season": 1962,
+    "id": 124371,
+    "name": "Maury Wills"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1963,
+    "id": 117277,
+    "name": "Sandy Koufax"
+   },
+   {
+    "award": "MVP",
+    "season": 1963,
+    "id": 117277,
+    "name": "Sandy Koufax"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1965,
+    "id": 117277,
+    "name": "Sandy Koufax"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1965,
+    "id": 117624,
+    "name": "Jim Lefebvre"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1966,
+    "id": 117277,
+    "name": "Sandy Koufax"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1969,
+    "id": 122287,
+    "name": "Ted Sizemore"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1974,
+    "id": 118320,
+    "name": "Mike Marshall"
+   },
+   {
+    "award": "MVP",
+    "season": 1974,
+    "id": 114641,
+    "name": "Steve Garvey"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1979,
+    "id": 122996,
+    "name": "Rick Sutcliffe"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1980,
+    "id": 116222,
+    "name": "Steve Howe"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1981,
+    "id": 123619,
+    "name": "Fernando Valenzuela"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1981,
+    "id": 123619,
+    "name": "Fernando Valenzuela"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1982,
+    "id": 121732,
+    "name": "Steve Sax"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1988,
+    "id": 115861,
+    "name": "Orel Hershiser"
+   },
+   {
+    "award": "MVP",
+    "season": 1988,
+    "id": 114752,
+    "name": "Kirk Gibson"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1992,
+    "id": 116852,
+    "name": "Eric Karros"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1993,
+    "id": 120536,
+    "name": "Mike Piazza"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1994,
+    "id": 119247,
+    "name": "Ra\u00fal Mondesi"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1995,
+    "id": 119827,
+    "name": "Hideo Nomo"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1996,
+    "id": 116075,
+    "name": "Todd Hollandsworth"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2003,
+    "id": 150378,
+    "name": "Eric Gagne"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2011,
+    "id": 477132,
+    "name": "Clayton Kershaw"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2013,
+    "id": 477132,
+    "name": "Clayton Kershaw"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2014,
+    "id": 477132,
+    "name": "Clayton Kershaw"
+   },
+   {
+    "award": "MVP",
+    "season": 2014,
+    "id": 477132,
+    "name": "Clayton Kershaw"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2016,
+    "id": 608369,
+    "name": "Corey Seager"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2017,
+    "id": 641355,
+    "name": "Cody Bellinger"
+   },
+   {
+    "award": "MVP",
+    "season": 2019,
+    "id": 641355,
+    "name": "Cody Bellinger"
+   },
+   {
+    "award": "MVP",
+    "season": 2024,
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   },
+   {
+    "award": "MVP",
+    "season": 2025,
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   }
+  ],
+  "hof": [
+   {
+    "id": 116891,
+    "name": "Willie Keeler",
+    "inducted": 1939,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121322,
+    "name": "Wilbert Robinson",
+    "inducted": 1945,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 123630,
+    "name": "Dazzy Vance",
+    "inducted": 1955,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 124134,
+    "name": "Zack Wheat",
+    "inducted": 1959,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 121314,
+    "name": "Jackie Robinson",
+    "inducted": 1962,
+    "pos": "2B",
+    "note": null
+   },
+   {
+    "id": 115162,
+    "name": "Burleigh Grimes",
+    "inducted": 1964,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 111915,
+    "name": "Roy Campanella",
+    "inducted": 1969,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 117277,
+    "name": "Sandy Koufax",
+    "inducted": 1972,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 122488,
+    "name": "Duke Snider",
+    "inducted": 1980,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 110193,
+    "name": "Walter Alston",
+    "inducted": 1983,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 113581,
+    "name": "Don Drysdale",
+    "inducted": 1984,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 121010,
+    "name": "Pee Wee Reese",
+    "inducted": 1984,
+    "pos": "SS",
+    "note": null
+   },
+   {
+    "id": 113664,
+    "name": "Leo Durocher",
+    "inducted": 1994,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 117524,
+    "name": "Tommy Lasorda",
+    "inducted": 1997,
+    "pos": "X",
+    "note": null
+   },
+   {
+    "id": 123006,
+    "name": "Don Sutton",
+    "inducted": 1998,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 116008,
+    "name": "Gil Hodges",
+    "inducted": 2021,
+    "pos": "1B",
+    "note": null
+   }
+  ]
+ },
+ "120": {
+  "ballparks": [
+   {
+    "id": 3129,
+    "from": 1968,
+    "to": 1976,
+    "name": "Jarry Park",
+    "aka": []
+   },
+   {
+    "id": 24,
+    "from": 1977,
+    "to": 2004,
+    "name": "Olympic Stadium",
+    "aka": []
+   },
+   {
+    "id": 2721,
+    "from": 2005,
+    "to": 2007,
+    "name": "Robert F. Kennedy Memorial Stadium",
+    "aka": []
+   },
+   {
+    "id": 3309,
+    "from": 2008,
+    "to": 2026,
+    "name": "Nationals Park",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1970,
+    "id": 119423,
+    "name": "Carl Morton"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1977,
+    "id": 113151,
+    "name": "Andre Dawson"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1997,
+    "id": 118377,
+    "name": "Pedro Mart\u00ednez"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2012,
+    "id": 547180,
+    "name": "Bryce Harper"
+   },
+   {
+    "award": "MVP",
+    "season": 2015,
+    "id": 547180,
+    "name": "Bryce Harper"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2016,
+    "id": 453286,
+    "name": "Max Scherzer"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2017,
+    "id": 453286,
+    "name": "Max Scherzer"
+   }
+  ],
+  "hof": [
+   {
+    "id": 112061,
+    "name": "Gary Carter",
+    "inducted": 2003,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 113151,
+    "name": "Andre Dawson",
+    "inducted": 2010,
+    "pos": "OF",
+    "note": null
+   },
+   {
+    "id": 120891,
+    "name": "Tim Raines Sr.",
+    "inducted": 2017,
+    "pos": "LF",
+    "note": null
+   }
+  ]
+ },
+ "121": {
+  "ballparks": [
+   {
+    "id": 3140,
+    "from": 1962,
+    "to": 1963,
+    "name": "Polo Grounds",
+    "aka": []
+   },
+   {
+    "id": 25,
+    "from": 1964,
+    "to": 2008,
+    "name": "Shea Stadium",
+    "aka": []
+   },
+   {
+    "id": 3289,
+    "from": 2009,
+    "to": 2026,
+    "name": "Citi Field",
+    "aka": []
+   }
+  ],
+  "awards": [
+   {
+    "award": "Rookie of the Year",
+    "season": 1967,
+    "id": 121961,
+    "name": "Tom Seaver"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1969,
+    "id": 121961,
+    "name": "Tom Seaver"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1972,
+    "id": 118428,
+    "name": "Jon Matlack"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1973,
+    "id": 121961,
+    "name": "Tom Seaver"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1975,
+    "id": 121961,
+    "name": "Tom Seaver"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1983,
+    "id": 122864,
+    "name": "Darryl Strawberry"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 1984,
+    "id": 114947,
+    "name": "Dwight Gooden"
+   },
+   {
+    "award": "Cy Young",
+    "season": 1985,
+    "id": 114947,
+    "name": "Dwight Gooden"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2012,
+    "id": 285079,
+    "name": "R.A. Dickey"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2014,
+    "id": 594798,
+    "name": "Jacob deGrom"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2018,
+    "id": 594798,
+    "name": "Jacob deGrom"
+   },
+   {
+    "award": "Cy Young",
+    "season": 2019,
+    "id": 594798,
+    "name": "Jacob deGrom"
+   },
+   {
+    "award": "Rookie of the Year",
+    "season": 2019,
+    "id": 624413,
+    "name": "Pete Alonso"
+   }
+  ],
+  "hof": [
+   {
+    "id": 121961,
+    "name": "Tom Seaver",
+    "inducted": 1992,
+    "pos": "P",
+    "note": null
+   },
+   {
+    "id": 120536,
+    "name": "Mike Piazza",
+    "inducted": 2016,
+    "pos": "C",
+    "note": null
+   },
+   {
+    "id": 136860,
+    "name": "Carlos Beltr\u00e1n",
+    "inducted": 2026,
+    "pos": "OF",
+    "note": null
+   }
+  ]
+ }
+}

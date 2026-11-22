@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dugout Time Machine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Rye&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23fbf6e8' stroke='%232a2118' stroke-width='2'/%3E%3Cpath d='M9 5c4 6 4 16 0 22M23 5c-4 6-4 16 0 22' fill='none' stroke='%23a3302a' stroke-width='2' stroke-dasharray='2 2'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bunting" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <span>★ Est. 1876 ★</span>
+      <span class="hide-sm">The National Pastime</span>
+      <span>★ Vol. II ★</span>
+    </div>
+    <h1>Dugout Time Machine</h1>
+    <p class="masthead-sub">A Franchise Almanac of the Grand Old Game</p>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="franchise" role="tab">The Franchise</button>
+      <button class="tab" data-view="league" role="tab">The League</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="roster-board">
+      <h2 class="board-title"><span>Choose Your Ball Club</span></h2>
+      <div id="picker" class="picker" aria-label="Pick a team"></div>
+    </section>
+
+    <!-- ================= FRANCHISE ================= -->
+    <section id="view-franchise" class="view">
+      <div id="franchise-empty" class="empty">
+        <p class="empty-big">Step right up!</p>
+        <p>Pick a ball club above to open its almanac: every season, its legends, its ballparks and its brightest days.</p>
+      </div>
+
+      <div id="franchise" hidden>
+        <!-- Title page -->
+        <section class="title-page">
+          <div class="title-left">
+            <div class="pennant" id="pennant">
+              <img id="hero-logo" alt="" />
+              <span id="pennant-name"></span>
+            </div>
+            <h2 id="hero-name"></h2>
+            <p id="hero-sub" class="hero-sub"></p>
+            <div class="hero-actions">
+              <button id="btn-random" class="btn">Pick a Random Season</button>
+              <button id="btn-game" class="btn btn-red">Play “Guess the Year”</button>
+            </div>
+          </div>
+          <figure id="hero-photo" class="photo-frame hero-photo" hidden>
+            <img alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </section>
+
+        <div class="scoreboard" id="scoreboard"></div>
+
+        <nav class="contents" id="contents" aria-label="Contents"></nav>
+
+        <!-- The Ledger -->
+        <section class="sheet" id="sec-ledger">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the First</span>
+            <h3>The Ledger, Season by Season</h3>
+          </header>
+          <div class="ledger-key">
+            <span><i class="sw sw-up"></i>Winning season</span>
+            <span><i class="sw sw-down"></i>Losing season</span>
+            <span><i class="sw sw-pennant"></i>Pennant</span>
+            <span><i class="sw sw-champ"></i>World Champions ★</span>
+            <span><i class="sw sw-photo"></i>Photo in the scrapbook</span>
+          </div>
+          <div class="timeline-wrap">
+            <svg id="timeline" role="img" aria-label="Win percentage by season"></svg>
+            <div id="tooltip" class="tooltip" hidden></div>
+          </div>
+          <p class="fineprint">Bars show distance from .500. The bands underneath show the club's name and its home ballpark. Click any season to read that year's newspaper.</p>
+        </section>
+
+        <!-- Newspaper (season) -->
+        <article id="season" class="newspaper" hidden></article>
+
+        <!-- Chapters -->
+        <section class="sheet" id="sec-chapters">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the Second</span>
+            <h3>Turning Points &amp; Tall Tales</h3>
+            <p class="sheet-lede">The great stretches, the lean years, and the long waits. Click one to see it on the ledger.</p>
+          </header>
+          <div id="chapters" class="chapters"></div>
+        </section>
+
+        <!-- Legends -->
+        <section class="sheet" id="sec-legends">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the Third</span>
+            <h3>Franchise Legends</h3>
+            <p class="sheet-lede">The five most valuable players in club history. Hover a card to see their era on the ledger, or click it to read the paper from their finest season.</p>
+          </header>
+          <div id="legends" class="legends"></div>
+          <details class="how">
+            <summary>How are these ranked?</summary>
+            <p>
+              “Legend value” is a WAR-style estimate built from every season each player spent with this franchise.
+              Hitters earn batting runs above an average hitter that season (walks, singles, doubles, triples and homers, each weighted),
+              plus a position adjustment and credit for playing time. Pitchers earn credit for runs allowed per nine innings against that season's league.
+              Everything is scaled to its own era, so a 1908 ace and a 2008 ace compete fairly. It ignores defense and ballparks,
+              so treat it as a parlor estimate, not official WAR.
+            </p>
+          </details>
+        </section>
+
+        <!-- Hall of Fame -->
+        <section class="sheet" id="sec-hof">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the Fourth</span>
+            <h3>In Cooperstown</h3>
+            <p class="sheet-lede" id="hof-lede"></p>
+          </header>
+          <div id="hof" class="plaques"></div>
+          <button id="hof-more" class="btn btn-small" hidden></button>
+        </section>
+
+        <!-- Trophy case -->
+        <section class="sheet" id="sec-trophies">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the Fifth</span>
+            <h3>The Trophy Case</h3>
+            <p class="sheet-lede">Most Valuable Players, Cy Young winners and Rookies of the Year in club colors. Click a year to open that season.</p>
+          </header>
+          <div id="trophies" class="trophies"></div>
+        </section>
+
+        <!-- Home fields -->
+        <section class="sheet" id="sec-parks">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the Sixth</span>
+            <h3>Home Fields</h3>
+            <p class="sheet-lede">Every ballpark this club has called home.</p>
+          </header>
+          <div id="parks" class="tickets"></div>
+        </section>
+
+        <!-- Scrapbook -->
+        <section class="sheet" id="sec-scrapbook">
+          <header class="sheet-head">
+            <span class="kicker">Chapter the Seventh</span>
+            <h3>The Scrapbook</h3>
+            <p class="sheet-lede">Old ballparks, pennant winners and famous moments, from the public-domain archives. Click a photo to enlarge it.</p>
+          </header>
+          <div id="archive" class="scrapbook"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ================= LEAGUE ================= -->
+    <section id="view-league" class="view" hidden>
+      <section class="sheet">
+        <header class="sheet-head">
+          <span class="kicker">League Bulletin</span>
+          <h3>The Long Wait</h3>
+          <p class="sheet-lede">Years since each club last won the World Series.</p>
+        </header>
+        <div id="droughts" class="board"></div>
+      </section>
+      <section class="sheet">
+        <header class="sheet-head">
+          <span class="kicker">League Bulletin</span>
+          <h3>Wall of Champions</h3>
+          <p class="sheet-lede">Every World Series winner since 1903, shown with today's logos. Click a pennant to read that year's paper.</p>
+        </header>
+        <div id="wall" class="wall"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Game -->
+  <dialog id="game" class="modal game">
+    <button class="close" id="game-close" aria-label="Close">×</button>
+    <div id="game-body"></div>
+  </dialog>
+
+  <!-- Lightbox -->
+  <dialog id="lightbox" class="modal lightbox">
+    <button class="close" id="lb-close" aria-label="Close">×</button>
+    <div class="lb-photo"><img id="lb-img" alt="" /></div>
+    <div class="lb-text">
+      <h3 id="lb-title"></h3>
+      <p id="lb-cap"></p>
+      <div class="lb-actions">
+        <a id="lb-wiki" target="_blank" rel="noopener">Read the full story on Wikipedia</a>
+        <a id="lb-file" target="_blank" rel="noopener">Photo credit &amp; license</a>
+        <button id="lb-season" class="btn btn-red" hidden></button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="foot">
+    <div class="foot-rule">★ ★ ★</div>
+    Statistics: MLB Stats API (statsapi.mlb.com). Photographs: Wikimedia Commons, public domain or freely licensed, via Wikipedia.<br />
+    A fan's almanac. Not affiliated with Major League Baseball.
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

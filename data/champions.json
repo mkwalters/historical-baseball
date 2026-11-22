@@ -1,0 +1,1344 @@
+{
+"1903": {
+"winner": {
+"id": 111,
+"name": "Boston Americans"
+},
+"loser": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"result": "5-3"
+},
+"1905": {
+"winner": {
+"id": 137,
+"name": "New York Giants"
+},
+"loser": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"result": "4-1"
+},
+"1906": {
+"winner": {
+"id": 145,
+"name": "Chicago White Sox"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-2"
+},
+"1907": {
+"winner": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-0-1"
+},
+"1908": {
+"winner": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-1"
+},
+"1909": {
+"winner": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-3"
+},
+"1910": {
+"winner": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-1"
+},
+"1911": {
+"winner": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-2"
+},
+"1912": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-3-1"
+},
+"1913": {
+"winner": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-1"
+},
+"1914": {
+"winner": {
+"id": 144,
+"name": "Boston Braves"
+},
+"loser": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"result": "4-0"
+},
+"1915": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"result": "4-1"
+},
+"1916": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Robins"
+},
+"result": "4-1"
+},
+"1917": {
+"winner": {
+"id": 145,
+"name": "Chicago White Sox"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-2"
+},
+"1918": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-2"
+},
+"1919": {
+"winner": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"loser": {
+"id": 145,
+"name": "Chicago White Sox"
+},
+"result": "5-3"
+},
+"1920": {
+"winner": {
+"id": 114,
+"name": "Cleveland Indians"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Robins"
+},
+"result": "5-2"
+},
+"1921": {
+"winner": {
+"id": 137,
+"name": "New York Giants"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "5-3"
+},
+"1922": {
+"winner": {
+"id": 137,
+"name": "New York Giants"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-0-1"
+},
+"1923": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-2"
+},
+"1924": {
+"winner": {
+"id": 142,
+"name": "Washington Senators"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-3"
+},
+"1925": {
+"winner": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"loser": {
+"id": 142,
+"name": "Washington Senators"
+},
+"result": "4-3"
+},
+"1926": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-3"
+},
+"1927": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"result": "4-0"
+},
+"1928": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-0"
+},
+"1929": {
+"winner": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-1"
+},
+"1930": {
+"winner": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-2"
+},
+"1931": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 133,
+"name": "Philadelphia Athletics"
+},
+"result": "4-3"
+},
+"1932": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-0"
+},
+"1933": {
+"winner": {
+"id": 137,
+"name": "New York Giants"
+},
+"loser": {
+"id": 142,
+"name": "Washington Senators"
+},
+"result": "4-1"
+},
+"1934": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-3"
+},
+"1935": {
+"winner": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-2"
+},
+"1936": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-2"
+},
+"1937": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-1"
+},
+"1938": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-0"
+},
+"1939": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"result": "4-0"
+},
+"1940": {
+"winner": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-3"
+},
+"1941": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"result": "4-1"
+},
+"1942": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-1"
+},
+"1943": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-1"
+},
+"1944": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 110,
+"name": "St. Louis Browns"
+},
+"result": "4-2"
+},
+"1945": {
+"winner": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"loser": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"result": "4-3"
+},
+"1946": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"result": "4-3"
+},
+"1947": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"result": "4-3"
+},
+"1948": {
+"winner": {
+"id": 114,
+"name": "Cleveland Indians"
+},
+"loser": {
+"id": 144,
+"name": "Boston Braves"
+},
+"result": "4-2"
+},
+"1949": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"result": "4-1"
+},
+"1950": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"result": "4-0"
+},
+"1951": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 137,
+"name": "New York Giants"
+},
+"result": "4-2"
+},
+"1952": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"result": "4-3"
+},
+"1953": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"result": "4-2"
+},
+"1954": {
+"winner": {
+"id": 137,
+"name": "New York Giants"
+},
+"loser": {
+"id": 114,
+"name": "Cleveland Indians"
+},
+"result": "4-0"
+},
+"1955": {
+"winner": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-3"
+},
+"1956": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Brooklyn Dodgers"
+},
+"result": "4-3"
+},
+"1957": {
+"winner": {
+"id": 144,
+"name": "Milwaukee Braves"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-3"
+},
+"1958": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 144,
+"name": "Milwaukee Braves"
+},
+"result": "4-3"
+},
+"1959": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 145,
+"name": "Chicago White Sox"
+},
+"result": "4-2"
+},
+"1960": {
+"winner": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-3"
+},
+"1961": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"result": "4-1"
+},
+"1962": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 137,
+"name": "San Francisco Giants"
+},
+"result": "4-3"
+},
+"1963": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-0"
+},
+"1964": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-3"
+},
+"1965": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 142,
+"name": "Minnesota Twins"
+},
+"result": "4-3"
+},
+"1966": {
+"winner": {
+"id": 110,
+"name": "Baltimore Orioles"
+},
+"loser": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"result": "4-0"
+},
+"1967": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"result": "4-3"
+},
+"1968": {
+"winner": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-3"
+},
+"1969": {
+"winner": {
+"id": 121,
+"name": "New York Mets"
+},
+"loser": {
+"id": 110,
+"name": "Baltimore Orioles"
+},
+"result": "4-1"
+},
+"1970": {
+"winner": {
+"id": 110,
+"name": "Baltimore Orioles"
+},
+"loser": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"result": "4-1"
+},
+"1971": {
+"winner": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"loser": {
+"id": 110,
+"name": "Baltimore Orioles"
+},
+"result": "4-3"
+},
+"1972": {
+"winner": {
+"id": 133,
+"name": "Oakland Athletics"
+},
+"loser": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"result": "4-3"
+},
+"1973": {
+"winner": {
+"id": 133,
+"name": "Oakland Athletics"
+},
+"loser": {
+"id": 121,
+"name": "New York Mets"
+},
+"result": "4-3"
+},
+"1974": {
+"winner": {
+"id": 133,
+"name": "Oakland Athletics"
+},
+"loser": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"result": "4-1"
+},
+"1975": {
+"winner": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"loser": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"result": "4-3"
+},
+"1976": {
+"winner": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-0"
+},
+"1977": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"result": "4-2"
+},
+"1978": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"result": "4-2"
+},
+"1979": {
+"winner": {
+"id": 134,
+"name": "Pittsburgh Pirates"
+},
+"loser": {
+"id": 110,
+"name": "Baltimore Orioles"
+},
+"result": "4-3"
+},
+"1980": {
+"winner": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"loser": {
+"id": 118,
+"name": "Kansas City Royals"
+},
+"result": "4-2"
+},
+"1981": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-2"
+},
+"1982": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 158,
+"name": "Milwaukee Brewers"
+},
+"result": "4-3"
+},
+"1983": {
+"winner": {
+"id": 110,
+"name": "Baltimore Orioles"
+},
+"loser": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"result": "4-1"
+},
+"1984": {
+"winner": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"loser": {
+"id": 135,
+"name": "San Diego Padres"
+},
+"result": "4-1"
+},
+"1985": {
+"winner": {
+"id": 118,
+"name": "Kansas City Royals"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-3"
+},
+"1986": {
+"winner": {
+"id": 121,
+"name": "New York Mets"
+},
+"loser": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"result": "4-3"
+},
+"1987": {
+"winner": {
+"id": 142,
+"name": "Minnesota Twins"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-3"
+},
+"1988": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 133,
+"name": "Oakland Athletics"
+},
+"result": "4-1"
+},
+"1989": {
+"winner": {
+"id": 133,
+"name": "Oakland Athletics"
+},
+"loser": {
+"id": 137,
+"name": "San Francisco Giants"
+},
+"result": "4-0"
+},
+"1990": {
+"winner": {
+"id": 113,
+"name": "Cincinnati Reds"
+},
+"loser": {
+"id": 133,
+"name": "Oakland Athletics"
+},
+"result": "4-0"
+},
+"1991": {
+"winner": {
+"id": 142,
+"name": "Minnesota Twins"
+},
+"loser": {
+"id": 144,
+"name": "Atlanta Braves"
+},
+"result": "4-3"
+},
+"1992": {
+"winner": {
+"id": 141,
+"name": "Toronto Blue Jays"
+},
+"loser": {
+"id": 144,
+"name": "Atlanta Braves"
+},
+"result": "4-2"
+},
+"1993": {
+"winner": {
+"id": 141,
+"name": "Toronto Blue Jays"
+},
+"loser": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"result": "4-2"
+},
+"1995": {
+"winner": {
+"id": 144,
+"name": "Atlanta Braves"
+},
+"loser": {
+"id": 114,
+"name": "Cleveland Indians"
+},
+"result": "4-2"
+},
+"1996": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 144,
+"name": "Atlanta Braves"
+},
+"result": "4-2"
+},
+"1997": {
+"winner": {
+"id": 146,
+"name": "Florida Marlins"
+},
+"loser": {
+"id": 114,
+"name": "Cleveland Indians"
+},
+"result": "4-3"
+},
+"1998": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 135,
+"name": "San Diego Padres"
+},
+"result": "4-0"
+},
+"1999": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 144,
+"name": "Atlanta Braves"
+},
+"result": "4-0"
+},
+"2000": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 121,
+"name": "New York Mets"
+},
+"result": "4-1"
+},
+"2001": {
+"winner": {
+"id": 109,
+"name": "Arizona Diamondbacks"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-3"
+},
+"2002": {
+"winner": {
+"id": 108,
+"name": "Anaheim Angels"
+},
+"loser": {
+"id": 137,
+"name": "San Francisco Giants"
+},
+"result": "4-3"
+},
+"2003": {
+"winner": {
+"id": 146,
+"name": "Florida Marlins"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-2"
+},
+"2004": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-0"
+},
+"2005": {
+"winner": {
+"id": 145,
+"name": "Chicago White Sox"
+},
+"loser": {
+"id": 117,
+"name": "Houston Astros"
+},
+"result": "4-0"
+},
+"2006": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-1"
+},
+"2007": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 115,
+"name": "Colorado Rockies"
+},
+"result": "4-0"
+},
+"2008": {
+"winner": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"loser": {
+"id": 139,
+"name": "Tampa Bay Rays"
+},
+"result": "4-1"
+},
+"2009": {
+"winner": {
+"id": 147,
+"name": "New York Yankees"
+},
+"loser": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"result": "4-2"
+},
+"2010": {
+"winner": {
+"id": 137,
+"name": "San Francisco Giants"
+},
+"loser": {
+"id": 140,
+"name": "Texas Rangers"
+},
+"result": "4-1"
+},
+"2011": {
+"winner": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"loser": {
+"id": 140,
+"name": "Texas Rangers"
+},
+"result": "4-3"
+},
+"2012": {
+"winner": {
+"id": 137,
+"name": "San Francisco Giants"
+},
+"loser": {
+"id": 116,
+"name": "Detroit Tigers"
+},
+"result": "4-0"
+},
+"2013": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 138,
+"name": "St. Louis Cardinals"
+},
+"result": "4-2"
+},
+"2014": {
+"winner": {
+"id": 137,
+"name": "San Francisco Giants"
+},
+"loser": {
+"id": 118,
+"name": "Kansas City Royals"
+},
+"result": "4-3"
+},
+"2015": {
+"winner": {
+"id": 118,
+"name": "Kansas City Royals"
+},
+"loser": {
+"id": 121,
+"name": "New York Mets"
+},
+"result": "4-1"
+},
+"2016": {
+"winner": {
+"id": 112,
+"name": "Chicago Cubs"
+},
+"loser": {
+"id": 114,
+"name": "Cleveland Indians"
+},
+"result": "4-3"
+},
+"2017": {
+"winner": {
+"id": 117,
+"name": "Houston Astros"
+},
+"loser": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"result": "4-3"
+},
+"2018": {
+"winner": {
+"id": 111,
+"name": "Boston Red Sox"
+},
+"loser": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"result": "4-1"
+},
+"2019": {
+"winner": {
+"id": 120,
+"name": "Washington Nationals"
+},
+"loser": {
+"id": 117,
+"name": "Houston Astros"
+},
+"result": "4-3"
+},
+"2020": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 139,
+"name": "Tampa Bay Rays"
+},
+"result": "4-2"
+},
+"2021": {
+"winner": {
+"id": 144,
+"name": "Atlanta Braves"
+},
+"loser": {
+"id": 117,
+"name": "Houston Astros"
+},
+"result": "4-2"
+},
+"2022": {
+"winner": {
+"id": 117,
+"name": "Houston Astros"
+},
+"loser": {
+"id": 143,
+"name": "Philadelphia Phillies"
+},
+"result": "4-2"
+},
+"2023": {
+"winner": {
+"id": 140,
+"name": "Texas Rangers"
+},
+"loser": {
+"id": 109,
+"name": "Arizona Diamondbacks"
+},
+"result": "4-1"
+},
+"2024": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 147,
+"name": "New York Yankees"
+},
+"result": "4-1"
+},
+"2025": {
+"winner": {
+"id": 119,
+"name": "Los Angeles Dodgers"
+},
+"loser": {
+"id": 141,
+"name": "Toronto Blue Jays"
+},
+"result": "4-3"
+},
+"2026": {
+"winner": {
+"id": 158,
+"name": "Milwaukee Brewers"
+},
+"loser": {
+"id": 139,
+"name": "Tampa Bay Rays"
+},
+"result": "4-1"
+}
+}
