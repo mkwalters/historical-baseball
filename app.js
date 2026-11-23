@@ -1,4 +1,4 @@
-// Dugout Time Machine v3 — a franchise almanac. Vanilla JS + the public MLB Stats API.
+// The Grandstand Almanac v3 — a franchise almanac. Vanilla JS + the public MLB Stats API.
 const API = "https://statsapi.mlb.com/api/v1";
 
 // Bundle mode: when data/bundle/ exists (see scripts/bundle_artifact.mjs) the page runs fully offline,
@@ -78,7 +78,7 @@ async function get(path) {
 const state = {
   teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {},
   team: null, seasons: [], eras: [], parks: [], archive: [],
-  barW: 1, page: "cover", pages: [], decade: null,
+  barW: 1, page: "ledger", pages: [], decade: null,
 };
 
 async function init() {
@@ -96,12 +96,12 @@ async function init() {
   $$(".tab").forEach((b) => (b.onclick = () => showView(b.dataset.view)));
   $("#home-link").onclick = (e) => { e.preventDefault(); goHome(); };
   $("#prev").onclick = () => step(-1);
-  $("#next").onclick = () => (state.page === state.pages.at(-1) ? goPage("cover") : step(1));
+  $("#next").onclick = () => (state.page === state.pages.at(-1) ? goPage(state.pages[0]) : step(1));
   document.addEventListener("keydown", onKey);
 
   const params = new URLSearchParams(location.hash.slice(1));
   const teamId = +(params.get("team") || 0);
-  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId, params.get("page") || "cover");
+  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId, params.get("page") || "ledger");
   if (params.get("view") === "league") showView("league");
 }
 
@@ -138,7 +138,7 @@ function updateHash(view = "franchise") {
   const p = new URLSearchParams();
   if (state.team) p.set("team", state.team.id);
   if (view === "league") p.set("view", "league");
-  else if (state.team && state.page !== "cover") p.set("page", state.page);
+  else if (state.team && state.page !== state.pages[0]) p.set("page", state.page);
   try { history.replaceState(null, "", "#" + p.toString()); } catch {}
 }
 
@@ -152,25 +152,16 @@ function setupPages() {
   state.pages = $$(".page").filter((el) => !el.dataset.skip).map((el) => el.dataset.page);
   let n = 0;
   for (const k of state.pages) {
-    if (k === "cover") continue;
     const kicker = $(".kicker", pageEl(k));
     if (kicker) kicker.textContent = `Chapter the ${ORD[n++]}`;
   }
   $("#progress").innerHTML = `<div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>` +
     state.pages.map((k, i) => `<button class="pstop" data-k="${k}" title="${esc(pageLabel(k))}"><i>${i + 1}</i><span>${esc(pageLabel(k))}</span></button>`).join("");
   $$("#progress .pstop").forEach((b) => (b.onclick = () => goPage(b.dataset.k)));
-  const blurbs = {
-    ledger: "Every season, in one long line", october: "The pennants and the Fall Classics", legends: "The five greatest to wear the uniform",
-    dugout: "Skippers, voices and builders", numbers: "The numbers no one will wear again", hof: "Bronze plaques in Cooperstown",
-    trophies: "MVPs, Cy Youngs and top rookies", parks: "Every ballpark the club called home", scrapbook: "Photographs from the archives",
-  };
-  $("#toc").innerHTML = state.pages.filter((k) => k !== "cover").map((k) =>
-    `<li><button data-k="${k}"><span class="toc-name">${esc(pageLabel(k))}<small>${blurbs[k] || ""}</small></span><span class="toc-dots"></span><span class="toc-pg">${state.pages.indexOf(k) + 1}</span></button></li>`).join("");
-  $$("#toc button").forEach((b) => (b.onclick = () => goPage(b.dataset.k)));
 }
 
 function goPage(k, { scroll = true } = {}) {
-  if (!state.pages.includes(k)) k = "cover";
+  if (!state.pages.includes(k)) k = state.pages[0];
   const from = state.pages.indexOf(state.page), to = state.pages.indexOf(k);
   state.page = k;
   for (const el of $$(".page")) {
@@ -190,14 +181,14 @@ function goPage(k, { scroll = true } = {}) {
   $("#progress-fill").style.width = `${(to / Math.max(1, state.pages.length - 1)) * 100}%`;
   const prev = state.pages[to - 1], next = state.pages[to + 1];
   $("#prev").hidden = !prev;
-  $("#next").hidden = k === "cover" && !next;
+  $("#next").hidden = state.pages.length < 2;
   if (prev) $("#prev .pager-label").textContent = pageLabel(prev);
-  $("#next .pager-label").textContent = next ? (k === "cover" ? "Begin: " : "Next: ") + pageLabel(next) : "Back to the title page";
+  $("#next .pager-label").textContent = next ? "Next: " + pageLabel(next) : "Back to the start";
   if (k === "ledger") renderTimeline();
   updateHash();
   if (scroll) {
     const top = $("#franchise").getBoundingClientRect().top + window.scrollY - 6;
-    if (window.scrollY > top || k !== "cover") window.scrollTo({ top, behavior: "smooth" });
+    if (window.scrollY > top || to > 0) window.scrollTo({ top, behavior: "smooth" });
   }
 }
 function step(d) {
@@ -214,7 +205,7 @@ function onKey(e) {
 // =====================================================================
 // FRANCHISE
 // =====================================================================
-async function selectTeam(id, page = "cover") {
+async function selectTeam(id, page = "ledger") {
   const team = state.teams.find((t) => t.id === id);
   Object.assign(state, { team, seasons: [], decade: null });
   await ensureBundle(id);
@@ -223,16 +214,12 @@ async function selectTeam(id, page = "cover") {
   $$(".team-btn").forEach((b) => b.classList.toggle("active", +b.dataset.id === id));
   $("#franchise-empty").hidden = true;
   $("#franchise").hidden = false;
-  $$(".page").forEach((el) => (el.hidden = el.dataset.page !== "cover")); // only the title page while loading
+  $$(".page").forEach((el) => (el.hidden = el.dataset.page !== "ledger")); // only the first chapter while loading
   document.body.classList.add("paging");
-  $("#hero-logo").src = logo(id);
-  $("#pennant-name").textContent = team.teamName;
-  $("#hero-name").textContent = team.name;
   $("#hero-sub").textContent = "Opening the record books…";
   $("#scoreboard").innerHTML = "";
   $("#timeline").innerHTML = "";
   state.archive = ((state.photos[id] || {}).archive || []).slice();
-  renderHeroPhoto();
 
   const [hit, pit, hist] = await Promise.all([
     get(`/teams/${id}/stats?stats=yearByYear&group=hitting&sportId=1`),
@@ -294,7 +281,7 @@ const markSkip = (k, skip) => { if (skip) pageEl(k).dataset.skip = "1"; else del
 // Empty a skipped chapter so nothing from the previous club lingers in it.
 const clearPage = (k, ...ids) => ids.forEach((id) => ($("#" + id).innerHTML = ""));
 
-// ---------- title page + scoreboard ----------
+// ---------- scoreboard (top of the ledger) ----------
 function renderHero() {
   const S = state.seasons, t = state.team;
   const { W, L, p } = record(S);
@@ -304,7 +291,7 @@ function renderHero() {
   const lastTitle = champs.at(-1)?.year, thisYear = S.at(-1).year;
   const formerly = [...new Set(state.eras.map((e) => e.name))].filter((n) => n !== t.name);
   const hof = (state.history[t.id] || {}).hof || [];
-  $("#hero-sub").textContent = `Est. ${S[0].year} · ${S.length} seasons of baseball` + (formerly.length ? ` · formerly the ${listify(formerly)}` : "");
+  $("#hero-sub").textContent = `${t.name} · Est. ${S[0].year} · ${S.length} seasons of baseball` + (formerly.length ? ` · formerly the ${listify(formerly)}` : "");
   const cell = (label, val, sub = "") =>
     `<div class="sb-cell"><div class="sb-label">${label}</div><div class="sb-val${String(val).length > 9 ? " sb-long" : ""}">${val}</div><div class="sb-sub">${sub}</div></div>`;
   $("#scoreboard").innerHTML = [
@@ -316,21 +303,6 @@ function renderHero() {
     cell("Title Drought", lastTitle ? thisYear - lastTitle : S.length, lastTitle ? "years" : "seasons & counting"),
     cell("Hall of Famers", hof.length, "in Cooperstown"),
   ].join("");
-}
-
-function heroPick() {
-  const land = state.archive.filter((a) => a.w && a.h && a.w / a.h >= 1.2);
-  return land.find((a) => a.year && a.year <= 1960) || land[0] || state.archive[0] || null;
-}
-function renderHeroPhoto() {
-  const fig = $("#hero-photo"), a = heroPick();
-  fig.hidden = !a;
-  $(".title-page").classList.toggle("no-photo", !a);
-  if (!a) return;
-  $("img", fig).src = a.src;
-  $("img", fig).alt = a.title;
-  $("figcaption", fig).textContent = `${a.year ? a.year + " — " : ""}${a.title}`;
-  fig.onclick = () => openLightbox(state.archive, state.archive.indexOf(a));
 }
 
 // "Polo Grounds" -> "the Polo Grounds", "The Kingdome" -> "the Kingdome"

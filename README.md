@@ -1,15 +1,14 @@
-# Dugout Time Machine
+# The Grandstand Almanac
 
 *A franchise almanac of the grand old game.* Pick a ball club and leaf through its whole history: every season, its legends, its ballparks and its brightest days. It's meant to be a fun ten minutes for a baseball fan.
 
 ## What's inside (v3)
 
-The page is styled like an old almanac: parchment, wood-type headlines, bunting, a manual scoreboard and a felt pennant. Each club's almanac is read **one chapter at a time**: a numbered progress strip runs across the top, and Back and Next buttons sit in the bottom corners. The arrow keys turn pages too, and the address bar remembers the chapter (`#team=147&page=legends`).
+The page is styled like an old almanac: parchment, wood-type headlines, bunting and a manual scoreboard. Each club's almanac is read **one chapter at a time**: a numbered progress strip runs across the top, and Back and Next buttons sit in the bottom corners. The arrow keys turn pages too, and the address bar remembers the chapter (`#team=147&page=legends`).
 
 | Chapter | What it shows |
 |---|---|
-| **Title page** | A felt pennant, an archive photo, the scoreboard and a table of contents. |
-| **The Ledger** | Every season as a bar (distance from .500), with the club's names and ballparks underneath. Hover a year for its record, skipper, stars and awards. Below it: the golden decade, the lean years, the longest run of winning seasons. |
+| **The Ledger** | The scoreboard (all-time record, titles, pennants, best and worst seasons, drought, Hall of Famers), then every season as a bar (distance from .500), with the club's names and ballparks underneath. Hover a year for its record, skipper, stars and awards. Below it: the golden decade, the lean years, the longest run of winning seasons. |
 | **October** | Every World Series the club played in: the opponent, the series score, the manager, the stars on the roster and a photo when one exists. |
 | **Legends** | The top 5 players by an era-adjusted, WAR-style "legend value", as tobacco cards, plus the next three in line. Every portrait shows the player **in this club's uniform**: a hand-picked Commons photo, or MLB's own headshot. |
 | **The Dugout & the Booth** | The longest-serving managers with their records and titles, every manager in club history, and the club's voices and builders: broadcasters (with their signature calls), owners, executives and a few beloved characters. |

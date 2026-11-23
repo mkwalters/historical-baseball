@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* =========================================================
-   Dugout Time Machine v2 — "almanac" style
+   The Grandstand Almanac v3 — "almanac" style
    parchment · wood type · bunting · scoreboards · tobacco cards
    ========================================================= */
 :root {
@@ -73,7 +73,7 @@ img { max-width: 100%; }
   border-bottom: 1px solid var(--rule); padding-bottom: 4px; letter-spacing: .08em; text-transform: uppercase;
 }
 .masthead h1 {
-  font: 64px/1 var(--display); letter-spacing: .02em; color: var(--ink); margin: 14px 0 4px;
+  font: clamp(36px, 7vw, 64px)/1 var(--display); letter-spacing: .02em; color: var(--ink); margin: 14px 0 4px;
   text-shadow: 2px 2px 0 rgba(163,48,42,.22);
 }
 .masthead h1 a { color: inherit; text-decoration: none; }
@@ -123,32 +123,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .btn-red { background: var(--red); color: #fbf3e2; border-color: var(--red-dark); box-shadow: 2px 2px 0 var(--red-dark); }
 .btn-small { padding: 4px 10px; font-size: 12px; }
 
-/* ---------- title page ---------- */
-.title-page { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: center; margin-bottom: 22px; }
-.title-page.no-photo { grid-template-columns: 1fr; }
-.pennant {
-  display: flex; align-items: center; gap: 14px; background: var(--team); color: #fbf3e2;
-  clip-path: polygon(0 0, 100% 50%, 0 100%); padding: 24px 130px 24px 22px; width: min(100%, 540px); min-height: 110px;
-  position: relative;
-}
-.pennant::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: rgba(255,255,255,.85); }
-.pennant img { width: 64px; height: 64px; object-fit: contain; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 12px; margin-left: 8px; flex: none; }
-.pennant span { font: 30px/1.05 var(--display); letter-spacing: .03em; text-transform: uppercase; text-shadow: 1px 1px 0 rgba(0,0,0,.35); }
-.title-left h2 { font: 900 40px/1.05 var(--headline); margin: 18px 0 6px; }
-.hero-sub { margin: 0 0 14px; color: var(--ink-soft); font-style: italic; }
-
-.photo-frame {
-  margin: 0; background: #fdfaf2; padding: 12px 12px 36px; box-shadow: 0 1px 2px rgba(0,0,0,.15), 4px 8px 18px rgba(60,40,10,.25);
-  position: relative; transform: rotate(1.2deg); cursor: zoom-in;
-}
-.photo-frame img { display: block; width: 100%; max-height: 330px; object-fit: cover; filter: sepia(.35) contrast(1.05); }
-.photo-frame figcaption {
-  position: absolute; left: 14px; right: 14px; bottom: 9px; font: 13px var(--type); color: var(--ink-soft);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center;
-}
-.photo-frame::before, .photo-frame::after { content: ""; position: absolute; width: 30px; height: 30px; background: var(--ink); opacity: .85; }
-.photo-frame::before { left: 5px; top: 5px; clip-path: polygon(0 0, 100% 0, 0 100%); }
-.photo-frame::after { right: 5px; bottom: 29px; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.hero-sub { margin: 0 0 10px; color: var(--ink-soft); font-style: italic; text-align: center; }
 
 /* ---------- scoreboard ---------- */
 .scoreboard {
@@ -359,18 +334,6 @@ body.paging main { padding-bottom: 90px; }
 .pager-prev { left: 22px; background: var(--card); color: var(--ink); }
 body:not(.paging) .pager { display: none; }
 
-/* ---------- cover ---------- */
-.cover-bottom { max-width: 640px; margin: 22px auto 0; }
-.toc h4 { font: 26px var(--display); text-align: center; margin-bottom: 8px; }
-.toc ol { list-style: none; margin: 0; padding: 0; }
-.toc li button {
-  width: 100%; display: flex; align-items: baseline; gap: 6px; background: none; border: 0; padding: 6px 2px; text-align: left; border-bottom: 1px dotted transparent;
-}
-.toc li button:hover .toc-name { color: var(--red); }
-.toc-name { font: 700 15px var(--body); }
-.toc-name small { display: block; font: italic 12.5px var(--body); font-weight: normal; color: var(--ink-faint); }
-.toc-dots { flex: 1; border-bottom: 2px dotted var(--rule); transform: translateY(-5px); align-self: flex-start; margin-top: 14px; }
-.toc-pg { font: 15px var(--slab); color: var(--ink-soft); align-self: flex-start; margin-top: 2px; }
 
 /* ---------- ledger facts ---------- */
 .eras { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 18px; }
@@ -533,10 +496,6 @@ body:not(.paging) .pager { display: none; }
   .masthead-sub { font-size: 15px; }
   .hide-sm { display: none; }
   .tab { padding: 4px 10px; font-size: 13px; }
-  .title-page { grid-template-columns: 1fr; }
-  .pennant { padding-right: 80px; }
-  .pennant span { font-size: 22px; }
-  .title-left h2 { font-size: 30px; }
   .sheet { padding: 20px 14px; }
   .sheet-head h3 { font-size: 26px; }
   .legends { grid-template-columns: repeat(2, 1fr); gap: 14px; }

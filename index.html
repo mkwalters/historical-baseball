@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dugout Time Machine</title>
+  <title>The Grandstand Almanac</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Rye&family=Special+Elite&family=Homemade+Apple&display=swap" rel="stylesheet" />
@@ -19,7 +19,7 @@
       <span class="hide-sm">The National Pastime</span>
       <span>★ Vol. III ★</span>
     </div>
-    <h1><a href="./" id="home-link" title="Back to the front page">Dugout Time Machine</a></h1>
+    <h1><a href="./" id="home-link" title="Back to the front page">The Grandstand Almanac</a></h1>
     <p class="masthead-sub">A Franchise Almanac of the Grand Old Game</p>
     <nav class="tabs" role="tablist">
       <button class="tab active" data-view="franchise" role="tab">The Franchise</button>
@@ -44,31 +44,6 @@
         <nav class="progress" id="progress" aria-label="Chapters"></nav>
 
         <div id="pages">
-          <!-- Title page -->
-          <section class="page" data-page="cover" data-label="Title Page">
-            <div class="title-page">
-              <div class="title-left">
-                <div class="pennant" id="pennant">
-                  <img id="hero-logo" alt="" />
-                  <span id="pennant-name"></span>
-                </div>
-                <h2 id="hero-name"></h2>
-                <p id="hero-sub" class="hero-sub"></p>
-              </div>
-              <figure id="hero-photo" class="photo-frame hero-photo" hidden>
-                <img alt="" />
-                <figcaption></figcaption>
-              </figure>
-            </div>
-            <div class="scoreboard" id="scoreboard"></div>
-            <div class="cover-bottom">
-              <div class="toc">
-                <h4>In This Almanac</h4>
-                <ol id="toc"></ol>
-              </div>
-            </div>
-          </section>
-
           <!-- The Ledger -->
           <section class="page sheet" data-page="ledger" data-label="The Ledger">
             <header class="sheet-head">
@@ -76,6 +51,8 @@
               <h3>The Ledger, Season by Season</h3>
               <p class="sheet-lede">Every season the club has played, from the first to the latest. Hover a bar for the year's record, its skipper and its stars.</p>
             </header>
+            <p id="hero-sub" class="hero-sub"></p>
+            <div class="scoreboard" id="scoreboard"></div>
             <div class="ledger-key">
               <span><i class="sw sw-up"></i>Winning season</span>
               <span><i class="sw sw-down"></i>Losing season</span>
