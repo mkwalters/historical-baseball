@@ -12,12 +12,10 @@ The page is styled like an old almanac: parchment, wood-type headlines, bunting,
 | **Scoreboard** | All-time record, titles, pennants, best and worst seasons, title drought, Hall of Famers. |
 | **I. The Ledger** | Every season as a bar (distance from .500). Gold means World Champions, light gold means pennant. Bands show the club's name and its home ballpark over time. Red dots mark years with a scrapbook photo. |
 | **The Dugout Gazette** | Click any season for a generated newspaper front page: headline, lead story, a "Stars of the Season" box score, Hall of Famers on the roster, the October report, and the World Series result elsewhere in the league. |
-| **II. Turning Points** | Computed chapters: the Golden Age, the Lean Years, the Long Run, the Wilderness, the Long Wait, the First Crown, the Turnaround, a New Home. Click one to highlight it on the ledger. |
-| **III. Franchise Legends** | The top 5 players by an era-adjusted, WAR-style "legend value", shown as tobacco cards. Hover a card to see their era; click it for the paper from their best season. |
-| **IV. In Cooperstown** | Bronze plaques for every Hall of Famer enshrined with the club. Click a plaque to jump to their tenure. |
-| **V. The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year. |
-| **VI. Home Fields** | Ticket stubs for every home ballpark, with seasons, record and titles there. |
-| **VII. The Scrapbook** | Public-domain and freely licensed photos of old ballparks, pennant winners and famous moments. |
+| **II. Franchise Legends** | The top 5 players by an era-adjusted, WAR-style "legend value", shown as tobacco cards. Hover a card to see their era; click it for the paper from their best season. |
+| **III. In Cooperstown** | Bronze plaques for every Hall of Famer enshrined with the club. Click a plaque to jump to their tenure. |
+| **IV. The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year. |
+| **V. The Scrapbook** | Public-domain and freely licensed photos of old ballparks, pennant winners and famous moments. |
 | **Guess the Year** | A five-round game: name the season from its record, ballpark and best hitter's line. |
 | **The League** | A title-drought scoreboard and a wall of every champion's pennant since 1903. |
 

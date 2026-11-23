@@ -132,7 +132,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
   position: relative;
 }
 .pennant::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: rgba(255,255,255,.85); }
-.pennant img { width: 60px; height: 60px; object-fit: contain; background: #fbf3e2; border-radius: 50%; padding: 6px; margin-left: 8px; flex: none; }
+.pennant img { width: 64px; height: 64px; object-fit: contain; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 12px; margin-left: 8px; flex: none; }
 .pennant span { font: 30px/1.05 var(--display); letter-spacing: .03em; text-transform: uppercase; text-shadow: 1px 1px 0 rgba(0,0,0,.35); }
 .title-left h2 { font: 900 40px/1.05 var(--headline); margin: 18px 0 6px; }
 .hero-sub { margin: 0 0 14px; color: var(--ink-soft); font-style: italic; }
@@ -261,21 +261,6 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .badge-champ { background: var(--gold); color: #fffbe8; border-color: #8a6410; }
 .badge-pennant { background: var(--gold-light); border-color: var(--gold); }
 
-/* ---------- chapters ---------- */
-.chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
-.chapter {
-  text-align: left; background: #fbf5e6; border: 1px solid var(--rule); padding: 14px 16px 14px 20px; position: relative;
-  box-shadow: 3px 3px 0 var(--paper-2); transition: transform .15s, box-shadow .15s; font: inherit;
-}
-.chapter::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: var(--ch, var(--team)); }
-.chapter:hover, .chapter.active { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--rule); }
-.chapter.active { border-color: var(--ink); }
-.ch-num { font: 12px var(--type); color: var(--red); letter-spacing: .14em; text-transform: uppercase; }
-.ch-title { font: 900 22px/1.15 var(--headline); margin: 2px 0; }
-.ch-years { font: 14px var(--slab); color: var(--ink-soft); }
-.ch-text { font-size: 13.5px; margin: 8px 0 0; }
-.ch-who { font-size: 12.5px; color: var(--ink-soft); font-style: italic; margin-top: 6px; }
-
 /* ---------- legends: tobacco cards ---------- */
 .legends { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 .tcard { cursor: pointer; outline: none; display: flex; flex-direction: column; }
@@ -334,31 +319,6 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .trophy-list button { background: none; border: 0; padding: 0; font: 13px var(--type); color: var(--red); text-decoration: underline dotted; min-width: 40px; text-align: left; }
 .trophy-empty { font-style: italic; color: var(--ink-faint); font-size: 14px; margin: 0; }
 
-/* ---------- home fields: tickets ---------- */
-.tickets { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 16px; }
-.ticket {
-  display: grid; grid-template-columns: 54px 1fr; background: var(--tk, #f4dcc6); border: 1px solid rgba(42,33,24,.35);
-  position: relative; min-height: 118px; filter: drop-shadow(2px 3px 0 rgba(60,40,10,.15));
-  -webkit-mask: radial-gradient(circle 8px at 54px 0, transparent 98%, #000) top / 100% 51% no-repeat,
-                radial-gradient(circle 8px at 54px 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
-          mask: radial-gradient(circle 8px at 54px 0, transparent 98%, #000) top / 100% 51% no-repeat,
-                radial-gradient(circle 8px at 54px 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
-}
-.ticket:nth-child(3n+2) { --tk: #d9e2ea; }
-.ticket:nth-child(3n+3) { --tk: #f1e7b9; }
-.ticket-stub {
-  border-right: 2px dashed rgba(42,33,24,.45); display: grid; place-items: center; writing-mode: vertical-rl; transform: rotate(180deg);
-  font: 12px var(--type); letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft);
-}
-.ticket-body { padding: 12px 14px; position: relative; }
-.tk-admit { font: 11px var(--type); letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
-.ticket-body h4 { font: 20px/1.15 var(--display); margin: 2px 0 4px; }
-.tk-years { font: 15px var(--slab); }
-.tk-aka { font: italic 12px var(--body); color: var(--ink-soft); margin-top: 2px; }
-.tk-rec { font: 12px var(--type); color: var(--ink-soft); margin-top: 4px; }
-.ticket-photo { position: absolute; right: 10px; top: 10px; width: 88px; height: 66px; object-fit: cover; border: 3px solid #fdfaf2; transform: rotate(3deg); box-shadow: 1px 2px 4px rgba(0,0,0,.3); filter: sepia(.4); cursor: zoom-in; }
-.ticket-body.has-photo h4, .ticket-body.has-photo .tk-admit, .ticket-body.has-photo .tk-years { margin-right: 98px; }
-
 /* ---------- scrapbook ---------- */
 .scrapbook { columns: 3 260px; column-gap: 24px; padding-top: 10px; }
 .snap {
@@ -379,7 +339,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .board { background: var(--board); border: 6px solid var(--board-dark); padding: 10px 14px; color: var(--chalk); }
 .brow { display: grid; grid-template-columns: 38px 190px 1fr 130px; gap: 12px; align-items: center; padding: 5px 4px; border-bottom: 1px solid rgba(255,255,255,.08); cursor: pointer; }
 .brow:hover { background: rgba(255,255,255,.05); }
-.brow img { width: 32px; height: 32px; background: #fbf3e2; border-radius: 50%; padding: 4px; object-fit: contain; }
+.brow img { width: 32px; height: 32px; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 4px; object-fit: contain; }
 .brow .bname { font: 15px var(--type); letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .brow .bname small { color: #b7cdb2; }
 .bbar { height: 12px; background: repeating-linear-gradient(90deg, #f4efe0 0 6px, transparent 6px 9px); opacity: .85; min-width: 4px; }
@@ -391,7 +351,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
   display: flex; flex-direction: column; align-items: center; padding-top: 6px; gap: 2px; cursor: pointer; transition: transform .15s;
 }
 .wpen:hover { transform: translateY(-3px); }
-.wpen img { width: 32px; height: 32px; background: #fbf3e2; border-radius: 50%; padding: 3px; object-fit: contain; }
+.wpen img { width: 32px; height: 32px; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 3px; object-fit: contain; }
 .wpen span { font: 13px var(--slab); }
 .wpen.gap { background: var(--paper-2); color: var(--ink-faint); cursor: default; font: 11px var(--type); padding-top: 16px; }
 
@@ -456,7 +416,6 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
   .np-col { padding: 0 !important; border-left: 0 !important; margin-bottom: 12px; }
   .brow { grid-template-columns: 34px 1fr 100px; }
   .brow .bbar-wrap { display: none; }
-  .tickets { grid-template-columns: 1fr; }
   .sb-val { font-size: 19px; min-width: 0; }
   .np-top .np-nav .btn { padding: 4px 8px; }
 }

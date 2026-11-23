@@ -130,7 +130,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
   position: relative;
 }
 .pennant::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 12px; background: rgba(255,255,255,.85); }
-.pennant img { width: 60px; height: 60px; object-fit: contain; background: #fbf3e2; border-radius: 50%; padding: 6px; margin-left: 8px; flex: none; }
+.pennant img { width: 64px; height: 64px; object-fit: contain; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 12px; margin-left: 8px; flex: none; }
 .pennant span { font: 30px/1.05 var(--display); letter-spacing: .03em; text-transform: uppercase; text-shadow: 1px 1px 0 rgba(0,0,0,.35); }
 .title-left h2 { font: 900 40px/1.05 var(--headline); margin: 18px 0 6px; }
 .hero-sub { margin: 0 0 14px; color: var(--ink-soft); font-style: italic; }
@@ -377,7 +377,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .board { background: var(--board); border: 6px solid var(--board-dark); padding: 10px 14px; color: var(--chalk); }
 .brow { display: grid; grid-template-columns: 38px 190px 1fr 130px; gap: 12px; align-items: center; padding: 5px 4px; border-bottom: 1px solid rgba(255,255,255,.08); cursor: pointer; }
 .brow:hover { background: rgba(255,255,255,.05); }
-.brow img { width: 32px; height: 32px; background: #fbf3e2; border-radius: 50%; padding: 4px; object-fit: contain; }
+.brow img { width: 32px; height: 32px; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 4px; object-fit: contain; }
 .brow .bname { font: 15px var(--type); letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .brow .bname small { color: #b7cdb2; }
 .bbar { height: 12px; background: repeating-linear-gradient(90deg, #f4efe0 0 6px, transparent 6px 9px); opacity: .85; min-width: 4px; }
@@ -389,7 +389,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
   display: flex; flex-direction: column; align-items: center; padding-top: 6px; gap: 2px; cursor: pointer; transition: transform .15s;
 }
 .wpen:hover { transform: translateY(-3px); }
-.wpen img { width: 32px; height: 32px; background: #fbf3e2; border-radius: 50%; padding: 3px; object-fit: contain; }
+.wpen img { width: 32px; height: 32px; background: radial-gradient(circle closest-side, #fbf3e2 calc(100% - 1px), transparent 100%); padding: 3px; object-fit: contain; }
 .wpen span { font: 13px var(--slab); }
 .wpen.gap { background: var(--paper-2); color: var(--ink-faint); cursor: default; font: 11px var(--type); padding-top: 16px; }
 

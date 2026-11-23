@@ -28,7 +28,6 @@ const COLORS = {
 };
 const DIVISIONS = { 200: "AL West", 201: "AL East", 202: "AL Central", 203: "NL West", 204: "NL East", 205: "NL Central" };
 const LEAGUES = { 103: "American League", 104: "National League" };
-const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -69,7 +68,7 @@ async function get(path) {
 // ---------- state ----------
 const state = {
   teams: [], champions: {}, legends: {}, photos: {}, history: {},
-  team: null, seasons: [], eras: [], parks: [], archive: [], chapters: [],
+  team: null, seasons: [], eras: [], parks: [], archive: [],
   selected: null, pinned: null, barW: 1,
 };
 
@@ -174,15 +173,12 @@ async function selectTeam(id, season = null) {
     .sort((a, b) => a.year - b.year);
 
   state.parks = clipParks((state.history[id] || {}).ballparks || []);
-  state.chapters = computeChapters();
 
   renderHero();
   renderTimeline();
-  renderChapters();
   renderLegends();
   renderHof();
   renderTrophies();
-  renderParks();
   renderArchive();
   renderContents();
   if (season && state.seasons.some((s) => s.year === season)) selectSeason(season);
@@ -247,8 +243,8 @@ function renderHeroPhoto() {
 
 function renderContents() {
   const links = [
-    ["sec-ledger", "The Ledger"], ["sec-chapters", "Turning Points"], ["sec-legends", "Legends"], ["sec-hof", "Cooperstown"],
-    ["sec-trophies", "Trophy Case"], ["sec-parks", "Home Fields"], ["sec-scrapbook", "Scrapbook"],
+    ["sec-ledger", "The Ledger"], ["sec-legends", "Legends"], ["sec-hof", "Cooperstown"],
+    ["sec-trophies", "Trophy Case"], ["sec-scrapbook", "Scrapbook"],
   ].filter(([id]) => !$("#" + id).hidden);
   $("#contents").innerHTML = links.map(([id, label]) => `<a href="#${id}" data-target="${id}">${label}</a>`).join("");
   $$("#contents a").forEach((a) => (a.onclick = (e) => { e.preventDefault(); $("#" + a.dataset.target).scrollIntoView({ behavior: "smooth" }); }));
@@ -537,119 +533,12 @@ const boxPitcher = (p) => `<tr><td><span class="pname">${esc(p.name)} <span clas
   ${(p.stat.saves || 0) >= 20 ? `${p.stat.saves} saves` : `${p.stat.wins}–${p.stat.losses}`}, ${p.stat.era} era, ${p.stat.strikeOuts} k</td></tr>`;
 
 // =====================================================================
-// TURNING POINTS (computed chapters)
-// =====================================================================
-function computeChapters() {
-  const S = state.seasons.filter((s) => s.w + s.l >= 50), n = S.length;
-  if (n < 6) return [];
-  const out = [], K = Math.min(10, Math.max(4, Math.floor(n / 5)));
-  let best = null, worst = null;
-  for (let i = 0; i + K <= n; i++) {
-    const win = S.slice(i, i + K), r = record(win);
-    const t = win.filter((s) => s.champ).length, pn = win.filter((s) => s.champ || s.pennant).length;
-    const score = r.p + 0.012 * pn + 0.02 * t;
-    if (!best || score > best.score) best = { win, r, t, pn, score };
-    if (!worst || r.p < worst.r.p) worst = { win, r };
-  }
-  const span = (win) => [win[0].year, win.at(-1).year];
-  {
-    const [a, b] = span(best.win), key = best.win.find((s) => s.champ) || [...best.win].sort((x, y) => y.pct - x.pct)[0];
-    out.push({ title: best.t || best.r.p >= 0.55 ? "The Golden Age" : "The Best of Times", from: a, to: b, key: key.year,
-      text: `${num(best.r.W)}–${num(best.r.L)} (${fmtPct(best.r.p)}) across ${K} seasons` + (best.pn ? `, with ${plural(best.pn, "pennant")}` : "") + (best.t ? ` and ${plural(best.t, "World Series title")}.` : ".") });
-  }
-  {
-    const [a, b] = span(worst.win), losing = worst.win.filter((s) => s.pct < 0.5).length;
-    const key = [...worst.win].sort((x, y) => x.pct - y.pct)[0];
-    out.push({ title: "The Lean Years", from: a, to: b, key: key.year, dark: true,
-      text: `${losing} losing seasons in ${K}, a combined ${num(worst.r.W)}–${num(worst.r.L)}. The ${key.year} club bottomed out at ${key.w}–${key.l}.` });
-  }
-  const runs = (pred) => {
-    let bestRun = [], cur = [];
-    for (const s of S) {
-      if (pred(s)) cur.push(s); else cur = [];
-      if (cur.length > bestRun.length) bestRun = [...cur];
-    }
-    return bestRun;
-  };
-  const up = runs((s) => s.pct > 0.5);
-  if (up.length >= 4) {
-    const key = up.find((s) => s.champ) || [...up].sort((x, y) => y.pct - x.pct)[0];
-    out.push({ title: "The Long Run", from: up[0].year, to: up.at(-1).year, key: key.year,
-      text: `${up.length} straight winning seasons, ${up[0].year} through ${up.at(-1).year}.` });
-  }
-  const down = runs((s) => s.pct < 0.5);
-  if (down.length >= 5) {
-    const key = [...down].sort((x, y) => x.pct - y.pct)[0];
-    out.push({ title: "The Wilderness", from: down[0].year, to: down.at(-1).year, key: key.year, dark: true,
-      text: `${down.length} consecutive losing seasons, ${down[0].year} to ${down.at(-1).year}.` });
-  }
-  // title droughts
-  const all = state.seasons, titles = all.filter((s) => s.champ).map((s) => s.year), first = all[0].year, last = all.at(-1).year;
-  if (titles.length) {
-    const firstWS = Math.max(first, 1903);
-    let gap = { len: titles[0] - firstWS, a: firstWS, b: titles[0], ended: true };
-    for (let i = 1; i < titles.length; i++) if (titles[i] - titles[i - 1] > gap.len) gap = { len: titles[i] - titles[i - 1], a: titles[i - 1], b: titles[i], ended: true };
-    if (last - titles.at(-1) > gap.len) gap = { len: last - titles.at(-1), a: titles.at(-1), b: last, ended: false };
-    if (gap.len >= 15) out.push({ title: gap.ended ? "The Long Wait" : "Still Waiting", from: gap.a, to: gap.b, key: gap.b, dark: !gap.ended,
-      text: gap.ended ? `${gap.len} years between championships, from ${gap.a} until the drought finally broke in ${gap.b}.`
-        : `No championship since ${gap.a}: ${gap.len} years and counting.` });
-    const ws = state.champions[titles[0]];
-    out.push({ title: "The First Crown", from: titles[0], to: titles[0], key: titles[0],
-      text: `The ${ws.winner.name} beat the ${ws.loser.name} ${ws.result.split("-").slice(0, 2).join("–")} for the club's first World Series title.` });
-  } else {
-    out.push({ title: "Still Waiting", from: Math.max(first, 1903), to: last, key: last, dark: true,
-      text: `${plural(last - Math.max(first, 1903) + 1, "season")} and no World Series title, yet.` });
-  }
-  // biggest one-year turnaround
-  let turn = null;
-  for (let i = 1; i < n; i++) if (S[i].year === S[i - 1].year + 1) {
-    const d = S[i].pct - S[i - 1].pct;
-    if (!turn || d > turn.d) turn = { d, a: S[i - 1], b: S[i] };
-  }
-  if (turn && turn.d >= 0.12) out.push({ title: "The Turnaround", from: turn.a.year, to: turn.b.year, key: turn.b.year,
-    text: `From ${turn.a.w}–${turn.a.l} in ${turn.a.year} to ${turn.b.w}–${turn.b.l} in ${turn.b.year}, the biggest one-year leap in club history.` });
-  // a new home
-  const move = state.parks.slice(1).filter((p) => p.to - p.from >= 8).at(-1);
-  if (move) out.push({ title: "A New Home", from: move.from, to: Math.min(move.from + 2, move.to), key: move.from,
-    text: `The club moved into ${move.name} in ${move.from}` + (move.to >= last ? ", and has played there ever since." : `, and stayed through ${move.to}.`) });
-  return out.sort((a, b) => a.from - b.from).slice(0, 8);
-}
-
-function renderChapters() {
-  const C = state.chapters;
-  $("#sec-chapters").hidden = !C.length;
-  $("#chapters").innerHTML = C.map((c, i) => {
-    const who = legendsBetween(c.from, c.to).map((p) => p.name);
-    return `<button class="chapter" data-i="${i}" style="--ch:${c.dark ? "#8a7a60" : "var(--team)"}">
-      <div class="ch-num">Chapter ${ROMAN[i] || i + 1}</div>
-      <div class="ch-title">${esc(c.title)}</div>
-      <div class="ch-years">${c.from === c.to ? c.from : `${c.from}–${c.to}`}</div>
-      <p class="ch-text">${esc(c.text)}</p>
-      ${who.length ? `<div class="ch-who">Featuring ${esc(listify(who))}</div>` : ""}
-    </button>`;
-  }).join("");
-  $$("#chapters .chapter").forEach((b) => {
-    const c = C[+b.dataset.i];
-    b.onmouseenter = () => showSpan(c.from, c.to);
-    b.onmouseleave = () => (state.pinned ? showSpan(state.pinned.from, state.pinned.to) : showSpan());
-    b.onclick = () => {
-      $$("#chapters .chapter").forEach((x) => x.classList.toggle("active", x === b));
-      $$(".tcard").forEach((x) => x.classList.remove("pinned"));
-      pin(c.from, c.to);
-      selectSeason(c.key);
-      $("#sec-ledger").scrollIntoView({ behavior: "smooth" });
-    };
-  });
-}
-
-// =====================================================================
 // LEGENDS (tobacco cards)
 // =====================================================================
 const SUFFIX = /^(jr\.?|sr\.?|ii|iii|iv)$/i;
 function lastName(name) { const parts = name.split(" ").filter((w) => !SUFFIX.test(w)); return parts.length > 1 ? parts.slice(1).join(" ") : name; }
 const topLegends = () => (state.legends[state.team?.id] || []).slice(0, 5);
 const legendsIn = (year) => topLegends().filter((p) => p.from <= year && year <= p.to);
-const legendsBetween = (a, b) => topLegends().filter((p) => p.from <= b && a <= p.to);
 
 function legendLine(p) {
   const L = p.line || {};
@@ -671,14 +560,14 @@ function renderLegends() {
   const L = topLegends(), ph = (state.photos[state.team.id] || {}).legends || {};
   $("#sec-legends").hidden = !L.length;
   $("#legends").innerHTML = L.map((p, i) => {
-    const photo = ph[p.id], city = eraAt(p.from).city || state.team.franchiseName || "";
+    const photo = ph[p.id];
     return `<article class="tcard" data-i="${i}" tabindex="0" aria-label="${esc(p.name)}">
       <div class="tcard-face" style="--tc:${COLORS[state.team.id]}">
         <div class="tcard-art${photo ? "" : " headshot"}">
           <img src="${esc(photo ? photo.src : headshot(p.id, 360))}" alt="" loading="lazy">
           <span class="tcard-rank">${i + 1}</span>
         </div>
-        <div class="tcard-plate">${esc(lastName(p.name))}, ${esc(city)}<small>${esc(p.pos || "")} · ${p.from}–${p.to}</small></div>
+        <div class="tcard-plate">${esc(p.name)}<small>${esc(p.pos || "")} · ${p.from}–${p.to}</small></div>
       </div>
       <div class="tcard-back">
         <h4>${esc(p.name)}</h4>
@@ -697,7 +586,6 @@ function renderLegends() {
     el.onclick = (e) => {
       if (e.target.closest("a")) return;
       $$(".tcard").forEach((x) => x.classList.toggle("pinned", x === el));
-      $$("#chapters .chapter").forEach((x) => x.classList.remove("active"));
       pin(p.from, p.to);
       const best = bestSeasonIn(p.from, p.to);
       if (best) selectSeason(best.year, { scroll: true });
@@ -760,34 +648,6 @@ function renderTrophies() {
         : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
   }).join("");
   $$("#trophies [data-year]").forEach((b) => (b.onclick = () => selectSeason(+b.dataset.year, { scroll: true })));
-}
-
-// =====================================================================
-// HOME FIELDS (tickets)
-// =====================================================================
-const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\b(the|park|field|stadium|grounds|ballpark)\b/g, " ").replace(/\s+/g, " ").trim();
-function parkPhoto(p) {
-  const keys = [p.name, ...(p.aka || [])].map(norm).filter((k) => k.length > 3);
-  return state.archive.find((a) => { const t = norm(a.title); return t.length > 3 && keys.some((k) => t === k || t.startsWith(k + " ") || k.startsWith(t + " ")); });
-}
-function renderParks() {
-  const P = state.parks;
-  $("#sec-parks").hidden = !P.length;
-  $("#parks").innerHTML = P.map((p, i) => {
-    const list = seasonsIn(p.from, p.to), r = record(list), titles = list.filter((s) => s.champ).length;
-    const photo = parkPhoto(p);
-    return `<div class="ticket">
-      <div class="ticket-stub">Admit One · No. ${String(i + 1).padStart(3, "0")}</div>
-      <div class="ticket-body${photo ? " has-photo" : ""}">
-        <div class="tk-admit">Grandstand · ${p.from === p.to ? p.from : `${p.from}–${p.to}`}</div>
-        <h4>${esc(p.name)}</h4>
-        ${p.aka?.length ? `<div class="tk-aka">a.k.a. ${esc(p.aka.join(", "))}</div>` : ""}
-        <div class="tk-rec">${plural(list.length, "season")} · ${num(r.W)}–${num(r.L)} (${fmtPct(r.p)})${titles ? ` · ${"★".repeat(Math.min(titles, 12))}` : ""}</div>
-        ${photo ? `<img class="ticket-photo" data-i="${state.archive.indexOf(photo)}" src="${esc(photo.src)}" alt="${esc(photo.title)}" loading="lazy">` : ""}
-      </div>
-    </div>`;
-  }).join("");
-  $$("#parks .ticket-photo").forEach((img) => (img.onclick = () => openLightbox(state.archive[+img.dataset.i])));
 }
 
 // =====================================================================
