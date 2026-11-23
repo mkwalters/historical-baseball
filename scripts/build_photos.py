@@ -3,8 +3,13 @@
 For every franchise we look up a hand-picked list of famous moments and ballparks,
 plus the World Series articles for every pennant it won, and keep the lead image of
 each article **only if it is hosted on Wikimedia Commons** (i.e. freely licensed;
-most pre-1929 photos are public domain). Logos/SVGs are skipped. We also find a
-Commons portrait for each franchise legend in data/legends.json.
+most pre-1929 photos are public domain). Logos/SVGs are skipped. On top of that,
+SCRAPBOOK (scripts/scrapbook_picks.py) lists Commons files picked by hand for each club.
+
+Legends get a Commons portrait **in the club's uniform**: the Wikipedia lead photo when it
+is one, else the file in LEGEND_PHOTOS, else nothing (the page then uses MLB's headshot,
+which is always in uniform). Every ballpark the club called home gets its Wikipedia
+photo and a short description.
 
 Usage: python3 scripts/build_photos.py
 """
@@ -91,10 +96,14 @@ def commons_image(s):
     src = img.get("source", "").split("?")[0]
     if "/wikipedia/commons/" not in src or BAD.search(src):
         return None
-    m = re.match(r"(https://upload\.wikimedia\.org/wikipedia/commons)/(\w)/(\w\w)/(.+)$", src)
+    # Either upload.wikimedia.org/wikipedia/commons/a/ab/Name or (newer API) a thumbnail URL:
+    # thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Name/3840px-Name
+    m = (re.match(r"https://upload\.wikimedia\.org/wikipedia/commons/(\w)/(\w\w)/([^/]+)$", src)
+         or re.match(r"https://(?:upload|thumb)\.wikimedia\.org/wikipedia/commons/thumb/(\w)/(\w\w)/([^/]+)/[^/]+$", src))
     if not m:
         return None
-    base, a, ab, name = m.groups()
+    a, ab, name = m.groups()
+    base = "https://upload.wikimedia.org/wikipedia/commons"
     thumb = src if img.get("width", 0) <= 960 else f"{base}/thumb/{a}/{ab}/{name}/960px-{name}"
     if name.lower().endswith((".tif", ".tiff")):
         thumb = f"{base}/thumb/{a}/{ab}/{name}/lossy-page1-960px-{name}.jpg"
@@ -149,7 +158,49 @@ def legend_photo(name, born=""):
     return None
 
 
+COMMONS_API = "https://commons.wikimedia.org/w/api.php?"
+
+
+def commons_files(titles):
+    """Resolve Commons file titles -> {title: {src, file, w, h, desc}} (batched, cached)."""
+    out = {}
+    titles = list(dict.fromkeys(titles))
+    for i in range(0, len(titles), 40):
+        params = {"action": "query", "format": "json", "formatversion": "2", "titles": "|".join(titles[i:i + 40]),
+                  "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": "960",
+                  "iiextmetadatafilter": "ImageDescription|DateTimeOriginal"}
+        d = fetch(COMMONS_API + urllib.parse.urlencode(params))
+        norm = {n["to"]: n["from"] for n in (d.get("query") or {}).get("normalized", [])}
+        for pg in (d.get("query") or {}).get("pages", []):
+            ii = (pg.get("imageinfo") or [None])[0]
+            if not ii:
+                print("missing on Commons:", pg.get("title"), file=sys.stderr)
+                continue
+            desc = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", ((ii.get("extmetadata") or {}).get("ImageDescription") or {}).get("value", ""))).strip()
+            src = ii.get("thumburl") or ii["url"]
+            out[norm.get(pg["title"], pg["title"])] = {"src": src, "file": ii.get("descriptionurl"), "w": ii.get("width"), "h": ii.get("height"), "desc": desc}
+    return out
+
+
+def clean_desc(d):
+    """A Commons description as a caption, minus library catalog boilerplate."""
+    if re.search(r"negative : (glass|nitrate)|Abstract/medium|Bain News Service|Digital ID|Collection Name|DSCF|Original data", d or ""):
+        return ""
+    return first_sentences(d, 300)
+
+
+def park_item(title):
+    s = summary(title)
+    if not s.get("title") or s.get("type") == "disambiguation":
+        print("no park article:", title, file=sys.stderr)
+        return None
+    im = commons_image(s) or {}
+    return {"src": im.get("src"), "file": im.get("file"), "blurb": first_sentences(s.get("extract"), 320),
+            "url": (s.get("content_urls") or {}).get("desktop", {}).get("page")}
+
+
 def main():
+    from scrapbook_picks import SCRAPBOOK, LEGEND_PHOTOS, PARK_TITLES
     champs = json.load(open(os.path.join(ROOT, "data", "champions.json")))
     legends = json.load(open(os.path.join(ROOT, "data", "legends.json")))
     jobs = {}
@@ -170,13 +221,43 @@ def main():
             uniq.sort(key=lambda x: (x["year"] is None, x["year"] or 0))
             out[str(tid)] = {"archive": uniq, "legends": {}}
         names = [(tid, p["id"], p["name"], p.get("born", "")) for tid, ps in legends.items() for p in ps[:5]]  # the page shows 5
-        for (tid, pid, _, _), ph in zip(names, ex.map(lambda a: legend_photo(a[2], a[3]), names)):
+        for (tid, pid, _, _), ph in zip(names, ex.map(lambda a: legend_photo(a[2], a[3]) if a[1] not in LEGEND_PHOTOS else None, names)):
             if ph:
                 out.setdefault(tid, {"archive": [], "legends": {}})["legends"][str(pid)] = ph
+
+    # hand-picked Commons files: scrapbook pages and in-uniform legend portraits
+    files = commons_files([p[0] for picks in SCRAPBOOK.values() for p in picks] + [f for f in LEGEND_PHOTOS.values() if f])
+    for (tid, pid, _, _) in names:
+        f = LEGEND_PHOTOS.get(pid, "keep")
+        if f is None or (f != "keep" and f not in files):
+            out[tid]["legends"].pop(str(pid), None)  # fall back to MLB's headshot
+        elif f != "keep":
+            out[tid]["legends"][str(pid)] = {"src": files[f]["src"], "file": files[f]["file"], "w": files[f]["w"], "h": files[f]["h"]}
+    for tid, picks in SCRAPBOOK.items():
+        arc = out.setdefault(str(tid), {"archive": [], "legends": {}})["archive"]
+        have = {a["src"] for a in arc}
+        for f, year, title, caption in picks:
+            im = files.get(f)
+            if not im or im["src"] in have:
+                continue
+            have.add(im["src"])
+            arc.append({"title": title, "year": year, "caption": caption or clean_desc(im["desc"]), "url": im["file"],
+                        "src": im["src"], "file": im["file"], "w": im["w"], "h": im["h"]})
+        arc.sort(key=lambda x: (x["year"] is None, x["year"] or 0))
+
+    # ballparks
+    history = json.load(open(os.path.join(ROOT, "data", "history.json")))
+    for tid, v in history.items():
+        parks = out.setdefault(tid, {"archive": [], "legends": {}}).setdefault("parks", {})
+        for p in v.get("ballparks", []):
+            title = PARK_TITLES.get((int(tid), p["name"], p["from"])) or PARK_TITLES.get(p["name"]) or p["name"]
+            it = park_item(title)
+            if it:
+                parks[f"{p['name']}|{p['from']}"] = it
     with open(os.path.join(ROOT, "data", "photos.json"), "w") as fh:
         json.dump(out, fh, indent=1)
     for tid, v in out.items():
-        print(f"{tid}: {len(v['archive']):2} archive, {len(v['legends'])}/{len(legends.get(tid, []))} legends  "
+        print(f"{tid}: {len(v['archive']):2} archive, {len(v['legends'])}/5 legends, {sum(1 for x in v.get('parks', {}).values() if x['src'])}/{len(v.get('parks', {}))} parks  "
               + ", ".join(f"{a['year']}" for a in v["archive"]))
 
 

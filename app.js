@@ -1,4 +1,4 @@
-// Dugout Time Machine v2 — a franchise almanac. Vanilla JS + the public MLB Stats API.
+// Dugout Time Machine v3 — a franchise almanac. Vanilla JS + the public MLB Stats API.
 const API = "https://statsapi.mlb.com/api/v1";
 
 // Bundle mode: when data/bundle/ exists (see scripts/bundle_artifact.mjs) the page runs fully offline,
@@ -37,6 +37,18 @@ const num = (n) => (n == null ? "?" : Number(n).toLocaleString());
 const plural = (n, word, pl = word + "s") => `${n} ${n === 1 ? word : pl}`;
 const listify = (a) => (a.length <= 1 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a.at(-1));
 const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+const WORDS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+const word = (n) => WORDS[n] ?? String(n);
+const ORD = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth"];
+// "1903, 1904, 1905, 1910" -> "1903–05, 1910"
+function spans(years) {
+  const out = [];
+  for (const y of years) {
+    const last = out.at(-1);
+    if (last && y === last[1] + 1) last[1] = y; else out.push([y, y]);
+  }
+  return out.map(([a, b]) => (a === b ? `${a}` : `${a}–${String(b).slice(Math.floor(a / 100) === Math.floor(b / 100) ? 2 : 0)}`)).join(", ");
+}
 
 // ---------- fetch with in-memory + session cache ----------
 const memo = new Map();
@@ -64,28 +76,34 @@ async function get(path) {
 
 // ---------- state ----------
 const state = {
-  teams: [], champions: {}, legends: {}, photos: {}, history: {},
+  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {},
   team: null, seasons: [], eras: [], parks: [], archive: [],
-  barW: 1,
+  barW: 1, page: "cover", pages: [], decade: null,
 };
 
 async function init() {
   const b = await json("data/bundle/teams.json");
   if (b.teams) Object.assign(BUNDLE, { on: true, teams: { teams: b.teams }, logos: b.logos || {} });
-  const [teamsRes, champions, legends, photos, history] = await Promise.all([
+  const [teamsRes, champions, legends, photos, history, people, retired] = await Promise.all([
     get(`/teams?sportId=1&season=${new Date().getFullYear()}`),
     json("data/champions.json"), json("data/legends.json"), json("data/photos.json"), json("data/history.json"),
+    json("data/people.json"), json("data/retired.json"),
   ]);
-  Object.assign(state, { champions, legends, photos, history });
+  Object.assign(state, { champions, legends, photos, history, people, retired });
   state.teams = teamsRes.teams.filter((t) => t.sport?.id === 1).sort((a, b) => a.teamName.localeCompare(b.teamName));
   renderPicker();
   renderLeague();
   $$(".tab").forEach((b) => (b.onclick = () => showView(b.dataset.view)));
   $("#home-link").onclick = (e) => { e.preventDefault(); goHome(); };
+  $("#prev").onclick = () => step(-1);
+  $("#next").onclick = () => step(1);
+  $("#btn-restart").onclick = () => goPage("cover");
+  $("#btn-another").onclick = () => { $(".roster-board").scrollIntoView({ behavior: "smooth" }); };
+  document.addEventListener("keydown", onKey);
 
   const params = new URLSearchParams(location.hash.slice(1));
   const teamId = +(params.get("team") || 0);
-  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId);
+  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId, params.get("page") || "cover");
   if (params.get("view") === "league") showView("league");
 }
 
@@ -114,35 +132,109 @@ function showView(v) {
   $$(".tab").forEach((b) => b.classList.toggle("active", b.dataset.view === v));
   $("#view-franchise").hidden = v !== "franchise";
   $("#view-league").hidden = v !== "league";
-  if (v === "franchise" && state.seasons.length) renderTimeline();
+  document.body.classList.toggle("paging", v === "franchise" && !!state.team);
+  if (v === "franchise" && state.page === "ledger" && state.seasons.length) renderTimeline();
   updateHash(v);
 }
 function updateHash(view = "franchise") {
   const p = new URLSearchParams();
   if (state.team) p.set("team", state.team.id);
   if (view === "league") p.set("view", "league");
+  else if (state.team && state.page !== "cover") p.set("page", state.page);
   try { history.replaceState(null, "", "#" + p.toString()); } catch {}
+}
+
+// =====================================================================
+// PAGES: one chapter at a time, with a progress strip and a Next button
+// =====================================================================
+const pageEl = (k) => $(`.page[data-page="${k}"]`);
+const pageLabel = (k) => pageEl(k).dataset.label;
+
+function setupPages() {
+  state.pages = $$(".page").filter((el) => !el.dataset.skip).map((el) => el.dataset.page);
+  let n = 0;
+  for (const k of state.pages) {
+    if (k === "cover") continue;
+    const kicker = $(".kicker", pageEl(k));
+    if (kicker) kicker.textContent = k === "letter" ? "Postscript" : `Chapter the ${ORD[n++]}`;
+  }
+  $("#progress").innerHTML = `<div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>` +
+    state.pages.map((k, i) => `<button class="pstop" data-k="${k}" title="${esc(pageLabel(k))}"><i>${i + 1}</i><span>${esc(pageLabel(k))}</span></button>`).join("");
+  $$("#progress .pstop").forEach((b) => (b.onclick = () => goPage(b.dataset.k)));
+  const blurbs = {
+    ledger: "Every season, in one long line", october: "The pennants and the Fall Classics", legends: "The five greatest to wear the uniform",
+    dugout: "Skippers, voices and builders", numbers: "The numbers no one will wear again", hof: "Bronze plaques in Cooperstown",
+    trophies: "MVPs, Cy Youngs and top rookies", parks: "Every ballpark the club called home", scrapbook: "Photographs from the archives",
+    letter: "A few words from a fan",
+  };
+  $("#toc").innerHTML = state.pages.filter((k) => k !== "cover").map((k) =>
+    `<li><button data-k="${k}"><span class="toc-name">${esc(pageLabel(k))}<small>${blurbs[k] || ""}</small></span><span class="toc-dots"></span><span class="toc-pg">${state.pages.indexOf(k) + 1}</span></button></li>`).join("");
+  $$("#toc button").forEach((b) => (b.onclick = () => goPage(b.dataset.k)));
+}
+
+function goPage(k, { scroll = true } = {}) {
+  if (!state.pages.includes(k)) k = "cover";
+  const from = state.pages.indexOf(state.page), to = state.pages.indexOf(k);
+  state.page = k;
+  for (const el of $$(".page")) {
+    const on = el.dataset.page === k;
+    el.hidden = !on;
+    if (on) {
+      el.classList.remove("turn-fwd", "turn-back");
+      void el.offsetWidth;
+      el.classList.add(to >= from ? "turn-fwd" : "turn-back");
+    }
+  }
+  $$("#progress .pstop").forEach((b, i) => {
+    b.classList.toggle("current", i === to);
+    b.classList.toggle("done", i < to);
+    b.setAttribute("aria-current", i === to ? "step" : "false");
+  });
+  $("#progress-fill").style.width = `${(to / Math.max(1, state.pages.length - 1)) * 100}%`;
+  const prev = state.pages[to - 1], next = state.pages[to + 1];
+  $("#prev").hidden = !prev;
+  $("#next").hidden = !next;
+  if (prev) $("#prev .pager-label").textContent = pageLabel(prev);
+  if (next) $("#next .pager-label").textContent = (k === "cover" ? "Begin: " : "Next: ") + pageLabel(next);
+  if (k === "ledger") renderTimeline();
+  updateHash();
+  if (scroll) {
+    const top = $("#franchise").getBoundingClientRect().top + window.scrollY - 6;
+    if (window.scrollY > top || k !== "cover") window.scrollTo({ top, behavior: "smooth" });
+  }
+}
+function step(d) {
+  const i = state.pages.indexOf(state.page) + d;
+  if (i >= 0 && i < state.pages.length) goPage(state.pages[i]);
+}
+function onKey(e) {
+  if (!state.team || $("#view-franchise").hidden || lb.open || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (/input|textarea|select/i.test(document.activeElement?.tagName || "")) return;
+  if (e.key === "ArrowRight") { step(1); e.preventDefault(); }
+  if (e.key === "ArrowLeft") { step(-1); e.preventDefault(); }
 }
 
 // =====================================================================
 // FRANCHISE
 // =====================================================================
-async function selectTeam(id) {
+async function selectTeam(id, page = "cover") {
   const team = state.teams.find((t) => t.id === id);
-  Object.assign(state, { team, seasons: [] });
+  Object.assign(state, { team, seasons: [], decade: null });
   await ensureBundle(id);
   if (state.team?.id !== id) return;
   document.documentElement.style.setProperty("--team", COLORS[id] || "#1e3557");
   $$(".team-btn").forEach((b) => b.classList.toggle("active", +b.dataset.id === id));
   $("#franchise-empty").hidden = true;
   $("#franchise").hidden = false;
+  $$(".page").forEach((el) => (el.hidden = el.dataset.page !== "cover")); // only the title page while loading
+  document.body.classList.add("paging");
   $("#hero-logo").src = logo(id);
   $("#pennant-name").textContent = team.teamName;
   $("#hero-name").textContent = team.name;
   $("#hero-sub").textContent = "Opening the record books…";
   $("#scoreboard").innerHTML = "";
   $("#timeline").innerHTML = "";
-  state.archive = (state.photos[id] || {}).archive || [];
+  state.archive = ((state.photos[id] || {}).archive || []).slice();
   renderHeroPhoto();
 
   const [hit, pit, hist] = await Promise.all([
@@ -170,13 +262,19 @@ async function selectTeam(id) {
   state.parks = clipParks((state.history[id] || {}).ballparks || []);
 
   renderHero();
-  renderTimeline();
+  renderEras();
+  renderOctober();
   renderLegends();
+  renderDugout();
+  renderNumbers();
   renderHof();
   renderTrophies();
+  renderParks();
   renderArchive();
-  renderContents();
-  updateHash();
+  renderLetter();
+  renderDedication();
+  setupPages();
+  goPage(page, { scroll: false });
 }
 
 function eraAt(y) {
@@ -186,14 +284,20 @@ function eraAt(y) {
 }
 const seasonsIn = (a, b) => state.seasons.filter((s) => s.year >= a && s.year <= b);
 const record = (list) => { const W = list.reduce((a, s) => a + s.w, 0), L = list.reduce((a, s) => a + s.l, 0); return { W, L, p: pct(W, L) }; };
+const teamPeople = () => state.people[state.team.id] || { managers: [], people: [] };
+const managersIn = (y) => teamPeople().managers.filter((m) => (m.years || []).includes(y));
+const awardsIn = (y) => ((state.history[state.team.id] || {}).awards || []).filter((a) => a.season === y);
 
 function clipParks(parks) {
   if (!state.seasons.length) return [];
   const first = state.seasons[0].year, last = state.seasons.at(-1).year;
   return parks
-    .map((p) => ({ ...p, from: Math.max(p.from, first), to: Math.min(p.to, last) }))
+    .map((p) => ({ ...p, key: `${p.name}|${p.from}`, from: Math.max(p.from, first), to: Math.min(p.to, last) }))
     .filter((p) => p.from <= p.to && seasonsIn(p.from, p.to).length);
 }
+const markSkip = (k, skip) => { if (skip) pageEl(k).dataset.skip = "1"; else delete pageEl(k).dataset.skip; };
+// Empty a skipped chapter so nothing from the previous club lingers in it.
+const clearPage = (k, ...ids) => ids.forEach((id) => ($("#" + id).innerHTML = ""));
 
 // ---------- title page + scoreboard ----------
 function renderHero() {
@@ -231,22 +335,28 @@ function renderHeroPhoto() {
   $("img", fig).src = a.src;
   $("img", fig).alt = a.title;
   $("figcaption", fig).textContent = `${a.year ? a.year + " — " : ""}${a.title}`;
-  fig.onclick = () => openLightbox(a);
+  fig.onclick = () => openLightbox(state.archive, state.archive.indexOf(a));
 }
 
-function renderContents() {
-  const links = [
-    ["sec-ledger", "The Ledger"], ["sec-legends", "Legends"], ["sec-hof", "Cooperstown"],
-    ["sec-trophies", "Trophy Case"], ["sec-scrapbook", "Scrapbook"],
-  ].filter(([id]) => !$("#" + id).hidden);
-  $("#contents").innerHTML = links.map(([id, label]) => `<a href="#${id}" data-target="${id}">${label}</a>`).join("");
-  $$("#contents a").forEach((a) => (a.onclick = (e) => { e.preventDefault(); $("#" + a.dataset.target).scrollIntoView({ behavior: "smooth" }); }));
+// "Polo Grounds" -> "the Polo Grounds", "The Kingdome" -> "the Kingdome"
+function parkName(n) {
+  if (!n) return n;
+  if (/^the /i.test(n)) return "the " + n.slice(4);
+  return /(Grounds|dome|Coliseum|Bowl|Ballpark)$|^Palace/.test(n) ? "the " + n : n;
+}
+function currentPark() { return state.parks.at(-1)?.name; }
+function renderDedication() {
+  const t = state.team, S = state.seasons, park = currentPark();
+  const firstName = state.eras[0]?.name || t.name;
+  $("#dedication").innerHTML =
+    `<p>For everyone who ever kept score in the cheap seats${park ? ` at ${esc(parkName(park))}` : ""}, argued about the lineup on the drive home, and came back the next day anyway.</p>` +
+    `<p>${S.length} seasons of ${esc(t.teamName)} baseball, from the ${esc(firstName)} of ${S[0].year} to the club of ${S.at(-1).year}, bound in one volume.</p>`;
 }
 
 // ---------- the ledger (SVG timeline) ----------
 function renderTimeline() {
   const svg = $("#timeline"), S = state.seasons;
-  if (!S.length) return;
+  if (!S.length || pageEl("ledger").hidden) return;
   const W = Math.max(300, Math.round(svg.clientWidth || 1000)), H = Math.round(svg.clientHeight || 330);
   const top = 20, bandH = 22, axisH = 18, bandsTop = H - bandH * 2 - 2;
   const plotH = bandsTop - top - axisH, mid = top + plotH / 2;
@@ -259,8 +369,7 @@ function renderTimeline() {
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   state.barW = bw;
 
-  let out = `<rect class="span-hl" id="span-hl" x="-100" y="0" width="0" height="${bandsTop}"/>`;
-  out += `<line x1="0" x2="${W}" y1="${mid}" y2="${mid}" stroke="#8a7a60" stroke-width="1" stroke-dasharray="3 3"/>`;
+  let out = `<line x1="0" x2="${W}" y1="${mid}" y2="${mid}" stroke="#8a7a60" stroke-width="1" stroke-dasharray="3 3"/>`;
   out += `<text x="4" y="${top - 6}">${fmtPct(0.5 + maxDev)}</text><text x="4" y="${top + plotH - 3}">${fmtPct(0.5 - maxDev)}</text>`;
   S.forEach((s, i) => {
     const x = i * bw + gap / 2, w = Math.max(0.6, bw - gap);
@@ -294,11 +403,15 @@ function renderTimeline() {
     const i = e.target.dataset?.i;
     if (i == null) { tip.hidden = true; return; }
     const s = S[+i], r = wrap.getBoundingClientRect();
-    const greats = legendsIn(s.year).map((p) => lastName(p.name));
+    const greats = allLegendsIn(s.year).map((p) => lastName(p.name));
     const park = state.parks.find((p) => p.from <= s.year && s.year <= p.to);
+    const mgr = managersIn(s.year).map((m) => m.name);
+    const aw = awardsIn(s.year).map((a) => `${a.award === "Rookie of the Year" ? "ROY" : a.award}: ${a.name}`);
     tip.innerHTML = `<b>${s.year}</b> ${esc(s.name)}<br>${s.w}–${s.l} (${fmtPct(s.pct)})${s.champ ? " · ★ World Champions" : s.pennant ? " · Pennant" : ""}` +
+      (mgr.length ? `<br><span class="muted">Skipper: ${esc(listify(mgr))}</span>` : "") +
       (park ? `<br><span class="muted">at ${esc(park.name)}</span>` : "") +
       (greats.length ? `<br><span class="muted">Legends: ${esc(greats.join(", "))}</span>` : "") +
+      (aw.length ? `<br><span class="muted">${esc(aw.join(" · "))}</span>` : "") +
       (photoYears.has(s.year) ? `<br><span class="muted">A photograph survives in the scrapbook</span>` : "");
     tip.style.left = Math.min(r.width - 110, Math.max(110, e.clientX - r.left)) + "px";
     tip.style.top = e.clientY - r.top + "px";
@@ -313,16 +426,72 @@ window.addEventListener("resize", () => {
   resizeTimer = setTimeout(() => { if (state.seasons.length && !$("#view-franchise").hidden) renderTimeline(); }, 150);
 });
 
-function showSpan(from, to) {
-  const r = $("#span-hl"), S = state.seasons;
-  if (!r) return;
-  if (from == null) { r.setAttribute("x", -100); r.setAttribute("width", 0); return; }
-  const i0 = S.findIndex((s) => s.year >= from);
-  let i1 = S.findIndex((s) => s.year > to);
-  if (i1 < 0) i1 = S.length;
-  if (i0 < 0) return;
-  r.setAttribute("x", i0 * state.barW);
-  r.setAttribute("width", Math.max(state.barW, (i1 - i0) * state.barW));
+// Almanac facts under the ledger: golden decade, lean years, longest run of winning seasons.
+function renderEras() {
+  const S = state.seasons, facts = [];
+  const win = (k) => {
+    let best = null, worst = null;
+    for (let i = 0; i + k <= S.length; i++) {
+      const slice = S.slice(i, i + k);
+      if (slice.at(-1).year - slice[0].year !== k - 1) continue; // skip windows that span a gap
+      const r = { ...record(slice), from: slice[0].year, to: slice.at(-1).year, champs: slice.filter((s) => s.champ).length, flags: slice.filter((s) => s.champ || s.pennant).length };
+      if (!best || r.p > best.p) best = r;
+      if (!worst || r.p < worst.p) worst = r;
+    }
+    return { best, worst };
+  };
+  if (S.length >= 20) {
+    const { best, worst } = win(10);
+    if (best) facts.push(["The Golden Decade", `${best.from}–${best.to}`, `${num(best.W)}–${num(best.L)}, ${fmtPct(best.p)}` + (best.flags ? ` · ${plural(best.flags, "pennant")}` : "") + (best.champs ? `, ${plural(best.champs, "title")}` : "")]);
+    if (worst) facts.push(["The Lean Years", `${worst.from}–${worst.to}`, `${num(worst.W)}–${num(worst.L)}, ${fmtPct(worst.p)}`]);
+  }
+  let run = 0, bestRun = { n: 0 };
+  S.forEach((s, i) => {
+    run = s.pct > 0.5 && (i === 0 || S[i - 1].year === s.year - 1) ? run + 1 : s.pct > 0.5 ? 1 : 0;
+    if (run > bestRun.n) bestRun = { n: run, to: s.year };
+  });
+  if (bestRun.n >= 2) facts.push(["Winning Streak", plural(bestRun.n, "season"), `straight winning years, ${bestRun.to - bestRun.n + 1}–${bestRun.to}`]);
+  const most = [...S].sort((a, b) => b.w - a.w)[0];
+  if (most) facts.push(["Most Wins", `${most.w}`, `in ${most.year} (${most.w}–${most.l})`]);
+  const names = [...new Set(state.eras.map((e) => e.name))];
+  const older = names.filter((n) => n !== state.team.name);
+  if (older.length) facts.push(["Also Known As", plural(older.length, "former name"), listify(older)]);
+  $("#eras").innerHTML = facts.map(([k, v, sub]) => `<div class="fact"><div class="fact-k">${k}</div><div class="fact-v">${esc(v)}</div><div class="fact-sub">${esc(sub)}</div></div>`).join("");
+}
+
+// =====================================================================
+// OCTOBER: every World Series the club played in
+// =====================================================================
+function renderOctober() {
+  const S = state.seasons.filter((s) => s.champ || s.pennant);
+  markSkip("october", !S.length);
+  if (!S.length) return clearPage("october", "october");
+  const titles = S.filter((s) => s.champ).length;
+  $("#october-lede").textContent = `${plural(S.length, "trip")} to the World Series, ${titles ? `and ${word(titles)} ${titles === 1 ? "championship" : "championships"}` : "and the first title still to come"}.`;
+  const photoFor = (y) => state.archive.find((a) => a.year === y && /world series/i.test(a.title)) || state.archive.find((a) => a.year === y);
+  $("#october").innerHTML = S.slice().reverse().map((s) => {
+    const c = state.champions[s.year], [a, b] = (c.result || "").split("-");
+    const opp = s.champ ? c.loser.name : c.winner.name;
+    const score = s.champ ? `${a}–${b}` : `${b}–${a}`;
+    const mgr = managersIn(s.year).map((m) => m.name);
+    const stars = allLegendsIn(s.year).map((p) => p.name);
+    const aw = awardsIn(s.year).filter((x) => x.award !== "Rookie of the Year");
+    const park = state.parks.find((p) => p.from <= s.year && s.year <= p.to);
+    const ph = photoFor(s.year);
+    return `<article class="oct ${s.champ ? "won" : "lost"}">
+      <div class="oct-year"><span>${s.year}</span>${s.champ ? `<i>★</i>` : ""}</div>
+      <div class="oct-body">
+        <div class="oct-flag">${s.champ ? "World Champions" : "League Champions"}</div>
+        <h4>${s.champ ? "Beat" : "Fell to"} the ${esc(opp)}, <span class="oct-score">${score}</span></h4>
+        <p>${esc(s.name)} · ${s.w}–${s.l} in the regular season${park ? ` · home at ${esc(park.name)}` : ""}</p>
+        ${mgr.length ? `<p>Managed by ${esc(listify(mgr))}</p>` : ""}
+        ${stars.length ? `<p class="oct-stars">On the roster: ${esc(listify(stars))}</p>` : ""}
+        ${aw.length ? `<p class="oct-stars">${aw.map((x) => `${esc(x.award)}: ${esc(x.name)}`).join(" · ")}</p>` : ""}
+      </div>
+      ${ph ? `<button class="oct-photo" data-i="${state.archive.indexOf(ph)}"><img src="${esc(ph.src)}" alt="${esc(ph.title)}" loading="lazy"></button>` : ""}
+    </article>`;
+  }).join("");
+  $$("#october .oct-photo").forEach((b) => (b.onclick = () => openLightbox(state.archive, +b.dataset.i)));
 }
 
 // =====================================================================
@@ -330,8 +499,11 @@ function showSpan(from, to) {
 // =====================================================================
 const SUFFIX = /^(jr\.?|sr\.?|ii|iii|iv)$/i;
 function lastName(name) { const parts = name.split(" ").filter((w) => !SUFFIX.test(w)); return parts.length > 1 ? parts.slice(1).join(" ") : name; }
-const topLegends = () => (state.legends[state.team?.id] || []).slice(0, 5);
-const legendsIn = (year) => topLegends().filter((p) => p.from <= year && year <= p.to);
+const allLegends = () => state.legends[state.team?.id] || [];
+const topLegends = () => allLegends().slice(0, 5);
+const allLegendsIn = (year) => allLegends().filter((p) => p.from <= year && year <= p.to);
+// A legend's portrait: a curated in-uniform Commons photo, else MLB's own (uniformed) headshot.
+const legendPhoto = (pid) => { const p = ((state.photos[state.team.id] || {}).legends || {})[pid]; return p && p.src ? p : null; };
 
 function legendLine(p) {
   const L = p.line || {};
@@ -345,11 +517,11 @@ function legendLine(p) {
 }
 
 function renderLegends() {
-  const L = topLegends(), ph = (state.photos[state.team.id] || {}).legends || {};
-  $("#sec-legends").hidden = !L.length;
+  const L = topLegends();
+  markSkip("legends", !L.length);
   $("#legends").innerHTML = L.map((p, i) => {
-    const photo = ph[p.id];
-    return `<article class="tcard" data-i="${i}" aria-label="${esc(p.name)}">
+    const photo = legendPhoto(p.id);
+    return `<article class="tcard" aria-label="${esc(p.name)}">
       <div class="tcard-face" style="--tc:${COLORS[state.team.id]}">
         <div class="tcard-art${photo ? "" : " headshot"}">
           <img src="${esc(photo ? photo.src : headshot(p.id, 360))}" alt="" loading="lazy">
@@ -367,11 +539,78 @@ function renderLegends() {
       </div>
     </article>`;
   }).join("");
-  $$("#legends .tcard").forEach((el) => {
-    const p = L[+el.dataset.i];
-    el.onmouseenter = () => showSpan(p.from, p.to);
-    el.onmouseleave = () => showSpan();
-  });
+  const more = allLegends().slice(5);
+  $("#also").innerHTML = more.length
+    ? `<span class="also-k">Also in the conversation</span> ${more.map((p) => `<span class="also-p">${esc(p.name)} <small>${p.from}–${p.to} · ${Math.round(p.value)}</small></span>`).join("")}`
+    : "";
+}
+
+// =====================================================================
+// THE DUGOUT & THE BOOTH
+// =====================================================================
+function renderDugout() {
+  const { managers = [], people = [] } = teamPeople();
+  markSkip("dugout", !managers.length && !people.length);
+  const top = [...managers].sort((a, b) => b.seasons - a.seasons || b.titles.length - a.titles.length || b.W - a.W).slice(0, 6);
+  top.sort((a, b) => a.from - b.from);
+  $("#skippers").innerHTML = top.map((m) => {
+    const rec = m.W + m.L ? `${num(m.W)}–${num(m.L)} <small>(${fmtPct(pct(m.W, m.L))})</small>` : "";
+    const hon = m.titles.length ? `<div class="sk-stars" title="World Series titles">${"★".repeat(m.titles.length)} <span>${plural(m.titles.length, "title")}</span></div>`
+      : m.pennants.length ? `<div class="sk-stars pen"><span>${plural(m.pennants.length, "pennant")}</span></div>` : "";
+    return `<article class="skipper">
+      <img src="${esc(headshot(m.id, 240))}" alt="" loading="lazy">
+      <div class="sk-body">
+        <h5>${esc(m.name)}</h5>
+        <div class="sk-years">${spans(m.years)} · ${plural(m.seasons, "season")}</div>
+        ${rec ? `<div class="sk-rec">${rec}</div>` : ""}
+        ${hon}
+      </div>
+    </article>`;
+  }).join("");
+  $("#all-managers-sum").textContent = `All ${managers.length} managers in club history`;
+  $("#managers-list").innerHTML = managers.map((m) => `<li><span>${spans(m.years)}</span> ${esc(m.name)}${m.titles.length ? ` <b title="World Series titles">${"★".repeat(m.titles.length)}</b>` : ""}</li>`).join("");
+  $(".all-managers").hidden = !managers.length;
+
+  $("#voices").innerHTML = people.map((p) => {
+    const initials = p.name.split(/\s+/).map((w) => w[0]).filter((c) => /[A-Z]/.test(c)).slice(0, 2).join("");
+    return `<article class="voice">
+      <div class="voice-photo">${p.photo ? `<img src="${esc(p.photo.src)}" alt="" loading="lazy">` : `<span>${esc(initials)}</span>`}</div>
+      <div class="voice-body">
+        <div class="voice-role">${esc(p.role)}<span> · ${esc(p.years)}</span></div>
+        <h5>${esc(p.name)}</h5>
+        ${p.call ? `<q class="voice-call">${esc(p.call)}</q>` : ""}
+        <p>${esc(p.blurb || "")}</p>
+        ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">Read more on Wikipedia</a>` : ""}
+      </div>
+    </article>`;
+  }).join("");
+  $$(".subhead")[1].hidden = !people.length;
+}
+
+// =====================================================================
+// RETIRED NUMBERS
+// =====================================================================
+const MIC = `<svg viewBox="0 0 24 24" aria-label="Broadcaster"><path fill="currentColor" d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm-7 9a7 7 0 0 0 6 6.9V21H8v2h8v-2h-3v-3.1A7 7 0 0 0 19 11h-2a5 5 0 0 1-10 0z"/></svg>`;
+function renderNumbers() {
+  const list = state.retired[state.team.id] || [];
+  const hasJackie = list.some((r) => r.no === "42" && /Jackie Robinson/.test(r.name));
+  $("#numbers-lede").textContent = list.length
+    ? `${plural(list.length, "honor")} hang${list.length === 1 ? "s" : ""} on the wall. These numbers will never be issued again.`
+    : "The club has yet to retire a number of its own, but one hangs in every ballpark.";
+  const banner = (r, extra = "") => {
+    const isNum = /^\d+$/.test(r.no), mic = /🎤/.test(r.no);
+    const tags = (r.tags || []).filter((t) => t === "hof" || t === "broadcaster" || t === "honorary");
+    return `<div class="num-banner${extra}">
+      <span class="num${isNum ? "" : " num-word"}${r.no.length > 2 && isNum ? " num-long" : ""}">${mic ? MIC : esc(r.no)}</span>
+      <span class="num-name">${esc(r.name)}</span>
+      <span class="num-year">${r.year ? `retired ${r.year}` : ""}</span>
+      ${tags.includes("hof") ? `<span class="num-tag" title="Hall of Famer">HOF</span>` : ""}
+    </div>`;
+  };
+  $("#numbers").innerHTML = list.map((r) => banner(r)).join("") +
+    (hasJackie ? "" : banner({ no: "42", name: "Jackie Robinson", year: 1997, tags: ["hof"] }, " league"));
+  $("#numbers-note").textContent = hasJackie ? "Number 42 was retired throughout baseball in 1997, fifty years after Jackie Robinson's debut in Brooklyn."
+    : "Number 42 is retired throughout baseball in honor of Jackie Robinson, who broke the color line in 1947.";
 }
 
 // =====================================================================
@@ -381,14 +620,13 @@ const HOF_PAGE = 12;
 let hofAll = false;
 function renderHof() {
   const list = (state.history[state.team.id] || {}).hof || [];
-  const legendPhotos = (state.photos[state.team.id] || {}).legends || {};
-  $("#sec-hof").hidden = !list.length;
-  if (!list.length) return;
+  markSkip("hof", !list.length);
+  if (!list.length) return clearPage("hof", "hof");
   $("#hof-lede").textContent = `${plural(list.length, "member")} of the Hall of Fame wear this club's cap on their plaque.`;
   const shown = hofAll ? list : list.slice(0, HOF_PAGE);
   $("#hof").innerHTML = shown.map((x) => `
     <div class="plaque">
-      <img src="${esc(legendPhotos[x.id]?.src || headshot(x.id, 180))}" alt="" loading="lazy">
+      <img src="${esc(legendPhoto(x.id)?.src || headshot(x.id, 180))}" alt="" loading="lazy">
       <h4>${esc(x.name)}</h4>
       <div>Inducted ${x.inducted}${x.pos && x.pos !== "X" ? " · " + esc(x.pos) : ""}</div>
     </div>`).join("");
@@ -405,7 +643,7 @@ const TROPHY = (fill) => `<svg viewBox="0 0 32 32" aria-hidden="true"><path fill
 function renderTrophies() {
   const A = (state.history[state.team.id] || {}).awards || [];
   const groups = [["MVP", "Most Valuable Player", "#d4a830"], ["Cy Young", "Cy Young Award", "#c9c9c9"], ["Rookie of the Year", "Rookie of the Year", "#c27a3a"]];
-  $("#sec-trophies").hidden = !A.length;
+  markSkip("trophies", !A.length);
   $("#trophies").innerHTML = groups.map(([key, label, color]) => {
     const list = A.filter((a) => a.award === key);
     return `<div class="trophy-col"><h4>${TROPHY(color)}${label}<small>${list.length}</small></h4>
@@ -415,32 +653,143 @@ function renderTrophies() {
 }
 
 // =====================================================================
+// HOME FIELDS
+// =====================================================================
+function renderParks() {
+  const P = state.parks, info = (state.photos[state.team.id] || {}).parks || {};
+  markSkip("parks", !P.length);
+  if (!P.length) return clearPage("parks", "parks");
+  $("#parks-lede").textContent = P.length === 1 ? `One ballpark has been home since ${P[0].from}.`
+    : `${word(P.length)[0].toUpperCase() + word(P.length).slice(1)} ballparks have been home since ${P[0].from}.`;
+  $("#parks").innerHTML = P.map((p, i) => {
+    const d = info[p.key] || {}, S = seasonsIn(p.from, p.to), r = record(S);
+    const titles = S.filter((s) => s.champ).map((s) => s.year);
+    const now = i === P.length - 1 && p.to >= state.seasons.at(-1).year;
+    const span = now ? `${p.from} to today` : p.from === p.to ? `${p.from}` : `${p.from}–${p.to}`;
+    return `<article class="park${i % 2 ? " flip" : ""}">
+      <div class="park-photo">${d.src ? `<button data-i="${i}"><img src="${esc(d.src)}" alt="${esc(p.name)}" loading="lazy"></button>` : `<div class="park-blank">${esc(p.name)}</div>`}
+        <span class="park-stamp">${now ? "Home today" : span}</span></div>
+      <div class="park-body">
+        <h4>${esc(p.name)}</h4>
+        <div class="park-meta">${span} · ${plural(S.length, "season")}${p.aka?.length ? ` · also ${esc(listify(p.aka))}` : ""}</div>
+        <div class="park-rec">${num(r.W)}–${num(r.L)} <small>${fmtPct(r.p)}</small>${titles.length ? ` <span class="park-titles">★ ${titles.join(", ")}</span>` : ""}</div>
+        ${d.blurb ? `<p>${esc(d.blurb)}</p>` : ""}
+        ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">Read more on Wikipedia</a>` : ""}
+      </div>
+    </article>`;
+  }).join("");
+  const shots = P.map((p) => info[p.key]).map((d, i) => d?.src ? { src: d.src, title: P[i].name, caption: d.blurb, url: d.url, file: d.file, year: null } : null);
+  $$("#parks .park-photo button").forEach((b) => (b.onclick = () => {
+    const list = shots.filter(Boolean);
+    openLightbox(list, list.indexOf(shots[+b.dataset.i]));
+  }));
+}
+
+// =====================================================================
 // SCRAPBOOK + LIGHTBOX
 // =====================================================================
+const decadeOf = (y) => (y ? Math.floor(y / 10) * 10 : null);
 function renderArchive() {
   const A = state.archive;
-  $("#sec-scrapbook").hidden = !A.length;
-  $("#archive").innerHTML = A.map((a, i) => `
+  markSkip("scrapbook", !A.length);
+  const decades = [...new Set(A.map((a) => decadeOf(a.year)))].sort((a, b) => (a ?? 1e4) - (b ?? 1e4));
+  $("#decades").innerHTML = decades.length > 2
+    ? [`<button data-d="" class="${state.decade == null ? "on" : ""}">All <small>${A.length}</small></button>`,
+       ...decades.map((d) => `<button data-d="${d ?? "x"}" class="${String(state.decade) === String(d ?? "x") ? "on" : ""}">${d ? d + "s" : "Undated"} <small>${A.filter((a) => decadeOf(a.year) === d).length}</small></button>`)].join("")
+    : "";
+  $$("#decades button").forEach((b) => (b.onclick = () => { state.decade = b.dataset.d === "" ? null : b.dataset.d; renderArchive(); }));
+  const shown = state.decade == null ? A : A.filter((a) => String(decadeOf(a.year) ?? "x") === state.decade);
+  $("#archive").innerHTML = shown.map((a, i) => `
     <button class="snap" data-i="${i}" style="--rot:${(((i * 37) % 7) - 3) * 0.55}deg">
       <img src="${esc(a.src)}" alt="${esc(a.title)}" loading="lazy">
       <span class="snap-cap">${a.year ? `<b>${a.year}</b>` : ""}${esc(a.title)}</span>
     </button>`).join("");
-  $$("#archive .snap").forEach((b) => (b.onclick = () => openLightbox(A[+b.dataset.i])));
+  $$("#archive .snap").forEach((b) => (b.onclick = () => openLightbox(shown, +b.dataset.i)));
 }
 
 const lb = $("#lightbox");
+const LB = { list: [], i: 0 };
 lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+lb.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") { lbStep(1); e.preventDefault(); }
+  if (e.key === "ArrowLeft") { lbStep(-1); e.preventDefault(); }
+});
 $("#lb-close").onclick = () => lb.close();
-function openLightbox(a) {
-  if (!a) return;
+$("#lb-prev").onclick = () => lbStep(-1);
+$("#lb-next").onclick = () => lbStep(1);
+function lbStep(d) { if (LB.list.length > 1) showLightbox((LB.i + d + LB.list.length) % LB.list.length); }
+function openLightbox(list, i = 0) {
+  if (!list?.length || i < 0) return;
+  LB.list = list;
+  showLightbox(i);
+  if (!lb.open) lb.showModal();
+}
+function showLightbox(i) {
+  const a = LB.list[i];
+  LB.i = i;
   $("#lb-img").src = a.src;
   $("#lb-img").alt = a.title;
   $("#lb-title").textContent = (a.year ? a.year + " — " : "") + a.title;
   $("#lb-cap").textContent = a.caption || "";
   $("#lb-wiki").href = a.url || "#";
   $("#lb-wiki").hidden = !a.url;
-  $("#lb-file").href = a.file;
-  lb.showModal();
+  $("#lb-wiki").textContent = /commons\.wikimedia/.test(a.url || "") ? "See it on Wikimedia Commons" : "Read the full story on Wikipedia";
+  $("#lb-file").href = a.file || "#";
+  $("#lb-file").hidden = !a.file;
+  const many = LB.list.length > 1;
+  $("#lb-prev").hidden = $("#lb-next").hidden = !many;
+  $("#lb-count").textContent = many ? `${i + 1} of ${LB.list.length}` : "";
+}
+
+// =====================================================================
+// A LETTER TO THE CLUB
+// =====================================================================
+function renderLetter() {
+  const t = state.team, S = state.seasons, { W, L } = record(S);
+  const names = [...new Set(state.eras.map((e) => e.name))];
+  const champs = S.filter((s) => s.champ), flags = S.filter((s) => s.champ || s.pennant);
+  const full = S.filter((s) => s.w + s.l >= 100);
+  const best = [...full].sort((a, b) => b.pct - a.pct)[0];
+  const L5 = topLegends(), { managers = [], people = [] } = teamPeople();
+  const skipper = [...managers].sort((a, b) => b.seasons - a.seasons)[0];
+  const voice = people.find((p) => /broadcaster|voice/i.test(p.role) && p.call) || people.find((p) => /broadcaster|voice/i.test(p.role));
+  const now = state.parks.at(-1)?.name;
+  const parks = [...new Set(state.parks.map((p) => p.name).filter((n) => n !== now))].map(parkName);
+  const retired = (state.retired[t.id] || []).filter((r) => /^\d+$/.test(r.no));
+  const thisYear = S.at(-1).year, drought = champs.length ? thisYear - champs.at(-1).year : S.length;
+  const nameFor = (p) => (p.nick ? `${p.name} (“${p.nick}”)` : p.name);
+
+  const paras = [];
+  paras.push(`You first took the field in ${S[0].year}` + (names.length > 1 ? ` as the ${names[0]}, and have since been the ${listify(names.slice(1))}` : "") +
+    `. In ${S.length} seasons you have won ${num(W)} games and lost ${num(L)}, and we remember more of them than we'd care to admit.`);
+  if (champs.length) {
+    paras.push(`You gave us ${word(champs.length)} World Series ${champs.length === 1 ? "title" : "titles"}` +
+      (champs.length > 1 ? `, from ${champs[0].year} to ${champs.at(-1).year}` : ` in ${champs[0].year}`) +
+      (flags.length > champs.length ? `, and ${word(flags.length - champs.length)} more October${flags.length - champs.length === 1 ? "" : "s"} that ended a few outs short` : "") +
+      `.` + (best ? ` We still talk about ${best.year}, when you went ${best.w}–${best.l}.` : "") +
+      (drought >= 25 ? ` It has been ${drought} years since the last parade. We're ready when you are.` : ""));
+  } else if (flags.length) {
+    paras.push(`You've reached the World Series ${flags.length === 1 ? "once" : word(flags.length) + " times"} and come home without the trophy. ${S.length} seasons and counting, and every spring we believe this is the year.`);
+  } else {
+    paras.push(`The pennant hasn't come yet. ${S.length} seasons and counting, and every spring we believe this is the year.` + (best ? ` Until then, there's ${best.year}, when you went ${best.w}–${best.l}.` : ""));
+  }
+  if (L5.length) {
+    paras.push(`You gave us ${listify(L5.slice(0, 4).map(nameFor))}` +
+      (retired.length ? `, and ${word(retired.length)} ${retired.length === 1 ? "number" : "numbers"} that hang on the wall where no one else can wear them` : "") + `.`);
+  }
+  const bits = [];
+  if (skipper && skipper.seasons >= 3) bits.push(`${skipper.name} filled out your lineup card for ${word(skipper.seasons)} seasons`);
+  if (voice) bits.push(`${voice.name} called it for us${voice.call ? `: “${voice.call}”` : ""}`);
+  if (bits.length) paras.push(bits.join(", and ") + (voice?.call ? "" : "."));
+  if (parks.length) paras.push(`We came to see you at ${listify(parks.slice(-4))}, and now we come to ${parkName(now)}. Save us a seat.`);
+  else if (now) paras.push(`We come to see you at ${parkName(now)}. Save us a seat.`);
+  paras.push(`Here's to ${thisYear + 1}. See you on Opening Day.`);
+
+  const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  $("#letter").innerHTML = `<div class="letter-date">${today}</div>
+    <p class="letter-dear">Dear ${esc(t.teamName)},</p>
+    ${paras.map((p) => `<p>${esc(p)}</p>`).join("")}
+    <p class="letter-sign">Yours, through every losing streak,<span>A fan</span></p>`;
 }
 
 // =====================================================================
