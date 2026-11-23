@@ -96,9 +96,7 @@ async function init() {
   $$(".tab").forEach((b) => (b.onclick = () => showView(b.dataset.view)));
   $("#home-link").onclick = (e) => { e.preventDefault(); goHome(); };
   $("#prev").onclick = () => step(-1);
-  $("#next").onclick = () => step(1);
-  $("#btn-restart").onclick = () => goPage("cover");
-  $("#btn-another").onclick = () => { $(".roster-board").scrollIntoView({ behavior: "smooth" }); };
+  $("#next").onclick = () => (state.page === state.pages.at(-1) ? goPage("cover") : step(1));
   document.addEventListener("keydown", onKey);
 
   const params = new URLSearchParams(location.hash.slice(1));
@@ -156,7 +154,7 @@ function setupPages() {
   for (const k of state.pages) {
     if (k === "cover") continue;
     const kicker = $(".kicker", pageEl(k));
-    if (kicker) kicker.textContent = k === "letter" ? "Postscript" : `Chapter the ${ORD[n++]}`;
+    if (kicker) kicker.textContent = `Chapter the ${ORD[n++]}`;
   }
   $("#progress").innerHTML = `<div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>` +
     state.pages.map((k, i) => `<button class="pstop" data-k="${k}" title="${esc(pageLabel(k))}"><i>${i + 1}</i><span>${esc(pageLabel(k))}</span></button>`).join("");
@@ -165,7 +163,6 @@ function setupPages() {
     ledger: "Every season, in one long line", october: "The pennants and the Fall Classics", legends: "The five greatest to wear the uniform",
     dugout: "Skippers, voices and builders", numbers: "The numbers no one will wear again", hof: "Bronze plaques in Cooperstown",
     trophies: "MVPs, Cy Youngs and top rookies", parks: "Every ballpark the club called home", scrapbook: "Photographs from the archives",
-    letter: "A few words from a fan",
   };
   $("#toc").innerHTML = state.pages.filter((k) => k !== "cover").map((k) =>
     `<li><button data-k="${k}"><span class="toc-name">${esc(pageLabel(k))}<small>${blurbs[k] || ""}</small></span><span class="toc-dots"></span><span class="toc-pg">${state.pages.indexOf(k) + 1}</span></button></li>`).join("");
@@ -193,9 +190,9 @@ function goPage(k, { scroll = true } = {}) {
   $("#progress-fill").style.width = `${(to / Math.max(1, state.pages.length - 1)) * 100}%`;
   const prev = state.pages[to - 1], next = state.pages[to + 1];
   $("#prev").hidden = !prev;
-  $("#next").hidden = !next;
+  $("#next").hidden = k === "cover" && !next;
   if (prev) $("#prev .pager-label").textContent = pageLabel(prev);
-  if (next) $("#next .pager-label").textContent = (k === "cover" ? "Begin: " : "Next: ") + pageLabel(next);
+  $("#next .pager-label").textContent = next ? (k === "cover" ? "Begin: " : "Next: ") + pageLabel(next) : "Back to the title page";
   if (k === "ledger") renderTimeline();
   updateHash();
   if (scroll) {
@@ -271,8 +268,6 @@ async function selectTeam(id, page = "cover") {
   renderTrophies();
   renderParks();
   renderArchive();
-  renderLetter();
-  renderDedication();
   setupPages();
   goPage(page, { scroll: false });
 }
@@ -344,15 +339,6 @@ function parkName(n) {
   if (/^the /i.test(n)) return "the " + n.slice(4);
   return /(Grounds|dome|Coliseum|Bowl|Ballpark)$|^Palace/.test(n) ? "the " + n : n;
 }
-function currentPark() { return state.parks.at(-1)?.name; }
-function renderDedication() {
-  const t = state.team, S = state.seasons, park = currentPark();
-  const firstName = state.eras[0]?.name || t.name;
-  $("#dedication").innerHTML =
-    `<p>For everyone who ever kept score in the cheap seats${park ? ` at ${esc(parkName(park))}` : ""}, argued about the lineup on the drive home, and came back the next day anyway.</p>` +
-    `<p>${S.length} seasons of ${esc(t.teamName)} baseball, from the ${esc(firstName)} of ${S[0].year} to the club of ${S.at(-1).year}, bound in one volume.</p>`;
-}
-
 // ---------- the ledger (SVG timeline) ----------
 function renderTimeline() {
   const svg = $("#timeline"), S = state.seasons;
@@ -593,24 +579,29 @@ function renderDugout() {
 const MIC = `<svg viewBox="0 0 24 24" aria-label="Broadcaster"><path fill="currentColor" d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm-7 9a7 7 0 0 0 6 6.9V21H8v2h8v-2h-3v-3.1A7 7 0 0 0 19 11h-2a5 5 0 0 1-10 0z"/></svg>`;
 function renderNumbers() {
   const list = state.retired[state.team.id] || [];
-  const hasJackie = list.some((r) => r.no === "42" && /Jackie Robinson/.test(r.name));
-  $("#numbers-lede").textContent = list.length
-    ? `${plural(list.length, "honor")} hang${list.length === 1 ? "s" : ""} on the wall. These numbers will never be issued again.`
-    : "The club has yet to retire a number of its own, but one hangs in every ballpark.";
+  const isJackie = (r) => r.no === "42" && /Jackie Robinson/.test(r.name);
+  const hasJackie = list.some(isJackie);
+  markSkip("numbers", !list.length);
+  $("#numbers-lede").textContent =
+    `${plural(list.length, "honor")} hang${list.length === 1 ? "s" : ""} on the wall. These numbers will never be issued again.`;
   const banner = (r, extra = "") => {
     const isNum = /^\d+$/.test(r.no), mic = /🎤/.test(r.no);
     const tags = (r.tags || []).filter((t) => t === "hof" || t === "broadcaster" || t === "honorary");
-    return `<div class="num-banner${extra}">
+    return `<div class="num-banner${extra}"${extra ? ` title="Retired across all of Major League Baseball"` : ""}>
       <span class="num${isNum ? "" : " num-word"}${r.no.length > 2 && isNum ? " num-long" : ""}">${mic ? MIC : esc(r.no)}</span>
       <span class="num-name">${esc(r.name)}</span>
       <span class="num-year">${r.year ? `retired ${r.year}` : ""}</span>
-      ${tags.includes("hof") ? `<span class="num-tag" title="Hall of Famer">HOF</span>` : ""}
+      ${extra ? `<span class="num-tag">EVERY TEAM · 1997</span>` : tags.includes("hof") ? `<span class="num-tag" title="Hall of Famer">HOF</span>` : ""}
     </div>`;
   };
-  $("#numbers").innerHTML = list.map((r) => banner(r)).join("") +
-    (hasJackie ? "" : banner({ no: "42", name: "Jackie Robinson", year: 1997, tags: ["hof"] }, " league"));
-  $("#numbers-note").textContent = hasJackie ? "Number 42 was retired throughout baseball in 1997, fifty years after Jackie Robinson's debut in Brooklyn."
-    : "Number 42 is retired throughout baseball in honor of Jackie Robinson, who broke the color line in 1947.";
+  // Jackie's 42 hangs first, in gold, on his own club's wall
+  const ordered = hasJackie ? [list.find(isJackie), ...list.filter((r) => !isJackie(r))] : list;
+  $("#numbers").innerHTML = ordered.map((r) => banner(r, isJackie(r) ? " gold" : "")).join("");
+  const note = $("#numbers-note");
+  note.hidden = !hasJackie;
+  note.textContent = hasJackie
+    ? "Jackie Robinson broke baseball's color line in Brooklyn on April 15, 1947. The Dodgers retired his 42 in 1972, and in 1997, on the fiftieth anniversary, Major League Baseball retired it for every team. It's the only number no club will ever issue again."
+    : "";
 }
 
 // =====================================================================
@@ -739,57 +730,6 @@ function showLightbox(i) {
   const many = LB.list.length > 1;
   $("#lb-prev").hidden = $("#lb-next").hidden = !many;
   $("#lb-count").textContent = many ? `${i + 1} of ${LB.list.length}` : "";
-}
-
-// =====================================================================
-// A LETTER TO THE CLUB
-// =====================================================================
-function renderLetter() {
-  const t = state.team, S = state.seasons, { W, L } = record(S);
-  const names = [...new Set(state.eras.map((e) => e.name))];
-  const champs = S.filter((s) => s.champ), flags = S.filter((s) => s.champ || s.pennant);
-  const full = S.filter((s) => s.w + s.l >= 100);
-  const best = [...full].sort((a, b) => b.pct - a.pct)[0];
-  const L5 = topLegends(), { managers = [], people = [] } = teamPeople();
-  const skipper = [...managers].sort((a, b) => b.seasons - a.seasons)[0];
-  const voice = people.find((p) => /broadcaster|voice/i.test(p.role) && p.call) || people.find((p) => /broadcaster|voice/i.test(p.role));
-  const now = state.parks.at(-1)?.name;
-  const parks = [...new Set(state.parks.map((p) => p.name).filter((n) => n !== now))].map(parkName);
-  const retired = (state.retired[t.id] || []).filter((r) => /^\d+$/.test(r.no));
-  const thisYear = S.at(-1).year, drought = champs.length ? thisYear - champs.at(-1).year : S.length;
-  const nameFor = (p) => (p.nick ? `${p.name} (“${p.nick}”)` : p.name);
-
-  const paras = [];
-  paras.push(`You first took the field in ${S[0].year}` + (names.length > 1 ? ` as the ${names[0]}, and have since been the ${listify(names.slice(1))}` : "") +
-    `. In ${S.length} seasons you have won ${num(W)} games and lost ${num(L)}, and we remember more of them than we'd care to admit.`);
-  if (champs.length) {
-    paras.push(`You gave us ${word(champs.length)} World Series ${champs.length === 1 ? "title" : "titles"}` +
-      (champs.length > 1 ? `, from ${champs[0].year} to ${champs.at(-1).year}` : ` in ${champs[0].year}`) +
-      (flags.length > champs.length ? `, and ${word(flags.length - champs.length)} more October${flags.length - champs.length === 1 ? "" : "s"} that ended a few outs short` : "") +
-      `.` + (best ? ` We still talk about ${best.year}, when you went ${best.w}–${best.l}.` : "") +
-      (drought >= 25 ? ` It has been ${drought} years since the last parade. We're ready when you are.` : ""));
-  } else if (flags.length) {
-    paras.push(`You've reached the World Series ${flags.length === 1 ? "once" : word(flags.length) + " times"} and come home without the trophy. ${S.length} seasons and counting, and every spring we believe this is the year.`);
-  } else {
-    paras.push(`The pennant hasn't come yet. ${S.length} seasons and counting, and every spring we believe this is the year.` + (best ? ` Until then, there's ${best.year}, when you went ${best.w}–${best.l}.` : ""));
-  }
-  if (L5.length) {
-    paras.push(`You gave us ${listify(L5.slice(0, 4).map(nameFor))}` +
-      (retired.length ? `, and ${word(retired.length)} ${retired.length === 1 ? "number" : "numbers"} that hang on the wall where no one else can wear them` : "") + `.`);
-  }
-  const bits = [];
-  if (skipper && skipper.seasons >= 3) bits.push(`${skipper.name} filled out your lineup card for ${word(skipper.seasons)} seasons`);
-  if (voice) bits.push(`${voice.name} called it for us${voice.call ? `: “${voice.call}”` : ""}`);
-  if (bits.length) paras.push(bits.join(", and ") + (voice?.call ? "" : "."));
-  if (parks.length) paras.push(`We came to see you at ${listify(parks.slice(-4))}, and now we come to ${parkName(now)}. Save us a seat.`);
-  else if (now) paras.push(`We come to see you at ${parkName(now)}. Save us a seat.`);
-  paras.push(`Here's to ${thisYear + 1}. See you on Opening Day.`);
-
-  const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-  $("#letter").innerHTML = `<div class="letter-date">${today}</div>
-    <p class="letter-dear">Dear ${esc(t.teamName)},</p>
-    ${paras.map((p) => `<p>${esc(p)}</p>`).join("")}
-    <p class="letter-sign">Yours, through every losing streak,<span>A fan</span></p>`;
 }
 
 // =====================================================================
