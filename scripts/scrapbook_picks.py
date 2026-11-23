@@ -7,6 +7,7 @@ freely licensed). Re-check a file before swapping it in: Commons titles are ofte
 
 # Legend portraits in the club's own uniform, by MLB person id.
 # A file replaces the Wikipedia lead photo; None drops it so the page uses MLB's headshot.
+# A (team id, person id) key overrides a bare person id for that club only.
 LEGEND_PHOTOS = {
     116615: "File:Randy Johnson (51006682348) (cropped).jpg",          # D-backs, 2000s
     502671: "File:Paulgoldschmidt1.jpg",                               # D-backs
@@ -58,6 +59,68 @@ LEGEND_PHOTOS = {
     121604: None,  # Bret Saberhagen
     122111: None,  # Gary Sheffield
     111676: None,  # Jay Buhner
+    # --- legends ranked 6-10 (the page shows ten). (team, player) keys are for players
+    # who rank for two clubs, so each card shows the right uniform.
+    113516: 'File:BrianDowningCAL.png',                            # Brian Downing (108)
+    115130: 'File:BobbyGrichCAL.png',                              # Bobby Grich (108)
+    121597: 'File:Nolan Ryan - California Angels.jpg',             # Nolan Ryan Jr. (108)
+    114135: None,                                                  # Steve Finley (109)
+    121811: None,                                                  # Curt Schilling (109)
+    457708: 'File:Opening Day 074 Justin Upton cropped.jpg',       # Justin Upton (109)
+    471083: "File:Diamondbacks' Catchers - 1st Day of Spring Training (cropped).jpg", # Miguel Montero (109)
+    119608: 'File:Mike Mussina (48163613981).jpg',                 # Mike Mussina (110)
+    122272: None,                                                  # Ken Singleton (110)
+    112388: 'File:Lipofsky-Roger-Clemens.jpg',                     # Roger Clemens (111)
+    (111, 122566): 'File:Tris Speaker, Boston Red Sox, baseball card portrait LCCN2008677364.jpg', # Tris Speaker (111)
+    111577: 'File:Mordecai Brown, Chicago Cubs, baseball card portrait LCCN2008677458.jpg', # Mordecai Brown (112)
+    122544: 'File:Sammy Sosa (51009953001) (cropped).jpg',         # Sammy Sosa (112)
+    (114, 122566): 'File:Speaker, Cleveland, 1924 LOC npcc.11155.jpg', # Tris Speaker (114)
+    110974: None,                                                  # Dante Bichette (115)
+    112106: None,                                                  # Vinny Castilla (115)
+    407812: 'File:IMG 9454 MattHolliday.jpg',                      # Matt Holliday (115)
+    596115: 'File:Colorado Rockies (25269265500).jpg',             # Trevor Story (115)
+    112090: 'File:Norm Cash 1966.jpg',                             # Norm Cash (116)
+    (116, 408234): 'File:Miguel Cabrera (2011).jpg',               # Miguel Cabrera (116)
+    112902: 'File:Jose Cruz - Houston Astros.jpg',                 # Jose Cruz (117)
+    400061: 'File:Roy Oswalt 2008 (2).jpg',                        # Roy Oswalt (117)
+    123041: 'File:Mike Sweeney (543523365) (cropped).jpg',         # Mike Sweeney (118)
+    113151: None,                                                  # Andre Dawson (120)
+    118371: None,                                                  # Dennis Martinez (120)
+    123865: None,                                                  # Tim Wallach (120)
+    453286: 'File:2016-10-13 Max Schezer pitch NLDS Game 5 for the Nationals 09.jpg', # Max Scherzer (120)
+    543685: 'File:Anthony Rendon (14430676940).jpg',               # Anthony Rendon (120)
+    122864: 'File:Darryl Strawberry 1986.jpg',                     # Darryl Strawberry (121)
+    408314: 'File:NYM Jose Reyes 7 cropped.JPG',                   # José Reyes (121)
+    (133, 112506): 'File:Eddie Collins, Philadelphia Athletics, baseball card portrait LCCN2008676835.jpg', # Eddie Collins Sr. (133)
+    115749: 'File:RickeyOAK.png',                                  # Rickey Henderson (133)
+    117072: 'File:RalphKiner1953bowman.jpg',                       # Ralph Kiner (134)
+    110351: None,                                                  # Andy Ashby (135)
+    119732: None,                                                  # Phil Nevin (135)
+    113096: None,                                                  # Alvin Davis (136)
+    (136, 116615): None,                                           # Randy Johnson (136)
+    (136, 121347): None,                                           # Alex Rodriguez (136)
+    111495: 'File:Lou Brock - St. Louis Cardinals.jpg',            # Lou Brock (138)
+    408307: 'File:Carl Crawford on May 12, 2009.jpg',              # Carl Crawford (139)
+    425834: 'File:UptonTB.jpg',                                    # B.J. Upton (139)
+    650490: 'File:Diazstlrays2024.jpg',                            # Yandy Díaz (139)
+    (140, 121347): None,                                           # Alex Rodriguez (140)
+    134181: 'File:Adrian Beltre Rangers 2013.jpg',                 # Adrian Beltré (140)
+    435079: 'File:KinslerHeadshot.jpg',                            # Ian Kinsler (140)
+    124224: None,                                                  # Ernie Whitt (141)
+    150484: 'File:Vernon Wells on the basepath.jpg',               # Vernon Wells (141)
+    124682: None,                                                  # Eddie Yost (142)
+    110029: 'File:Bobby Abreu in 2004.jpg',                        # Bobby Abreu (143)
+    114849: 'File:Tom Glavine Pitching 1993.jpg',                  # Tom Glavine (144)
+    118120: None,                                                  # Greg Maddux (144)
+    122477: 'File:John Smoltz with Colonel Air Force (cropped).jpg', # John Smoltz (144)
+    (145, 112506): 'File:Eddie Collins second base 1923 Chicago White Sox.jpg', # Eddie Collins Sr. (145)
+    114260: 'File:Cliff Floyd (27978622127) (cropped).jpg',        # Cliff Floyd (146)
+    136780: 'File:Mike Lowell (42847443081) (cropped).jpg',        # Mike Lowell (146)
+    425883: 'File:DontrelleWillis.jpg',                            # Dontrelle Willis (146)
+    435178: 'File:Josh Johnson (baseball player) (7117344265) (cropped).jpg', # Josh Johnson (146)
+    124288: 'File:Bernie Williams.jpg',                            # Bernie Williams (147)
+    123251: 'File:GormanThomas.jpg',                               # Gorman Thomas (158)
+    282656: 'File:Bensheets.png',                                  # Ben Sheets (158)
 }
 
 # Wikipedia article for each ballpark name in data/history.json, when the name alone is ambiguous.

@@ -90,6 +90,13 @@
     "h": 2370,
     "url": "https://en.wikipedia.org/wiki/Ketel_Marte"
    },
+   "444482": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/David_Peralta_on_March_11%2C_2016.jpg/960px-David_Peralta_on_March_11%2C_2016.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:David_Peralta_on_March_11%2C_2016.jpg",
+    "w": 2000,
+    "h": 3000,
+    "url": "https://en.wikipedia.org/wiki/David_Peralta"
+   },
    "116615": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Randy_Johnson_%2851006682348%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Randy_Johnson_(51006682348)_(cropped).jpg",
@@ -107,6 +114,18 @@
     "file": "https://commons.wikimedia.org/wiki/File:Brandon_Webb_bunting.jpg",
     "w": 640,
     "h": 540
+   },
+   "471083": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Diamondbacks%27_Catchers_-_1st_Day_of_Spring_Training_%28cropped%29.jpg/960px-Diamondbacks%27_Catchers_-_1st_Day_of_Spring_Training_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Diamondbacks%27_Catchers_-_1st_Day_of_Spring_Training_(cropped).jpg",
+    "w": 1255,
+    "h": 1725
+   },
+   "457708": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Opening_Day_074_Justin_Upton_cropped.jpg/960px-Opening_Day_074_Justin_Upton_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Opening_Day_074_Justin_Upton_cropped.jpg",
+    "w": 1157,
+    "h": 1793
    }
   },
   "parks": {
@@ -346,6 +365,39 @@
     "w": 3148,
     "h": 4076,
     "url": "https://en.wikipedia.org/wiki/Al_Simmons"
+   },
+   "110850": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Chief_Bender%2C_Philadelphia_Athletics_pitcher_in_1911_%28cropped%29.jpg/960px-Chief_Bender%2C_Philadelphia_Athletics_pitcher_in_1911_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Chief_Bender%2C_Philadelphia_Athletics_pitcher_in_1911_%28cropped%29.jpg",
+    "w": 4433,
+    "h": 3324,
+    "url": "https://en.wikipedia.org/wiki/Chief_Bender"
+   },
+   "112437": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mickey_Cochrane_card.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Mickey_Cochrane_card.jpg",
+    "w": 248,
+    "h": 386,
+    "url": "https://en.wikipedia.org/wiki/Mickey_Cochrane"
+   },
+   "121426": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Eddie-rommel.jpg/960px-Eddie-rommel.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Eddie-rommel.jpg",
+    "w": 2696,
+    "h": 3774,
+    "url": "https://en.wikipedia.org/wiki/Eddie_Rommel"
+   },
+   "115749": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fc/RickeyOAK.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:RickeyOAK.png",
+    "w": 317,
+    "h": 500
+   },
+   "112506": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Eddie_Collins%2C_Philadelphia_Athletics%2C_baseball_card_portrait_LCCN2008676835.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Eddie_Collins,_Philadelphia_Athletics,_baseball_card_portrait_LCCN2008676835.jpg",
+    "w": 562,
+    "h": 1024
    }
   },
   "parks": {
@@ -617,11 +669,37 @@
     "h": 515,
     "url": "https://en.wikipedia.org/wiki/Eddie_Mathews"
    },
+   "119786": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/89/Phil_Niekro_1974.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Phil_Niekro_1974.jpg",
+    "w": 342,
+    "h": 431,
+    "url": "https://en.wikipedia.org/wiki/Phil_Niekro"
+   },
+   "119545": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Dale_Murphy_1984_Braves_Police_Set_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Dale_Murphy_1984_Braves_Police_Set_%28cropped%29.jpg",
+    "w": 194,
+    "h": 263,
+    "url": "https://en.wikipedia.org/wiki/Dale_Murphy"
+   },
    "119761": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Kid_Nichols_Boston_Beaneaters_baseball_card_1895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Kid_Nichols_Boston_Beaneaters_baseball_card_1895.jpg",
     "w": 564,
     "h": 1024
+   },
+   "122477": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/John_Smoltz_with_Colonel_Air_Force_%28cropped%29.jpg/960px-John_Smoltz_with_Colonel_Air_Force_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:John_Smoltz_with_Colonel_Air_Force_(cropped).jpg",
+    "w": 1245,
+    "h": 1405
+   },
+   "114849": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Tom_Glavine_Pitching_1993.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Tom_Glavine_Pitching_1993.jpg",
+    "w": 760,
+    "h": 580
    }
   },
   "parks": {
@@ -894,11 +972,38 @@
     "h": 661,
     "url": "https://en.wikipedia.org/wiki/Harlond_Clift"
    },
+   "122280": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Sisler%2C_St._Louis%2C_1924_LOC_npcc.11451.jpg/960px-Sisler%2C_St._Louis%2C_1924_LOC_npcc.11451.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sisler%2C_St._Louis%2C_1924_LOC_npcc.11451.jpg",
+    "w": 3417,
+    "h": 4224,
+    "url": "https://en.wikipedia.org/wiki/George_Sisler"
+   },
+   "124321": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/Ken-williams.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Ken-williams.jpg",
+    "w": 706,
+    "h": 1024,
+    "url": "https://en.wikipedia.org/wiki/Ken_Williams_(baseball)"
+   },
+   "120719": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Boog_Powell_Orioles.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Boog_Powell_Orioles.jpg",
+    "w": 613,
+    "h": 891,
+    "url": "https://en.wikipedia.org/wiki/Boog_Powell"
+   },
    "119579": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Eddie_Murray_-_Baltimore_Orioles_-_1983.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Eddie_Murray_-_Baltimore_Orioles_-_1983.jpg",
     "w": 212,
     "h": 310
+   },
+   "119608": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Mike_Mussina_%2848163613981%29.jpg/960px-Mike_Mussina_%2848163613981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Mike_Mussina_(48163613981).jpg",
+    "w": 3476,
+    "h": 2681
    }
   },
   "parks": {
@@ -1210,11 +1315,44 @@
     "h": 1473,
     "url": "https://en.wikipedia.org/wiki/Cy_Young"
    },
+   "120074": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/David_Ortiz_on_July_27%2C_2013.jpg/960px-David_Ortiz_on_July_27%2C_2013.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:David_Ortiz_on_July_27%2C_2013.jpg",
+    "w": 2790,
+    "h": 3429,
+    "url": "https://en.wikipedia.org/wiki/David_Ortiz"
+   },
+   "121140": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Jim_Rice_1976.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Rice_1976.jpg",
+    "w": 286,
+    "h": 472,
+    "url": "https://en.wikipedia.org/wiki/Jim_Rice"
+   },
+   "113419": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/93/Bob_Doerr_1947.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Doerr_1947.jpg",
+    "w": 330,
+    "h": 480,
+    "url": "https://en.wikipedia.org/wiki/Bobby_Doerr"
+   },
    "111153": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Wade_Boggs_1988_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Wade_Boggs_1988_(cropped).jpg",
     "w": 452,
     "h": 837
+   },
+   "112388": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/15/Lipofsky-Roger-Clemens.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Lipofsky-Roger-Clemens.jpg",
+    "w": 300,
+    "h": 277
+   },
+   "122566": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/58/Tris_Speaker%2C_Boston_Red_Sox%2C_baseball_card_portrait_LCCN2008677364.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Tris_Speaker,_Boston_Red_Sox,_baseball_card_portrait_LCCN2008677364.jpg",
+    "w": 571,
+    "h": 1024
    }
   },
   "parks": {
@@ -1513,6 +1651,39 @@
     "w": 298,
     "h": 301,
     "url": "https://en.wikipedia.org/wiki/Charlie_Root"
+   },
+   "121665": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Pic_of_ryne_sandberg_from_the_early_90%27s.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Pic_of_ryne_sandberg_from_the_early_90%27s.jpg",
+    "w": 277,
+    "h": 408,
+    "url": "https://en.wikipedia.org/wiki/Ryne_Sandberg"
+   },
+   "115283": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Stan_Hack_1938.jpeg/960px-Stan_Hack_1938.jpeg",
+    "file": "https://commons.wikimedia.org/wiki/File:Stan_Hack_1938.jpeg",
+    "w": 1443,
+    "h": 1842,
+    "url": "https://en.wikipedia.org/wiki/Stan_Hack"
+   },
+   "110533": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ernie_Banks_1969.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Ernie_Banks_1969.jpg",
+    "w": 295,
+    "h": 452,
+    "url": "https://en.wikipedia.org/wiki/Ernie_Banks"
+   },
+   "122544": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sammy_Sosa_%2851009953001%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Sammy_Sosa_(51009953001)_(cropped).jpg",
+    "w": 359,
+    "h": 548
+   },
+   "111577": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Mordecai_Brown%2C_Chicago_Cubs%2C_baseball_card_portrait_LCCN2008677458.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Mordecai_Brown,_Chicago_Cubs,_baseball_card_portrait_LCCN2008677458.jpg",
+    "w": 581,
+    "h": 1024
    }
   },
   "parks": {
@@ -1782,11 +1953,45 @@
     "h": 446,
     "url": "https://en.wikipedia.org/wiki/Ted_Lyons"
    },
+   "120562": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Billy_Pierce_1953.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Billy_Pierce_1953.jpg",
+    "w": 249,
+    "h": 388,
+    "url": "https://en.wikipedia.org/wiki/Billy_Pierce"
+   },
+   "112288": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3a/EddieCicotte55.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:EddieCicotte55.jpg",
+    "w": 214,
+    "h": 303,
+    "url": "https://en.wikipedia.org/wiki/Eddie_Cicotte"
+   },
+   "124173": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2b/T206_Doc_White.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:T206_Doc_White.jpg",
+    "w": 213,
+    "h": 386,
+    "url": "https://en.wikipedia.org/wiki/Doc_White"
+   },
+   "117244": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Paul_Konerko_on_August_10%2C_2011.jpg/960px-Paul_Konerko_on_August_10%2C_2011.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Paul_Konerko_on_August_10%2C_2011.jpg",
+    "w": 1063,
+    "h": 1680,
+    "url": "https://en.wikipedia.org/wiki/Paul_Konerko"
+   },
    "123878": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ed_Walsh%2C_Chicago_White_Sox%2C_baseball_card_portrait_LCCN2008676550.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Ed_Walsh,_Chicago_White_Sox,_baseball_card_portrait_LCCN2008676550.jpg",
     "w": 575,
     "h": 1024
+   },
+   "112506": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Eddie_Collins_second_base_1923_Chicago_White_Sox.jpg/960px-Eddie_Collins_second_base_1923_Chicago_White_Sox.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Eddie_Collins_second_base_1923_Chicago_White_Sox.jpg",
+    "w": 1052,
+    "h": 2391
    }
   },
   "parks": {
@@ -1994,6 +2199,41 @@
     "w": 2000,
     "h": 2465,
     "url": "https://en.wikipedia.org/wiki/Frank_Robinson"
+   },
+   "121255": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Eppa_Rixey_1922.jpeg",
+    "file": "https://commons.wikimedia.org/wiki/File:Eppa_Rixey_1922.jpeg",
+    "w": 408,
+    "h": 722,
+    "url": "https://en.wikipedia.org/wiki/Eppa_Rixey"
+   },
+   "118012": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Dolf_Luque%2C_Cincinnati_NL_%28baseball%29_LCCN2014709351_%28cropped%29.jpg/960px-Dolf_Luque%2C_Cincinnati_NL_%28baseball%29_LCCN2014709351_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Dolf_Luque%2C_Cincinnati_NL_%28baseball%29_LCCN2014709351_%28cropped%29.jpg",
+    "w": 2917,
+    "h": 4009,
+    "url": "https://en.wikipedia.org/wiki/Dolf_Luque"
+   },
+   "113285": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Paul_Derringer_Reds.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Paul_Derringer_Reds.jpg",
+    "w": 306,
+    "h": 386,
+    "url": "https://en.wikipedia.org/wiki/Paul_Derringer"
+   },
+   "119371": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Joe_Morgan_Reds_1972.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Joe_Morgan_Reds_1972.jpg",
+    "w": 564,
+    "h": 743,
+    "url": "https://en.wikipedia.org/wiki/Joe_Morgan"
+   },
+   "123898": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Bucky_Walters.jpg/960px-Bucky_Walters.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Bucky_Walters.jpg",
+    "w": 1429,
+    "h": 1796,
+    "url": "https://en.wikipedia.org/wiki/Bucky_Walters"
    },
    "110849": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Johnny_Bench_-_Cincinnati_Reds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2219,13 +2459,6 @@
    }
   ],
   "legends": {
-   "122566": {
-    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Tris_Speaker.jpg",
-    "file": "https://commons.wikimedia.org/wiki/File:Tris_Speaker.jpg",
-    "w": 346,
-    "h": 504,
-    "url": "https://en.wikipedia.org/wiki/Tris_Speaker"
-   },
    "114055": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Bob_Feller_1953.jpg/960px-Bob_Feller_1953.jpg",
     "file": "https://commons.wikimedia.org/wiki/File:Bob_Feller_1953.jpg",
@@ -2239,6 +2472,47 @@
     "w": 656,
     "h": 946,
     "url": "https://en.wikipedia.org/wiki/Bob_Lemon"
+   },
+   "608070": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jose_Ramirez_%2852968360805%29_%28cropped%29.jpg/960px-Jose_Ramirez_%2852968360805%29_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Jose_Ramirez_%2852968360805%29_%28cropped%29.jpg",
+    "w": 2623,
+    "h": 3622,
+    "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Ram%C3%ADrez_(third_baseman)"
+   },
+   "111272": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/LOU_BOUDREAU.jpg/960px-LOU_BOUDREAU.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:LOU_BOUDREAU.jpg",
+    "w": 2294,
+    "h": 2600,
+    "url": "https://en.wikipedia.org/wiki/Lou_Boudreau"
+   },
+   "116772": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Addie_Joss_by_Carl_Horner_1902.png/960px-Addie_Joss_by_Carl_Horner_1902.png",
+    "file": "https://commons.wikimedia.org/wiki/File:Addie_Joss_by_Carl_Horner_1902.png",
+    "w": 1044,
+    "h": 1497,
+    "url": "https://en.wikipedia.org/wiki/Addie_Joss"
+   },
+   "115451": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Mel_Harder_Goudey.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Mel_Harder_Goudey.jpg",
+    "w": 317,
+    "h": 386,
+    "url": "https://en.wikipedia.org/wiki/Mel_Harder"
+   },
+   "123272": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Jim_Thome_%2818421174923%29.jpg/960px-Jim_Thome_%2818421174923%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Thome_%2818421174923%29.jpg",
+    "w": 4000,
+    "h": 4000,
+    "url": "https://en.wikipedia.org/wiki/Jim_Thome"
+   },
+   "122566": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Speaker%2C_Cleveland%2C_1924_LOC_npcc.11155.jpg/960px-Speaker%2C_Cleveland%2C_1924_LOC_npcc.11155.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Speaker,_Cleveland,_1924_LOC_npcc.11155.jpg",
+    "w": 4280,
+    "h": 5282
    },
    "117414": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Nap_Lajoie%2C_Cleveland_Naps%2C_baseball_card_portrait_LCCN2007685672.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2393,6 +2667,13 @@
     "h": 2000,
     "url": "https://en.wikipedia.org/wiki/Troy_Tulowitzki"
    },
+   "471865": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Colorado_Rockies_%2823777694373%29.jpg/960px-Colorado_Rockies_%2823777694373%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Colorado_Rockies_%2823777694373%29.jpg",
+    "w": 1500,
+    "h": 1000,
+    "url": "https://en.wikipedia.org/wiki/Carlos_Gonz%C3%A1lez_(baseball)"
+   },
    "123833": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Larry_Walker_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Larry_Walker_(cropped).jpg",
@@ -2404,6 +2685,18 @@
     "file": "https://commons.wikimedia.org/wiki/File:Colorado_Rockies_(41418615111).jpg",
     "w": 1441,
     "h": 2000
+   },
+   "596115": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Colorado_Rockies_%2825269265500%29.jpg/960px-Colorado_Rockies_%2825269265500%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Colorado_Rockies_(25269265500).jpg",
+    "w": 1000,
+    "h": 1500
+   },
+   "407812": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5b/IMG_9454_MattHolliday.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:IMG_9454_MattHolliday.jpg",
+    "w": 955,
+    "h": 1024
    }
   },
   "parks": {
@@ -2629,6 +2922,39 @@
     "w": 378,
     "h": 558,
     "url": "https://en.wikipedia.org/wiki/Sam_Crawford"
+   },
+   "124154": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Lou_Whitaker_Tigers.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Lou_Whitaker_Tigers.jpg",
+    "w": 216,
+    "h": 294,
+    "url": "https://en.wikipedia.org/wiki/Lou_Whitaker"
+   },
+   "115096": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/26/Hank_Greenberg_1946.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Hank_Greenberg_1946.jpg",
+    "w": 693,
+    "h": 656,
+    "url": "https://en.wikipedia.org/wiki/Hank_Greenberg"
+   },
+   "119739": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Hal_Newhouser_1953.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Hal_Newhouser_1953.jpg",
+    "w": 605,
+    "h": 1003,
+    "url": "https://en.wikipedia.org/wiki/Hal_Newhouser"
+   },
+   "408234": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Miguel_Cabrera_%282011%29.jpg/960px-Miguel_Cabrera_%282011%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Miguel_Cabrera_(2011).jpg",
+    "w": 2214,
+    "h": 2555
+   },
+   "112090": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Norm_Cash_1966.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Norm_Cash_1966.jpg",
+    "w": 338,
+    "h": 466
    }
   },
   "parks": {
@@ -2783,6 +3109,27 @@
     "h": 4288,
     "url": "https://en.wikipedia.org/wiki/Lance_Berkman"
    },
+   "112153": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/CesarCedeno1980.png",
+    "file": "https://commons.wikimedia.org/wiki/File:CesarCedeno1980.png",
+    "w": 594,
+    "h": 899,
+    "url": "https://en.wikipedia.org/wiki/C%C3%A9sar_Cede%C3%B1o"
+   },
+   "119785": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Joe_Niekro_-_Houston_Astros_-_1976.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Joe_Niekro_-_Houston_Astros_-_1976.jpg",
+    "w": 311,
+    "h": 427,
+    "url": "https://en.wikipedia.org/wiki/Joe_Niekro"
+   },
+   "608324": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Alex_Bregman_on_April_23%2C_2018_%282%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Alex_Bregman_on_April_23%2C_2018_%282%29.jpg",
+    "w": 400,
+    "h": 600,
+    "url": "https://en.wikipedia.org/wiki/Alex_Bregman"
+   },
    "110432": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jeff_Bagwell_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Jeff_Bagwell_2.jpg",
@@ -2800,6 +3147,18 @@
     "file": "https://commons.wikimedia.org/wiki/File:JimmyWynnHOU.png",
     "w": 491,
     "h": 724
+   },
+   "400061": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Roy_Oswalt_2008_%282%29.jpg/960px-Roy_Oswalt_2008_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Roy_Oswalt_2008_(2).jpg",
+    "w": 1500,
+    "h": 1350
+   },
+   "112902": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jose_Cruz_-_Houston_Astros.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jose_Cruz_-_Houston_Astros.jpg",
+    "w": 205,
+    "h": 193
    }
   },
   "parks": {
@@ -2914,6 +3273,34 @@
     "h": 409,
     "url": "https://en.wikipedia.org/wiki/Amos_Otis"
    },
+   "118872": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Hal_McRae_-_Kansas_City_Royals_-_1980.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Hal_McRae_-_Kansas_City_Royals_-_1980.jpg",
+    "w": 272,
+    "h": 275,
+    "url": "https://en.wikipedia.org/wiki/Hal_McRae"
+   },
+   "677951": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Bobbywittjrprofile.png/960px-Bobbywittjrprofile.png",
+    "file": "https://commons.wikimedia.org/wiki/File:Bobbywittjrprofile.png",
+    "w": 996,
+    "h": 1392,
+    "url": "https://en.wikipedia.org/wiki/Bobby_Witt_Jr."
+   },
+   "115217": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Mark_Gubicza_Royals.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Mark_Gubicza_Royals.jpg",
+    "w": 285,
+    "h": 424,
+    "url": "https://en.wikipedia.org/wiki/Mark_Gubicza"
+   },
+   "117687": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Dennis_Leonard_-_Kansas_City_Royals.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Dennis_Leonard_-_Kansas_City_Royals.jpg",
+    "w": 172,
+    "h": 209,
+    "url": "https://en.wikipedia.org/wiki/Dennis_Leonard"
+   },
    "111437": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/George_Brett_-_Kansas_City_Royals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:George_Brett_-_Kansas_City_Royals.jpg",
@@ -2925,6 +3312,12 @@
     "file": "https://commons.wikimedia.org/wiki/File:Salvador_P%C3%A9rez_on_May_7,_2013_(2).jpg",
     "w": 625,
     "h": 935
+   },
+   "123041": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Mike_Sweeney_%28543523365%29_%28cropped%29.jpg/960px-Mike_Sweeney_%28543523365%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Mike_Sweeney_(543523365)_(cropped).jpg",
+    "w": 1289,
+    "h": 1417
    }
   },
   "parks": {
@@ -3130,11 +3523,43 @@
     "h": 391,
     "url": "https://en.wikipedia.org/wiki/Jim_Fregosi"
    },
+   "450308": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Jered_Weaver_on_June_27%2C_2012.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Jered_Weaver_on_June_27%2C_2012.jpg",
+    "w": 930,
+    "h": 1500,
+    "url": "https://en.wikipedia.org/wiki/Jered_Weaver"
+   },
+   "123084": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Frank_Tanana.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Frank_Tanana.jpg",
+    "w": 284,
+    "h": 368,
+    "url": "https://en.wikipedia.org/wiki/Frank_Tanana"
+   },
    "660271": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Cleveland_Guardians_vs._Los_Angeles_Angels_%2852968316355%29_%28cropped%29.jpg/960px-Cleveland_Guardians_vs._Los_Angeles_Angels_%2852968316355%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "https://commons.wikimedia.org/wiki/File:Cleveland_Guardians_vs._Los_Angeles_Angels_(52968316355)_(cropped).jpg",
     "w": 3412,
     "h": 3457
+   },
+   "121597": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Nolan_Ryan_-_California_Angels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Nolan_Ryan_-_California_Angels.jpg",
+    "w": 150,
+    "h": 212
+   },
+   "115130": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/BobbyGrichCAL.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:BobbyGrichCAL.png",
+    "w": 170,
+    "h": 210
+   },
+   "113516": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/BrianDowningCAL.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:BrianDowningCAL.png",
+    "w": 405,
+    "h": 483
    }
   },
   "parks": {
@@ -3416,6 +3841,41 @@
     "w": 716,
     "h": 1003,
     "url": "https://en.wikipedia.org/wiki/Zack_Wheat"
+   },
+   "113581": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Don_Drysdale_-_Los_Angeles_Dodgers_-_1961.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Don_Drysdale_-_Los_Angeles_Dodgers_-_1961.jpg",
+    "w": 336,
+    "h": 453,
+    "url": "https://en.wikipedia.org/wiki/Don_Drysdale"
+   },
+   "121010": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Pee_Wee_Reese_1956.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Pee_Wee_Reese_1956.jpg",
+    "w": 327,
+    "h": 382,
+    "url": "https://en.wikipedia.org/wiki/Pee_Wee_Reese"
+   },
+   "121314": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Jackie_Robinson%2C_NPG_97_135.jpg/960px-Jackie_Robinson%2C_NPG_97_135.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Jackie_Robinson%2C_NPG_97_135.jpg",
+    "w": 3386,
+    "h": 4361,
+    "url": "https://en.wikipedia.org/wiki/Jackie_Robinson"
+   },
+   "117277": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sandy_Koufax.jpg/960px-Sandy_Koufax.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sandy_Koufax.jpg",
+    "w": 961,
+    "h": 1213,
+    "url": "https://en.wikipedia.org/wiki/Sandy_Koufax"
+   },
+   "111915": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Roy_Campanella_1956.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Roy_Campanella_1956.jpg",
+    "w": 322,
+    "h": 388,
+    "url": "https://en.wikipedia.org/wiki/Roy_Campanella"
    }
   },
   "parks": {
@@ -3559,6 +4019,13 @@
    }
   ],
   "legends": {
+   "645261": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sandy_Alc%C3%A1ntara_pitching%2C_March_30%2C_2023_%28cropped%29.jpg/960px-Sandy_Alc%C3%A1ntara_pitching%2C_March_30%2C_2023_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sandy_Alc%C3%A1ntara_pitching%2C_March_30%2C_2023_%28cropped%29.jpg",
+    "w": 3023,
+    "h": 4532,
+    "url": "https://en.wikipedia.org/wiki/Sandy_Alc%C3%A1ntara"
+   },
    "434670": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Hanley_Ramirez_01.JPG/960px-Hanley_Ramirez_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "https://commons.wikimedia.org/wiki/File:Hanley_Ramirez_01.JPG",
@@ -3582,6 +4049,30 @@
     "file": "https://commons.wikimedia.org/wiki/File:MiguelCabrera.jpg",
     "w": 222,
     "h": 312
+   },
+   "435178": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Josh_Johnson_%28baseball_player%29_%287117344265%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Josh_Johnson_(baseball_player)_(7117344265)_(cropped).jpg",
+    "w": 680,
+    "h": 605
+   },
+   "136780": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Mike_Lowell_%2842847443081%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Mike_Lowell_(42847443081)_(cropped).jpg",
+    "w": 910,
+    "h": 1893
+   },
+   "425883": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/DontrelleWillis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:DontrelleWillis.jpg",
+    "w": 185,
+    "h": 284
+   },
+   "114260": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/77/Cliff_Floyd_%2827978622127%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Cliff_Floyd_(27978622127)_(cropped).jpg",
+    "w": 778,
+    "h": 1302
    }
   },
   "parks": {
@@ -3730,6 +4221,27 @@
     "h": 624,
     "url": "https://en.wikipedia.org/wiki/Paul_Molitor"
    },
+   "119248": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Don_Money_1975.JPG",
+    "file": "https://commons.wikimedia.org/wiki/File:Don_Money_1975.JPG",
+    "w": 809,
+    "h": 1153,
+    "url": "https://en.wikipedia.org/wiki/Don_Money"
+   },
+   "430001": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Rickie_Weeks_baseball.JPG",
+    "file": "https://commons.wikimedia.org/wiki/File:Rickie_Weeks_baseball.JPG",
+    "w": 685,
+    "h": 856,
+    "url": "https://en.wikipedia.org/wiki/Rickie_Weeks_Jr."
+   },
+   "119954": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Ben_Oglivie_Milwaukee_Brewers.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Ben_Oglivie_Milwaukee_Brewers.jpg",
+    "w": 460,
+    "h": 577,
+    "url": "https://en.wikipedia.org/wiki/Ben_Oglivie"
+   },
    "124721": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Robin_Yount_-_Milwaukee_Brewers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Robin_Yount_-_Milwaukee_Brewers.jpg",
@@ -3753,6 +4265,18 @@
     "file": "https://commons.wikimedia.org/wiki/File:CecilCooperMIL.png",
     "w": 697,
     "h": 1000
+   },
+   "123251": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/bd/GormanThomas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:GormanThomas.jpg",
+    "w": 711,
+    "h": 1000
+   },
+   "282656": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Bensheets.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bensheets.png",
+    "w": 526,
+    "h": 951
    }
   },
   "parks": {
@@ -3994,6 +4518,34 @@
     "w": 334,
     "h": 422,
     "url": "https://en.wikipedia.org/wiki/Tony_Oliva"
+   },
+   "119046": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Clyde_Milan_in_1913_of_the_Washington_Senators_baseball_team_%28cropped%29.jpg/960px-Clyde_Milan_in_1913_of_the_Washington_Senators_baseball_team_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Clyde_Milan_in_1913_of_the_Washington_Senators_baseball_team_%28cropped%29.jpg",
+    "w": 2173,
+    "h": 2891,
+    "url": "https://en.wikipedia.org/wiki/Clyde_Milan"
+   },
+   "121137": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Sam_Rice.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sam_Rice.jpg",
+    "w": 715,
+    "h": 879,
+    "url": "https://en.wikipedia.org/wiki/Sam_Rice"
+   },
+   "111986": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/1978_Minnesota_Twins_Postcards_Rod_Carew.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:1978_Minnesota_Twins_Postcards_Rod_Carew.jpg",
+    "w": 324,
+    "h": 500,
+    "url": "https://en.wikipedia.org/wiki/Rod_Carew"
+   },
+   "119613": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Myer%2C_Wash._LCCN2016840564.jpg/960px-Myer%2C_Wash._LCCN2016840564.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Myer%2C_Wash._LCCN2016840564.jpg",
+    "w": 4298,
+    "h": 5229,
+    "url": "https://en.wikipedia.org/wiki/Buddy_Myer"
    }
   },
   "parks": {
@@ -4211,11 +4763,44 @@
     "h": 453,
     "url": "https://en.wikipedia.org/wiki/Jerry_Koosman"
    },
+   "594798": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Jacob_deGrom_pitches_in_the_2nd_inning_from_Nationals_vs._Mets_at_Nationals_Park%2C_September_26th%2C_2020_%28All-Pro_Reels_Photography%29_%2850389894478%29_%28cropped%29.jpg/960px-Jacob_deGrom_pitches_in_the_2nd_inning_from_Nationals_vs._Mets_at_Nationals_Park%2C_September_26th%2C_2020_%28All-Pro_Reels_Photography%29_%2850389894478%29_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Jacob_deGrom_pitches_in_the_2nd_inning_from_Nationals_vs._Mets_at_Nationals_Park%2C_September_26th%2C_2020_%28All-Pro_Reels_Photography%29_%2850389894478%29_%28cropped%29.jpg",
+    "w": 2107,
+    "h": 2974,
+    "url": "https://en.wikipedia.org/wiki/Jacob_deGrom"
+   },
+   "114074": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sid_Fernandez_1986.jpg/960px-Sid_Fernandez_1986.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sid_Fernandez_1986.jpg",
+    "w": 3487,
+    "h": 2367,
+    "url": "https://en.wikipedia.org/wiki/Sid_Fernandez"
+   },
+   "116593": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Howard_Johnson_%28cropped%29.jpg/960px-Howard_Johnson_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Howard_Johnson_%28cropped%29.jpg",
+    "w": 1561,
+    "h": 1871,
+    "url": "https://en.wikipedia.org/wiki/Howard_Johnson_(baseball)"
+   },
    "120536": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Mike_Piazza_%281999%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Mike_Piazza_(1999)_(cropped).jpg",
     "w": 308,
     "h": 357
+   },
+   "122864": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Darryl_Strawberry_1986.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Darryl_Strawberry_1986.jpg",
+    "w": 285,
+    "h": 421
+   },
+   "408314": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/42/NYM_Jose_Reyes_7_cropped.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:NYM_Jose_Reyes_7_cropped.JPG",
+    "w": 778,
+    "h": 960
    }
   },
   "parks": {
@@ -4511,11 +5096,45 @@
     "h": 2600,
     "url": "https://en.wikipedia.org/wiki/Joe_DiMaggio"
    },
+   "110925": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Yogi_Berra_%281957%29_%28cropped%29.jpg/960px-Yogi_Berra_%281957%29_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Yogi_Berra_%281957%29_%28cropped%29.jpg",
+    "w": 1589,
+    "h": 2187,
+    "url": "https://en.wikipedia.org/wiki/Yogi_Berra"
+   },
+   "114299": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Whitey_Ford_1953_Bowman.jpg/960px-Whitey_Ford_1953_Bowman.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Whitey_Ford_1953_Bowman.jpg",
+    "w": 1085,
+    "h": 1689,
+    "url": "https://en.wikipedia.org/wiki/Whitey_Ford"
+   },
+   "113340": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Bill_Dickey_1937_cropped.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Dickey_1937_cropped.jpg",
+    "w": 431,
+    "h": 593,
+    "url": "https://en.wikipedia.org/wiki/Bill_Dickey"
+   },
+   "121547": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ruffing%2C_Boston%2C_1924_LOC_npcc.11179_%28cropped%29.jpg/960px-Ruffing%2C_Boston%2C_1924_LOC_npcc.11179_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Ruffing%2C_Boston%2C_1924_LOC_npcc.11179_%28cropped%29.jpg",
+    "w": 1987,
+    "h": 2345,
+    "url": "https://en.wikipedia.org/wiki/Red_Ruffing"
+   },
    "116539": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Derek_Jeter_Hit_-2722_edit.jpg/960px-Derek_Jeter_Hit_-2722_edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "https://commons.wikimedia.org/wiki/File:Derek_Jeter_Hit_-2722_edit.jpg",
     "w": 1731,
     "h": 2591
+   },
+   "124288": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Bernie_Williams.jpg/960px-Bernie_Williams.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bernie_Williams.jpg",
+    "w": 1000,
+    "h": 838
    }
   },
   "parks": {
@@ -4739,11 +5358,45 @@
     "h": 1233,
     "url": "https://en.wikipedia.org/wiki/Grover_Cleveland_Alexander"
    },
+   "118135": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Sherry_Magee_circa_1911.jpg/960px-Sherry_Magee_circa_1911.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sherry_Magee_circa_1911.jpg",
+    "w": 5221,
+    "h": 3712,
+    "url": "https://en.wikipedia.org/wiki/Sherry_Magee"
+   },
+   "110349": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Richie_Ashburn_1953.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Richie_Ashburn_1953.jpg",
+    "w": 252,
+    "h": 390,
+    "url": "https://en.wikipedia.org/wiki/Richie_Ashburn"
+   },
+   "400284": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Chase_Utley_2009.jpg/960px-Chase_Utley_2009.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Chase_Utley_2009.jpg",
+    "w": 1300,
+    "h": 1300,
+    "url": "https://en.wikipedia.org/wiki/Chase_Utley"
+   },
+   "117141": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Chuck_Klein_1936_Goudey.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Chuck_Klein_1936_Goudey.jpg",
+    "w": 288,
+    "h": 356,
+    "url": "https://en.wikipedia.org/wiki/Chuck_Klein"
+   },
    "121836": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Mike_Schmidt_-_Philadelphia_Phillies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Mike_Schmidt_-_Philadelphia_Phillies.jpg",
     "w": 204,
     "h": 195
+   },
+   "110029": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Bobby_Abreu_in_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bobby_Abreu_in_2004.jpg",
+    "w": 360,
+    "h": 540
    }
   },
   "parks": {
@@ -5021,6 +5674,40 @@
     "w": 1024,
     "h": 707,
     "url": "https://en.wikipedia.org/wiki/Babe_Adams"
+   },
+   "123671": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/82/ArkyVaughanGoudeycard.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:ArkyVaughanGoudeycard.jpg",
+    "w": 313,
+    "h": 386,
+    "url": "https://en.wikipedia.org/wiki/Arky_Vaughan"
+   },
+   "112649": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Wilbur_Cooper_Pirates.jpeg/960px-Wilbur_Cooper_Pirates.jpeg",
+    "file": "https://commons.wikimedia.org/wiki/File:Wilbur_Cooper_Pirates.jpeg",
+    "w": 2276,
+    "h": 2485,
+    "url": "https://en.wikipedia.org/wiki/Wilbur_Cooper"
+   },
+   "111989": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Max_Carey_1921.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Max_Carey_1921.jpg",
+    "w": 221,
+    "h": 359,
+    "url": "https://en.wikipedia.org/wiki/Max_Carey"
+   },
+   "117623": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Sleever.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Sleever.jpg",
+    "w": 366,
+    "h": 640,
+    "url": "https://en.wikipedia.org/wiki/Sam_Leever"
+   },
+   "117072": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/RalphKiner1953bowman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:RalphKiner1953bowman.jpg",
+    "w": 250,
+    "h": 393
    }
   },
   "parks": {
@@ -5211,6 +5898,27 @@
     "w": 240,
     "h": 301,
     "url": "https://en.wikipedia.org/wiki/Dave_Winfield"
+   },
+   "116715": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/37/Randy_Jones_-_San_Diego_Padres.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Randy_Jones_-_San_Diego_Padres.jpg",
+    "w": 150,
+    "h": 209,
+    "url": "https://en.wikipedia.org/wiki/Randy_Jones_(baseball)"
+   },
+   "665487": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Padres_Visit_3rd_MAW_Marines_at_Miramar_%282%29_%28cropped%29.jpg/960px-Padres_Visit_3rd_MAW_Marines_at_Miramar_%282%29_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Padres_Visit_3rd_MAW_Marines_at_Miramar_%282%29_%28cropped%29.jpg",
+    "w": 2143,
+    "h": 2855,
+    "url": "https://en.wikipedia.org/wiki/Fernando_Tat%C3%ADs_Jr."
+   },
+   "122197": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Eric_Show_Padres.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Eric_Show_Padres.jpg",
+    "w": 325,
+    "h": 500,
+    "url": "https://en.wikipedia.org/wiki/Eric_Show"
    },
    "408241": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Jake_delivers.jpg/960px-Jake_delivers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -5556,6 +6264,41 @@
     "h": 1320,
     "url": "https://en.wikipedia.org/wiki/Carl_Hubbell"
    },
+   "121559": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c1/AmosRusiecrop.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:AmosRusiecrop.jpg",
+    "w": 640,
+    "h": 967,
+    "url": "https://en.wikipedia.org/wiki/Amos_Rusie"
+   },
+   "124062": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mickey_Welch_baseball_card.jpg/960px-Mickey_Welch_baseball_card.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Mickey_Welch_baseball_card.jpg",
+    "w": 1592,
+    "h": 3000,
+    "url": "https://en.wikipedia.org/wiki/Mickey_Welch"
+   },
+   "118605": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Willie_McCovey_1961.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Willie_McCovey_1961.jpg",
+    "w": 367,
+    "h": 461,
+    "url": "https://en.wikipedia.org/wiki/Willie_McCovey"
+   },
+   "118283": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Juan_Marichal_1962.png",
+    "file": "https://commons.wikimedia.org/wiki/File:Juan_Marichal_1962.png",
+    "w": 295,
+    "h": 398,
+    "url": "https://en.wikipedia.org/wiki/Juan_Marichal"
+   },
+   "116888": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Timothy_John_Tim_Keefe%2C_Pitcher%2C_New_York%2C_from_the_Old_Judge_series_%28N172%29_for_Old_Judge_Cigarettes_MET_DP825933.jpg/960px-Timothy_John_Tim_Keefe%2C_Pitcher%2C_New_York%2C_from_the_Old_Judge_series_%28N172%29_for_Old_Judge_Cigarettes_MET_DP825933.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Timothy_John_Tim_Keefe%2C_Pitcher%2C_New_York%2C_from_the_Old_Judge_series_%28N172%29_for_Old_Judge_Cigarettes_MET_DP825933.jpg",
+    "w": 1534,
+    "h": 2700,
+    "url": "https://en.wikipedia.org/wiki/Tim_Keefe"
+   },
    "120117": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Mel_Ott.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Mel_Ott.jpg",
@@ -5755,6 +6498,20 @@
     "h": 2976,
     "url": "https://en.wikipedia.org/wiki/F%C3%A9lix_Hern%C3%A1ndez"
    },
+   "572122": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Kyle_Seager_%2817919015822%29.jpg/960px-Kyle_Seager_%2817919015822%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Kyle_Seager_%2817919015822%29.jpg",
+    "w": 3954,
+    "h": 3222,
+    "url": "https://en.wikipedia.org/wiki/Kyle_Seager"
+   },
+   "400085": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ichiro_Suzuki_%2851007034081%29_%28cropped%29.jpg/960px-Ichiro_Suzuki_%2851007034081%29_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Ichiro_Suzuki_%2851007034081%29_%28cropped%29.jpg",
+    "w": 1399,
+    "h": 1750,
+    "url": "https://en.wikipedia.org/wiki/Ichiro_Suzuki"
+   },
    "119469": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/9/93/J_Moyer.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:J_Moyer.JPG",
@@ -5945,6 +6702,40 @@
     "w": 314,
     "h": 424,
     "url": "https://en.wikipedia.org/wiki/Ted_Simmons"
+   },
+   "111321": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Ken_Boyer_-_St._Louis_Cardinals_-_1965.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Ken_Boyer_-_St._Louis_Cardinals_-_1965.jpg",
+    "w": 227,
+    "h": 379,
+    "url": "https://en.wikipedia.org/wiki/Ken_Boyer"
+   },
+   "115314": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/JessieHainesGoudeycard.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:JessieHainesGoudeycard.jpg",
+    "w": 314,
+    "h": 386,
+    "url": "https://en.wikipedia.org/wiki/Jesse_Haines"
+   },
+   "122319": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Enos_Slaughter_1948.jpeg",
+    "file": "https://commons.wikimedia.org/wiki/File:Enos_Slaughter_1948.jpeg",
+    "w": 291,
+    "h": 359,
+    "url": "https://en.wikipedia.org/wiki/Enos_Slaughter"
+   },
+   "425794": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Adam_Wainright_%28cropped%29.jpg/960px-Adam_Wainright_%28cropped%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Adam_Wainright_%28cropped%29.jpg",
+    "w": 1063,
+    "h": 1417,
+    "url": "https://en.wikipedia.org/wiki/Adam_Wainwright"
+   },
+   "111495": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/70/Lou_Brock_-_St._Louis_Cardinals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Lou_Brock_-_St._Louis_Cardinals.jpg",
+    "w": 200,
+    "h": 197
    }
   },
   "parks": {
@@ -6146,11 +6937,43 @@
     "h": 2048,
     "url": "https://en.wikipedia.org/wiki/Brandon_Lowe"
    },
+   "656876": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/DrewRasmussen2026.jpg/960px-DrewRasmussen2026.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:DrewRasmussen2026.jpg",
+    "w": 2048,
+    "h": 1868,
+    "url": "https://en.wikipedia.org/wiki/Drew_Rasmussen"
+   },
+   "150289": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/CarlosPena2012.jpg/960px-CarlosPena2012.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:CarlosPena2012.jpg",
+    "w": 4080,
+    "h": 4037,
+    "url": "https://en.wikipedia.org/wiki/Carlos_Pe%C3%B1a"
+   },
    "456034": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/David_Price_%2851006215657%29_%28cropped%29.jpg/960px-David_Price_%2851006215657%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "https://commons.wikimedia.org/wiki/File:David_Price_(51006215657)_(cropped).jpg",
     "w": 2828,
     "h": 2741
+   },
+   "425834": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/UptonTB.jpg/960px-UptonTB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:UptonTB.jpg",
+    "w": 3264,
+    "h": 4896
+   },
+   "650490": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Diazstlrays2024.jpg/960px-Diazstlrays2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Diazstlrays2024.jpg",
+    "w": 2094,
+    "h": 1512
+   },
+   "408307": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Carl_Crawford_on_May_12%2C_2009.jpg/960px-Carl_Crawford_on_May_12%2C_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Carl_Crawford_on_May_12,_2009.jpg",
+    "w": 1666,
+    "h": 2018
    }
   },
   "parks": {
@@ -6342,6 +7165,20 @@
     "h": 650,
     "url": "https://en.wikipedia.org/wiki/Iv%C3%A1n_Rodr%C3%ADguez"
    },
+   "115497": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1e/TobyHarrahFlickr.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:TobyHarrahFlickr.jpg",
+    "w": 765,
+    "h": 621,
+    "url": "https://en.wikipedia.org/wiki/Toby_Harrah"
+   },
+   "285078": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Josh_Hamilton_on_May_10%2C_2012.jpg/960px-Josh_Hamilton_on_May_10%2C_2012.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Josh_Hamilton_on_May_10%2C_2012.jpg",
+    "w": 2328,
+    "h": 3381,
+    "url": "https://en.wikipedia.org/wiki/Josh_Hamilton"
+   },
    "120191": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Rafael_Palmeiro_2003.jpg/960px-Rafael_Palmeiro_2003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "https://commons.wikimedia.org/wiki/File:Rafael_Palmeiro_2003.jpg",
@@ -6353,6 +7190,18 @@
     "file": "https://commons.wikimedia.org/wiki/File:FrankHowardWSH.png",
     "w": 362,
     "h": 500
+   },
+   "134181": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Adrian_Beltre_Rangers_2013.jpg/960px-Adrian_Beltre_Rangers_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Adrian_Beltre_Rangers_2013.jpg",
+    "w": 1413,
+    "h": 1347
+   },
+   "435079": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/KinslerHeadshot.jpg/960px-KinslerHeadshot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:KinslerHeadshot.jpg",
+    "w": 2090,
+    "h": 2228
    }
   },
   "parks": {
@@ -6546,11 +7395,38 @@
     "h": 2932,
     "url": "https://en.wikipedia.org/wiki/Roy_Halladay"
    },
+   "119432": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/A_mighty_swing_%283863822298%29.jpg/960px-A_mighty_swing_%283863822298%29.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:A_mighty_swing_%283863822298%29.jpg",
+    "w": 2402,
+    "h": 1429,
+    "url": "https://en.wikipedia.org/wiki/Lloyd_Moseby"
+   },
+   "117032": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Jimmy_Key_%28Taps_1983%29.png",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy_Key_%28Taps_1983%29.png",
+    "w": 491,
+    "h": 547,
+    "url": "https://en.wikipedia.org/wiki/Jimmy_Key"
+   },
+   "665489": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Vladimir_guerrero_jr.jpg/960px-Vladimir_guerrero_jr.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Vladimir_guerrero_jr.jpg",
+    "w": 1221,
+    "h": 1832,
+    "url": "https://en.wikipedia.org/wiki/Vladimir_Guerrero_Jr."
+   },
    "430832": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Jose_Bautista_of_the_Toronto_Blue_Jays%2C_June_30%2C_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "file": "https://commons.wikimedia.org/wiki/File:Jose_Bautista_of_the_Toronto_Blue_Jays,_June_30,_2012.jpg",
     "w": 500,
     "h": 537
+   },
+   "150484": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Vernon_Wells_on_the_basepath.jpg/960px-Vernon_Wells_on_the_basepath.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Vernon_Wells_on_the_basepath.jpg",
+    "w": 2552,
+    "h": 2409
    }
   },
   "parks": {
@@ -6751,6 +7627,18 @@
     "file": "https://commons.wikimedia.org/wiki/File:Gary_Carter_-_Montreal_Expos.jpg",
     "w": 207,
     "h": 196
+   },
+   "453286": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/2016-10-13_Max_Schezer_pitch_NLDS_Game_5_for_the_Nationals_09.jpg/960px-2016-10-13_Max_Schezer_pitch_NLDS_Game_5_for_the_Nationals_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:2016-10-13_Max_Schezer_pitch_NLDS_Game_5_for_the_Nationals_09.jpg",
+    "w": 3574,
+    "h": 3347
+   },
+   "543685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Anthony_Rendon_%2814430676940%29.jpg/960px-Anthony_Rendon_%2814430676940%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Anthony_Rendon_(14430676940).jpg",
+    "w": 1857,
+    "h": 1806
    }
   },
   "parks": {

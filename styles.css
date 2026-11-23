@@ -203,8 +203,6 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .tcard-nick { font: italic 13px var(--headline); color: var(--red); }
 .tcard-meta { font: 12px var(--type); color: var(--ink-soft); margin-top: 2px; }
 .tcard-line { font-size: 12.5px; margin-top: 6px; }
-.tcard-val { margin-top: 8px; font: 12px var(--type); color: var(--ink-soft); }
-.tcard-val b { font: 22px var(--slab); color: var(--ink); vertical-align: -2px; margin-right: 4px; }
 .credit { display: inline-block; font: 10px var(--type); color: var(--ink-faint); margin-top: 4px; }
 .how { margin-top: 20px; text-align: center; }
 .how summary { cursor: pointer; font: 12px var(--type); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
@@ -489,7 +487,9 @@ body:not(.paging) .pager { display: none; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1000px) {
-  .legends { grid-template-columns: repeat(3, 1fr); }
+  /* three across; the tenth card sits centered on its own row */
+  .legends { display: flex; flex-wrap: wrap; justify-content: center; }
+  .legends .tcard { width: calc((100% - 40px) / 3); }
 }
 @media (max-width: 760px) {
   .masthead h1 { font-size: 36px; }
@@ -498,7 +498,8 @@ body:not(.paging) .pager { display: none; }
   .tab { padding: 4px 10px; font-size: 13px; }
   .sheet { padding: 20px 14px; }
   .sheet-head h3 { font-size: 26px; }
-  .legends { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .legends { gap: 14px; }
+  .legends .tcard { width: calc((100% - 14px) / 2); }
   #timeline { height: 280px; }
   .brow { grid-template-columns: 34px 1fr 100px; }
   .brow .bbar-wrap { display: none; }

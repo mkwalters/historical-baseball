@@ -159,6 +159,7 @@ def legend_photo(name, born=""):
 
 
 COMMONS_API = "https://commons.wikimedia.org/w/api.php?"
+LEGEND_CARDS = 10  # the Legends chapter shows ten cards
 
 
 def commons_files(titles):
@@ -201,6 +202,10 @@ def park_item(title):
 
 def main():
     from scrapbook_picks import SCRAPBOOK, LEGEND_PHOTOS, PARK_TITLES
+
+    def pick(tid, pid):
+        """A curated portrait: (team, player) first, for players who starred for two clubs, then player."""
+        return LEGEND_PHOTOS.get((int(tid), pid), LEGEND_PHOTOS.get(pid, "keep"))
     champs = json.load(open(os.path.join(ROOT, "data", "champions.json")))
     legends = json.load(open(os.path.join(ROOT, "data", "legends.json")))
     jobs = {}
@@ -220,15 +225,15 @@ def main():
                     seen.add(it["src"]); uniq.append(it)
             uniq.sort(key=lambda x: (x["year"] is None, x["year"] or 0))
             out[str(tid)] = {"archive": uniq, "legends": {}}
-        names = [(tid, p["id"], p["name"], p.get("born", "")) for tid, ps in legends.items() for p in ps[:5]]  # the page shows 5
-        for (tid, pid, _, _), ph in zip(names, ex.map(lambda a: legend_photo(a[2], a[3]) if a[1] not in LEGEND_PHOTOS else None, names)):
+        names = [(tid, p["id"], p["name"], p.get("born", "")) for tid, ps in legends.items() for p in ps[:LEGEND_CARDS]]
+        for (tid, pid, _, _), ph in zip(names, ex.map(lambda a: legend_photo(a[2], a[3]) if pick(a[0], a[1]) == "keep" else None, names)):
             if ph:
                 out.setdefault(tid, {"archive": [], "legends": {}})["legends"][str(pid)] = ph
 
     # hand-picked Commons files: scrapbook pages and in-uniform legend portraits
     files = commons_files([p[0] for picks in SCRAPBOOK.values() for p in picks] + [f for f in LEGEND_PHOTOS.values() if f])
     for (tid, pid, _, _) in names:
-        f = LEGEND_PHOTOS.get(pid, "keep")
+        f = pick(tid, pid)
         if f is None or (f != "keep" and f not in files):
             out[tid]["legends"].pop(str(pid), None)  # fall back to MLB's headshot
         elif f != "keep":
@@ -257,7 +262,7 @@ def main():
     with open(os.path.join(ROOT, "data", "photos.json"), "w") as fh:
         json.dump(out, fh, indent=1)
     for tid, v in out.items():
-        print(f"{tid}: {len(v['archive']):2} archive, {len(v['legends'])}/5 legends, {sum(1 for x in v.get('parks', {}).values() if x['src'])}/{len(v.get('parks', {}))} parks  "
+        print(f"{tid}: {len(v['archive']):2} archive, {len(v['legends'])}/{LEGEND_CARDS} legends, {sum(1 for x in v.get('parks', {}).values() if x['src'])}/{len(v.get('parks', {}))} parks  "
               + ", ".join(f"{a['year']}" for a in v["archive"]))
 
 

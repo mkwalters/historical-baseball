@@ -458,7 +458,8 @@ function renderOctober() {
 const SUFFIX = /^(jr\.?|sr\.?|ii|iii|iv)$/i;
 function lastName(name) { const parts = name.split(" ").filter((w) => !SUFFIX.test(w)); return parts.length > 1 ? parts.slice(1).join(" ") : name; }
 const allLegends = () => state.legends[state.team?.id] || [];
-const topLegends = () => allLegends().slice(0, 5);
+const LEGEND_CARDS = 10;
+const topLegends = () => allLegends().slice(0, LEGEND_CARDS);
 const allLegendsIn = (year) => allLegends().filter((p) => p.from <= year && year <= p.to);
 // A legend's portrait: a curated in-uniform Commons photo, else MLB's own (uniformed) headshot.
 const legendPhoto = (pid) => { const p = ((state.photos[state.team.id] || {}).legends || {})[pid]; return p && p.src ? p : null; };
@@ -492,14 +493,13 @@ function renderLegends() {
         ${p.nick ? `<div class="tcard-nick">“${esc(p.nick)}”</div>` : ""}
         <div class="tcard-meta">${plural(p.seasons, "season")} with the club</div>
         <div class="tcard-line">${legendLine(p)}</div>
-        <div class="tcard-val" title="Estimated wins above replacement with this franchise"><b>${Math.round(p.value)}</b>legend value</div>
         ${photo ? `<a class="credit" href="${esc(photo.file)}" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>` : ""}
       </div>
     </article>`;
   }).join("");
-  const more = allLegends().slice(5);
+  const more = allLegends().slice(LEGEND_CARDS);
   $("#also").innerHTML = more.length
-    ? `<span class="also-k">Also in the conversation</span> ${more.map((p) => `<span class="also-p">${esc(p.name)} <small>${p.from}–${p.to} · ${Math.round(p.value)}</small></span>`).join("")}`
+    ? `<span class="also-k">Also in the conversation</span> ${more.map((p) => `<span class="also-p">${esc(p.name)} <small>${p.from}–${p.to}</small></span>`).join("")}`
     : "";
 }
 

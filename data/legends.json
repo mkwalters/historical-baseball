@@ -177,6 +177,119 @@
     "inningsPitched": "781.2"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 444482,
+   "name": "David Peralta",
+   "pos": "LF",
+   "nick": "Freight Train",
+   "born": "1987",
+   "value": 16.9,
+   "bat": 17.2,
+   "pit": -0.2,
+   "from": 2014,
+   "to": 2022,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 961,
+    "hits": 960,
+    "homeRuns": 110,
+    "rbi": 468,
+    "avg": ".283",
+    "ops": ".803",
+    "stolenBases": 33
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 457708,
+   "name": "Justin Upton",
+   "pos": "LF",
+   "nick": "J-Up",
+   "born": "1987",
+   "value": 16.9,
+   "bat": 16.9,
+   "pit": 0.0,
+   "from": 2007,
+   "to": 2012,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 731,
+    "hits": 739,
+    "homeRuns": 108,
+    "rbi": 363,
+    "avg": ".278",
+    "ops": ".832",
+    "stolenBases": 80
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 518876,
+   "name": "Merrill Kelly",
+   "pos": "P",
+   "nick": "Mert",
+   "born": "1988",
+   "value": 16.8,
+   "bat": 0.0,
+   "pit": 16.8,
+   "from": 2019,
+   "to": 2026,
+   "seasons": 8,
+   "line": {
+    "wins": 72,
+    "losses": 64,
+    "era": "3.91",
+    "strikeOuts": 978,
+    "saves": 0,
+    "inningsPitched": "1115.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 452220,
+   "name": "Stephen Drew",
+   "pos": "SS",
+   "nick": "Dirt",
+   "born": "1983",
+   "value": 16.6,
+   "bat": 16.6,
+   "pit": 0.0,
+   "from": 2006,
+   "to": 2012,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 773,
+    "hits": 776,
+    "homeRuns": 72,
+    "rbi": 333,
+    "avg": ".266",
+    "ops": ".764",
+    "stolenBases": 33
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 668678,
+   "name": "Zac Gallen",
+   "pos": "P",
+   "nick": "Galls",
+   "born": "1995",
+   "value": 16.5,
+   "bat": 0.0,
+   "pit": 16.5,
+   "from": 2019,
+   "to": 2026,
+   "seasons": 8,
+   "line": {
+    "wins": 68,
+    "losses": 58,
+    "era": "3.85",
+    "strikeOuts": 1081,
+    "saves": 0,
+    "inningsPitched": "1076.1"
+   },
+   "kind": "pitcher"
   }
  ],
  "133": [
@@ -358,6 +471,116 @@
     "stolenBases": 377
    },
    "kind": "hitter"
+  },
+  {
+   "id": 112437,
+   "name": "Mickey Cochrane",
+   "pos": "C",
+   "nick": "Black Mike",
+   "born": "1903",
+   "value": 50.7,
+   "bat": 50.7,
+   "pit": 0.0,
+   "from": 1925,
+   "to": 1933,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1167,
+    "hits": 1317,
+    "homeRuns": 108,
+    "rbi": 680,
+    "avg": ".321",
+    "ops": ".902",
+    "stolenBases": 50
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 121426,
+   "name": "Eddie Rommel",
+   "pos": "P",
+   "born": "1897",
+   "value": 46.7,
+   "bat": 0.0,
+   "pit": 46.7,
+   "from": 1920,
+   "to": 1932,
+   "seasons": 13,
+   "line": {
+    "wins": 171,
+    "losses": 119,
+    "era": "3.54",
+    "strikeOuts": 599,
+    "saves": 29,
+    "inningsPitched": "2556.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 110526,
+   "name": "Sal Bando",
+   "pos": "3B",
+   "born": "1944",
+   "value": 44.3,
+   "bat": 44.3,
+   "pit": 0.0,
+   "from": 1966,
+   "to": 1976,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1468,
+    "hits": 1311,
+    "homeRuns": 192,
+    "rbi": 796,
+    "avg": ".255",
+    "ops": ".777",
+    "stolenBases": 60
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 123767,
+   "name": "Rube Waddell",
+   "pos": "P",
+   "born": "1876",
+   "value": 43.7,
+   "bat": 0.0,
+   "pit": 43.7,
+   "from": 1902,
+   "to": 1907,
+   "seasons": 6,
+   "line": {
+    "wins": 131,
+    "losses": 82,
+    "era": "1.97",
+    "strikeOuts": 1576,
+    "saves": 0,
+    "inningsPitched": "1869.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 118743,
+   "name": "Mark McGwire",
+   "pos": "1B",
+   "nick": "Big Mac",
+   "born": "1963",
+   "value": 43.4,
+   "bat": 43.4,
+   "pit": 0.0,
+   "from": 1986,
+   "to": 1997,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1329,
+    "hits": 1157,
+    "homeRuns": 363,
+    "rbi": 941,
+    "avg": ".260",
+    "ops": ".931",
+    "stolenBases": 8
+   },
+   "kind": "hitter"
   }
  ],
  "144": [
@@ -533,6 +756,117 @@
     "inningsPitched": "3408.0"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 119786,
+   "name": "Phil Niekro",
+   "pos": "P",
+   "nick": "Knucksie",
+   "born": "1939",
+   "value": 66.0,
+   "bat": 0.0,
+   "pit": 66.0,
+   "from": 1964,
+   "to": 1987,
+   "seasons": 21,
+   "line": {
+    "wins": 268,
+    "losses": 230,
+    "era": "3.20",
+    "strikeOuts": 2912,
+    "saves": 29,
+    "inningsPitched": "4622.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 119545,
+   "name": "Dale Murphy",
+   "pos": "CF",
+   "born": "1956",
+   "value": 64.3,
+   "bat": 64.3,
+   "pit": 0.0,
+   "from": 1976,
+   "to": 1990,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 1926,
+    "hits": 1901,
+    "homeRuns": 371,
+    "rbi": 1143,
+    "avg": ".268",
+    "ops": ".829",
+    "stolenBases": 160
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 112369,
+   "name": "John Clarkson",
+   "pos": "P",
+   "born": "1861",
+   "value": 49.4,
+   "bat": 0.0,
+   "pit": 49.4,
+   "from": 1888,
+   "to": 1892,
+   "seasons": 5,
+   "line": {
+    "wins": 149,
+    "losses": 82,
+    "era": "2.82",
+    "strikeOuts": 834,
+    "saves": 4,
+    "inningsPitched": "2092.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 518692,
+   "name": "Freddie Freeman",
+   "pos": "1B",
+   "nick": "Phillip",
+   "born": "1989",
+   "value": 47.0,
+   "bat": 47.0,
+   "pit": 0.0,
+   "from": 2010,
+   "to": 2021,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1565,
+    "hits": 1704,
+    "homeRuns": 271,
+    "rbi": 941,
+    "avg": ".295",
+    "ops": ".893",
+    "stolenBases": 53
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 116662,
+   "name": "Andruw Jones",
+   "pos": "CF",
+   "nick": "The Curacao Kid",
+   "born": "1977",
+   "value": 45.3,
+   "bat": 45.3,
+   "pit": 0.0,
+   "from": 1996,
+   "to": 2007,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1761,
+    "hits": 1683,
+    "homeRuns": 368,
+    "rbi": 1117,
+    "avg": ".263",
+    "ops": ".839",
+    "stolenBases": 138
+   },
+   "kind": "hitter"
   }
  ],
  "110": [
@@ -713,6 +1047,116 @@
     "avg": ".284",
     "ops": ".833",
     "stolenBases": 8
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 120719,
+   "name": "Boog Powell",
+   "pos": "1B",
+   "born": "1941",
+   "value": 44.5,
+   "bat": 44.5,
+   "pit": 0.0,
+   "from": 1961,
+   "to": 1974,
+   "seasons": 14,
+   "line": {
+    "gamesPlayed": 1763,
+    "hits": 1574,
+    "homeRuns": 303,
+    "rbi": 1063,
+    "avg": ".266",
+    "ops": ".827",
+    "stolenBases": 18
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 119608,
+   "name": "Mike Mussina",
+   "pos": "P",
+   "nick": "Moose",
+   "born": "1968",
+   "value": 43.9,
+   "bat": 0.0,
+   "pit": 43.9,
+   "from": 1991,
+   "to": 2000,
+   "seasons": 10,
+   "line": {
+    "wins": 147,
+    "losses": 81,
+    "era": "3.53",
+    "strikeOuts": 1535,
+    "saves": 0,
+    "inningsPitched": "2009.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 118841,
+   "name": "Dave McNally",
+   "pos": "P",
+   "born": "1942",
+   "value": 42.4,
+   "bat": 0.0,
+   "pit": 42.4,
+   "from": 1962,
+   "to": 1974,
+   "seasons": 13,
+   "line": {
+    "wins": 181,
+    "losses": 113,
+    "era": "3.18",
+    "strikeOuts": 1476,
+    "saves": 2,
+    "inningsPitched": "2652.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 121311,
+   "name": "Frank Robinson",
+   "pos": "RF",
+   "born": "1935",
+   "value": 41.6,
+   "bat": 41.6,
+   "pit": 0.0,
+   "from": 1966,
+   "to": 1971,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 827,
+    "hits": 882,
+    "homeRuns": 179,
+    "rbi": 545,
+    "avg": ".300",
+    "ops": ".944",
+    "stolenBases": 35
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 430945,
+   "name": "Adam Jones",
+   "pos": "CF",
+   "nick": "Roots",
+   "born": "1985",
+   "value": 36.7,
+   "bat": 36.7,
+   "pit": 0.0,
+   "from": 2008,
+   "to": 2018,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1613,
+    "hits": 1781,
+    "homeRuns": 263,
+    "rbi": 866,
+    "avg": ".279",
+    "ops": ".778",
+    "stolenBases": 90
    },
    "kind": "hitter"
   }
@@ -897,6 +1341,119 @@
     "inningsPitched": "2776.0"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 113419,
+   "name": "Bobby Doerr",
+   "pos": "2B",
+   "born": "1918",
+   "value": 61.5,
+   "bat": 61.5,
+   "pit": 0.0,
+   "from": 1937,
+   "to": 1951,
+   "seasons": 14,
+   "line": {
+    "gamesPlayed": 1865,
+    "hits": 2042,
+    "homeRuns": 223,
+    "rbi": 1247,
+    "avg": ".288",
+    "ops": ".823",
+    "stolenBases": 54
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 122566,
+   "name": "Tris Speaker",
+   "pos": "CF",
+   "nick": "The Grey Eagle",
+   "born": "1888",
+   "value": 56.7,
+   "bat": 56.8,
+   "pit": -0.1,
+   "from": 1907,
+   "to": 1915,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1066,
+    "hits": 1328,
+    "homeRuns": 39,
+    "rbi": 542,
+    "avg": ".337",
+    "ops": ".896",
+    "stolenBases": 267
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 113375,
+   "name": "Dom DiMaggio",
+   "pos": "CF",
+   "nick": "The Little Professor",
+   "born": "1917",
+   "value": 47.3,
+   "bat": 47.3,
+   "pit": 0.0,
+   "from": 1940,
+   "to": 1953,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1399,
+    "hits": 1680,
+    "homeRuns": 87,
+    "rbi": 618,
+    "avg": ".298",
+    "ops": ".802",
+    "stolenBases": 100
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 120903,
+   "name": "Manny Ramirez",
+   "pos": "LF",
+   "born": "1972",
+   "value": 47.2,
+   "bat": 47.2,
+   "pit": 0.0,
+   "from": 2001,
+   "to": 2008,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 1083,
+    "hits": 1232,
+    "homeRuns": 274,
+    "rbi": 868,
+    "avg": ".312",
+    "ops": ".999",
+    "stolenBases": 7
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 114182,
+   "name": "Carlton Fisk",
+   "pos": "C",
+   "nick": "Pudge",
+   "born": "1947",
+   "value": 45.3,
+   "bat": 45.3,
+   "pit": 0.0,
+   "from": 1969,
+   "to": 1980,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1078,
+    "hits": 1097,
+    "homeRuns": 162,
+    "rbi": 568,
+    "avg": ".284",
+    "ops": ".837",
+    "stolenBases": 61
+   },
+   "kind": "hitter"
   }
  ],
  "112": [
@@ -1079,6 +1636,118 @@
     "stolenBases": 181
    },
    "kind": "hitter"
+  },
+  {
+   "id": 111577,
+   "name": "Mordecai Brown",
+   "pos": "P",
+   "nick": "Three Finger",
+   "born": "1876",
+   "value": 57.8,
+   "bat": 0.0,
+   "pit": 57.8,
+   "from": 1904,
+   "to": 1916,
+   "seasons": 10,
+   "line": {
+    "wins": 188,
+    "losses": 86,
+    "era": "1.80",
+    "strikeOuts": 1043,
+    "saves": 39,
+    "inningsPitched": "2329.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 110533,
+   "name": "Ernie Banks",
+   "pos": "1B",
+   "nick": "Mr. Cub",
+   "born": "1931",
+   "value": 55.3,
+   "bat": 55.3,
+   "pit": 0.0,
+   "from": 1953,
+   "to": 1971,
+   "seasons": 19,
+   "line": {
+    "gamesPlayed": 2528,
+    "hits": 2583,
+    "homeRuns": 512,
+    "rbi": 1636,
+    "avg": ".274",
+    "ops": ".830",
+    "stolenBases": 50
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 116369,
+   "name": "William Hutchinson",
+   "pos": "P",
+   "nick": "Wild Bill",
+   "born": "1859",
+   "value": 52.3,
+   "bat": 0.0,
+   "pit": 52.3,
+   "from": 1889,
+   "to": 1895,
+   "seasons": 7,
+   "line": {
+    "wins": 181,
+    "losses": 158,
+    "era": "3.56",
+    "strikeOuts": 1224,
+    "saves": 4,
+    "inningsPitched": "3021.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 121588,
+   "name": "Jimmy Ryan",
+   "pos": "OF",
+   "nick": "Pony",
+   "born": "1863",
+   "value": 48.8,
+   "bat": 48.3,
+   "pit": 0.4,
+   "from": 1885,
+   "to": 1900,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 1660,
+    "hits": 2083,
+    "homeRuns": 99,
+    "rbi": 914,
+    "avg": ".308",
+    "ops": ".823",
+    "stolenBases": 369
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110127,
+   "name": "Grover Cleveland Alexander",
+   "pos": "P",
+   "nick": "Old Pete",
+   "born": "1887",
+   "value": 47.1,
+   "bat": 0.0,
+   "pit": 47.1,
+   "from": 1918,
+   "to": 1926,
+   "seasons": 9,
+   "line": {
+    "wins": 128,
+    "losses": 83,
+    "era": "2.85",
+    "strikeOuts": 614,
+    "saves": 10,
+    "inningsPitched": "1884.1"
+   },
+   "kind": "pitcher"
   }
  ],
  "145": [
@@ -1256,6 +1925,116 @@
     "strikeOuts": 961,
     "saves": 21,
     "inningsPitched": "2322.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 124173,
+   "name": "Doc White",
+   "pos": "P",
+   "born": "1879",
+   "value": 49.3,
+   "bat": 0.0,
+   "pit": 49.3,
+   "from": 1903,
+   "to": 1913,
+   "seasons": 11,
+   "line": {
+    "wins": 159,
+    "losses": 123,
+    "era": "2.30",
+    "strikeOuts": 1067,
+    "saves": 4,
+    "inningsPitched": "2498.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 117244,
+   "name": "Paul Konerko",
+   "pos": "1B",
+   "born": "1976",
+   "value": 43.5,
+   "bat": 43.5,
+   "pit": 0.0,
+   "from": 1999,
+   "to": 2014,
+   "seasons": 16,
+   "line": {
+    "gamesPlayed": 2268,
+    "hits": 2292,
+    "homeRuns": 432,
+    "rbi": 1383,
+    "avg": ".281",
+    "ops": ".847",
+    "stolenBases": 9
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 119176,
+   "name": "Minnie Minoso",
+   "pos": "LF",
+   "nick": "Cuban Comet",
+   "born": "1925",
+   "value": 42.6,
+   "bat": 42.6,
+   "pit": 0.0,
+   "from": 1951,
+   "to": 1980,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1373,
+    "hits": 1523,
+    "homeRuns": 135,
+    "rbi": 808,
+    "avg": ".304",
+    "ops": ".865",
+    "stolenBases": 171
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 114182,
+   "name": "Carlton Fisk",
+   "pos": "C",
+   "nick": "Pudge",
+   "born": "1947",
+   "value": 41.2,
+   "bat": 41.2,
+   "pit": 0.0,
+   "from": 1981,
+   "to": 1993,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1421,
+    "hits": 1259,
+    "homeRuns": 214,
+    "rbi": 762,
+    "avg": ".257",
+    "ops": ".767",
+    "stolenBases": 67
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 279824,
+   "name": "Mark Buehrle",
+   "pos": "P",
+   "born": "1979",
+   "value": 37.2,
+   "bat": 0.0,
+   "pit": 37.2,
+   "from": 2000,
+   "to": 2011,
+   "seasons": 12,
+   "line": {
+    "wins": 161,
+    "losses": 119,
+    "era": "3.83",
+    "strikeOuts": 1396,
+    "saves": 0,
+    "inningsPitched": "2476.2"
    },
    "kind": "pitcher"
   }
@@ -1436,6 +2215,115 @@
     "strikeOuts": 1062,
     "saves": 17,
     "inningsPitched": "2615.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 119371,
+   "name": "Joe Morgan",
+   "pos": "2B",
+   "born": "1943",
+   "value": 55.0,
+   "bat": 55.0,
+   "pit": 0.0,
+   "from": 1972,
+   "to": 1979,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 1154,
+    "hits": 1155,
+    "homeRuns": 152,
+    "rbi": 612,
+    "avg": ".288",
+    "ops": ".885",
+    "stolenBases": 406
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 123898,
+   "name": "Bucky Walters",
+   "pos": "P",
+   "born": "1909",
+   "value": 54.0,
+   "bat": 0.0,
+   "pit": 54.0,
+   "from": 1938,
+   "to": 1948,
+   "seasons": 11,
+   "line": {
+    "wins": 160,
+    "losses": 107,
+    "era": "2.93",
+    "strikeOuts": 879,
+    "saves": 4,
+    "inningsPitched": "2355.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 120590,
+   "name": "Vada Pinson",
+   "pos": "CF",
+   "born": "1938",
+   "value": 53.6,
+   "bat": 53.6,
+   "pit": 0.0,
+   "from": 1958,
+   "to": 1968,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1565,
+    "hits": 1881,
+    "homeRuns": 186,
+    "rbi": 814,
+    "avg": ".297",
+    "ops": ".810",
+    "stolenBases": 221
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 118860,
+   "name": "Bid McPhee",
+   "pos": "2B",
+   "born": "1859",
+   "value": 50.6,
+   "bat": 50.6,
+   "pit": 0.0,
+   "from": 1882,
+   "to": 1899,
+   "seasons": 18,
+   "line": {
+    "gamesPlayed": 2135,
+    "hits": 2250,
+    "homeRuns": 53,
+    "rbi": 1067,
+    "avg": ".271",
+    "ops": ".727",
+    "stolenBases": 568
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 119489,
+   "name": "Tony Mullane",
+   "pos": "P",
+   "nick": "Count",
+   "born": "1859",
+   "value": 48.7,
+   "bat": 0.0,
+   "pit": 48.7,
+   "from": 1886,
+   "to": 1893,
+   "seasons": 8,
+   "line": {
+    "wins": 163,
+    "losses": 124,
+    "era": "3.15",
+    "strikeOuts": 993,
+    "saves": 9,
+    "inningsPitched": "2599.0"
    },
    "kind": "pitcher"
   }
@@ -1619,6 +2507,116 @@
     "inningsPitched": "2327.0"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 115451,
+   "name": "Mel Harder",
+   "pos": "P",
+   "nick": "Chief",
+   "born": "1909",
+   "value": 49.7,
+   "bat": 0.0,
+   "pit": 49.7,
+   "from": 1928,
+   "to": 1947,
+   "seasons": 20,
+   "line": {
+    "wins": 223,
+    "losses": 186,
+    "era": "3.80",
+    "strikeOuts": 1161,
+    "saves": 23,
+    "inningsPitched": "3426.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 123272,
+   "name": "Jim Thome",
+   "pos": "1B",
+   "born": "1970",
+   "value": 49.5,
+   "bat": 49.5,
+   "pit": 0.0,
+   "from": 1991,
+   "to": 2011,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1399,
+    "hits": 1353,
+    "homeRuns": 337,
+    "rbi": 937,
+    "avg": ".287",
+    "ops": ".980",
+    "stolenBases": 18
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 113411,
+   "name": "Larry Doby",
+   "pos": "CF",
+   "born": "1923",
+   "value": 48.5,
+   "bat": 48.5,
+   "pit": 0.0,
+   "from": 1947,
+   "to": 1958,
+   "seasons": 10,
+   "line": {
+    "gamesPlayed": 1235,
+    "hits": 1234,
+    "homeRuns": 215,
+    "rbi": 776,
+    "avg": ".286",
+    "ops": ".889",
+    "stolenBases": 44
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 112743,
+   "name": "Stan Coveleski",
+   "pos": "P",
+   "nick": "Covey",
+   "born": "1889",
+   "value": 48.4,
+   "bat": 0.0,
+   "pit": 48.4,
+   "from": 1916,
+   "to": 1924,
+   "seasons": 9,
+   "line": {
+    "wins": 172,
+    "losses": 123,
+    "era": "2.80",
+    "strikeOuts": 856,
+    "saves": 20,
+    "inningsPitched": "2502.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 122023,
+   "name": "Joe Sewell",
+   "pos": "SS",
+   "born": "1898",
+   "value": 46.3,
+   "bat": 46.3,
+   "pit": 0.0,
+   "from": 1920,
+   "to": 1930,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1513,
+    "hits": 1800,
+    "homeRuns": 30,
+    "rbi": 869,
+    "avg": ".320",
+    "ops": ".823",
+    "stolenBases": 71
+   },
+   "kind": "hitter"
   }
  ],
  "115": [
@@ -1800,6 +2798,118 @@
     "avg": ".316",
     "ops": ".892",
     "stolenBases": 105
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 596115,
+   "name": "Trevor Story",
+   "pos": "SS",
+   "nick": "True",
+   "born": "1992",
+   "value": 26.8,
+   "bat": 26.8,
+   "pit": 0.0,
+   "from": 2016,
+   "to": 2021,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 745,
+    "hits": 768,
+    "homeRuns": 158,
+    "rbi": 450,
+    "avg": ".272",
+    "ops": ".863",
+    "stolenBases": 100
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 407812,
+   "name": "Matt Holliday",
+   "pos": "LF",
+   "born": "1980",
+   "value": 24.5,
+   "bat": 24.5,
+   "pit": 0.0,
+   "from": 2004,
+   "to": 2018,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 723,
+    "hits": 863,
+    "homeRuns": 130,
+    "rbi": 486,
+    "avg": ".319",
+    "ops": ".937",
+    "stolenBases": 66
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 114526,
+   "name": "Andres Galarraga",
+   "pos": "1B",
+   "nick": "Big Cat",
+   "born": "1961",
+   "value": 21.5,
+   "bat": 21.5,
+   "pit": 0.0,
+   "from": 1993,
+   "to": 1997,
+   "seasons": 5,
+   "line": {
+    "gamesPlayed": 679,
+    "hits": 843,
+    "homeRuns": 172,
+    "rbi": 579,
+    "avg": ".316",
+    "ops": ".944",
+    "stolenBases": 55
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 111736,
+   "name": "Ellis Burks",
+   "pos": "CF",
+   "born": "1964",
+   "value": 20.1,
+   "bat": 20.1,
+   "pit": 0.0,
+   "from": 1994,
+   "to": 1998,
+   "seasons": 5,
+   "line": {
+    "gamesPlayed": 520,
+    "hits": 558,
+    "homeRuns": 115,
+    "rbi": 337,
+    "avg": ".306",
+    "ops": ".957",
+    "stolenBases": 52
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 425547,
+   "name": "Brad Hawpe",
+   "pos": "RF",
+   "born": "1979",
+   "value": 18.7,
+   "bat": 18.7,
+   "pit": 0.0,
+   "from": 2004,
+   "to": 2010,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 816,
+    "hits": 749,
+    "homeRuns": 118,
+    "rbi": 464,
+    "avg": ".280",
+    "ops": ".866",
+    "stolenBases": 13
    },
    "kind": "hitter"
   }
@@ -1986,6 +3096,117 @@
     "inningsPitched": "2944.0"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 408234,
+   "name": "Miguel Cabrera",
+   "pos": "1B",
+   "nick": "Miggy",
+   "born": "1983",
+   "value": 60.8,
+   "bat": 60.8,
+   "pit": 0.0,
+   "from": 2008,
+   "to": 2023,
+   "seasons": 16,
+   "line": {
+    "gamesPlayed": 2077,
+    "hits": 2332,
+    "homeRuns": 373,
+    "rbi": 1358,
+    "avg": ".304",
+    "ops": ".890",
+    "stolenBases": 23
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 112090,
+   "name": "Norm Cash",
+   "pos": "1B",
+   "nick": "Stormin' Norman",
+   "born": "1934",
+   "value": 59.0,
+   "bat": 59.0,
+   "pit": 0.0,
+   "from": 1960,
+   "to": 1974,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 2018,
+    "hits": 1793,
+    "homeRuns": 373,
+    "rbi": 1087,
+    "avg": ".272",
+    "ops": ".864",
+    "stolenBases": 42
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 123437,
+   "name": "Alan Trammell",
+   "pos": "SS",
+   "born": "1958",
+   "value": 58.8,
+   "bat": 58.8,
+   "pit": 0.0,
+   "from": 1977,
+   "to": 1996,
+   "seasons": 20,
+   "line": {
+    "gamesPlayed": 2293,
+    "hits": 2365,
+    "homeRuns": 185,
+    "rbi": 1003,
+    "avg": ".285",
+    "ops": ".767",
+    "stolenBases": 236
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 114399,
+   "name": "Bill Freehan",
+   "pos": "C",
+   "born": "1941",
+   "value": 58.2,
+   "bat": 58.2,
+   "pit": 0.0,
+   "from": 1961,
+   "to": 1976,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 1774,
+    "hits": 1591,
+    "homeRuns": 200,
+    "rbi": 758,
+    "avg": ".262",
+    "ops": ".752",
+    "stolenBases": 24
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 111458,
+   "name": "Tommy Bridges",
+   "pos": "P",
+   "born": "1906",
+   "value": 50.2,
+   "bat": 0.0,
+   "pit": 50.2,
+   "from": 1930,
+   "to": 1946,
+   "seasons": 16,
+   "line": {
+    "wins": 194,
+    "losses": 138,
+    "era": "3.57",
+    "strikeOuts": 1674,
+    "saves": 10,
+    "inningsPitched": "2826.1"
+   },
+   "kind": "pitcher"
   }
  ],
  "117": [
@@ -2163,6 +3384,117 @@
     "strikeOuts": 1178,
     "saves": 9,
     "inningsPitched": "2270.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 608324,
+   "name": "Alex Bregman",
+   "pos": "3B",
+   "nick": "A-Breg",
+   "born": "1994",
+   "value": 37.4,
+   "bat": 37.4,
+   "pit": 0.0,
+   "from": 2016,
+   "to": 2024,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1111,
+    "hits": 1132,
+    "homeRuns": 191,
+    "rbi": 663,
+    "avg": ".272",
+    "ops": ".849",
+    "stolenBases": 42
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 112902,
+   "name": "Jose Cruz",
+   "pos": "LF",
+   "nick": "Cheo",
+   "born": "1947",
+   "value": 36.7,
+   "bat": 36.7,
+   "pit": 0.0,
+   "from": 1975,
+   "to": 1987,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1870,
+    "hits": 1937,
+    "homeRuns": 138,
+    "rbi": 942,
+    "avg": ".292",
+    "ops": ".788",
+    "stolenBases": 288
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 121597,
+   "name": "Nolan Ryan Jr.",
+   "pos": "P",
+   "nick": "Ryan Express",
+   "born": "1947",
+   "value": 34.1,
+   "bat": 0.0,
+   "pit": 34.1,
+   "from": 1980,
+   "to": 1988,
+   "seasons": 9,
+   "line": {
+    "wins": 106,
+    "losses": 94,
+    "era": "3.13",
+    "strikeOuts": 1866,
+    "saves": 0,
+    "inningsPitched": "1854.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 119371,
+   "name": "Joe Morgan",
+   "pos": "2B",
+   "born": "1943",
+   "value": 32.5,
+   "bat": 32.5,
+   "pit": 0.0,
+   "from": 1963,
+   "to": 1980,
+   "seasons": 10,
+   "line": {
+    "gamesPlayed": 1032,
+    "hits": 972,
+    "homeRuns": 72,
+    "rbi": 327,
+    "avg": ".261",
+    "ops": ".767",
+    "stolenBases": 219
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 113352,
+   "name": "Larry Dierker",
+   "pos": "P",
+   "born": "1946",
+   "value": 31.6,
+   "bat": 0.0,
+   "pit": 31.6,
+   "from": 1964,
+   "to": 1976,
+   "seasons": 13,
+   "line": {
+    "wins": 137,
+    "losses": 117,
+    "era": "3.28",
+    "strikeOuts": 1487,
+    "saves": 1,
+    "inningsPitched": "2294.1"
    },
    "kind": "pitcher"
   }
@@ -2343,6 +3675,115 @@
     "inningsPitched": "2218.2"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 123041,
+   "name": "Mike Sweeney",
+   "pos": "1B",
+   "born": "1973",
+   "value": 24.8,
+   "bat": 24.8,
+   "pit": 0.0,
+   "from": 1995,
+   "to": 2007,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1282,
+    "hits": 1398,
+    "homeRuns": 197,
+    "rbi": 837,
+    "avg": ".299",
+    "ops": ".861",
+    "stolenBases": 50
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 117687,
+   "name": "Dennis Leonard",
+   "pos": "P",
+   "born": "1951",
+   "value": 24.5,
+   "bat": 0.0,
+   "pit": 24.5,
+   "from": 1974,
+   "to": 1986,
+   "seasons": 12,
+   "line": {
+    "wins": 144,
+    "losses": 106,
+    "era": "3.70",
+    "strikeOuts": 1323,
+    "saves": 1,
+    "inningsPitched": "2187.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 120858,
+   "name": "Dan Quisenberry",
+   "pos": "P",
+   "born": "1953",
+   "value": 24.5,
+   "bat": 0.0,
+   "pit": 24.5,
+   "from": 1979,
+   "to": 1988,
+   "seasons": 10,
+   "line": {
+    "wins": 51,
+    "losses": 44,
+    "era": "2.55",
+    "strikeOuts": 321,
+    "saves": 238,
+    "inningsPitched": "920.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 123096,
+   "name": "Danny Tartabull",
+   "pos": "OF",
+   "born": "1962",
+   "value": 23.8,
+   "bat": 23.8,
+   "pit": 0.0,
+   "from": 1987,
+   "to": 1991,
+   "seasons": 5,
+   "line": {
+    "gamesPlayed": 657,
+    "hits": 674,
+    "homeRuns": 124,
+    "rbi": 425,
+    "avg": ".290",
+    "ops": ".894",
+    "stolenBases": 28
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 118480,
+   "name": "John Mayberry Sr.",
+   "pos": "1B",
+   "nick": "RFD",
+   "born": "1949",
+   "value": 22.9,
+   "bat": 22.9,
+   "pit": 0.0,
+   "from": 1972,
+   "to": 1977,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 897,
+    "hits": 816,
+    "homeRuns": 143,
+    "rbi": 552,
+    "avg": ".261",
+    "ops": ".822",
+    "stolenBases": 16
+   },
+   "kind": "hitter"
   }
  ],
  "108": [
@@ -2522,6 +3963,117 @@
     "stolenBases": 27
    },
    "kind": "hitter"
+  },
+  {
+   "id": 123084,
+   "name": "Frank Tanana",
+   "pos": "P",
+   "born": "1953",
+   "value": 30.8,
+   "bat": 0.0,
+   "pit": 30.8,
+   "from": 1973,
+   "to": 1980,
+   "seasons": 8,
+   "line": {
+    "wins": 102,
+    "losses": 78,
+    "era": "3.08",
+    "strikeOuts": 1233,
+    "saves": 0,
+    "inningsPitched": "1615.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 113516,
+   "name": "Brian Downing",
+   "pos": "DH",
+   "nick": "The Incredible Hulk",
+   "born": "1950",
+   "value": 28.8,
+   "bat": 28.8,
+   "pit": 0.0,
+   "from": 1978,
+   "to": 1990,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1661,
+    "hits": 1588,
+    "homeRuns": 222,
+    "rbi": 846,
+    "avg": ".271",
+    "ops": ".813",
+    "stolenBases": 27
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 115223,
+   "name": "Vladimir Guerrero",
+   "pos": "RF",
+   "nick": "Vladdy",
+   "born": "1975",
+   "value": 28.0,
+   "bat": 28.0,
+   "pit": 0.0,
+   "from": 2004,
+   "to": 2009,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 846,
+    "hits": 1034,
+    "homeRuns": 173,
+    "rbi": 616,
+    "avg": ".319",
+    "ops": ".927",
+    "stolenBases": 52
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110236,
+   "name": "Garret Anderson",
+   "pos": "LF",
+   "born": "1972",
+   "value": 26.9,
+   "bat": 26.9,
+   "pit": 0.0,
+   "from": 1994,
+   "to": 2008,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 2013,
+    "hits": 2368,
+    "homeRuns": 272,
+    "rbi": 1292,
+    "avg": ".296",
+    "ops": ".796",
+    "stolenBases": 78
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 407793,
+   "name": "John Lackey",
+   "pos": "P",
+   "nick": "Lack",
+   "born": "1978",
+   "value": 24.3,
+   "bat": 0.0,
+   "pit": 24.3,
+   "from": 2002,
+   "to": 2009,
+   "seasons": 8,
+   "line": {
+    "wins": 102,
+    "losses": 71,
+    "era": "3.81",
+    "strikeOuts": 1201,
+    "saves": 0,
+    "inningsPitched": "1501.0"
+   },
+   "kind": "pitcher"
   }
  ],
  "119": [
@@ -2699,6 +4251,115 @@
     "avg": ".311",
     "ops": ".883",
     "stolenBases": 197
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 117277,
+   "name": "Sandy Koufax",
+   "pos": "P",
+   "born": "1935",
+   "value": 53.1,
+   "bat": 0.0,
+   "pit": 53.1,
+   "from": 1955,
+   "to": 1966,
+   "seasons": 12,
+   "line": {
+    "wins": 165,
+    "losses": 87,
+    "era": "2.76",
+    "strikeOuts": 2396,
+    "saves": 9,
+    "inningsPitched": "2324.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 111915,
+   "name": "Roy Campanella",
+   "pos": "C",
+   "nick": "Campy",
+   "born": "1921",
+   "value": 47.7,
+   "bat": 47.7,
+   "pit": 0.0,
+   "from": 1948,
+   "to": 1957,
+   "seasons": 10,
+   "line": {
+    "gamesPlayed": 1215,
+    "hits": 1161,
+    "homeRuns": 242,
+    "rbi": 856,
+    "avg": ".276",
+    "ops": ".860",
+    "stolenBases": 25
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 116994,
+   "name": "Brickyard Kennedy",
+   "pos": "P",
+   "born": "1867",
+   "value": 46.6,
+   "bat": 0.0,
+   "pit": 46.6,
+   "from": 1892,
+   "to": 1901,
+   "seasons": 10,
+   "line": {
+    "wins": 177,
+    "losses": 149,
+    "era": "3.98",
+    "strikeOuts": 749,
+    "saves": 9,
+    "inningsPitched": "2857.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 121530,
+   "name": "Nap Rucker",
+   "pos": "P",
+   "born": "1884",
+   "value": 45.9,
+   "bat": 0.0,
+   "pit": 45.9,
+   "from": 1907,
+   "to": 1916,
+   "seasons": 10,
+   "line": {
+    "wins": 134,
+    "losses": 134,
+    "era": "2.42",
+    "strikeOuts": 1217,
+    "saves": 14,
+    "inningsPitched": "2375.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 112162,
+   "name": "Ron Cey",
+   "pos": "3B",
+   "nick": "Penguin",
+   "born": "1948",
+   "value": 45.2,
+   "bat": 45.2,
+   "pit": 0.0,
+   "from": 1971,
+   "to": 1982,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1481,
+    "hits": 1378,
+    "homeRuns": 228,
+    "rbi": 842,
+    "avg": ".264",
+    "ops": ".804",
+    "stolenBases": 20
    },
    "kind": "hitter"
   }
@@ -2881,6 +4542,114 @@
     "stolenBases": 21
    },
    "kind": "hitter"
+  },
+  {
+   "id": 425883,
+   "name": "Dontrelle Willis",
+   "pos": "P",
+   "nick": "D-Train",
+   "born": "1982",
+   "value": 17.3,
+   "bat": 0.0,
+   "pit": 17.3,
+   "from": 2003,
+   "to": 2007,
+   "seasons": 5,
+   "line": {
+    "wins": 68,
+    "losses": 54,
+    "era": "3.78",
+    "strikeOuts": 757,
+    "saves": 0,
+    "inningsPitched": "1022.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 114260,
+   "name": "Cliff Floyd",
+   "pos": "LF",
+   "born": "1972",
+   "value": 16.9,
+   "bat": 16.9,
+   "pit": 0.0,
+   "from": 1997,
+   "to": 2002,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 637,
+    "hits": 661,
+    "homeRuns": 110,
+    "rbi": 409,
+    "avg": ".294",
+    "ops": ".897",
+    "stolenBases": 90
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 111554,
+   "name": "Kevin Brown",
+   "pos": "P",
+   "born": "1965",
+   "value": 16.2,
+   "bat": 0.0,
+   "pit": 16.2,
+   "from": 1996,
+   "to": 1997,
+   "seasons": 2,
+   "line": {
+    "wins": 33,
+    "losses": 19,
+    "era": "2.30",
+    "strikeOuts": 364,
+    "saves": 0,
+    "inningsPitched": "470.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 112116,
+   "name": "Luis Castillo",
+   "pos": "2B",
+   "born": "1975",
+   "value": 15.7,
+   "bat": 15.7,
+   "pit": 0.0,
+   "from": 1996,
+   "to": 2005,
+   "seasons": 10,
+   "line": {
+    "gamesPlayed": 1128,
+    "hits": 1273,
+    "homeRuns": 20,
+    "rbi": 271,
+    "avg": ".293",
+    "ops": ".726",
+    "stolenBases": 281
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 150359,
+   "name": "A.J. Burnett",
+   "pos": "P",
+   "born": "1977",
+   "value": 14.6,
+   "bat": 0.0,
+   "pit": 14.6,
+   "from": 1999,
+   "to": 2005,
+   "seasons": 7,
+   "line": {
+    "wins": 49,
+    "losses": 50,
+    "era": "3.73",
+    "strikeOuts": 753,
+    "saves": 0,
+    "inningsPitched": "853.2"
+   },
+   "kind": "pitcher"
   }
  ],
  "158": [
@@ -3063,6 +4832,116 @@
     "stolenBases": 126
    },
    "kind": "hitter"
+  },
+  {
+   "id": 119954,
+   "name": "Ben Oglivie",
+   "pos": "LF",
+   "born": "1949",
+   "value": 24.8,
+   "bat": 24.8,
+   "pit": 0.0,
+   "from": 1978,
+   "to": 1986,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1149,
+    "hits": 1144,
+    "homeRuns": 176,
+    "rbi": 685,
+    "avg": ".277",
+    "ops": ".806",
+    "stolenBases": 44
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 282656,
+   "name": "Ben Sheets",
+   "pos": "P",
+   "born": "1978",
+   "value": 24.8,
+   "bat": 0.0,
+   "pit": 24.8,
+   "from": 2001,
+   "to": 2008,
+   "seasons": 8,
+   "line": {
+    "wins": 86,
+    "losses": 83,
+    "era": "3.72",
+    "strikeOuts": 1206,
+    "saves": 0,
+    "inningsPitched": "1428.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 518960,
+   "name": "Jonathan Lucroy",
+   "pos": "C",
+   "nick": "Luc",
+   "born": "1986",
+   "value": 24.3,
+   "bat": 24.3,
+   "pit": 0.0,
+   "from": 2010,
+   "to": 2016,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 805,
+    "hits": 806,
+    "homeRuns": 79,
+    "rbi": 387,
+    "avg": ".284",
+    "ops": ".778",
+    "stolenBases": 29
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 132961,
+   "name": "Geoff Jenkins",
+   "pos": "LF",
+   "born": "1974",
+   "value": 23.7,
+   "bat": 23.7,
+   "pit": 0.0,
+   "from": 1998,
+   "to": 2007,
+   "seasons": 10,
+   "line": {
+    "gamesPlayed": 1234,
+    "hits": 1221,
+    "homeRuns": 212,
+    "rbi": 704,
+    "avg": ".277",
+    "ops": ".843",
+    "stolenBases": 31
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 119804,
+   "name": "Dave Nilsson",
+   "pos": "C",
+   "born": "1969",
+   "value": 23.1,
+   "bat": 23.1,
+   "pit": 0.0,
+   "from": 1992,
+   "to": 1999,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 837,
+    "hits": 789,
+    "homeRuns": 105,
+    "rbi": 470,
+    "avg": ".284",
+    "ops": ".817",
+    "stolenBases": 15
+   },
+   "kind": "hitter"
   }
  ],
  "142": [
@@ -3243,6 +5122,116 @@
     "stolenBases": 271
    },
    "kind": "hitter"
+  },
+  {
+   "id": 119613,
+   "name": "Buddy Myer",
+   "pos": "2B",
+   "born": "1904",
+   "value": 44.6,
+   "bat": 44.6,
+   "pit": 0.0,
+   "from": 1925,
+   "to": 1941,
+   "seasons": 16,
+   "line": {
+    "gamesPlayed": 1643,
+    "hits": 1828,
+    "homeRuns": 35,
+    "rbi": 759,
+    "avg": ".303",
+    "ops": ".801",
+    "stolenBases": 117
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 124682,
+   "name": "Eddie Yost",
+   "pos": "3B",
+   "nick": "The Walking Man",
+   "born": "1926",
+   "value": 42.4,
+   "bat": 42.4,
+   "pit": 0.0,
+   "from": 1944,
+   "to": 1958,
+   "seasons": 14,
+   "line": {
+    "gamesPlayed": 1690,
+    "hits": 1521,
+    "homeRuns": 101,
+    "rbi": 550,
+    "avg": ".253",
+    "ops": ".757",
+    "stolenBases": 58
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 116243,
+   "name": "Kent Hrbek",
+   "pos": "1B",
+   "born": "1960",
+   "value": 42.3,
+   "bat": 42.3,
+   "pit": 0.0,
+   "from": 1981,
+   "to": 1994,
+   "seasons": 14,
+   "line": {
+    "gamesPlayed": 1747,
+    "hits": 1749,
+    "homeRuns": 293,
+    "rbi": 1086,
+    "avg": ".282",
+    "ops": ".848",
+    "stolenBases": 37
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110176,
+   "name": "Bob Allison",
+   "pos": "RF",
+   "born": "1934",
+   "value": 41.7,
+   "bat": 41.7,
+   "pit": 0.0,
+   "from": 1958,
+   "to": 1970,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1542,
+    "hits": 1281,
+    "homeRuns": 256,
+    "rbi": 796,
+    "avg": ".255",
+    "ops": ".829",
+    "stolenBases": 84
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 111126,
+   "name": "Bert Blyleven",
+   "pos": "P",
+   "born": "1951",
+   "value": 41.5,
+   "bat": 0.0,
+   "pit": 41.5,
+   "from": 1970,
+   "to": 1988,
+   "seasons": 11,
+   "line": {
+    "wins": 149,
+    "losses": 138,
+    "era": "3.28",
+    "strikeOuts": 2035,
+    "saves": 0,
+    "inningsPitched": "2566.2"
+   },
+   "kind": "pitcher"
   }
  ],
  "121": [
@@ -3421,6 +5410,119 @@
     "inningsPitched": "1584.2"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 116593,
+   "name": "Howard Johnson",
+   "pos": "3B",
+   "nick": "HoJo",
+   "born": "1960",
+   "value": 31.3,
+   "bat": 31.3,
+   "pit": 0.0,
+   "from": 1985,
+   "to": 1993,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1154,
+    "hits": 997,
+    "homeRuns": 192,
+    "rbi": 629,
+    "avg": ".251",
+    "ops": ".800",
+    "stolenBases": 202
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 408314,
+   "name": "Jos\u00e9 Reyes",
+   "pos": "SS",
+   "nick": "La Melaza",
+   "born": "1983",
+   "value": 30.2,
+   "bat": 30.7,
+   "pit": -0.5,
+   "from": 2003,
+   "to": 2018,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1365,
+    "hits": 1534,
+    "homeRuns": 108,
+    "rbi": 521,
+    "avg": ".282",
+    "ops": ".767",
+    "stolenBases": 408
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 117652,
+   "name": "Al Leiter",
+   "pos": "P",
+   "born": "1965",
+   "value": 29.8,
+   "bat": 0.0,
+   "pit": 29.8,
+   "from": 1998,
+   "to": 2004,
+   "seasons": 7,
+   "line": {
+    "wins": 95,
+    "losses": 67,
+    "era": "3.42",
+    "strikeOuts": 1106,
+    "saves": 0,
+    "inningsPitched": "1360.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 136860,
+   "name": "Carlos Beltr\u00e1n",
+   "pos": "CF",
+   "nick": "Ivan",
+   "born": "1977",
+   "value": 28.2,
+   "bat": 28.2,
+   "pit": 0.0,
+   "from": 2005,
+   "to": 2011,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 839,
+    "hits": 878,
+    "homeRuns": 149,
+    "rbi": 559,
+    "avg": ".280",
+    "ops": ".869",
+    "stolenBases": 100
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 596019,
+   "name": "Francisco Lindor",
+   "pos": "SS",
+   "nick": "Mr. Smile",
+   "born": "1993",
+   "value": 27.1,
+   "bat": 27.1,
+   "pit": 0.0,
+   "from": 2021,
+   "to": 2026,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 863,
+    "hits": 862,
+    "homeRuns": 162,
+    "rbi": 494,
+    "avg": ".256",
+    "ops": ".792",
+    "stolenBases": 120
+   },
+   "kind": "hitter"
   }
  ],
  "147": [
@@ -3604,6 +5706,117 @@
     "stolenBases": 36
    },
    "kind": "hitter"
+  },
+  {
+   "id": 124288,
+   "name": "Bernie Williams",
+   "pos": "CF",
+   "born": "1968",
+   "value": 66.4,
+   "bat": 66.4,
+   "pit": 0.0,
+   "from": 1991,
+   "to": 2006,
+   "seasons": 16,
+   "line": {
+    "gamesPlayed": 2076,
+    "hits": 2336,
+    "homeRuns": 287,
+    "rbi": 1257,
+    "avg": ".297",
+    "ops": ".858",
+    "stolenBases": 147
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 121547,
+   "name": "Red Ruffing",
+   "pos": "P",
+   "born": "1905",
+   "value": 65.9,
+   "bat": 0.0,
+   "pit": 65.9,
+   "from": 1930,
+   "to": 1946,
+   "seasons": 15,
+   "line": {
+    "wins": 231,
+    "losses": 124,
+    "era": "3.47",
+    "strikeOuts": 1526,
+    "saves": 8,
+    "inningsPitched": "3168.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 121347,
+   "name": "Alex Rodriguez",
+   "pos": "SS",
+   "nick": "A-Rod",
+   "born": "1975",
+   "value": 64.7,
+   "bat": 64.7,
+   "pit": 0.0,
+   "from": 2004,
+   "to": 2016,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1509,
+    "hits": 1580,
+    "homeRuns": 351,
+    "rbi": 1096,
+    "avg": ".283",
+    "ops": ".901",
+    "stolenBases": 152
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 120691,
+   "name": "Jorge Posada",
+   "pos": "C",
+   "born": "1970",
+   "value": 62.3,
+   "bat": 62.3,
+   "pit": 0.0,
+   "from": 1996,
+   "to": 2011,
+   "seasons": 16,
+   "line": {
+    "gamesPlayed": 1829,
+    "hits": 1664,
+    "homeRuns": 275,
+    "rbi": 1065,
+    "avg": ".273",
+    "ops": ".848",
+    "stolenBases": 20
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 592450,
+   "name": "Aaron Judge",
+   "pos": "RF",
+   "nick": "Baj",
+   "born": "1992",
+   "value": 62.0,
+   "bat": 62.0,
+   "pit": 0.0,
+   "from": 2016,
+   "to": 2026,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1211,
+    "hits": 1262,
+    "homeRuns": 386,
+    "rbi": 871,
+    "avg": ".291",
+    "ops": "1.020",
+    "stolenBases": 70
+   },
+   "kind": "hitter"
   }
  ],
  "143": [
@@ -3782,6 +5995,119 @@
     "avg": ".282",
     "ops": ".847",
     "stolenBases": 142
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 117141,
+   "name": "Chuck Klein",
+   "pos": "RF",
+   "born": "1904",
+   "value": 48.1,
+   "bat": 48.1,
+   "pit": 0.0,
+   "from": 1928,
+   "to": 1944,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 1405,
+    "hits": 1705,
+    "homeRuns": 243,
+    "rbi": 983,
+    "avg": ".326",
+    "ops": ".935",
+    "stolenBases": 71
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110029,
+   "name": "Bobby Abreu",
+   "pos": "RF",
+   "nick": "El Comedulce",
+   "born": "1974",
+   "value": 46.2,
+   "bat": 46.2,
+   "pit": 0.0,
+   "from": 1998,
+   "to": 2006,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1353,
+    "hits": 1474,
+    "homeRuns": 195,
+    "rbi": 814,
+    "avg": ".303",
+    "ops": ".929",
+    "stolenBases": 254
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 276519,
+   "name": "Jimmy Rollins",
+   "pos": "SS",
+   "nick": "J-Roll",
+   "born": "1978",
+   "value": 45.6,
+   "bat": 45.6,
+   "pit": 0.0,
+   "from": 2000,
+   "to": 2014,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 2090,
+    "hits": 2306,
+    "homeRuns": 216,
+    "rbi": 887,
+    "avg": ".267",
+    "ops": ".751",
+    "stolenBases": 453
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 124310,
+   "name": "Cy Williams",
+   "pos": "OF",
+   "born": "1887",
+   "value": 45.0,
+   "bat": 45.0,
+   "pit": 0.0,
+   "from": 1918,
+   "to": 1930,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1463,
+    "hits": 1553,
+    "homeRuns": 217,
+    "rbi": 795,
+    "avg": ".306",
+    "ops": ".880",
+    "stolenBases": 77
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 112794,
+   "name": "Gavvy Cravath",
+   "pos": "RF",
+   "nick": "Cactus",
+   "born": "1881",
+   "value": 41.8,
+   "bat": 41.8,
+   "pit": 0.0,
+   "from": 1912,
+   "to": 1920,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1104,
+    "hits": 1054,
+    "homeRuns": 117,
+    "rbi": 676,
+    "avg": ".291",
+    "ops": ".870",
+    "stolenBases": 80
    },
    "kind": "hitter"
   }
@@ -3965,6 +6291,117 @@
     "stolenBases": 688
    },
    "kind": "hitter"
+  },
+  {
+   "id": 117623,
+   "name": "Sam Leever",
+   "pos": "P",
+   "nick": "Deacon",
+   "born": "1871",
+   "value": 54.1,
+   "bat": 0.0,
+   "pit": 54.1,
+   "from": 1898,
+   "to": 1910,
+   "seasons": 13,
+   "line": {
+    "wins": 194,
+    "losses": 100,
+    "era": "2.47",
+    "strikeOuts": 847,
+    "saves": 13,
+    "inningsPitched": "2660.2"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 117072,
+   "name": "Ralph Kiner",
+   "pos": "LF",
+   "born": "1922",
+   "value": 51.6,
+   "bat": 51.6,
+   "pit": 0.0,
+   "from": 1946,
+   "to": 1953,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 1095,
+    "hits": 1097,
+    "homeRuns": 301,
+    "rbi": 801,
+    "avg": ".280",
+    "ops": ".972",
+    "stolenBases": 19
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 112352,
+   "name": "Fred Clarke",
+   "pos": "LF",
+   "nick": "Cap",
+   "born": "1872",
+   "value": 47.2,
+   "bat": 47.2,
+   "pit": 0.0,
+   "from": 1900,
+   "to": 1915,
+   "seasons": 15,
+   "line": {
+    "gamesPlayed": 1479,
+    "hits": 1638,
+    "homeRuns": 33,
+    "rbi": 622,
+    "avg": ".299",
+    "ops": ".797",
+    "stolenBases": 261
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 119397,
+   "name": "Ed Morris",
+   "pos": "P",
+   "nick": "Cannonball",
+   "born": "1862",
+   "value": 46.8,
+   "bat": 0.0,
+   "pit": 46.8,
+   "from": 1885,
+   "to": 1889,
+   "seasons": 5,
+   "line": {
+    "wins": 129,
+    "losses": 102,
+    "era": "2.81",
+    "strikeOuts": 890,
+    "saves": 1,
+    "inningsPitched": "2104.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 114442,
+   "name": "Bob Friend",
+   "pos": "P",
+   "nick": "Warrior",
+   "born": "1930",
+   "value": 45.4,
+   "bat": 0.0,
+   "pit": 45.4,
+   "from": 1951,
+   "to": 1965,
+   "seasons": 15,
+   "line": {
+    "wins": 191,
+    "losses": 218,
+    "era": "3.55",
+    "strikeOuts": 1682,
+    "saves": 10,
+    "inningsPitched": "3480.1"
+   },
+   "kind": "pitcher"
   }
  ],
  "135": [
@@ -4142,6 +6579,117 @@
     "inningsPitched": "1603.1"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 119732,
+   "name": "Phil Nevin",
+   "pos": "3B",
+   "nick": "Nev",
+   "born": "1971",
+   "value": 22.8,
+   "bat": 22.8,
+   "pit": 0.0,
+   "from": 1999,
+   "to": 2005,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 806,
+    "hits": 842,
+    "homeRuns": 156,
+    "rbi": 573,
+    "avg": ".288",
+    "ops": ".862",
+    "stolenBases": 14
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110351,
+   "name": "Andy Ashby",
+   "pos": "P",
+   "born": "1967",
+   "value": 22.8,
+   "bat": 0.0,
+   "pit": 22.8,
+   "from": 1993,
+   "to": 2004,
+   "seasons": 8,
+   "line": {
+    "wins": 70,
+    "losses": 62,
+    "era": "3.59",
+    "strikeOuts": 829,
+    "saves": 0,
+    "inningsPitched": "1212.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 123183,
+   "name": "Gene Tenace",
+   "pos": "C",
+   "born": "1946",
+   "value": 21.4,
+   "bat": 21.4,
+   "pit": 0.0,
+   "from": 1977,
+   "to": 1980,
+   "seasons": 4,
+   "line": {
+    "gamesPlayed": 573,
+    "hits": 384,
+    "homeRuns": 68,
+    "rbi": 239,
+    "avg": ".237",
+    "ops": ".825",
+    "stolenBases": 17
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 111908,
+   "name": "Ken Caminiti",
+   "pos": "3B",
+   "born": "1963",
+   "value": 20.9,
+   "bat": 20.9,
+   "pit": 0.0,
+   "from": 1995,
+   "to": 1998,
+   "seasons": 4,
+   "line": {
+    "gamesPlayed": 557,
+    "hits": 592,
+    "homeRuns": 121,
+    "rbi": 396,
+    "avg": ".295",
+    "ops": ".924",
+    "stolenBases": 40
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 408236,
+   "name": "Adri\u00e1n Gonz\u00e1lez",
+   "pos": "1B",
+   "nick": "El Titan",
+   "born": "1982",
+   "value": 20.5,
+   "bat": 20.5,
+   "pit": 0.0,
+   "from": 2006,
+   "to": 2010,
+   "seasons": 5,
+   "line": {
+    "gamesPlayed": 799,
+    "hits": 856,
+    "homeRuns": 161,
+    "rbi": 501,
+    "avg": ".288",
+    "ops": ".888",
+    "stolenBases": 1
+   },
+   "kind": "hitter"
   }
  ],
  "137": [
@@ -4323,6 +6871,118 @@
     "stolenBases": 24
    },
    "kind": "hitter"
+  },
+  {
+   "id": 118283,
+   "name": "Juan Marichal",
+   "pos": "P",
+   "nick": "Manito",
+   "born": "1937",
+   "value": 60.9,
+   "bat": 0.0,
+   "pit": 60.9,
+   "from": 1960,
+   "to": 1973,
+   "seasons": 14,
+   "line": {
+    "wins": 238,
+    "losses": 140,
+    "era": "2.84",
+    "strikeOuts": 2281,
+    "saves": 2,
+    "inningsPitched": "3444.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 116888,
+   "name": "Tim Keefe",
+   "pos": "P",
+   "nick": "Smiling Tim",
+   "born": "1857",
+   "value": 57.4,
+   "bat": 0.0,
+   "pit": 57.4,
+   "from": 1885,
+   "to": 1891,
+   "seasons": 6,
+   "line": {
+    "wins": 174,
+    "losses": 82,
+    "era": "2.53",
+    "strikeOuts": 1303,
+    "saves": 1,
+    "inningsPitched": "2265.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 113531,
+   "name": "Larry Doyle",
+   "pos": "2B",
+   "nick": "Laughing Larry",
+   "born": "1886",
+   "value": 55.1,
+   "bat": 55.1,
+   "pit": 0.0,
+   "from": 1907,
+   "to": 1920,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1623,
+    "hits": 1751,
+    "homeRuns": 67,
+    "rbi": 725,
+    "avg": ".292",
+    "ops": ".770",
+    "stolenBases": 291
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 457763,
+   "name": "Buster Posey",
+   "pos": "C",
+   "nick": "Hum Buss",
+   "born": "1987",
+   "value": 52.6,
+   "bat": 52.6,
+   "pit": 0.0,
+   "from": 2009,
+   "to": 2021,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1371,
+    "hits": 1500,
+    "homeRuns": 158,
+    "rbi": 729,
+    "avg": ".302",
+    "ops": ".832",
+    "stolenBases": 23
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 121899,
+   "name": "Hal Schumacher",
+   "pos": "P",
+   "nick": "Prince Hal",
+   "born": "1910",
+   "value": 51.6,
+   "bat": 0.0,
+   "pit": 51.6,
+   "from": 1931,
+   "to": 1946,
+   "seasons": 13,
+   "line": {
+    "wins": 158,
+    "losses": 121,
+    "era": "3.36",
+    "strikeOuts": 906,
+    "saves": 7,
+    "inningsPitched": "2482.1"
+   },
+   "kind": "pitcher"
   }
  ],
  "136": [
@@ -4505,6 +7165,118 @@
     "stolenBases": 55
    },
    "kind": "hitter"
+  },
+  {
+   "id": 400085,
+   "name": "Ichiro Suzuki",
+   "pos": "RF",
+   "nick": "Ichi",
+   "born": "1973",
+   "value": 29.7,
+   "bat": 29.7,
+   "pit": 0.0,
+   "from": 2001,
+   "to": 2019,
+   "seasons": 14,
+   "line": {
+    "gamesPlayed": 1861,
+    "hits": 2542,
+    "homeRuns": 99,
+    "rbi": 633,
+    "avg": ".321",
+    "ops": ".781",
+    "stolenBases": 438
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 113096,
+   "name": "Alvin Davis",
+   "pos": "1B",
+   "born": "1960",
+   "value": 28.8,
+   "bat": 28.8,
+   "pit": 0.0,
+   "from": 1984,
+   "to": 1991,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 1166,
+    "hits": 1163,
+    "homeRuns": 160,
+    "rbi": 667,
+    "avg": ".281",
+    "ops": ".834",
+    "stolenBases": 7
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 429664,
+   "name": "Robinson Can\u00f3",
+   "pos": "2B",
+   "nick": "Nolo",
+   "born": "1982",
+   "value": 22.7,
+   "bat": 22.7,
+   "pit": 0.0,
+   "from": 2014,
+   "to": 2018,
+   "seasons": 5,
+   "line": {
+    "gamesPlayed": 704,
+    "hits": 821,
+    "homeRuns": 107,
+    "rbi": 411,
+    "avg": ".296",
+    "ops": ".825",
+    "stolenBases": 13
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 663728,
+   "name": "Cal Raleigh",
+   "pos": "C",
+   "born": "1996",
+   "value": 21.8,
+   "bat": 21.8,
+   "pit": 0.0,
+   "from": 2021,
+   "to": 2026,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 749,
+    "hits": 571,
+    "homeRuns": 176,
+    "rbi": 445,
+    "avg": ".218",
+    "ops": ".775",
+    "stolenBases": 23
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 150119,
+   "name": "Freddy Garcia",
+   "pos": "P",
+   "nick": "The Chief",
+   "born": "1976",
+   "value": 19.9,
+   "bat": 0.0,
+   "pit": 19.9,
+   "from": 1999,
+   "to": 2004,
+   "seasons": 6,
+   "line": {
+    "wins": 76,
+    "losses": 50,
+    "era": "3.89",
+    "strikeOuts": 819,
+    "saves": 0,
+    "inningsPitched": "1096.1"
+   },
+   "kind": "pitcher"
   }
  ],
  "138": [
@@ -4687,6 +7459,117 @@
     "stolenBases": 64
    },
    "kind": "hitter"
+  },
+  {
+   "id": 425794,
+   "name": "Adam Wainwright",
+   "pos": "P",
+   "nick": "Uncle Charlie",
+   "born": "1981",
+   "value": 49.8,
+   "bat": 0.0,
+   "pit": 49.8,
+   "from": 2005,
+   "to": 2023,
+   "seasons": 18,
+   "line": {
+    "wins": 200,
+    "losses": 128,
+    "era": "3.53",
+    "strikeOuts": 2202,
+    "saves": 3,
+    "inningsPitched": "2668.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 111495,
+   "name": "Lou Brock",
+   "pos": "LF",
+   "nick": "The Franchise",
+   "born": "1939",
+   "value": 47.4,
+   "bat": 47.4,
+   "pit": 0.0,
+   "from": 1964,
+   "to": 1979,
+   "seasons": 16,
+   "line": {
+    "gamesPlayed": 2289,
+    "hits": 2713,
+    "homeRuns": 129,
+    "rbi": 814,
+    "avg": ".297",
+    "ops": ".761",
+    "stolenBases": 888
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 113168,
+   "name": "Dizzy Dean",
+   "pos": "P",
+   "nick": "The Great Man",
+   "born": "1910",
+   "value": 45.8,
+   "bat": 0.0,
+   "pit": 45.8,
+   "from": 1930,
+   "to": 1937,
+   "seasons": 7,
+   "line": {
+    "wins": 134,
+    "losses": 75,
+    "era": "2.99",
+    "strikeOuts": 1095,
+    "saves": 30,
+    "inningsPitched": "1737.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 111412,
+   "name": "Harry Brecheen",
+   "pos": "P",
+   "nick": "Harry The Cat",
+   "born": "1914",
+   "value": 44.9,
+   "bat": 0.0,
+   "pit": 44.9,
+   "from": 1940,
+   "to": 1952,
+   "seasons": 11,
+   "line": {
+    "wins": 128,
+    "losses": 79,
+    "era": "2.91",
+    "strikeOuts": 857,
+    "saves": 17,
+    "inningsPitched": "1790.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 117484,
+   "name": "Ray Lankford",
+   "pos": "CF",
+   "born": "1967",
+   "value": 44.4,
+   "bat": 44.4,
+   "pit": 0.0,
+   "from": 1990,
+   "to": 2004,
+   "seasons": 13,
+   "line": {
+    "gamesPlayed": 1580,
+    "hits": 1479,
+    "homeRuns": 228,
+    "rbi": 829,
+    "avg": ".273",
+    "ops": ".846",
+    "stolenBases": 250
+   },
+   "kind": "hitter"
   }
  ],
  "139": [
@@ -4865,6 +7748,115 @@
     "rbi": 481,
     "avg": ".291",
     "ops": ".818",
+    "stolenBases": 12
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 408307,
+   "name": "Carl Crawford",
+   "pos": "LF",
+   "born": "1981",
+   "value": 15.6,
+   "bat": 15.6,
+   "pit": 0.0,
+   "from": 2002,
+   "to": 2010,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1235,
+    "hits": 1480,
+    "homeRuns": 104,
+    "rbi": 592,
+    "avg": ".296",
+    "ops": ".781",
+    "stolenBases": 409
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 150289,
+   "name": "Carlos Pena",
+   "pos": "1B",
+   "born": "1978",
+   "value": 14.3,
+   "bat": 14.3,
+   "pit": 0.0,
+   "from": 2007,
+   "to": 2012,
+   "seasons": 5,
+   "line": {
+    "gamesPlayed": 726,
+    "hits": 559,
+    "homeRuns": 163,
+    "rbi": 468,
+    "avg": ".230",
+    "ops": ".843",
+    "stolenBases": 12
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 502042,
+   "name": "Chris Archer",
+   "pos": "P",
+   "nick": "Flaco Fuerte",
+   "born": "1988",
+   "value": 13.8,
+   "bat": 0.0,
+   "pit": 13.8,
+   "from": 2012,
+   "to": 2021,
+   "seasons": 8,
+   "line": {
+    "wins": 55,
+    "losses": 69,
+    "era": "3.71",
+    "strikeOuts": 1167,
+    "saves": 0,
+    "inningsPitched": "1082.1"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 431148,
+   "name": "Scott Kazmir",
+   "pos": "P",
+   "born": "1984",
+   "value": 12.4,
+   "bat": 0.0,
+   "pit": 12.4,
+   "from": 2004,
+   "to": 2009,
+   "seasons": 6,
+   "line": {
+    "wins": 55,
+    "losses": 44,
+    "era": "3.92",
+    "strikeOuts": 874,
+    "saves": 0,
+    "inningsPitched": "834.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 691406,
+   "name": "Junior Caminero",
+   "pos": "3B",
+   "born": "2003",
+   "value": 12.2,
+   "bat": 12.2,
+   "pit": 0.0,
+   "from": 2023,
+   "to": 2026,
+   "seasons": 4,
+   "line": {
+    "gamesPlayed": 366,
+    "hits": 378,
+    "homeRuns": 94,
+    "rbi": 236,
+    "avg": ".267",
+    "ops": ".844",
     "stolenBases": 12
    },
    "kind": "hitter"
@@ -5051,6 +8043,117 @@
     "stolenBases": 172
    },
    "kind": "hitter"
+  },
+  {
+   "id": 285078,
+   "name": "Josh Hamilton",
+   "pos": "CF",
+   "born": "1981",
+   "value": 27.9,
+   "bat": 27.9,
+   "pit": 0.0,
+   "from": 2008,
+   "to": 2015,
+   "seasons": 6,
+   "line": {
+    "gamesPlayed": 697,
+    "hits": 814,
+    "homeRuns": 150,
+    "rbi": 531,
+    "avg": ".302",
+    "ops": ".901",
+    "stolenBases": 40
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 121347,
+   "name": "Alex Rodriguez",
+   "pos": "SS",
+   "nick": "A-Rod",
+   "born": "1975",
+   "value": 27.8,
+   "bat": 27.8,
+   "pit": 0.0,
+   "from": 2001,
+   "to": 2003,
+   "seasons": 3,
+   "line": {
+    "gamesPlayed": 485,
+    "hits": 569,
+    "homeRuns": 156,
+    "rbi": 395,
+    "avg": ".305",
+    "ops": "1.010",
+    "stolenBases": 44
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 116176,
+   "name": "Charlie Hough",
+   "pos": "P",
+   "born": "1948",
+   "value": 25.7,
+   "bat": 0.0,
+   "pit": 25.7,
+   "from": 1980,
+   "to": 1990,
+   "seasons": 11,
+   "line": {
+    "wins": 139,
+    "losses": 123,
+    "era": "3.68",
+    "strikeOuts": 1452,
+    "saves": 1,
+    "inningsPitched": "2308.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 462101,
+   "name": "Elvis Andrus",
+   "pos": "SS",
+   "nick": "El Comando",
+   "born": "1988",
+   "value": 25.2,
+   "bat": 25.2,
+   "pit": 0.0,
+   "from": 2009,
+   "to": 2020,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1652,
+    "hits": 1743,
+    "homeRuns": 76,
+    "rbi": 636,
+    "avg": ".274",
+    "ops": ".702",
+    "stolenBases": 305
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110815,
+   "name": "Buddy Bell",
+   "pos": "3B",
+   "born": "1951",
+   "value": 25.1,
+   "bat": 25.1,
+   "pit": 0.0,
+   "from": 1979,
+   "to": 1989,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 958,
+    "hits": 1060,
+    "homeRuns": 87,
+    "rbi": 499,
+    "avg": ".293",
+    "ops": ".782",
+    "stolenBases": 24
+   },
+   "kind": "hitter"
   }
  ],
  "141": [
@@ -5229,6 +8332,118 @@
     "inningsPitched": "1695.2"
    },
    "kind": "pitcher"
+  },
+  {
+   "id": 124224,
+   "name": "Ernie Whitt",
+   "pos": "C",
+   "born": "1952",
+   "value": 26.6,
+   "bat": 26.6,
+   "pit": 0.0,
+   "from": 1977,
+   "to": 1989,
+   "seasons": 12,
+   "line": {
+    "gamesPlayed": 1218,
+    "hits": 888,
+    "homeRuns": 131,
+    "rbi": 518,
+    "avg": ".253",
+    "ops": ".747",
+    "stolenBases": 22
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 665489,
+   "name": "Vladimir Guerrero Jr.",
+   "pos": "1B",
+   "nick": "El K",
+   "born": "1999",
+   "value": 25.8,
+   "bat": 25.8,
+   "pit": 0.0,
+   "from": 2019,
+   "to": 2026,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 1119,
+    "hits": 1218,
+    "homeRuns": 192,
+    "rbi": 648,
+    "avg": ".285",
+    "ops": ".839",
+    "stolenBases": 33
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 110823,
+   "name": "George Bell",
+   "pos": "LF",
+   "born": "1959",
+   "value": 25.2,
+   "bat": 25.2,
+   "pit": 0.0,
+   "from": 1981,
+   "to": 1990,
+   "seasons": 9,
+   "line": {
+    "gamesPlayed": 1181,
+    "hits": 1294,
+    "homeRuns": 202,
+    "rbi": 740,
+    "avg": ".286",
+    "ops": ".811",
+    "stolenBases": 59
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 429665,
+   "name": "Edwin Encarnaci\u00f3n",
+   "pos": "DH",
+   "nick": "Rivera",
+   "born": "1983",
+   "value": 24.0,
+   "bat": 24.0,
+   "pit": 0.0,
+   "from": 2009,
+   "to": 2016,
+   "seasons": 8,
+   "line": {
+    "gamesPlayed": 999,
+    "hits": 977,
+    "homeRuns": 239,
+    "rbi": 679,
+    "avg": ".268",
+    "ops": ".877",
+    "stolenBases": 37
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 119506,
+   "name": "Rance Mulliniks",
+   "pos": "3B",
+   "born": "1956",
+   "value": 23.2,
+   "bat": 23.2,
+   "pit": 0.0,
+   "from": 1982,
+   "to": 1992,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1115,
+    "hits": 843,
+    "homeRuns": 68,
+    "rbi": 389,
+    "avg": ".280",
+    "ops": ".789",
+    "stolenBases": 12
+   },
+   "kind": "hitter"
   }
  ],
  "120": [
@@ -5410,6 +8625,118 @@
     "avg": ".290",
     "ops": ".859",
     "stolenBases": 45
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 118371,
+   "name": "Dennis Martinez",
+   "pos": "P",
+   "nick": "El Presidente",
+   "born": "1955",
+   "value": 31.1,
+   "bat": 0.0,
+   "pit": 31.1,
+   "from": 1986,
+   "to": 1993,
+   "seasons": 8,
+   "line": {
+    "wins": 100,
+    "losses": 72,
+    "era": "3.06",
+    "strikeOuts": 973,
+    "saves": 1,
+    "inningsPitched": "1609.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 113151,
+   "name": "Andre Dawson",
+   "pos": "RF",
+   "nick": "The Hawk",
+   "born": "1954",
+   "value": 29.7,
+   "bat": 29.7,
+   "pit": 0.0,
+   "from": 1976,
+   "to": 1986,
+   "seasons": 11,
+   "line": {
+    "gamesPlayed": 1443,
+    "hits": 1575,
+    "homeRuns": 225,
+    "rbi": 838,
+    "avg": ".280",
+    "ops": ".802",
+    "stolenBases": 253
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 547180,
+   "name": "Bryce Harper",
+   "pos": "1B",
+   "nick": "Harp",
+   "born": "1992",
+   "value": 29.0,
+   "bat": 29.0,
+   "pit": 0.0,
+   "from": 2012,
+   "to": 2018,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 927,
+    "hits": 922,
+    "homeRuns": 184,
+    "rbi": 521,
+    "avg": ".279",
+    "ops": ".900",
+    "stolenBases": 75
+   },
+   "kind": "hitter"
+  },
+  {
+   "id": 544931,
+   "name": "Stephen Strasburg",
+   "pos": "P",
+   "nick": "Stras",
+   "born": "1988",
+   "value": 29.0,
+   "bat": 0.0,
+   "pit": 29.0,
+   "from": 2010,
+   "to": 2022,
+   "seasons": 13,
+   "line": {
+    "wins": 113,
+    "losses": 62,
+    "era": "3.24",
+    "strikeOuts": 1723,
+    "saves": 0,
+    "inningsPitched": "1470.0"
+   },
+   "kind": "pitcher"
+  },
+  {
+   "id": 110451,
+   "name": "Bob Bailey",
+   "pos": "3B",
+   "born": "1942",
+   "value": 28.3,
+   "bat": 28.3,
+   "pit": 0.0,
+   "from": 1969,
+   "to": 1975,
+   "seasons": 7,
+   "line": {
+    "gamesPlayed": 951,
+    "hits": 791,
+    "homeRuns": 118,
+    "rbi": 466,
+    "avg": ".264",
+    "ops": ".805",
+    "stolenBases": 40
    },
    "kind": "hitter"
   }

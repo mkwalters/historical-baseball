@@ -20,7 +20,7 @@ import concurrent.futures as cf, hashlib, json, os, sys, time, urllib.request
 API = "https://statsapi.mlb.com/api/v1"
 CACHE = os.environ.get("DTM_CACHE", os.path.join(os.path.dirname(__file__), "..", ".cache"))
 os.makedirs(CACHE, exist_ok=True)
-HIT_POOL, PIT_POOL, TOP_N = 70, 45, 8
+HIT_POOL, PIT_POOL, TOP_N = 70, 45, 13
 
 # A few greats the API lists by formal first name.
 NAME_FIX = {"Tristram Speaker": "Tris Speaker", "Grover Alexander": "Grover Cleveland Alexander"}
