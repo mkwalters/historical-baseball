@@ -26,14 +26,11 @@ const COLORS = {
   121: "#002d72", 147: "#0c2340", 143: "#e81828", 134: "#27251f", 135: "#2f241d", 137: "#d9481a",
   136: "#0c2c56", 138: "#c41e3a", 139: "#092c5c", 140: "#003278", 141: "#134a8e", 120: "#ab0003",
 };
-const DIVISIONS = { 200: "AL West", 201: "AL East", 202: "AL Central", 203: "NL West", 204: "NL East", 205: "NL Central" };
-const LEAGUES = { 103: "American League", 104: "National League" };
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const h = (html) => { const t = document.createElement("template"); t.innerHTML = html.trim(); return t.content.firstElementChild; };
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const ordinal = (n) => { n = +n; const s = ["th", "st", "nd", "rd"], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
 const pct = (w, l) => (w + l ? w / (w + l) : 0);
 const fmtPct = (p) => p.toFixed(3).replace(/^0/, "");
 const num = (n) => (n == null ? "?" : Number(n).toLocaleString());
@@ -69,7 +66,7 @@ async function get(path) {
 const state = {
   teams: [], champions: {}, legends: {}, photos: {}, history: {},
   team: null, seasons: [], eras: [], parks: [], archive: [],
-  selected: null, pinned: null, barW: 1,
+  barW: 1,
 };
 
 async function init() {
@@ -88,7 +85,7 @@ async function init() {
 
   const params = new URLSearchParams(location.hash.slice(1));
   const teamId = +(params.get("team") || 0);
-  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId, +params.get("season") || null);
+  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId);
   if (params.get("view") === "league") showView("league");
 }
 
@@ -104,7 +101,7 @@ function renderPicker() {
 
 // Back to the front page: no club selected, team picker on top.
 function goHome() {
-  Object.assign(state, { team: null, seasons: [], selected: null, pinned: null });
+  Object.assign(state, { team: null, seasons: [] });
   $$(".team-btn").forEach((b) => b.classList.remove("active"));
   $("#franchise").hidden = true;
   $("#franchise-empty").hidden = false;
@@ -117,13 +114,12 @@ function showView(v) {
   $$(".tab").forEach((b) => b.classList.toggle("active", b.dataset.view === v));
   $("#view-franchise").hidden = v !== "franchise";
   $("#view-league").hidden = v !== "league";
-  if (v === "franchise" && state.seasons.length) { renderTimeline(); markSelected(); }
+  if (v === "franchise" && state.seasons.length) renderTimeline();
   updateHash(v);
 }
 function updateHash(view = "franchise") {
   const p = new URLSearchParams();
   if (state.team) p.set("team", state.team.id);
-  if (state.selected) p.set("season", state.selected);
   if (view === "league") p.set("view", "league");
   try { history.replaceState(null, "", "#" + p.toString()); } catch {}
 }
@@ -131,16 +127,15 @@ function updateHash(view = "franchise") {
 // =====================================================================
 // FRANCHISE
 // =====================================================================
-async function selectTeam(id, season = null) {
+async function selectTeam(id) {
   const team = state.teams.find((t) => t.id === id);
-  Object.assign(state, { team, selected: null, pinned: null, seasons: [] });
+  Object.assign(state, { team, seasons: [] });
   await ensureBundle(id);
   if (state.team?.id !== id) return;
   document.documentElement.style.setProperty("--team", COLORS[id] || "#1e3557");
   $$(".team-btn").forEach((b) => b.classList.toggle("active", +b.dataset.id === id));
   $("#franchise-empty").hidden = true;
   $("#franchise").hidden = false;
-  $("#season").hidden = true;
   $("#hero-logo").src = logo(id);
   $("#pennant-name").textContent = team.teamName;
   $("#hero-name").textContent = team.name;
@@ -181,8 +176,7 @@ async function selectTeam(id, season = null) {
   renderTrophies();
   renderArchive();
   renderContents();
-  if (season && state.seasons.some((s) => s.year === season)) selectSeason(season);
-  else updateHash();
+  updateHash();
 }
 
 function eraAt(y) {
@@ -212,18 +206,17 @@ function renderHero() {
   const formerly = [...new Set(state.eras.map((e) => e.name))].filter((n) => n !== t.name);
   const hof = (state.history[t.id] || {}).hof || [];
   $("#hero-sub").textContent = `Est. ${S[0].year} · ${S.length} seasons of baseball` + (formerly.length ? ` · formerly the ${listify(formerly)}` : "");
-  const cell = (label, val, sub = "", year = null) =>
-    `<div class="sb-cell"${year ? ` data-year="${year}" title="Open ${year}"` : ""}><div class="sb-label">${label}</div><div class="sb-val${String(val).length > 9 ? " sb-long" : ""}">${val}</div><div class="sb-sub">${sub}</div></div>`;
+  const cell = (label, val, sub = "") =>
+    `<div class="sb-cell"><div class="sb-label">${label}</div><div class="sb-val${String(val).length > 9 ? " sb-long" : ""}">${val}</div><div class="sb-sub">${sub}</div></div>`;
   $("#scoreboard").innerHTML = [
     cell("All-Time", `${num(W)}–${num(L)}`, fmtPct(p)),
-    cell("World Titles", champs.length, champs.length ? "last " + lastTitle : "none yet", lastTitle),
+    cell("World Titles", champs.length, champs.length ? "last " + lastTitle : "none yet"),
     cell("Pennants", pennants.length, "since 1903"),
-    best ? cell("Best Season", `${best.w}–${best.l}`, best.year, best.year) : "",
-    worst ? cell("Worst Season", `${worst.w}–${worst.l}`, worst.year, worst.year) : "",
+    best ? cell("Best Season", `${best.w}–${best.l}`, best.year) : "",
+    worst ? cell("Worst Season", `${worst.w}–${worst.l}`, worst.year) : "",
     cell("Title Drought", lastTitle ? thisYear - lastTitle : S.length, lastTitle ? "years" : "seasons & counting"),
     cell("Hall of Famers", hof.length, "in Cooperstown"),
   ].join("");
-  $$("#scoreboard [data-year]").forEach((el) => (el.onclick = () => selectSeason(+el.dataset.year, { scroll: true })));
 }
 
 function heroPick() {
@@ -267,7 +260,6 @@ function renderTimeline() {
   state.barW = bw;
 
   let out = `<rect class="span-hl" id="span-hl" x="-100" y="0" width="0" height="${bandsTop}"/>`;
-  out += `<rect class="sel" id="sel-rect" x="-100" y="${top - 14}" width="${bw}" height="${plotH + 26}"/>`;
   out += `<line x1="0" x2="${W}" y1="${mid}" y2="${mid}" stroke="#8a7a60" stroke-width="1" stroke-dasharray="3 3"/>`;
   out += `<text x="4" y="${top - 6}">${fmtPct(0.5 + maxDev)}</text><text x="4" y="${top + plotH - 3}">${fmtPct(0.5 - maxDev)}</text>`;
   S.forEach((s, i) => {
@@ -296,7 +288,6 @@ function renderTimeline() {
   band(state.parks.map((p) => ({ label: p.name, from: p.from, to: p.to })), bandsTop + bandH, "park", ["#f6edd6", "#ebdfc1"]);
   S.forEach((s, i) => (out += `<rect class="hit" data-i="${i}" x="${i * bw}" y="0" width="${bw}" height="${bandsTop}"/>`));
   svg.innerHTML = out;
-  if (state.pinned) showSpan(state.pinned.from, state.pinned.to);
 
   const tip = $("#tooltip"), wrap = $(".timeline-wrap");
   svg.onpointermove = (e) => {
@@ -314,19 +305,14 @@ function renderTimeline() {
     tip.hidden = false;
   };
   svg.onpointerleave = () => (tip.hidden = true);
-  svg.onclick = (e) => { const i = e.target.dataset?.i; if (i != null) selectSeason(S[+i].year, { scroll: true }); };
 }
 
 let resizeTimer;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => { if (state.seasons.length && !$("#view-franchise").hidden) { renderTimeline(); markSelected(); } }, 150);
+  resizeTimer = setTimeout(() => { if (state.seasons.length && !$("#view-franchise").hidden) renderTimeline(); }, 150);
 });
 
-function markSelected() {
-  const i = state.seasons.findIndex((s) => s.year === state.selected), r = $("#sel-rect");
-  if (r) r.setAttribute("x", i >= 0 ? i * state.barW : -100);
-}
 function showSpan(from, to) {
   const r = $("#span-hl"), S = state.seasons;
   if (!r) return;
@@ -338,199 +324,6 @@ function showSpan(from, to) {
   r.setAttribute("x", i0 * state.barW);
   r.setAttribute("width", Math.max(state.barW, (i1 - i0) * state.barW));
 }
-function pin(from, to) {
-  state.pinned = from == null ? null : { from, to };
-  showSpan(from, to);
-}
-
-// =====================================================================
-// THE NEWSPAPER (season detail)
-// =====================================================================
-let seasonToken = 0;
-async function selectSeason(year, { scroll = false } = {}) {
-  const s = state.seasons.find((x) => x.year === year);
-  if (!s) return;
-  state.selected = year;
-  markSelected();
-  updateHash();
-  const token = ++seasonToken;
-  const el = $("#season");
-  el.hidden = false;
-  const i = state.seasons.indexOf(s), prev = state.seasons[i - 1], next = state.seasons[i + 1];
-  const era = eraAt(year), id = state.team.id;
-  const photo = state.archive.find((a) => a.year === year);
-  const greats = legendsIn(year);
-  const park = state.parks.find((p) => p.from <= year && year <= p.to);
-  const awards = ((state.history[id] || {}).awards || []).filter((a) => a.season === year);
-  const ws = state.champions[year];
-  const hl = headline(s, era);
-  const price = year < 1918 ? "One Cent" : year < 1950 ? "Three Cents" : year < 1975 ? "Ten Cents" : year < 2000 ? "Fifty Cents" : "Two Dollars";
-
-  let lead = `The ${esc(s.name)} closed the ${year} campaign at ${s.w}–${s.l}, a ${fmtPct(s.pct)} clip<span id="np-finish"></span>.`;
-  if (park) lead += ` Home games were played at ${esc(parkWithArticle(park.name))}.`;
-  if (greats.length) lead += ` On the roster: future franchise ${greats.length > 1 ? "legends" : "legend"} ${esc(listify(greats.map((p) => p.name)))}.`;
-  for (const a of awards) lead += ` ${esc(a.name)} was named ${a.award === "MVP" ? "the league's Most Valuable Player" : a.award === "Cy Young" ? "winner of the Cy Young Award" : "Rookie of the Year"}.`;
-  lead += " " + rankLine(s);
-
-  const elsewhere = ws && !s.champ && !s.pennant
-    ? `The ${esc(ws.winner.name)} won the World Series over the ${esc(ws.loser.name)}, ${ws.result.split("-").slice(0, 2).join("–")}.`
-    : !ws && year >= 1903 ? (year === 1904 ? "No World Series was played this year." : year === 1994 ? "A players' strike cancelled the World Series." : "") : "";
-
-  el.innerHTML = `
-    <div class="np-top">
-      <span>Vol. ${i + 1} · ${esc(era.city || "")} Edition</span>
-      <span class="np-nav">
-        <button class="btn btn-small" id="prev" ${prev ? "" : "disabled"}>← ${prev?.year ?? ""}</button>
-        <button class="btn btn-small" id="next" ${next ? "" : "disabled"}>${next?.year ?? ""} →</button>
-        <button class="btn btn-small" id="close-season" aria-label="Close newspaper">✕</button>
-      </span>
-    </div>
-    <h3 class="np-name">The Dugout Gazette</h3>
-    <div class="np-bar"><span>${esc(era.city || "")}, October ${year}</span><span class="hide-sm">Late City Final</span><span>${price}</span></div>
-    <h4 class="np-headline" id="np-headline">${esc(hl.head)}</h4>
-    <p class="np-deck" id="np-deck">${esc(hl.deck)}</p>
-    ${s.champ ? `<div class="np-badge"><span class="badge badge-champ">★ World Champions ★</span></div>` : s.pennant ? `<div class="np-badge"><span class="badge badge-pennant">Pennant Winners</span></div>` : ""}
-    <div class="np-cols">
-      <div class="np-col">
-        ${photo ? `<figure class="np-photo" id="np-photo"><img src="${esc(photo.src)}" alt="${esc(photo.title)}"><figcaption>${esc(photo.title)}. (Archive photograph)</figcaption></figure>` : ""}
-        <p class="np-lead">${lead}</p>
-      </div>
-      <div class="np-col">
-        <h5>Stars of the Season</h5>
-        <div id="np-stars"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
-        <div id="np-hof"></div>
-      </div>
-      <div class="np-col">
-        <h5>October Report</h5>
-        <div id="np-post"><div class="skeleton"></div></div>
-        ${elsewhere ? `<h5>Around the League</h5><p class="np-note">${elsewhere}</p>` : ""}
-      </div>
-    </div>`;
-  $("#prev").onclick = () => prev && selectSeason(prev.year);
-  $("#next").onclick = () => next && selectSeason(next.year);
-  $("#close-season").onclick = () => { el.hidden = true; state.selected = null; markSelected(); updateHash(); };
-  if (photo) $("#np-photo").onclick = () => openLightbox(photo);
-  if (scroll) el.scrollIntoView({ behavior: "smooth", block: "start" });
-
-  loadFinish(year, id).then((txt) => { if (token === seasonToken && txt) $("#np-finish").textContent = `, good for ${txt}`; });
-  loadPostseason(year, id).then((post) => {
-    if (token !== seasonToken) return;
-    $("#np-post").innerHTML = post.html;
-    if (post.series.length && !s.champ && !s.pennant) {
-      const last = post.series.at(-1);
-      $("#np-headline").textContent = `${era.nick.toUpperCase()} FALL IN ${shortSeries(last.desc).toUpperCase()}`;
-      $("#np-deck").textContent = `${s.w}–${s.l} club reaches the postseason, but the ${last.opp} end the dream, ${last.l} games to ${last.w}`;
-    }
-  });
-  loadRoster(year, id).then(({ hitters, pitchers, ids }) => {
-    if (token !== seasonToken) return;
-    const rows = [...hitters.slice(0, 3).map(boxHitter), ...pitchers.slice(0, 2).map(boxPitcher)];
-    $("#np-stars").innerHTML = rows.length ? `<table class="box"><tbody>${rows.join("")}</tbody></table>` : `<p class="np-note">The box scores from this season are lost to time.</p>`;
-    const hof = ((state.history[id] || {}).hof || []).filter((x) => ids.has(x.id));
-    if (hof.length) $("#np-hof").innerHTML = `<h5>Cooperstown-Bound</h5><div class="np-chips">${hof.map((x) => `<span class="np-chip">${esc(x.name)}</span>`).join("")}</div>`;
-  }).catch(() => { if (token === seasonToken) $("#np-stars").innerHTML = `<p class="np-note">The box scores could not be fetched.</p>`; });
-}
-
-const shortSeries = (d) => d.replace(/^(AL|NL) /, "").replace("Championship Series", "LCS").replace(/Wild Card (Series|Game)/, "Wild Card");
-
-function headline(s, era) {
-  const N = era.nick.toUpperCase(), ws = state.champions[s.year];
-  const full = state.seasons.filter((x) => x.w + x.l >= 100 || x === s);
-  const rank = [...full].sort((a, b) => b.pct - a.pct).indexOf(s) + 1;
-  if (s.champ) {
-    const [w, l] = ws.result.split("-");
-    return { head: `${N} WIN THE WORLD SERIES!`, deck: `Champions defeat the ${ws.loser.name} ${w} games to ${l}; ${era.city} celebrates` };
-  }
-  if (s.pennant) {
-    const [w, l] = ws.result.split("-");
-    return { head: `${N} CAPTURE THE PENNANT`, deck: `But fall to the ${ws.winner.name} in the World Series, ${w} games to ${l}` };
-  }
-  if (rank === 1) return { head: `GREATEST ${N} TEAM EVER`, deck: `${s.w} victories set the club's all-time high-water mark` };
-  if (rank === full.length) return { head: `${N} SINK TO ALL-TIME LOW`, deck: `${s.l} defeats make it the worst campaign in club annals` };
-  if (s.pct >= 0.58) return { head: `${N} ROLL TO ${s.w} VICTORIES`, deck: `A banner year for the ${s.name}, though the flag flies elsewhere` };
-  if (s.pct >= 0.5) return { head: `${N} FINISH ${s.w}–${s.l}`, deck: `A winning campaign closes for the ${s.name}` };
-  if (s.pct < 0.4) return { head: `${N} ENDURE ${s.l} DEFEATS`, deck: `A long summer for the faithful; wait till next year` };
-  return { head: `${N} STUMBLE TO ${s.w}–${s.l} FINISH`, deck: `Losing campaign leaves the cranks grumbling` };
-}
-
-// "the Polo Grounds", "the Astrodome", but "Fenway Park"
-const parkWithArticle = (n) => (/^the /i.test(n) || !/(grounds|dome|coliseum|ballpark at)/i.test(n) ? n : "the " + n);
-
-function rankLine(s) {
-  const full = state.seasons.filter((x) => x.w + x.l >= 100 || x === s);
-  const rank = [...full].sort((a, b) => b.pct - a.pct).indexOf(s) + 1;
-  if (rank === 1) return "No club in franchise history has won at a better clip.";
-  if (rank === full.length) return "No club in franchise history has fared worse.";
-  return `By winning percentage it ranks ${ordinal(rank)} of ${full.length} seasons in franchise history.`;
-}
-
-async function loadFinish(year, teamId) {
-  try {
-    const d = await get(`/standings?leagueId=103,104&season=${year}&standingsTypes=regularSeason`);
-    for (const rec of d.records) {
-      const tr = rec.teamRecords.find((t) => t.team.id === teamId);
-      if (!tr) continue;
-      if (rec.division?.id && tr.divisionRank) return `${ordinal(tr.divisionRank)} place in the ${DIVISIONS[rec.division.id] || "division"}`;
-      if (tr.leagueRank) return `${ordinal(tr.leagueRank)} place in the ${LEAGUES[rec.league?.id] || "league"}`;
-    }
-  } catch {}
-  return "";
-}
-
-async function loadPostseason(year, teamId) {
-  try {
-    const d = await get(`/schedule/postseason/series?sportId=1&season=${year}`);
-    const series = [];
-    for (const s of d.series || []) {
-      const games = (s.games || []).filter((g) => g.status?.abstractGameState === "Final" || g.status?.detailedState?.startsWith("Final"));
-      if (!games.length) continue;
-      const g = games.at(-1);
-      const side = g.teams.home.team.id === teamId ? "home" : g.teams.away.team.id === teamId ? "away" : null;
-      if (!side) continue;
-      const opp = g.teams[side === "home" ? "away" : "home"], me = g.teams[side], rec = me.leagueRecord || {};
-      series.push({ date: games[0].gameDate, desc: g.seriesDescription || "Postseason", opp: opp.team.name,
-        won: (rec.wins || 0) > (opp.leagueRecord?.wins || 0), w: rec.wins ?? 0, l: rec.losses ?? 0 });
-    }
-    series.sort((a, b) => a.date.localeCompare(b.date));
-    if (!series.length) return { series, html: `<p class="np-note">${year < 1903 ? "There was no modern World Series yet." : "The club watched October from the grandstand."}</p>` };
-    return { series, html: `<ul class="np-list">${series.map((m) =>
-      `<li><span>${esc(m.desc)} vs. ${esc(m.opp)}</span><span class="${m.won ? "won" : "lost"}">${m.won ? "Won" : "Lost"} ${m.w}–${m.l}</span></li>`).join("")}</ul>` };
-  } catch {
-    return { series: [], html: `<p class="np-note">The wire reports could not be fetched.</p>` };
-  }
-}
-
-async function loadRoster(year, teamId) {
-  const d = await get(`/teams/${teamId}/roster?season=${year}&rosterType=fullSeason&hydrate=person(stats(group=[hitting,pitching],type=season,season=${year}))`);
-  const hitters = [], pitchers = [], ids = new Set();
-  for (const r of d.roster || []) {
-    const p = r.person;
-    ids.add(p.id);
-    for (const st of p.stats || []) {
-      const splits = st.splits || [];
-      const sp = splits.find((x) => x.team?.id === teamId) || (splits.length === 1 ? splits[0] : null);
-      if (!sp) continue;
-      const base = { id: p.id, name: p.fullName, pos: p.primaryPosition?.abbreviation, stat: sp.stat };
-      if (st.group.displayName === "hitting" && p.primaryPosition?.code !== "1") hitters.push(base);
-      if (st.group.displayName === "pitching") pitchers.push(base);
-    }
-  }
-  const ip = (s) => { const [a, b = 0] = String(s.inningsPitched || "0").split("."); return +a + +b / 3; };
-  const minPA = Math.max(...hitters.map((x) => x.stat.plateAppearances || 0), 1) * 0.55;
-  const topH = hitters.filter((x) => (x.stat.plateAppearances || 0) >= minPA)
-    .sort((a, b) => parseFloat(b.stat.ops || 0) - parseFloat(a.stat.ops || 0)).slice(0, 4);
-  const maxIP = Math.max(...pitchers.map((x) => ip(x.stat)), 1);
-  const topP = pitchers.filter((x) => ip(x.stat) >= maxIP * 0.45)
-    .sort((a, b) => (parseFloat(a.stat.era) || 99) - (parseFloat(b.stat.era) || 99)).slice(0, 3);
-  const closer = pitchers.filter((x) => (x.stat.saves || 0) >= 20).sort((a, b) => b.stat.saves - a.stat.saves)[0];
-  if (closer && !topP.some((x) => x.id === closer.id)) topP.splice(1, 0, closer);
-  return { hitters: topH, pitchers: topP, ids };
-}
-
-const boxHitter = (p) => `<tr><td><span class="pname">${esc(p.name)} <span class="pos">${esc(p.pos || "")}</span></span>
-  ${p.stat.avg} avg, ${p.stat.homeRuns} hr, ${p.stat.rbi} rbi${p.stat.stolenBases >= 20 ? `, ${p.stat.stolenBases} sb` : ""}</td></tr>`;
-const boxPitcher = (p) => `<tr><td><span class="pname">${esc(p.name)} <span class="pos">P</span></span>
-  ${(p.stat.saves || 0) >= 20 ? `${p.stat.saves} saves` : `${p.stat.wins}–${p.stat.losses}`}, ${p.stat.era} era, ${p.stat.strikeOuts} k</td></tr>`;
 
 // =====================================================================
 // LEGENDS (tobacco cards)
@@ -551,17 +344,12 @@ function legendLine(p) {
   return t;
 }
 
-function bestSeasonIn(from, to) {
-  const run = seasonsIn(from, to).filter((s) => s.w + s.l >= 100);
-  return run.sort((a, b) => (b.champ - a.champ) || (b.pennant - a.pennant) || b.pct - a.pct)[0];
-}
-
 function renderLegends() {
   const L = topLegends(), ph = (state.photos[state.team.id] || {}).legends || {};
   $("#sec-legends").hidden = !L.length;
   $("#legends").innerHTML = L.map((p, i) => {
     const photo = ph[p.id];
-    return `<article class="tcard" data-i="${i}" tabindex="0" aria-label="${esc(p.name)}">
+    return `<article class="tcard" data-i="${i}" aria-label="${esc(p.name)}">
       <div class="tcard-face" style="--tc:${COLORS[state.team.id]}">
         <div class="tcard-art${photo ? "" : " headshot"}">
           <img src="${esc(photo ? photo.src : headshot(p.id, 360))}" alt="" loading="lazy">
@@ -581,16 +369,8 @@ function renderLegends() {
   }).join("");
   $$("#legends .tcard").forEach((el) => {
     const p = L[+el.dataset.i];
-    el.onmouseenter = el.onfocus = () => showSpan(p.from, p.to);
-    el.onmouseleave = el.onblur = () => (state.pinned ? showSpan(state.pinned.from, state.pinned.to) : showSpan());
-    el.onclick = (e) => {
-      if (e.target.closest("a")) return;
-      $$(".tcard").forEach((x) => x.classList.toggle("pinned", x === el));
-      pin(p.from, p.to);
-      const best = bestSeasonIn(p.from, p.to);
-      if (best) selectSeason(best.year, { scroll: true });
-    };
-    el.onkeydown = (e) => { if (e.key === "Enter") el.onclick(e); };
+    el.onmouseenter = () => showSpan(p.from, p.to);
+    el.onmouseleave = () => showSpan();
   });
 }
 
@@ -604,33 +384,18 @@ function renderHof() {
   const legendPhotos = (state.photos[state.team.id] || {}).legends || {};
   $("#sec-hof").hidden = !list.length;
   if (!list.length) return;
-  $("#hof-lede").textContent = `${plural(list.length, "member")} of the Hall of Fame wear this club's cap on their plaque. Click a plaque to read the paper from the club's best season of their tenure.`;
+  $("#hof-lede").textContent = `${plural(list.length, "member")} of the Hall of Fame wear this club's cap on their plaque.`;
   const shown = hofAll ? list : list.slice(0, HOF_PAGE);
   $("#hof").innerHTML = shown.map((x) => `
-    <button class="plaque" data-id="${x.id}">
+    <div class="plaque">
       <img src="${esc(legendPhotos[x.id]?.src || headshot(x.id, 180))}" alt="" loading="lazy">
       <h4>${esc(x.name)}</h4>
       <div>Inducted ${x.inducted}${x.pos && x.pos !== "X" ? " · " + esc(x.pos) : ""}</div>
-    </button>`).join("");
+    </div>`).join("");
   const more = $("#hof-more");
   more.hidden = list.length <= HOF_PAGE;
   more.textContent = hofAll ? "Show fewer" : `Show all ${list.length} plaques`;
   more.onclick = () => { hofAll = !hofAll; renderHof(); };
-  $$("#hof .plaque").forEach((b) => (b.onclick = () => openTenure(+b.dataset.id)));
-}
-
-async function openTenure(pid) {
-  const tid = state.team.id;
-  try {
-    const d = await get(`/people/${pid}/stats?stats=yearByYear&group=hitting,pitching`);
-    const years = new Set();
-    for (const st of d.stats || []) for (const sp of st.splits || []) if (sp.team?.id === tid) years.add(+sp.season);
-    if (!years.size) return;
-    const from = Math.min(...years), to = Math.max(...years);
-    pin(from, to);
-    const best = bestSeasonIn(from, to) || state.seasons.find((s) => years.has(s.year));
-    if (best) selectSeason(best.year, { scroll: true });
-  } catch {}
 }
 
 // =====================================================================
@@ -644,10 +409,9 @@ function renderTrophies() {
   $("#trophies").innerHTML = groups.map(([key, label, color]) => {
     const list = A.filter((a) => a.award === key);
     return `<div class="trophy-col"><h4>${TROPHY(color)}${label}<small>${list.length}</small></h4>
-      ${list.length ? `<ul class="trophy-list">${list.map((a) => `<li><button data-year="${a.season}">${a.season}</button><span>${esc(a.name)}</span></li>`).join("")}</ul>`
+      ${list.length ? `<ul class="trophy-list">${list.map((a) => `<li><b>${a.season}</b><span>${esc(a.name)}</span></li>`).join("")}</ul>`
         : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
   }).join("");
-  $$("#trophies [data-year]").forEach((b) => (b.onclick = () => selectSeason(+b.dataset.year, { scroll: true })));
 }
 
 // =====================================================================
@@ -676,21 +440,8 @@ function openLightbox(a) {
   $("#lb-wiki").href = a.url || "#";
   $("#lb-wiki").hidden = !a.url;
   $("#lb-file").href = a.file;
-  const btn = $("#lb-season"), has = a.year && state.seasons.some((s) => s.year === a.year);
-  btn.hidden = !has;
-  if (has) {
-    btn.textContent = `Read the ${a.year} paper →`;
-    btn.onclick = () => { lb.close(); selectSeason(a.year, { scroll: true }); };
-  }
   lb.showModal();
 }
-
-$("#btn-random").onclick = () => {
-  const S = state.seasons;
-  let pick;
-  do pick = S[Math.floor(Math.random() * S.length)].year; while (S.length > 1 && pick === state.selected);
-  selectSeason(pick, { scroll: true });
-};
 
 // =====================================================================
 // LEAGUE
@@ -717,108 +468,10 @@ function renderLeague() {
   for (let y = thisYear; y >= 1903; y--) {
     const c = C[y];
     if (!c) { wall.push(`<div class="wpen gap" title="No World Series">${y}<br>no series</div>`); continue; }
-    wall.push(`<button class="wpen" style="--pc:${COLORS[c.winner.id] || "#1e3557"}" data-id="${c.winner.id}" data-year="${y}" title="${y}: ${esc(c.winner.name)} def. ${esc(c.loser.name)} (${c.result})">
-      <img src="${logo(c.winner.id)}" alt="${esc(c.winner.name)}" loading="lazy"><span>${y}</span></button>`);
+    wall.push(`<div class="wpen" style="--pc:${COLORS[c.winner.id] || "#1e3557"}" title="${y}: ${esc(c.winner.name)} def. ${esc(c.loser.name)} (${c.result})">
+      <img src="${logo(c.winner.id)}" alt="${esc(c.winner.name)}" loading="lazy"><span>${y}</span></div>`);
   }
   $("#wall").innerHTML = wall.join("");
-  $$("#wall .wpen[data-id]").forEach((el) => (el.onclick = async () => {
-    showView("franchise");
-    await selectTeam(+el.dataset.id, +el.dataset.year);
-    $("#season").scrollIntoView({ behavior: "smooth" });
-  }));
-}
-
-// =====================================================================
-// GUESS THE YEAR
-// =====================================================================
-const ROUNDS = 5;
-const game = { round: 0, score: 0, pool: [], current: null, hintUsed: false, history: [] };
-const dlg = $("#game");
-$("#game-close").onclick = () => dlg.close();
-$("#btn-game").onclick = startGame;
-
-function startGame() {
-  const S = state.seasons.filter((s) => s.year >= 1903 && s.w + s.l >= 100);
-  Object.assign(game, { round: 0, score: 0, pool: [...S].sort(() => Math.random() - 0.5).slice(0, ROUNDS), history: [] });
-  dlg.showModal();
-  nextRound();
-}
-
-async function nextRound() {
-  const body = $("#game-body");
-  if (game.round >= game.pool.length) return finishGame();
-  const s = game.pool[game.round];
-  game.current = s; game.hintUsed = false;
-  const meta = `<p class="round-meta">Round ${game.round + 1} of ${game.pool.length} · ${esc(state.team.teamName)} · Score ${game.score}</p>`;
-  body.innerHTML = `<h3>Guess the Year</h3>${meta}<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>`;
-  let star = null;
-  try { star = (await loadRoster(s.year, state.team.id)).hitters[0]; } catch {}
-  if (game.current !== s) return;
-  const S = state.seasons.filter((x) => x.year >= 1903), lo = S[0].year, hi = S.at(-1).year, mid = Math.round((lo + hi) / 2);
-  const park = state.parks.find((p) => p.from <= s.year && s.year <= p.to);
-  body.innerHTML = `
-    <h3>Guess the Year</h3>${meta}
-    <div class="clue-list">
-      <div class="clue"><span>Record</span><b>${s.w}–${s.l} (${fmtPct(s.pct)})</b></div>
-      <div class="clue"><span>Team HR / AVG / ERA</span><b>${s.hr ?? "?"} / ${s.avg ?? "?"} / ${s.era ?? "?"}</b></div>
-      ${park && state.parks.length > 1 ? `<div class="clue"><span>Home park</span><b>${esc(park.name)}</b></div>` : ""}
-      ${star ? `<div class="clue"><span>Best hitter</span><b id="star">${star.stat.homeRuns} HR, ${star.stat.avg} AVG, ${star.stat.ops} OPS<br><button class="btn btn-small" id="hint" style="margin-top:6px">Reveal name (−25)</button></b></div>` : ""}
-      <div class="clue"><span>October</span><b>${s.champ ? "Won the World Series ★" : s.pennant ? "Lost the World Series" : "No pennant"}</b></div>
-    </div>
-    <div class="year-pick"><output id="yr">${mid}</output><input id="slider" type="range" min="${lo}" max="${hi}" value="${mid}" aria-label="Year guess"></div>
-    <div class="game-actions"><button class="btn btn-red" id="lock">Lock it in</button></div>`;
-  const slider = $("#slider"), out = $("#yr");
-  slider.oninput = () => (out.textContent = slider.value);
-  const hint = $("#hint");
-  if (hint) hint.onclick = () => { game.hintUsed = true; hint.replaceWith(Object.assign(document.createElement("div"), { textContent: star.name, style: "color:var(--red)" })); };
-  $("#lock").onclick = () => reveal(+slider.value, star);
-}
-
-function reveal(guess, star) {
-  const s = game.current, off = Math.abs(guess - s.year);
-  const pts = Math.max(0, 100 - off * 6 - (game.hintUsed ? 25 : 0));
-  game.score += pts;
-  game.history.push({ year: s.year, guess, pts });
-  const verdict = off === 0 ? "Right on the button!" : off <= 3 ? "Close enough to smell the peanuts." : off <= 10 ? "Right era." : off <= 25 ? "Wrong generation." : "Way out in the bleachers.";
-  $("#game-body").innerHTML = `
-    <h3>Guess the Year</h3>
-    <p class="round-meta">Round ${game.round + 1} of ${game.pool.length}</p>
-    <div class="result">
-      <div class="round-meta">It was the</div>
-      <div class="big">${s.year} ${esc(s.name)}</div>
-      <p>You guessed <b>${guess}</b>: ${plural(off, "year")} off. ${verdict}</p>
-      ${star ? `<p>Best hitter: <b>${esc(star.name)}</b></p>` : ""}
-      <span class="score-pill">+${pts}</span>
-    </div>
-    <div class="game-actions">
-      <button class="btn" id="view">Read the ${s.year} paper</button>
-      <button class="btn btn-red" id="go">${game.round + 1 < game.pool.length ? "Next round →" : "Final score"}</button>
-    </div>`;
-  $("#view").onclick = () => { dlg.close(); selectSeason(s.year, { scroll: true }); };
-  $("#go").onclick = () => { game.round++; nextRound(); };
-}
-
-function finishGame() {
-  const max = game.pool.length * 100, sc = game.score;
-  const title = sc >= max * 0.85 ? "Hall of Famer" : sc >= max * 0.65 ? "All-Star" : sc >= max * 0.45 ? "Everyday Starter" : sc >= max * 0.25 ? "Bench Bat" : "Sent Down to the Minors";
-  const grid = game.history.map((x) => (x.pts >= 90 ? "🟩" : x.pts >= 60 ? "🟨" : x.pts >= 25 ? "🟧" : "⬛")).join("");
-  const share = `Dugout Time Machine · ${state.team.teamName}\n${grid} ${sc}/${max}`;
-  $("#game-body").innerHTML = `
-    <h3>Final Score</h3>
-    <div class="result">
-      <div class="year-pick"><output>${sc}</output></div>
-      <p class="round-meta">out of ${max} · Rating: ${title}</p>
-      <p style="font-size:22px;margin:4px 0">${grid}</p>
-      <ul class="final-list">${game.history.map((x) => `<li><span>${x.year}</span><span>guessed ${x.guess} · +${x.pts}</span></li>`).join("")}</ul>
-    </div>
-    <div class="game-actions">
-      <button class="btn" id="copy">Copy result</button>
-      <button class="btn btn-red" id="again">Play again</button>
-    </div>`;
-  $("#again").onclick = startGame;
-  $("#copy").onclick = async (e) => {
-    try { await navigator.clipboard.writeText(share); e.target.textContent = "Copied!"; } catch { e.target.textContent = "Copy failed"; }
-  };
 }
 
 init().catch((err) => {
