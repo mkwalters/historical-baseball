@@ -147,7 +147,8 @@ PEOPLE = {
           ("Jon Miller", "Jon Miller", "Broadcaster", "1997–"),
           ("John McGraw", "John McGraw", "Manager", "1902–1932"),
           ("Horace Stoneham", "Horace Stoneham", "Owner", "1936–1976"),
-          ("Mike Krukow", "Mike Krukow", "Pitcher & broadcaster", "1983–")],
+          ("Mike Krukow", "Mike Krukow", "Pitcher & broadcaster", "1983–"),
+          ("Duane Kuiper", "Duane Kuiper", "Infielder & broadcaster", "1982–")],
     136: [("Dave Niehaus", "Dave Niehaus", "Broadcaster", "1977–2010"),
           ("Rick Rizzs", "Rick Rizzs", "Broadcaster", "1983–2025"),
           ("Hiroshi Yamauchi", "Hiroshi Yamauchi", "Owner", "1992–2004")],
@@ -191,7 +192,7 @@ CALLS = {
     "Bill King": "Holy Toledo!", "Mark Holtz": "Hello, win column!", "Ned Martin": "Mercy!",
     "Joe Castiglione": "Can you believe it?", "Jimmy Dudley": "So long and good luck, y'all.",
     "Rick Rizzs": "Goodbye, baseball!", "Howie Rose": "Put it in the books!", "Pat Hughes": "Cubs win! Cubs win!",
-    "Mike Krukow": "Grab some pine, meat!", "Dave Van Horne": "Up, up and away!", "Dick Enberg": "Oh my!", "Lanny Frattare": "Raise the Jolly Roger!",
+    "Mike Krukow": "Grab some pine, meat!", "Duane Kuiper": "Get up, get up, get outta here, gone!", "Dave Van Horne": "Up, up and away!", "Dick Enberg": "Oh my!", "Lanny Frattare": "Raise the Jolly Roger!",
 }
 
 

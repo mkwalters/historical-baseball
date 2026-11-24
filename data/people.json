@@ -15491,6 +15491,20 @@
      "h": 1032
     },
     "call": "Grab some pine, meat!"
+   },
+   {
+    "name": "Duane Kuiper",
+    "role": "Infielder & broadcaster",
+    "years": "1982–",
+    "blurb": "Duane Eugene Kuiper, nicknamed \"Kuip\", is an American sportscaster and former professional baseball player. As a player, he was a second baseman for the Cleveland Indians and San Francisco Giants of Major League Baseball (MLB).",
+    "url": "https://en.wikipedia.org/wiki/Duane_Kuiper",
+    "photo": {
+     "src": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Duane_Kuiper_at_2012_Giants_victory_parade.jpg",
+     "file": "https://commons.wikimedia.org/wiki/File:Duane_Kuiper_at_2012_Giants_victory_parade.jpg",
+     "w": 518,
+     "h": 623
+    },
+    "call": "Get up, get up, get outta here, gone!"
    }
   ]
  },
