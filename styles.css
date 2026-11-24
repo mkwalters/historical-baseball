@@ -230,6 +230,8 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .trophy-list li { display: flex; gap: 10px; padding: 4px 0; border-bottom: 1px dotted var(--rule); font-size: 14px; }
 .trophy-list b { font: 13px var(--type); color: var(--red); min-width: 40px; }
 .trophy-empty { font-style: italic; color: var(--ink-faint); font-size: 14px; margin: 0; }
+.trophy-note { font: italic 13px var(--body); color: var(--ink-soft); margin: -2px 0 6px; }
+.trophy-list i { margin-left: auto; font: 12px var(--type); font-style: normal; color: var(--ink-faint); text-align: right; }
 
 /* ---------- scrapbook ---------- */
 .scrapbook { columns: 3 260px; column-gap: 24px; padding-top: 10px; }
@@ -372,12 +374,14 @@ body:not(.paging) .pager { display: none; }
 .skipper img { width: 76px; height: 92px; object-fit: cover; object-position: center 15%; background: var(--team); border: 3px solid #fdfaf2; box-shadow: 1px 2px 4px rgba(60,40,10,.3); filter: sepia(.25); flex: none; }
 .skipper h5 { font: 900 17px/1.15 var(--headline); margin: 0; }
 .sk-years { font: 12px var(--type); color: var(--ink-soft); margin-top: 2px; }
+.sk-now { display: inline-block; font: 10px var(--type); letter-spacing: .12em; text-transform: uppercase; color: #fbf3e2; background: var(--red); padding: 1px 6px; margin-top: 3px; }
+.sk-note { font: italic 14px/1.4 var(--body, Georgia, serif); color: var(--ink-soft); text-align: center; margin: -6px 0 12px; }
 .sk-rec { font: 15px var(--slab); margin-top: 4px; }
 .sk-rec small { font: 12px var(--type); color: var(--ink-faint); }
 .sk-stars { color: var(--gold); font-size: 14px; letter-spacing: 1px; margin-top: 2px; }
 .sk-stars span { font: 11px var(--type); color: var(--ink-soft); letter-spacing: .06em; text-transform: uppercase; }
 .all-managers { margin: 14px 0 26px; text-align: center; }
-.all-managers summary { cursor: pointer; font: 12px var(--type); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.all-managers summary { cursor: pointer; font: 12px var(--type); letter-spacing: .08em; text-transform: uppercase; color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
 .managers-list { columns: 3 220px; column-gap: 24px; text-align: left; margin: 12px 0 0; padding: 12px 16px; background: #fbf5e6; border: 1px dashed var(--rule); list-style: none; font-size: 13.5px; }
 .managers-list li { break-inside: avoid; padding: 2px 0; }
 .managers-list span { display: inline-block; min-width: 88px; font: 12px var(--type); color: var(--red); }

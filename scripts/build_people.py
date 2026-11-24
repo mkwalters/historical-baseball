@@ -208,12 +208,12 @@ def team_seasons(tid):
 
 def managers(tid, champs):
     seasons = team_seasons(tid)
-    years = sorted(y for y in seasons if y < 2026)
+    years = sorted(seasons)
     rosters = {}
     with cf.ThreadPoolExecutor(8) as ex:
         for y, d in zip(years, ex.map(lambda y: mlb(f"/teams/{tid}/roster?rosterType=coach&season={y}"), years)):
             # one entry per person (the API sometimes lists a manager twice in a season)
-            rosters[y] = list({r["person"]["id"]: r["person"] for r in d.get("roster", []) if r.get("jobId") == "MNGR"}.values())
+            rosters[y] = list({r["person"]["id"]: r["person"] for r in d.get("roster", []) if r.get("jobId") in ("MNGR", "NTRM")}.values())  # manager or interim manager
     by = {}
     for y in years:
         ms = rosters.get(y, [])

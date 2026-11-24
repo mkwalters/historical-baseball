@@ -182,6 +182,17 @@ PARK_PHOTOS = {
 # Portraits for managers and Hall of Famers whose MLB headshot is the blank silhouette.
 # A Commons file, or "mlb83" for MLB's newer headshot set. Keys: person id, or (team id, person id).
 FACE_PHOTOS = {
+    501913: 'File:Chad Tracy (489597897) (cropped).jpg',  # Chad Tracy
+    440053: 'mlb83',  # Joe Espada
+    449477: 'File:Clayton McCullough (cropped).jpg',  # Clayton McCullough
+    580268: 'File:Pat Murphy (2026 WS Parade).jpg',  # Pat Murphy
+    486359: 'File:Derek Shelton (260415-A-KI380-1289) (cropped).jpg',  # Derek Shelton
+    458538: 'File:Maral2023a.jpg',  # Oliver Marmol
+    613553: 'File:Blake Butera (55280041275) (cropped).jpg',  # Blake Butera
+    667437: 'File:Tony Vitello 2024 CWS.png',  # Tony Vitello (at Tennessee; no Giants photo on Commons yet)
+    117276: 'File:Mark Kotsay Texas Rangers at Oakland Athletics - May 12, 2023 (52910340596) (cropped).jpg',  # Mark Kotsay
+    116367: 'File:FredHutchinsonCIN.png',  # Fred Hutchinson
+    110468: 'File:Del Baker 1941.png',  # Del Baker
     117950: 'File:ToreyLovullo.jpg',  # Torey Lovullo
     118942: 'File:Bob Melvin 2012.jpg',  # Bob Melvin
     114752: 'File:Gibsonwin3.jpg',  # Kirk Gibson

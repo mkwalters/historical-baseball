@@ -13,7 +13,7 @@ The page is styled like an old almanac: parchment, wood-type headlines, bunting 
 | **The Dugout & the Booth** | The longest-serving managers with their records and titles, every manager in club history, and the club's voices and builders: broadcasters (with their signature calls), owners, executives and a few beloved characters. |
 | **Numbers on the Wall** | Retired numbers as banners hung from the rafters. Jackie Robinson's 42 hangs in gold on the Dodgers' wall. |
 | **In Cooperstown** | Bronze plaques for every Hall of Famer enshrined with the club. |
-| **The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year. |
+| **The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year, plus Gold Gloves and Silver Sluggers listed by player. |
 | **October** | Every World Series the club played in: the opponent, the series score, the manager, the stars on the roster and a photo when one exists. |
 | **Home Fields** | Every ballpark the club called home, as postcards, with its years, the club's record there and the titles won there. |
 | **The Scrapbook** | 360-odd hand-picked public-domain and freely licensed photos across the 30 clubs, filterable by decade, with a lightbox you can page through. |
@@ -37,7 +37,7 @@ Live per-season data comes from `statsapi.mlb.com`. The history layers are baked
 |---|---|---|
 | `data/champions.json` | `scripts/build_champions.py` | every World Series result |
 | `data/legends.json` | `scripts/build_legends.py` | top 13 players per franchise by legend value (10 cards, 3 more named below them) |
-| `data/history.json` | `scripts/build_history.py` | ballparks by season (merged across renamings), MVP/Cy Young/ROY winners, Hall of Famers |
+| `data/history.json` | `scripts/build_history.py` | ballparks by season (merged across renamings), MVP/Cy Young/ROY/Gold Glove/Silver Slugger winners, Hall of Famers |
 | `data/photos.json` | `scripts/build_photos.py` (run after legends) | scrapbook photos, in-uniform legend portraits and ballpark photos (picks live in `scripts/scrapbook_picks.py`) |
 | `data/people.json` | `scripts/build_people.py` | every manager by season from the Stats API, plus hand-picked broadcasters, owners and executives |
 | `data/retired.json` | `scripts/build_retired.py` | retired numbers, parsed from Wikipedia's list |

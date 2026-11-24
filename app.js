@@ -268,7 +268,9 @@ const seasonsIn = (a, b) => state.seasons.filter((s) => s.year >= a && s.year <=
 const record = (list) => { const W = list.reduce((a, s) => a + s.w, 0), L = list.reduce((a, s) => a + s.l, 0); return { W, L, p: pct(W, L) }; };
 const teamPeople = () => state.people[state.team.id] || { managers: [], people: [] };
 const managersIn = (y) => teamPeople().managers.filter((m) => (m.years || []).includes(y));
-const awardsIn = (y) => ((state.history[state.team.id] || {}).awards || []).filter((a) => a.season === y);
+// The headline awards (MVP, Cy Young, Rookie of the Year) won in a season; Gold Gloves and Silver Sluggers live in the Trophy Case.
+const BIG_AWARDS = new Set(["MVP", "Cy Young", "Rookie of the Year"]);
+const awardsIn = (y) => ((state.history[state.team.id] || {}).awards || []).filter((a) => a.season === y && BIG_AWARDS.has(a.award));
 
 function clipParks(parks) {
   if (!state.seasons.length) return [];
@@ -511,7 +513,11 @@ function renderLegends() {
 function renderDugout() {
   const { managers = [], people = [] } = teamPeople();
   markSkip("dugout", !managers.length && !people.length);
-  const top = [...managers].sort((a, b) => b.seasons - a.seasons || b.titles.length - a.titles.length || b.W - a.W).slice(0, 6);
+  // The longest-serving skippers, plus whoever managed the club most recently.
+  const current = managers.reduce((c, m) => (!c || m.to > c.to || (m.to === c.to && m.from > c.from) ? m : c), null);
+  const ranked = [...managers].sort((a, b) => b.seasons - a.seasons || b.titles.length - a.titles.length || b.W - a.W);
+  const top = ranked.slice(0, 6);
+  if (current && !top.includes(current)) top.splice(5, 1, current);
   top.sort((a, b) => a.from - b.from);
   $("#skippers").innerHTML = top.map((m) => {
     const rec = m.W + m.L ? `${num(m.W)}–${num(m.L)} <small>(${fmtPct(pct(m.W, m.L))})</small>` : "";
@@ -521,13 +527,14 @@ function renderDugout() {
       <img src="${esc(facePhoto(m.id) || headshot(m.id, 240))}" alt="" loading="lazy">
       <div class="sk-body">
         <h5>${esc(m.name)}</h5>
+        ${m === current ? `<div class="sk-now">Current manager</div>` : ""}
         <div class="sk-years">${spans(m.years)} · ${plural(m.seasons, "season")}</div>
         ${rec ? `<div class="sk-rec">${rec}</div>` : ""}
         ${hon}
       </div>
     </article>`;
   }).join("");
-  $("#all-managers-sum").textContent = `All ${managers.length} managers in club history`;
+  $("#all-managers-sum").textContent = `See all ${managers.length} managers in club history`;
   $("#managers-list").innerHTML = managers.map((m) => `<li><span>${spans(m.years)}</span> ${esc(m.name)}${m.titles.length ? ` <b title="World Series titles">${"★".repeat(m.titles.length)}</b>` : ""}</li>`).join("");
   $(".all-managers").hidden = !managers.length;
 
@@ -609,12 +616,24 @@ function renderTrophies() {
   const A = (state.history[state.team.id] || {}).awards || [];
   const groups = [["MVP", "Most Valuable Player", "#d4a830"], ["Cy Young", "Cy Young Award", "#c9c9c9"], ["Rookie of the Year", "Rookie of the Year", "#c27a3a"]];
   markSkip("trophies", !A.length);
-  $("#trophies").innerHTML = groups.map(([key, label, color]) => {
+  const html = groups.map(([key, label, color]) => {
     const list = A.filter((a) => a.award === key);
     return `<div class="trophy-col"><h4>${TROPHY(color)}${label}<small>${list.length}</small></h4>
       ${list.length ? `<ul class="trophy-list">${list.map((a) => `<li><b>${a.season}</b><span>${esc(a.name)}</span></li>`).join("")}</ul>`
         : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
-  }).join("");
+  });
+  // Gold Gloves (since 1958) and Silver Sluggers (since 1980) come by the dozen, so list them by player.
+  const multi = [["Gold Glove", "Gold Gloves", "#e3b23c", "Fielding's top honor, since 1957"], ["Silver Slugger", "Silver Sluggers", "#b8bcc2", "The best bat at each position, since 1980"]];
+  html.push(...multi.map(([key, label, color, note]) => {
+    const list = A.filter((a) => a.award === key), by = new Map();
+    for (const a of list) by.set(a.id, [...(by.get(a.id) || []), a]);
+    const rows = [...by.values()].sort((x, y) => y.length - x.length || x[0].season - y[0].season);
+    return `<div class="trophy-col"><h4>${TROPHY(color)}${label}<small>${list.length}</small></h4>
+      <p class="trophy-note">${note}</p>
+      ${rows.length ? `<ul class="trophy-list">${rows.map((r) => `<li><b>${r.length > 1 ? "×" + r.length : ""}</b><span>${esc(r[0].name)}</span><i>${esc(spans(r.map((a) => a.season)))}</i></li>`).join("")}</ul>`
+        : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
+  }));
+  $("#trophies").innerHTML = html.join("");
 }
 
 // =====================================================================

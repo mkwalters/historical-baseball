@@ -1,7 +1,7 @@
 """Build data/history.json — per-franchise ballparks, trophy case, and Hall of Famers.
 
   ballparks: consecutive seasons at each home venue  [{name, id, from, to}]
-  awards:    MVP / Cy Young / Rookie of the Year winners while with the franchise
+  awards:    MVP / Cy Young / Rookie of the Year / Gold Glove / Silver Slugger winners while with the franchise
   hof:       Hall of Famers whose plaque the API credits to the franchise
 
 Usage: python3 scripts/build_history.py
@@ -13,7 +13,8 @@ from build_legends import get  # shared cached fetch
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 AWARDS = {"ALMVP": "MVP", "NLMVP": "MVP", "ALCY": "Cy Young", "NLCY": "Cy Young", "MLBCY": "Cy Young",
-          "ALROY": "Rookie of the Year", "NLROY": "Rookie of the Year"}
+          "ALROY": "Rookie of the Year", "NLROY": "Rookie of the Year",
+          "MLGG": "Gold Glove", "ALGG": "Gold Glove", "NLGG": "Gold Glove", "ALSS": "Silver Slugger", "NLSS": "Silver Slugger"}
 
 
 def venues_for(y):
