@@ -159,7 +159,8 @@ PHOTO_FOCUS = {
     "File:Tim Salmon Afghanistan.jpg": "92% 18%",  # Salmon is on the right
 }
 
-# Commons photo for a ballpark whose Wikipedia article has no usable lead image.
+# Photo for a ballpark whose Wikipedia article has no usable lead image: a Commons file, or {src, file}
+# for a public-domain image hosted elsewhere (e.g. the Library of Congress).
 # Keys are (team id, name, first season) as in data/history.json.
 PARK_PHOTOS = {
     (133, "Shibe Park", 1909): "File:Grand Stand Entrance of Shibe Park.jpg",
@@ -173,7 +174,10 @@ PARK_PHOTOS = {
     (121, "Citi Field", 2009): "File:Citi Field Night Game.jpg",
     (143, "Connie Mack Stadium", 1939): "File:Shibe Park 1960.jpg",
     (143, "Citizens Bank Park", 2004): "File:Citizens Bank Park 2021.jpg",
-    (137, "Seals Stadium", 1958): "File:Seals Stadium Army-Navy War Show.jpg",
+    # Willie Mays under the marquee in January 1958, billing the first big-league game on the West Coast.
+    # LOOK Magazine staff photo (Maurice Terrell), public domain, from the Library of Congress.
+    (137, "Seals Stadium", 1958): {"src": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/18800/18871v.jpg",
+                                   "file": "https://www.loc.gov/item/2008679075/"},
     (137, "Candlestick Park", 1960): "File:Candlestick Postcard - 01.JPG",
     (138, "Sportsman's Park", 1920): "File:Sportsman's Park 1946 World Series-1.jpg",
     (140, "Griffith Stadium", 1961): "File:Griffith Stadium late 1950s.jpg",

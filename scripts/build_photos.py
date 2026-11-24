@@ -232,7 +232,7 @@ def main():
 
     # hand-picked Commons files: scrapbook pages and in-uniform legend portraits
     files = commons_files([p[0] for picks in SCRAPBOOK.values() for p in picks] + [f for f in LEGEND_PHOTOS.values() if f]
-                          + list(PARK_PHOTOS.values()) + [f for f in FACE_PHOTOS.values() if f.startswith("File:")])
+                          + [f for f in PARK_PHOTOS.values() if isinstance(f, str)] + [f for f in FACE_PHOTOS.values() if f.startswith("File:")])
     for (tid, pid, _, _) in names:
         f = pick(tid, pid)
         if f is None or (f != "keep" and f not in files):
@@ -260,7 +260,8 @@ def main():
         for p in v.get("ballparks", []):
             title = PARK_TITLES.get((int(tid), p["name"], p["from"])) or PARK_TITLES.get(p["name"]) or p["name"]
             it = park_item(title)
-            f = files.get(PARK_PHOTOS.get((int(tid), p["name"], p["from"])))
+            f = PARK_PHOTOS.get((int(tid), p["name"], p["from"]))
+            f = f if isinstance(f, dict) else files.get(f)
             if it and f:  # hand-picked photo for a park whose article has none we can use
                 it.update(src=f["src"], file=f["file"])
             if it:
