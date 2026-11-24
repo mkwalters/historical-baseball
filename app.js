@@ -423,30 +423,44 @@ function renderEras() {
 // OCTOBER: every World Series the club played in
 // =====================================================================
 function renderOctober() {
-  const S = state.seasons.filter((s) => s.champ || s.pennant);
+  // World Series titles only, with the series told game by game.
+  const tid = state.team.id;
+  const S = state.seasons.filter((s) => s.champ);
   markSkip("october", !S.length);
   if (!S.length) return clearPage("october", "october");
-  const titles = S.filter((s) => s.champ).length;
-  $("#october-lede").textContent = `${plural(S.length, "trip")} to the World Series, ${titles ? `and ${word(titles)} ${titles === 1 ? "championship" : "championships"}` : "and the first title still to come"}.`;
+  const pennants = state.seasons.filter((s) => s.pennant && !s.champ).length;
+  $("#october-lede").textContent = (S.length === 1 ? `One World Series championship, in ${S[0].year}`
+    : `${word(S.length)[0].toUpperCase() + word(S.length).slice(1)} World Series championships, from ${S[0].year} to ${S.at(-1).year}`)
+    + (pennants ? `, and ${plural(pennants, "other trip")} to the Fall Classic.` : ".");
   const photoFor = (y) => state.archive.find((a) => a.year === y && /world series/i.test(a.title)) || state.archive.find((a) => a.year === y);
+  const ORDN = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
   $("#october").innerHTML = S.slice().reverse().map((s) => {
-    const c = state.champions[s.year], [a, b] = (c.result || "").split("-");
-    const opp = s.champ ? c.loser.name : c.winner.name;
-    const score = s.champ ? `${a}–${b}` : `${b}–${a}`;
+    const c = state.champions[s.year], [a, b, t] = (c.result || "").split("-");
+    const games = (c.games || []).map((g, i) => {
+      const home = g.home === tid, us = home ? g.hs : g.as, them = home ? g.as : g.hs;
+      return { n: i + 1, us, them, home, res: us > them ? "W" : us < them ? "L" : "T", inn: g.inn, park: g.park };
+    });
+    const last = games.at(-1);
+    const sweep = +b === 0 && !t;
+    const runs = games.reduce((r, g) => [r[0] + g.us, r[1] + g.them], [0, 0]);
     const mgr = managersIn(s.year).map((m) => m.name);
     const stars = allLegendsIn(s.year).map((p) => p.name);
-    const aw = awardsIn(s.year).filter((x) => x.award !== "Rookie of the Year");
-    const park = state.parks.find((p) => p.from <= s.year && s.year <= p.to);
+    const mvp = (c.mvp || []).filter((m) => m.team === tid).map((m) => m.name);
     const ph = photoFor(s.year);
-    return `<article class="oct ${s.champ ? "won" : "lost"}">
-      <div class="oct-year"><span>${s.year}</span>${s.champ ? `<i>★</i>` : ""}</div>
+    const chips = games.map((g) => `<span class="oct-g ${g.res.toLowerCase()}" title="Game ${g.n}${g.park ? " at " + esc(g.park) : ""}${g.inn > 9 ? `, ${g.inn} innings` : ""}">`
+      + `<small>G${g.n}${g.home ? "" : " @"}</small><b>${g.res}</b> ${g.us}–${g.them}${g.inn > 9 ? `<sup>${g.inn}</sup>` : ""}</span>`).join("");
+    const clinch = last ? `Clinched in Game ${last.n}${last.park ? ` at ${esc(last.park)}` : ""}, ${last.us}–${last.them}${last.inn > 9 ? ` in ${last.inn} innings` : ""}.` : "";
+    return `<article class="oct won">
+      <div class="oct-year"><span>${s.year}</span><i>★</i></div>
       <div class="oct-body">
-        <div class="oct-flag">${s.champ ? "World Champions" : "League Champions"}</div>
-        <h4>${s.champ ? "Beat" : "Fell to"} the ${esc(opp)}, <span class="oct-score">${score}</span></h4>
-        <p>${esc(s.name)} · ${s.w}–${s.l} in the regular season${park ? ` · home at ${esc(park.name)}` : ""}</p>
-        ${mgr.length ? `<p>Managed by ${esc(listify(mgr))}</p>` : ""}
+        <div class="oct-flag">${sweep ? `A ${ORDN[+a] ? ORDN[+a].toLowerCase() + "-game " : ""}sweep` : +a + +b === 7 ? "Won in seven" : "World Champions"}</div>
+        <h4>Beat the ${esc(c.loser.name)}, <span class="oct-score">${a}–${b}${t ? `–${t}` : ""}</span></h4>
+        ${chips ? `<div class="oct-games">${chips}</div>` : ""}
+        <p>${clinch}${!games.length ? "" : runs[0] > runs[1] ? ` Outscored them ${runs[0]}–${runs[1]} over the series.`
+          : runs[0] < runs[1] ? ` Won it despite being outscored ${runs[1]}–${runs[0]}.` : ` Runs were even over the series, ${runs[0]}–${runs[1]}.`}</p>
+        <p>${esc(s.name)} · ${s.w}–${s.l} in the regular season${mgr.length ? ` · managed by ${esc(listify(mgr))}` : ""}</p>
+        ${mvp.length ? `<p class="oct-mvp">World Series MVP: ${esc(listify(mvp))}</p>` : ""}
         ${stars.length ? `<p class="oct-stars">On the roster: ${esc(listify(stars))}</p>` : ""}
-        ${aw.length ? `<p class="oct-stars">${aw.map((x) => `${esc(x.award)}: ${esc(x.name)}`).join(" · ")}</p>` : ""}
       </div>
       ${ph ? `<button class="oct-photo" data-i="${state.archive.indexOf(ph)}"><img src="${esc(ph.src)}" alt="${esc(ph.title)}" loading="lazy"></button>` : ""}
     </article>`;

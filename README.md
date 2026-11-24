@@ -14,7 +14,7 @@ The page is styled like an old almanac: parchment, wood-type headlines, bunting 
 | **Numbers on the Wall** | Retired numbers as banners hung from the rafters. Jackie Robinson's 42 hangs in gold on the Dodgers' wall. |
 | **In Cooperstown** | Bronze plaques for every Hall of Famer enshrined with the club. |
 | **The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year, plus Gold Gloves and Silver Sluggers listed by player. |
-| **October** | Every World Series the club played in: the opponent, the series score, the manager, the stars on the roster and a photo when one exists. |
+| **October** | Every World Series the club won: the opponent, the series score, each game's result, where it was clinched, the World Series MVP, the manager, the stars on the roster and a photo when one exists. Clubs without a title skip the chapter. |
 | **Home Fields** | Every ballpark the club called home, as postcards, with its years, the club's record there and the titles won there. |
 | **The Scrapbook** | 360-odd hand-picked public-domain and freely licensed photos across the 30 clubs, filterable by decade, with a lightbox you can page through. |
 | **The League** | A title-drought scoreboard and a wall of every champion's pennant since 1903. |
@@ -35,7 +35,7 @@ Live per-season data comes from `statsapi.mlb.com`. The history layers are baked
 
 | file | script | what |
 |---|---|---|
-| `data/champions.json` | `scripts/build_champions.py` | every World Series result |
+| `data/champions.json` | `scripts/build_champions.py` | every World Series: winner, loser, series score, each game's score and ballpark, and the World Series MVP |
 | `data/legends.json` | `scripts/build_legends.py` | top 13 players per franchise by legend value (10 cards, 3 more named below them) |
 | `data/history.json` | `scripts/build_history.py` | ballparks by season (merged across renamings), MVP/Cy Young/ROY/Gold Glove/Silver Slugger winners, Hall of Famers |
 | `data/photos.json` | `scripts/build_photos.py` (run after legends) | scrapbook photos, in-uniform legend portraits and ballpark photos (picks live in `scripts/scrapbook_picks.py`) |

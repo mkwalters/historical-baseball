@@ -356,6 +356,17 @@ body:not(.paging) .pager { display: none; }
 .oct-score { font: 16px var(--slab); color: var(--ink-soft); white-space: nowrap; }
 .oct p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
 .oct-stars { font-style: italic; }
+.oct-games { display: flex; flex-wrap: wrap; gap: 5px; margin: 4px 0 6px; }
+.oct-g { display: inline-flex; align-items: baseline; gap: 4px; font: 13px var(--slab); padding: 2px 7px; border: 1px solid var(--rule); background: #fdfaf2; color: var(--ink); white-space: nowrap; }
+.oct-g small { font: 10px var(--type); color: var(--ink-faint); letter-spacing: .04em; }
+.oct-g b { font: 12px var(--type); }
+.oct-g.w { border-color: var(--gold); background: rgba(228,199,126,.28); }
+.oct-g.w b { color: var(--red); }
+.oct-g.l b, .oct-g.t b { color: var(--ink-faint); }
+.oct-g sup { font: 9px var(--type); color: var(--ink-faint); }
+.oct-mvp { font-weight: 700; color: var(--ink) !important; }
+.oct-key { text-align: center; font: 12px var(--type); color: var(--ink-faint); margin: -4px 0 14px; }
+.oct-key b { color: var(--ink-soft); }
 .oct-photo { border: 0; padding: 5px 5px 14px; background: #fdfaf2; box-shadow: 2px 3px 8px rgba(60,40,10,.25); transform: rotate(2deg); cursor: zoom-in; }
 .oct-photo img { width: 150px; height: 104px; object-fit: cover; display: block; filter: sepia(.35); }
 

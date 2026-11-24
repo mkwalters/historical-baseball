@@ -8,7 +8,81 @@
 "id": 134,
 "name": "Pittsburgh Pirates"
 },
-"result": "5-3"
+"result": "5-3",
+"games": [
+{
+"date": "1903-10-01",
+"home": 111,
+"away": 134,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Huntington Avenue Grounds"
+},
+{
+"date": "1903-10-02",
+"home": 111,
+"away": 134,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Huntington Avenue Grounds"
+},
+{
+"date": "1903-10-03",
+"home": 111,
+"away": 134,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Huntington Avenue Grounds"
+},
+{
+"date": "1903-10-06",
+"home": 134,
+"away": 111,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Exposition Park"
+},
+{
+"date": "1903-10-07",
+"home": 134,
+"away": 111,
+"hs": 2,
+"as": 11,
+"inn": 9,
+"park": "Exposition Park"
+},
+{
+"date": "1903-10-08",
+"home": 134,
+"away": 111,
+"hs": 3,
+"as": 6,
+"inn": 9,
+"park": "Exposition Park"
+},
+{
+"date": "1903-10-10",
+"home": 134,
+"away": 111,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Exposition Park"
+},
+{
+"date": "1903-10-13",
+"home": 111,
+"away": 134,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Huntington Avenue Grounds"
+}
+]
 },
 "1905": {
 "winner": {
@@ -19,7 +93,54 @@
 "id": 133,
 "name": "Philadelphia Athletics"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1905-10-09",
+"home": 133,
+"away": 137,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Columbia Park"
+},
+{
+"date": "1905-10-10",
+"home": 137,
+"away": 133,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds III"
+},
+{
+"date": "1905-10-12",
+"home": 133,
+"away": 137,
+"hs": 0,
+"as": 9,
+"inn": 9,
+"park": "Columbia Park"
+},
+{
+"date": "1905-10-13",
+"home": 137,
+"away": 133,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Polo Grounds III"
+},
+{
+"date": "1905-10-14",
+"home": 137,
+"away": 133,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Polo Grounds III"
+}
+]
 },
 "1906": {
 "winner": {
@@ -30,7 +151,63 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1906-10-09",
+"home": 112,
+"away": 145,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1906-10-10",
+"home": 145,
+"away": 112,
+"hs": 1,
+"as": 7,
+"inn": 9,
+"park": "South Side Park "
+},
+{
+"date": "1906-10-11",
+"home": 112,
+"away": 145,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1906-10-12",
+"home": 145,
+"away": 112,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "South Side Park "
+},
+{
+"date": "1906-10-13",
+"home": 112,
+"away": 145,
+"hs": 6,
+"as": 8,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1906-10-14",
+"home": 145,
+"away": 112,
+"hs": 8,
+"as": 3,
+"inn": 9,
+"park": "South Side Park "
+}
+]
 },
 "1907": {
 "winner": {
@@ -41,7 +218,54 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-0-1"
+"result": "4-0-1",
+"games": [
+{
+"date": "1907-10-08",
+"home": 112,
+"away": 116,
+"hs": 3,
+"as": 3,
+"inn": 12,
+"park": "West Side Park"
+},
+{
+"date": "1907-10-09",
+"home": 112,
+"away": 116,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1907-10-10",
+"home": 112,
+"away": 116,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1907-10-11",
+"home": 116,
+"away": 112,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Bennett Park"
+},
+{
+"date": "1907-10-12",
+"home": 116,
+"away": 112,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Bennett Park"
+}
+]
 },
 "1908": {
 "winner": {
@@ -52,7 +276,54 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1908-10-10",
+"home": 116,
+"away": 112,
+"hs": 6,
+"as": 10,
+"inn": 9,
+"park": "Bennett Park"
+},
+{
+"date": "1908-10-11",
+"home": 112,
+"away": 116,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1908-10-12",
+"home": 112,
+"away": 116,
+"hs": 3,
+"as": 8,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1908-10-13",
+"home": 116,
+"away": 112,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Bennett Park"
+},
+{
+"date": "1908-10-14",
+"home": 116,
+"away": 112,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Bennett Park"
+}
+]
 },
 "1909": {
 "winner": {
@@ -63,7 +334,72 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1909-10-08",
+"home": 134,
+"away": 116,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1909-10-09",
+"home": 134,
+"away": 116,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1909-10-11",
+"home": 116,
+"away": 134,
+"hs": 6,
+"as": 8,
+"inn": 9,
+"park": "Bennett Park"
+},
+{
+"date": "1909-10-12",
+"home": 116,
+"away": 134,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Bennett Park"
+},
+{
+"date": "1909-10-13",
+"home": 134,
+"away": 116,
+"hs": 8,
+"as": 4,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1909-10-14",
+"home": 116,
+"away": 134,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Bennett Park"
+},
+{
+"date": "1909-10-16",
+"home": 116,
+"away": 134,
+"hs": 0,
+"as": 8,
+"inn": 9,
+"park": "Bennett Park"
+}
+]
 },
 "1910": {
 "winner": {
@@ -74,7 +410,54 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1910-10-17",
+"home": 133,
+"away": 112,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1910-10-18",
+"home": 133,
+"away": 112,
+"hs": 9,
+"as": 3,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1910-10-20",
+"home": 112,
+"away": 133,
+"hs": 5,
+"as": 12,
+"inn": 9,
+"park": "West Side Park"
+},
+{
+"date": "1910-10-22",
+"home": 112,
+"away": 133,
+"hs": 4,
+"as": 3,
+"inn": 10,
+"park": "West Side Park"
+},
+{
+"date": "1910-10-23",
+"home": 112,
+"away": 133,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "West Side Park"
+}
+]
 },
 "1911": {
 "winner": {
@@ -85,7 +468,63 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1911-10-14",
+"home": 137,
+"away": 133,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1911-10-16",
+"home": 133,
+"away": 137,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1911-10-17",
+"home": 137,
+"away": 133,
+"hs": 2,
+"as": 3,
+"inn": 11,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1911-10-24",
+"home": 133,
+"away": 137,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1911-10-25",
+"home": 137,
+"away": 133,
+"hs": 4,
+"as": 3,
+"inn": 10,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1911-10-26",
+"home": 133,
+"away": 137,
+"hs": 13,
+"as": 2,
+"inn": 9,
+"park": "Shibe Park"
+}
+]
 },
 "1912": {
 "winner": {
@@ -96,7 +535,81 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-3-1"
+"result": "4-3-1",
+"games": [
+{
+"date": "1912-10-08",
+"home": 137,
+"away": 111,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1912-10-09",
+"home": 111,
+"away": 137,
+"hs": 6,
+"as": 6,
+"inn": 11,
+"park": "Fenway Park"
+},
+{
+"date": "1912-10-10",
+"home": 111,
+"away": 137,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1912-10-11",
+"home": 137,
+"away": 111,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1912-10-12",
+"home": 111,
+"away": 137,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1912-10-14",
+"home": 137,
+"away": 111,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1912-10-15",
+"home": 111,
+"away": 137,
+"hs": 4,
+"as": 11,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1912-10-16",
+"home": 111,
+"away": 137,
+"hs": 3,
+"as": 2,
+"inn": 10,
+"park": "Fenway Park"
+}
+]
 },
 "1913": {
 "winner": {
@@ -107,7 +620,54 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1913-10-07",
+"home": 137,
+"away": 133,
+"hs": 4,
+"as": 6,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1913-10-08",
+"home": 133,
+"away": 137,
+"hs": 0,
+"as": 3,
+"inn": 10,
+"park": "Shibe Park"
+},
+{
+"date": "1913-10-09",
+"home": 137,
+"away": 133,
+"hs": 2,
+"as": 8,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1913-10-10",
+"home": 133,
+"away": 137,
+"hs": 6,
+"as": 5,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1913-10-11",
+"home": 137,
+"away": 133,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1914": {
 "winner": {
@@ -118,7 +678,45 @@
 "id": 133,
 "name": "Philadelphia Athletics"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1914-10-09",
+"home": 133,
+"away": 144,
+"hs": 1,
+"as": 7,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1914-10-10",
+"home": 133,
+"away": 144,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1914-10-12",
+"home": 144,
+"away": 133,
+"hs": 5,
+"as": 4,
+"inn": 12,
+"park": "Fenway Park"
+},
+{
+"date": "1914-10-13",
+"home": 144,
+"away": 133,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+}
+]
 },
 "1915": {
 "winner": {
@@ -129,7 +727,54 @@
 "id": 143,
 "name": "Philadelphia Phillies"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1915-10-08",
+"home": 143,
+"away": 111,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Baker Bowl"
+},
+{
+"date": "1915-10-09",
+"home": 143,
+"away": 111,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Baker Bowl"
+},
+{
+"date": "1915-10-11",
+"home": 111,
+"away": 143,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Braves Field"
+},
+{
+"date": "1915-10-12",
+"home": 111,
+"away": 143,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Braves Field"
+},
+{
+"date": "1915-10-13",
+"home": 143,
+"away": 111,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Baker Bowl"
+}
+]
 },
 "1916": {
 "winner": {
@@ -140,7 +785,54 @@
 "id": 119,
 "name": "Brooklyn Robins"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1916-10-07",
+"home": 111,
+"away": 119,
+"hs": 6,
+"as": 5,
+"inn": 9,
+"park": "Braves Field"
+},
+{
+"date": "1916-10-09",
+"home": 111,
+"away": 119,
+"hs": 2,
+"as": 1,
+"inn": 14,
+"park": "Braves Field"
+},
+{
+"date": "1916-10-10",
+"home": 119,
+"away": 111,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1916-10-11",
+"home": 119,
+"away": 111,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1916-10-12",
+"home": 111,
+"away": 119,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Braves Field"
+}
+]
 },
 "1917": {
 "winner": {
@@ -151,7 +843,63 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1917-10-06",
+"home": 145,
+"away": 137,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1917-10-07",
+"home": 145,
+"away": 137,
+"hs": 7,
+"as": 2,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1917-10-10",
+"home": 137,
+"away": 145,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1917-10-11",
+"home": 137,
+"away": 145,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1917-10-13",
+"home": 145,
+"away": 137,
+"hs": 8,
+"as": 5,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1917-10-15",
+"home": 137,
+"away": 145,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1918": {
 "winner": {
@@ -162,7 +910,63 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1918-09-05",
+"home": 112,
+"away": 111,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1918-09-06",
+"home": 112,
+"away": 111,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1918-09-07",
+"home": 112,
+"away": 111,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1918-09-09",
+"home": 111,
+"away": 112,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1918-09-10",
+"home": 111,
+"away": 112,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1918-09-11",
+"home": 111,
+"away": 112,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+}
+]
 },
 "1919": {
 "winner": {
@@ -173,7 +977,81 @@
 "id": 145,
 "name": "Chicago White Sox"
 },
-"result": "5-3"
+"result": "5-3",
+"games": [
+{
+"date": "1919-10-01",
+"home": 113,
+"away": 145,
+"hs": 9,
+"as": 1,
+"inn": 9,
+"park": "Redland Field"
+},
+{
+"date": "1919-10-02",
+"home": 113,
+"away": 145,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Redland Field"
+},
+{
+"date": "1919-10-03",
+"home": 145,
+"away": 113,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1919-10-04",
+"home": 145,
+"away": 113,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1919-10-06",
+"home": 145,
+"away": 113,
+"hs": 0,
+"as": 5,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1919-10-07",
+"home": 113,
+"away": 145,
+"hs": 4,
+"as": 5,
+"inn": 10,
+"park": "Redland Field"
+},
+{
+"date": "1919-10-08",
+"home": 113,
+"away": 145,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Redland Field"
+},
+{
+"date": "1919-10-09",
+"home": 145,
+"away": 113,
+"hs": 5,
+"as": 10,
+"inn": 9,
+"park": "Comiskey Park"
+}
+]
 },
 "1920": {
 "winner": {
@@ -184,7 +1062,72 @@
 "id": 119,
 "name": "Brooklyn Robins"
 },
-"result": "5-2"
+"result": "5-2",
+"games": [
+{
+"date": "1920-10-05",
+"home": 119,
+"away": 114,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1920-10-06",
+"home": 119,
+"away": 114,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1920-10-07",
+"home": 119,
+"away": 114,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1920-10-09",
+"home": 114,
+"away": 119,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Dunn Field"
+},
+{
+"date": "1920-10-10",
+"home": 114,
+"away": 119,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Dunn Field"
+},
+{
+"date": "1920-10-11",
+"home": 114,
+"away": 119,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Dunn Field"
+},
+{
+"date": "1920-10-12",
+"home": 114,
+"away": 119,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Dunn Field"
+}
+]
 },
 "1921": {
 "winner": {
@@ -195,7 +1138,81 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "5-3"
+"result": "5-3",
+"games": [
+{
+"date": "1921-10-05",
+"home": 137,
+"away": 147,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-06",
+"home": 147,
+"away": 137,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-07",
+"home": 137,
+"away": 147,
+"hs": 13,
+"as": 5,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-09",
+"home": 147,
+"away": 137,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-10",
+"home": 137,
+"away": 147,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-11",
+"home": 147,
+"away": 137,
+"hs": 5,
+"as": 8,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-12",
+"home": 137,
+"away": 147,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1921-10-13",
+"home": 147,
+"away": 137,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1922": {
 "winner": {
@@ -206,7 +1223,54 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-0-1"
+"result": "4-0-1",
+"games": [
+{
+"date": "1922-10-04",
+"home": 137,
+"away": 147,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1922-10-05",
+"home": 147,
+"away": 137,
+"hs": 3,
+"as": 3,
+"inn": 10,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1922-10-06",
+"home": 137,
+"away": 147,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1922-10-07",
+"home": 147,
+"away": 137,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1922-10-08",
+"home": 137,
+"away": 147,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1923": {
 "winner": {
@@ -217,7 +1281,63 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1923-10-10",
+"home": 147,
+"away": 137,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1923-10-11",
+"home": 137,
+"away": 147,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1923-10-12",
+"home": 147,
+"away": 137,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1923-10-13",
+"home": 137,
+"away": 147,
+"hs": 4,
+"as": 8,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1923-10-14",
+"home": 147,
+"away": 137,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1923-10-15",
+"home": 137,
+"away": 147,
+"hs": 4,
+"as": 6,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1924": {
 "winner": {
@@ -228,7 +1348,72 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1924-10-04",
+"home": 142,
+"away": 137,
+"hs": 3,
+"as": 4,
+"inn": 12,
+"park": "Griffith Stadium"
+},
+{
+"date": "1924-10-05",
+"home": 142,
+"away": 137,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Griffith Stadium"
+},
+{
+"date": "1924-10-06",
+"home": 137,
+"away": 142,
+"hs": 6,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1924-10-07",
+"home": 137,
+"away": 142,
+"hs": 4,
+"as": 7,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1924-10-08",
+"home": 137,
+"away": 142,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1924-10-09",
+"home": 142,
+"away": 137,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Griffith Stadium"
+},
+{
+"date": "1924-10-10",
+"home": 142,
+"away": 137,
+"hs": 4,
+"as": 3,
+"inn": 12,
+"park": "Griffith Stadium"
+}
+]
 },
 "1925": {
 "winner": {
@@ -239,7 +1424,72 @@
 "id": 142,
 "name": "Washington Senators"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1925-10-07",
+"home": 134,
+"away": 142,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1925-10-08",
+"home": 134,
+"away": 142,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1925-10-10",
+"home": 142,
+"away": 134,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Griffith Stadium"
+},
+{
+"date": "1925-10-11",
+"home": 142,
+"away": 134,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Griffith Stadium"
+},
+{
+"date": "1925-10-12",
+"home": 142,
+"away": 134,
+"hs": 3,
+"as": 6,
+"inn": 9,
+"park": "Griffith Stadium"
+},
+{
+"date": "1925-10-13",
+"home": 134,
+"away": 142,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1925-10-15",
+"home": 134,
+"away": 142,
+"hs": 9,
+"as": 7,
+"inn": 9,
+"park": "Forbes Field"
+}
+]
 },
 "1926": {
 "winner": {
@@ -250,7 +1500,72 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1926-10-02",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1926-10-03",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1926-10-05",
+"home": 138,
+"away": 147,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1926-10-06",
+"home": 138,
+"away": 147,
+"hs": 5,
+"as": 10,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1926-10-07",
+"home": 138,
+"away": 147,
+"hs": 2,
+"as": 3,
+"inn": 10,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1926-10-09",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 10,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1926-10-10",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1927": {
 "winner": {
@@ -261,7 +1576,45 @@
 "id": 134,
 "name": "Pittsburgh Pirates"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1927-10-05",
+"home": 134,
+"away": 147,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1927-10-06",
+"home": 134,
+"away": 147,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1927-10-07",
+"home": 147,
+"away": 134,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1927-10-08",
+"home": 147,
+"away": 134,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1928": {
 "winner": {
@@ -272,7 +1625,45 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1928-10-04",
+"home": 147,
+"away": 138,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1928-10-05",
+"home": 147,
+"away": 138,
+"hs": 9,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1928-10-07",
+"home": 138,
+"away": 147,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1928-10-09",
+"home": 138,
+"away": 147,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+}
+]
 },
 "1929": {
 "winner": {
@@ -283,7 +1674,54 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1929-10-08",
+"home": 112,
+"away": 133,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1929-10-09",
+"home": 112,
+"away": 133,
+"hs": 3,
+"as": 9,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1929-10-11",
+"home": 133,
+"away": 112,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1929-10-12",
+"home": 133,
+"away": 112,
+"hs": 10,
+"as": 8,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1929-10-14",
+"home": 133,
+"away": 112,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Shibe Park"
+}
+]
 },
 "1930": {
 "winner": {
@@ -294,7 +1732,63 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1930-10-01",
+"home": 133,
+"away": 138,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1930-10-02",
+"home": 133,
+"away": 138,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1930-10-04",
+"home": 138,
+"away": 133,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1930-10-05",
+"home": 138,
+"away": 133,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1930-10-06",
+"home": 138,
+"away": 133,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1930-10-08",
+"home": 133,
+"away": 138,
+"hs": 7,
+"as": 1,
+"inn": 9,
+"park": "Shibe Park"
+}
+]
 },
 "1931": {
 "winner": {
@@ -305,7 +1799,72 @@
 "id": 133,
 "name": "Philadelphia Athletics"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1931-10-01",
+"home": 138,
+"away": 133,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1931-10-02",
+"home": 138,
+"away": 133,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1931-10-05",
+"home": 133,
+"away": 138,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1931-10-06",
+"home": 133,
+"away": 138,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1931-10-07",
+"home": 133,
+"away": 138,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1931-10-09",
+"home": 138,
+"away": 133,
+"hs": 1,
+"as": 8,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1931-10-10",
+"home": 138,
+"away": 133,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+}
+]
 },
 "1932": {
 "winner": {
@@ -316,7 +1875,45 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1932-09-28",
+"home": 147,
+"away": 112,
+"hs": 12,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1932-09-29",
+"home": 147,
+"away": 112,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1932-10-01",
+"home": 112,
+"away": 147,
+"hs": 5,
+"as": 7,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1932-10-02",
+"home": 112,
+"away": 147,
+"hs": 6,
+"as": 13,
+"inn": 9,
+"park": "Wrigley Field"
+}
+]
 },
 "1933": {
 "winner": {
@@ -327,7 +1924,54 @@
 "id": 142,
 "name": "Washington Senators"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1933-10-03",
+"home": 137,
+"away": 142,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1933-10-04",
+"home": 137,
+"away": 142,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1933-10-05",
+"home": 142,
+"away": 137,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Griffith Stadium"
+},
+{
+"date": "1933-10-06",
+"home": 142,
+"away": 137,
+"hs": 1,
+"as": 2,
+"inn": 11,
+"park": "Griffith Stadium"
+},
+{
+"date": "1933-10-07",
+"home": 142,
+"away": 137,
+"hs": 3,
+"as": 4,
+"inn": 10,
+"park": "Griffith Stadium"
+}
+]
 },
 "1934": {
 "winner": {
@@ -338,7 +1982,72 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1934-10-03",
+"home": 116,
+"away": 138,
+"hs": 3,
+"as": 8,
+"inn": 9,
+"park": "Navin Field"
+},
+{
+"date": "1934-10-04",
+"home": 116,
+"away": 138,
+"hs": 3,
+"as": 2,
+"inn": 12,
+"park": "Navin Field"
+},
+{
+"date": "1934-10-05",
+"home": 138,
+"away": 116,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1934-10-06",
+"home": 138,
+"away": 116,
+"hs": 4,
+"as": 10,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1934-10-07",
+"home": 138,
+"away": 116,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1934-10-08",
+"home": 116,
+"away": 138,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Navin Field"
+},
+{
+"date": "1934-10-09",
+"home": 116,
+"away": 138,
+"hs": 0,
+"as": 11,
+"inn": 9,
+"park": "Navin Field"
+}
+]
 },
 "1935": {
 "winner": {
@@ -349,7 +2058,63 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1935-10-02",
+"home": 116,
+"away": 112,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Navin Field"
+},
+{
+"date": "1935-10-03",
+"home": 116,
+"away": 112,
+"hs": 8,
+"as": 3,
+"inn": 9,
+"park": "Navin Field"
+},
+{
+"date": "1935-10-04",
+"home": 112,
+"away": 116,
+"hs": 5,
+"as": 6,
+"inn": 11,
+"park": "Wrigley Field"
+},
+{
+"date": "1935-10-05",
+"home": 112,
+"away": 116,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1935-10-06",
+"home": 112,
+"away": 116,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1935-10-07",
+"home": 116,
+"away": 112,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Navin Field"
+}
+]
 },
 "1936": {
 "winner": {
@@ -360,7 +2125,63 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1936-09-30",
+"home": 137,
+"away": 147,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1936-10-02",
+"home": 137,
+"away": 147,
+"hs": 4,
+"as": 18,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1936-10-03",
+"home": 147,
+"away": 137,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1936-10-04",
+"home": 147,
+"away": 137,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1936-10-05",
+"home": 147,
+"away": 137,
+"hs": 4,
+"as": 5,
+"inn": 10,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1936-10-06",
+"home": 137,
+"away": 147,
+"hs": 5,
+"as": 13,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1937": {
 "winner": {
@@ -371,7 +2192,54 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1937-10-06",
+"home": 147,
+"away": 137,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1937-10-07",
+"home": 147,
+"away": 137,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1937-10-08",
+"home": 137,
+"away": 147,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1937-10-09",
+"home": 137,
+"away": 147,
+"hs": 7,
+"as": 3,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1937-10-10",
+"home": 137,
+"away": 147,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Polo Grounds IV"
+}
+]
 },
 "1938": {
 "winner": {
@@ -382,7 +2250,45 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1938-10-05",
+"home": 112,
+"away": 147,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1938-10-06",
+"home": 112,
+"away": 147,
+"hs": 3,
+"as": 6,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1938-10-08",
+"home": 147,
+"away": 112,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1938-10-09",
+"home": 147,
+"away": 112,
+"hs": 8,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1939": {
 "winner": {
@@ -393,7 +2299,45 @@
 "id": 113,
 "name": "Cincinnati Reds"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1939-10-04",
+"home": 147,
+"away": 113,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1939-10-05",
+"home": 147,
+"away": 113,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1939-10-07",
+"home": 113,
+"away": 147,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Crosley Field"
+},
+{
+"date": "1939-10-08",
+"home": 113,
+"away": 147,
+"hs": 4,
+"as": 7,
+"inn": 10,
+"park": "Crosley Field"
+}
+]
 },
 "1940": {
 "winner": {
@@ -404,7 +2348,72 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1940-10-02",
+"home": 113,
+"away": 116,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Crosley Field"
+},
+{
+"date": "1940-10-03",
+"home": 113,
+"away": 116,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Crosley Field"
+},
+{
+"date": "1940-10-04",
+"home": 116,
+"away": 113,
+"hs": 7,
+"as": 4,
+"inn": 9,
+"park": "Briggs Stadium"
+},
+{
+"date": "1940-10-05",
+"home": 116,
+"away": 113,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Briggs Stadium"
+},
+{
+"date": "1940-10-06",
+"home": 116,
+"away": 113,
+"hs": 8,
+"as": 0,
+"inn": 9,
+"park": "Briggs Stadium"
+},
+{
+"date": "1940-10-07",
+"home": 113,
+"away": 116,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Crosley Field"
+},
+{
+"date": "1940-10-08",
+"home": 113,
+"away": 116,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Crosley Field"
+}
+]
 },
 "1941": {
 "winner": {
@@ -415,7 +2424,54 @@
 "id": 119,
 "name": "Brooklyn Dodgers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1941-10-01",
+"home": 147,
+"away": 119,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1941-10-02",
+"home": 147,
+"away": 119,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1941-10-04",
+"home": 119,
+"away": 147,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1941-10-05",
+"home": 119,
+"away": 147,
+"hs": 4,
+"as": 7,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1941-10-06",
+"home": 119,
+"away": 147,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+}
+]
 },
 "1942": {
 "winner": {
@@ -426,7 +2482,54 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1942-09-30",
+"home": 138,
+"away": 147,
+"hs": 4,
+"as": 7,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1942-10-01",
+"home": 138,
+"away": 147,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1942-10-03",
+"home": 147,
+"away": 138,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1942-10-04",
+"home": 147,
+"away": 138,
+"hs": 6,
+"as": 9,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1942-10-05",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1943": {
 "winner": {
@@ -437,7 +2540,54 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1943-10-05",
+"home": 147,
+"away": 138,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1943-10-06",
+"home": 147,
+"away": 138,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1943-10-07",
+"home": 147,
+"away": 138,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1943-10-10",
+"home": 138,
+"away": 147,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1943-10-11",
+"home": 138,
+"away": 147,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+}
+]
 },
 "1944": {
 "winner": {
@@ -448,7 +2598,63 @@
 "id": 110,
 "name": "St. Louis Browns"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1944-10-04",
+"home": 138,
+"away": 110,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1944-10-05",
+"home": 138,
+"away": 110,
+"hs": 3,
+"as": 2,
+"inn": 11,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1944-10-06",
+"home": 110,
+"away": 138,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1944-10-07",
+"home": 110,
+"away": 138,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1944-10-08",
+"home": 110,
+"away": 138,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1944-10-09",
+"home": 138,
+"away": 110,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+}
+]
 },
 "1945": {
 "winner": {
@@ -459,7 +2665,72 @@
 "id": 112,
 "name": "Chicago Cubs"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1945-10-03",
+"home": 116,
+"away": 112,
+"hs": 0,
+"as": 9,
+"inn": 9,
+"park": "Briggs Stadium"
+},
+{
+"date": "1945-10-04",
+"home": 116,
+"away": 112,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Briggs Stadium"
+},
+{
+"date": "1945-10-05",
+"home": 116,
+"away": 112,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Briggs Stadium"
+},
+{
+"date": "1945-10-06",
+"home": 112,
+"away": 116,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1945-10-07",
+"home": 112,
+"away": 116,
+"hs": 4,
+"as": 8,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "1945-10-08",
+"home": 112,
+"away": 116,
+"hs": 8,
+"as": 7,
+"inn": 12,
+"park": "Wrigley Field"
+},
+{
+"date": "1945-10-10",
+"home": 112,
+"away": 116,
+"hs": 3,
+"as": 9,
+"inn": 9,
+"park": "Wrigley Field"
+}
+]
 },
 "1946": {
 "winner": {
@@ -470,7 +2741,72 @@
 "id": 111,
 "name": "Boston Red Sox"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1946-10-06",
+"home": 138,
+"away": 111,
+"hs": 2,
+"as": 3,
+"inn": 10,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1946-10-07",
+"home": 138,
+"away": 111,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1946-10-09",
+"home": 111,
+"away": 138,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1946-10-10",
+"home": 111,
+"away": 138,
+"hs": 3,
+"as": 12,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1946-10-11",
+"home": 111,
+"away": 138,
+"hs": 6,
+"as": 3,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1946-10-13",
+"home": 138,
+"away": 111,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1946-10-15",
+"home": 138,
+"away": 111,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+}
+]
 },
 "1947": {
 "winner": {
@@ -481,7 +2817,72 @@
 "id": 119,
 "name": "Brooklyn Dodgers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1947-09-30",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1947-10-01",
+"home": 147,
+"away": 119,
+"hs": 10,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1947-10-02",
+"home": 119,
+"away": 147,
+"hs": 9,
+"as": 8,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1947-10-03",
+"home": 119,
+"away": 147,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1947-10-04",
+"home": 119,
+"away": 147,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1947-10-05",
+"home": 147,
+"away": 119,
+"hs": 6,
+"as": 8,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1947-10-06",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1948": {
 "winner": {
@@ -492,7 +2893,63 @@
 "id": 144,
 "name": "Boston Braves"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1948-10-06",
+"home": 144,
+"away": 114,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Braves Field"
+},
+{
+"date": "1948-10-07",
+"home": 144,
+"away": 114,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Braves Field"
+},
+{
+"date": "1948-10-08",
+"home": 114,
+"away": 144,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Cleveland Municipal Stadium"
+},
+{
+"date": "1948-10-09",
+"home": 114,
+"away": 144,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Cleveland Municipal Stadium"
+},
+{
+"date": "1948-10-10",
+"home": 114,
+"away": 144,
+"hs": 5,
+"as": 11,
+"inn": 9,
+"park": "Cleveland Municipal Stadium"
+},
+{
+"date": "1948-10-11",
+"home": 144,
+"away": 114,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Braves Field"
+}
+]
 },
 "1949": {
 "winner": {
@@ -503,7 +2960,54 @@
 "id": 119,
 "name": "Brooklyn Dodgers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1949-10-05",
+"home": 147,
+"away": 119,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1949-10-06",
+"home": 147,
+"away": 119,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1949-10-07",
+"home": 119,
+"away": 147,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1949-10-08",
+"home": 119,
+"away": 147,
+"hs": 4,
+"as": 6,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1949-10-09",
+"home": 119,
+"away": 147,
+"hs": 6,
+"as": 10,
+"inn": 9,
+"park": "Ebbets Field"
+}
+]
 },
 "1950": {
 "winner": {
@@ -514,7 +3018,45 @@
 "id": 143,
 "name": "Philadelphia Phillies"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1950-10-04",
+"home": 143,
+"away": 147,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Shibe Park"
+},
+{
+"date": "1950-10-05",
+"home": 143,
+"away": 147,
+"hs": 1,
+"as": 2,
+"inn": 10,
+"park": "Shibe Park"
+},
+{
+"date": "1950-10-06",
+"home": 147,
+"away": 143,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1950-10-07",
+"home": 147,
+"away": 143,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1951": {
 "winner": {
@@ -525,7 +3067,63 @@
 "id": 137,
 "name": "New York Giants"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1951-10-04",
+"home": 147,
+"away": 137,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1951-10-05",
+"home": 147,
+"away": 137,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1951-10-06",
+"home": 137,
+"away": 147,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1951-10-08",
+"home": 137,
+"away": 147,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1951-10-09",
+"home": 137,
+"away": 147,
+"hs": 1,
+"as": 13,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1951-10-10",
+"home": 147,
+"away": 137,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1952": {
 "winner": {
@@ -536,7 +3134,72 @@
 "id": 119,
 "name": "Brooklyn Dodgers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1952-10-01",
+"home": 119,
+"away": 147,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1952-10-02",
+"home": 119,
+"away": 147,
+"hs": 1,
+"as": 7,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1952-10-03",
+"home": 147,
+"away": 119,
+"hs": 3,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1952-10-04",
+"home": 147,
+"away": 119,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1952-10-05",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 6,
+"inn": 11,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1952-10-06",
+"home": 119,
+"away": 147,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1952-10-07",
+"home": 119,
+"away": 147,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Ebbets Field"
+}
+]
 },
 "1953": {
 "winner": {
@@ -547,7 +3210,63 @@
 "id": 119,
 "name": "Brooklyn Dodgers"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1953-09-30",
+"home": 147,
+"away": 119,
+"hs": 9,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1953-10-01",
+"home": 147,
+"away": 119,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1953-10-02",
+"home": 119,
+"away": 147,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1953-10-03",
+"home": 119,
+"away": 147,
+"hs": 7,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1953-10-04",
+"home": 119,
+"away": 147,
+"hs": 7,
+"as": 11,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1953-10-05",
+"home": 147,
+"away": 119,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+]
 },
 "1954": {
 "winner": {
@@ -558,7 +3277,45 @@
 "id": 114,
 "name": "Cleveland Indians"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1954-09-29",
+"home": 137,
+"away": 114,
+"hs": 5,
+"as": 2,
+"inn": 10,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1954-09-30",
+"home": 137,
+"away": 114,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Polo Grounds IV"
+},
+{
+"date": "1954-10-01",
+"home": 114,
+"away": 137,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Cleveland Municipal Stadium"
+},
+{
+"date": "1954-10-02",
+"home": 114,
+"away": 137,
+"hs": 4,
+"as": 7,
+"inn": 9,
+"park": "Cleveland Municipal Stadium"
+}
+]
 },
 "1955": {
 "winner": {
@@ -569,7 +3326,79 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1955-09-28",
+"home": 147,
+"away": 119,
+"hs": 6,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1955-09-29",
+"home": 147,
+"away": 119,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1955-09-30",
+"home": 119,
+"away": 147,
+"hs": 8,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1955-10-01",
+"home": 119,
+"away": 147,
+"hs": 8,
+"as": 5,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1955-10-02",
+"home": 119,
+"away": 147,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1955-10-03",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1955-10-04",
+"home": 147,
+"away": 119,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 120637,
+"name": "Johnny Podres",
+"team": 119
+}
+]
 },
 "1956": {
 "winner": {
@@ -580,7 +3409,79 @@
 "id": 119,
 "name": "Brooklyn Dodgers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1956-10-03",
+"home": 119,
+"away": 147,
+"hs": 6,
+"as": 3,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1956-10-05",
+"home": 119,
+"away": 147,
+"hs": 13,
+"as": 8,
+"inn": 9,
+"park": "Ebbets Field"
+},
+{
+"date": "1956-10-06",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1956-10-07",
+"home": 147,
+"away": 119,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1956-10-08",
+"home": 147,
+"away": 119,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1956-10-09",
+"home": 119,
+"away": 147,
+"hs": 1,
+"as": 0,
+"inn": 10,
+"park": "Ebbets Field"
+},
+{
+"date": "1956-10-10",
+"home": 119,
+"away": 147,
+"hs": 0,
+"as": 9,
+"inn": 9,
+"park": "Ebbets Field"
+}
+],
+"mvp": [
+{
+"id": 117514,
+"name": "Don Larsen",
+"team": 147
+}
+]
 },
 "1957": {
 "winner": {
@@ -591,7 +3492,79 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1957-10-02",
+"home": 147,
+"away": 144,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1957-10-03",
+"home": 147,
+"away": 144,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1957-10-05",
+"home": 144,
+"away": 147,
+"hs": 3,
+"as": 12,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1957-10-06",
+"home": 144,
+"away": 147,
+"hs": 7,
+"as": 5,
+"inn": 10,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1957-10-07",
+"home": 144,
+"away": 147,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1957-10-09",
+"home": 147,
+"away": 144,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1957-10-10",
+"home": 147,
+"away": 144,
+"hs": 0,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 111701,
+"name": "Lew Burdette",
+"team": 144
+}
+]
 },
 "1958": {
 "winner": {
@@ -602,7 +3575,79 @@
 "id": 144,
 "name": "Milwaukee Braves"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1958-10-01",
+"home": 144,
+"away": 147,
+"hs": 4,
+"as": 3,
+"inn": 10,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1958-10-02",
+"home": 144,
+"away": 147,
+"hs": 13,
+"as": 5,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1958-10-04",
+"home": 147,
+"away": 144,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1958-10-05",
+"home": 147,
+"away": 144,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1958-10-06",
+"home": 147,
+"away": 144,
+"hs": 7,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1958-10-08",
+"home": 144,
+"away": 147,
+"hs": 3,
+"as": 4,
+"inn": 10,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1958-10-09",
+"home": 144,
+"away": 147,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+}
+],
+"mvp": [
+{
+"id": 123509,
+"name": "Bob Turley",
+"team": 147
+}
+]
 },
 "1959": {
 "winner": {
@@ -613,7 +3658,70 @@
 "id": 145,
 "name": "Chicago White Sox"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1959-10-01",
+"home": 145,
+"away": 119,
+"hs": 11,
+"as": 0,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1959-10-02",
+"home": 145,
+"away": 119,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Comiskey Park"
+},
+{
+"date": "1959-10-04",
+"home": 119,
+"away": 145,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Los Angeles Memorial Coliseum"
+},
+{
+"date": "1959-10-05",
+"home": 119,
+"away": 145,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Los Angeles Memorial Coliseum"
+},
+{
+"date": "1959-10-06",
+"home": 119,
+"away": 145,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Los Angeles Memorial Coliseum"
+},
+{
+"date": "1959-10-08",
+"home": 145,
+"away": 119,
+"hs": 3,
+"as": 9,
+"inn": 9,
+"park": "Comiskey Park"
+}
+],
+"mvp": [
+{
+"id": 122143,
+"name": "Larry Sherry",
+"team": 119
+}
+]
 },
 "1960": {
 "winner": {
@@ -624,7 +3732,79 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1960-10-05",
+"home": 134,
+"away": 147,
+"hs": 6,
+"as": 4,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1960-10-06",
+"home": 134,
+"away": 147,
+"hs": 3,
+"as": 16,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1960-10-08",
+"home": 147,
+"away": 134,
+"hs": 10,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1960-10-09",
+"home": 147,
+"away": 134,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1960-10-10",
+"home": 147,
+"away": 134,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1960-10-12",
+"home": 134,
+"away": 147,
+"hs": 0,
+"as": 12,
+"inn": 9,
+"park": "Forbes Field"
+},
+{
+"date": "1960-10-13",
+"home": 134,
+"away": 147,
+"hs": 10,
+"as": 9,
+"inn": 9,
+"park": "Forbes Field"
+}
+],
+"mvp": [
+{
+"id": 121161,
+"name": "Bobby Richardson",
+"team": 147
+}
+]
 },
 "1961": {
 "winner": {
@@ -635,7 +3815,61 @@
 "id": 113,
 "name": "Cincinnati Reds"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1961-10-04",
+"home": 147,
+"away": 113,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1961-10-05",
+"home": 147,
+"away": 113,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1961-10-07",
+"home": 113,
+"away": 147,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Crosley Field"
+},
+{
+"date": "1961-10-08",
+"home": 113,
+"away": 147,
+"hs": 0,
+"as": 7,
+"inn": 9,
+"park": "Crosley Field"
+},
+{
+"date": "1961-10-09",
+"home": 113,
+"away": 147,
+"hs": 5,
+"as": 13,
+"inn": 9,
+"park": "Crosley Field"
+}
+],
+"mvp": [
+{
+"id": 114299,
+"name": "Whitey Ford",
+"team": 147
+}
+]
 },
 "1962": {
 "winner": {
@@ -646,7 +3880,79 @@
 "id": 137,
 "name": "San Francisco Giants"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1962-10-04",
+"home": 137,
+"away": 147,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Candlestick Park"
+},
+{
+"date": "1962-10-05",
+"home": 137,
+"away": 147,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Candlestick Park"
+},
+{
+"date": "1962-10-07",
+"home": 147,
+"away": 137,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1962-10-08",
+"home": 147,
+"away": 137,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1962-10-10",
+"home": 147,
+"away": 137,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1962-10-15",
+"home": 137,
+"away": 147,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Candlestick Park"
+},
+{
+"date": "1962-10-16",
+"home": 137,
+"away": 147,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Candlestick Park"
+}
+],
+"mvp": [
+{
+"id": 123200,
+"name": "Ralph Terry",
+"team": 147
+}
+]
 },
 "1963": {
 "winner": {
@@ -657,7 +3963,52 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1963-10-02",
+"home": 147,
+"away": 119,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1963-10-03",
+"home": 147,
+"away": 119,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1963-10-05",
+"home": 119,
+"away": 147,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1963-10-06",
+"home": 119,
+"away": 147,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Dodger Stadium"
+}
+],
+"mvp": [
+{
+"id": 117277,
+"name": "Sandy Koufax",
+"team": 119
+}
+]
 },
 "1964": {
 "winner": {
@@ -668,7 +4019,79 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1964-10-07",
+"home": 138,
+"away": 147,
+"hs": 9,
+"as": 5,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1964-10-08",
+"home": 138,
+"away": 147,
+"hs": 3,
+"as": 8,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1964-10-10",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1964-10-11",
+"home": 147,
+"away": 138,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1964-10-12",
+"home": 147,
+"away": 138,
+"hs": 2,
+"as": 5,
+"inn": 10,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1964-10-14",
+"home": 138,
+"away": 147,
+"hs": 3,
+"as": 8,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+},
+{
+"date": "1964-10-15",
+"home": 138,
+"away": 147,
+"hs": 7,
+"as": 5,
+"inn": 9,
+"park": "Sportsman's Park (1909-66)"
+}
+],
+"mvp": [
+{
+"id": 114756,
+"name": "Bob Gibson",
+"team": 138
+}
+]
 },
 "1965": {
 "winner": {
@@ -679,7 +4102,79 @@
 "id": 142,
 "name": "Minnesota Twins"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1965-10-06",
+"home": 142,
+"away": 119,
+"hs": 8,
+"as": 2,
+"inn": 9,
+"park": "Metropolitan Stadium"
+},
+{
+"date": "1965-10-07",
+"home": 142,
+"away": 119,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Metropolitan Stadium"
+},
+{
+"date": "1965-10-09",
+"home": 119,
+"away": 142,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1965-10-10",
+"home": 119,
+"away": 142,
+"hs": 7,
+"as": 2,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1965-10-11",
+"home": 119,
+"away": 142,
+"hs": 7,
+"as": 0,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1965-10-13",
+"home": 142,
+"away": 119,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Metropolitan Stadium"
+},
+{
+"date": "1965-10-14",
+"home": 142,
+"away": 119,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Metropolitan Stadium"
+}
+],
+"mvp": [
+{
+"id": 117277,
+"name": "Sandy Koufax",
+"team": 119
+}
+]
 },
 "1966": {
 "winner": {
@@ -690,7 +4185,52 @@
 "id": 119,
 "name": "Los Angeles Dodgers"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1966-10-05",
+"home": 119,
+"away": 110,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1966-10-06",
+"home": 119,
+"away": 110,
+"hs": 0,
+"as": 6,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1966-10-08",
+"home": 110,
+"away": 119,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1966-10-09",
+"home": 110,
+"away": 119,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Memorial Stadium"
+}
+],
+"mvp": [
+{
+"id": 121311,
+"name": "Frank Robinson",
+"team": 110
+}
+]
 },
 "1967": {
 "winner": {
@@ -701,7 +4241,79 @@
 "id": 111,
 "name": "Boston Red Sox"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1967-10-04",
+"home": 111,
+"away": 138,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1967-10-05",
+"home": 111,
+"away": 138,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1967-10-07",
+"home": 138,
+"away": 111,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1967-10-08",
+"home": 138,
+"away": 111,
+"hs": 6,
+"as": 0,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1967-10-09",
+"home": 138,
+"away": 111,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1967-10-11",
+"home": 111,
+"away": 138,
+"hs": 8,
+"as": 4,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1967-10-12",
+"home": 111,
+"away": 138,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Fenway Park"
+}
+],
+"mvp": [
+{
+"id": 114756,
+"name": "Bob Gibson",
+"team": 138
+}
+]
 },
 "1968": {
 "winner": {
@@ -712,7 +4324,79 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1968-10-02",
+"home": 138,
+"away": 116,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1968-10-03",
+"home": 138,
+"away": 116,
+"hs": 1,
+"as": 8,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1968-10-05",
+"home": 116,
+"away": 138,
+"hs": 3,
+"as": 7,
+"inn": 9,
+"park": "Tiger Stadium"
+},
+{
+"date": "1968-10-06",
+"home": 116,
+"away": 138,
+"hs": 1,
+"as": 10,
+"inn": 9,
+"park": "Tiger Stadium"
+},
+{
+"date": "1968-10-07",
+"home": 116,
+"away": 138,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Tiger Stadium"
+},
+{
+"date": "1968-10-09",
+"home": 138,
+"away": 116,
+"hs": 1,
+"as": 13,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1968-10-10",
+"home": 138,
+"away": 116,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Busch Stadium I"
+}
+],
+"mvp": [
+{
+"id": 117875,
+"name": "Mickey Lolich",
+"team": 116
+}
+]
 },
 "1969": {
 "winner": {
@@ -723,7 +4407,61 @@
 "id": 110,
 "name": "Baltimore Orioles"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1969-10-11",
+"home": 110,
+"away": 121,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1969-10-12",
+"home": 110,
+"away": 121,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1969-10-14",
+"home": 121,
+"away": 110,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "1969-10-15",
+"home": 121,
+"away": 110,
+"hs": 2,
+"as": 1,
+"inn": 10,
+"park": "Shea Stadium"
+},
+{
+"date": "1969-10-16",
+"home": 121,
+"away": 110,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Shea Stadium"
+}
+],
+"mvp": [
+{
+"id": 112398,
+"name": "Donn Clendenon",
+"team": 121
+}
+]
 },
 "1970": {
 "winner": {
@@ -734,7 +4472,61 @@
 "id": 113,
 "name": "Cincinnati Reds"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1970-10-10",
+"home": 113,
+"away": 110,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1970-10-11",
+"home": 113,
+"away": 110,
+"hs": 5,
+"as": 6,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1970-10-13",
+"home": 110,
+"away": 113,
+"hs": 9,
+"as": 3,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1970-10-14",
+"home": 110,
+"away": 113,
+"hs": 5,
+"as": 6,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1970-10-15",
+"home": 110,
+"away": 113,
+"hs": 9,
+"as": 3,
+"inn": 9,
+"park": "Memorial Stadium"
+}
+],
+"mvp": [
+{
+"id": 121301,
+"name": "Brooks Robinson",
+"team": 110
+}
+]
 },
 "1971": {
 "winner": {
@@ -745,7 +4537,79 @@
 "id": 110,
 "name": "Baltimore Orioles"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1971-10-09",
+"home": 110,
+"away": 134,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1971-10-11",
+"home": 110,
+"away": 134,
+"hs": 11,
+"as": 3,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1971-10-12",
+"home": 134,
+"away": 110,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Three Rivers Stadium"
+},
+{
+"date": "1971-10-13",
+"home": 134,
+"away": 110,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Three Rivers Stadium"
+},
+{
+"date": "1971-10-14",
+"home": 134,
+"away": 110,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Three Rivers Stadium"
+},
+{
+"date": "1971-10-16",
+"home": 110,
+"away": 134,
+"hs": 3,
+"as": 2,
+"inn": 10,
+"park": "Memorial Stadium"
+},
+{
+"date": "1971-10-17",
+"home": 110,
+"away": 134,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Memorial Stadium"
+}
+],
+"mvp": [
+{
+"id": 112391,
+"name": "Roberto Clemente",
+"team": 134
+}
+]
 },
 "1972": {
 "winner": {
@@ -756,7 +4620,79 @@
 "id": 113,
 "name": "Cincinnati Reds"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1972-10-14",
+"home": 113,
+"away": 133,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1972-10-15",
+"home": 113,
+"away": 133,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1972-10-18",
+"home": 133,
+"away": 113,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1972-10-19",
+"home": 133,
+"away": 113,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1972-10-20",
+"home": 133,
+"away": 113,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1972-10-21",
+"home": 113,
+"away": 133,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1972-10-22",
+"home": 113,
+"away": 133,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Riverfront Stadium"
+}
+],
+"mvp": [
+{
+"id": 123183,
+"name": "Gene Tenace",
+"team": 133
+}
+]
 },
 "1973": {
 "winner": {
@@ -767,7 +4703,79 @@
 "id": 121,
 "name": "New York Mets"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1973-10-13",
+"home": 133,
+"away": 121,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1973-10-14",
+"home": 133,
+"away": 121,
+"hs": 7,
+"as": 10,
+"inn": 12,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1973-10-16",
+"home": 121,
+"away": 133,
+"hs": 2,
+"as": 3,
+"inn": 11,
+"park": "Shea Stadium"
+},
+{
+"date": "1973-10-17",
+"home": 121,
+"away": 133,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "1973-10-18",
+"home": 121,
+"away": 133,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "1973-10-20",
+"home": 133,
+"away": 121,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1973-10-21",
+"home": 133,
+"away": 121,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+}
+],
+"mvp": [
+{
+"id": 116439,
+"name": "Reggie Jackson",
+"team": 133
+}
+]
 },
 "1974": {
 "winner": {
@@ -778,7 +4786,61 @@
 "id": 119,
 "name": "Los Angeles Dodgers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1974-10-12",
+"home": 119,
+"away": 133,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1974-10-13",
+"home": 119,
+"away": 133,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1974-10-15",
+"home": 133,
+"away": 119,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1974-10-16",
+"home": 133,
+"away": 119,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1974-10-17",
+"home": 133,
+"away": 119,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+}
+],
+"mvp": [
+{
+"id": 114129,
+"name": "Rollie Fingers",
+"team": 133
+}
+]
 },
 "1975": {
 "winner": {
@@ -789,7 +4851,79 @@
 "id": 111,
 "name": "Boston Red Sox"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1975-10-11",
+"home": 111,
+"away": 113,
+"hs": 6,
+"as": 0,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1975-10-12",
+"home": 111,
+"away": 113,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1975-10-14",
+"home": 113,
+"away": 111,
+"hs": 6,
+"as": 5,
+"inn": 10,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1975-10-15",
+"home": 113,
+"away": 111,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1975-10-16",
+"home": 113,
+"away": 111,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1975-10-21",
+"home": 111,
+"away": 113,
+"hs": 7,
+"as": 6,
+"inn": 12,
+"park": "Fenway Park"
+},
+{
+"date": "1975-10-22",
+"home": 111,
+"away": 113,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Fenway Park"
+}
+],
+"mvp": [
+{
+"id": 121454,
+"name": "Pete Rose",
+"team": 113
+}
+]
 },
 "1976": {
 "winner": {
@@ -800,7 +4934,52 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1976-10-16",
+"home": 113,
+"away": 147,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1976-10-17",
+"home": 113,
+"away": 147,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1976-10-19",
+"home": 147,
+"away": 113,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1976-10-21",
+"home": 147,
+"away": 113,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 110849,
+"name": "Johnny Bench",
+"team": 113
+}
+]
 },
 "1977": {
 "winner": {
@@ -811,7 +4990,70 @@
 "id": 119,
 "name": "Los Angeles Dodgers"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1977-10-11",
+"home": 147,
+"away": 119,
+"hs": 4,
+"as": 3,
+"inn": 12,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1977-10-12",
+"home": 147,
+"away": 119,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1977-10-14",
+"home": 119,
+"away": 147,
+"hs": 3,
+"as": 5,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1977-10-15",
+"home": 119,
+"away": 147,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1977-10-16",
+"home": 119,
+"away": 147,
+"hs": 10,
+"as": 4,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1977-10-18",
+"home": 147,
+"away": 119,
+"hs": 8,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 116439,
+"name": "Reggie Jackson",
+"team": 147
+}
+]
 },
 "1978": {
 "winner": {
@@ -822,7 +5064,70 @@
 "id": 119,
 "name": "Los Angeles Dodgers"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1978-10-10",
+"home": 119,
+"away": 147,
+"hs": 11,
+"as": 5,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1978-10-11",
+"home": 119,
+"away": 147,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1978-10-13",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1978-10-14",
+"home": 147,
+"away": 119,
+"hs": 4,
+"as": 3,
+"inn": 10,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1978-10-15",
+"home": 147,
+"away": 119,
+"hs": 12,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1978-10-17",
+"home": 119,
+"away": 147,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Dodger Stadium"
+}
+],
+"mvp": [
+{
+"id": 113275,
+"name": "Bucky Dent",
+"team": 147
+}
+]
 },
 "1979": {
 "winner": {
@@ -833,7 +5138,79 @@
 "id": 110,
 "name": "Baltimore Orioles"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1979-10-10",
+"home": 110,
+"away": 134,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1979-10-11",
+"home": 110,
+"away": 134,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1979-10-12",
+"home": 134,
+"away": 110,
+"hs": 4,
+"as": 8,
+"inn": 9,
+"park": "Three Rivers Stadium"
+},
+{
+"date": "1979-10-13",
+"home": 134,
+"away": 110,
+"hs": 6,
+"as": 9,
+"inn": 9,
+"park": "Three Rivers Stadium"
+},
+{
+"date": "1979-10-14",
+"home": 134,
+"away": 110,
+"hs": 7,
+"as": 1,
+"inn": 9,
+"park": "Three Rivers Stadium"
+},
+{
+"date": "1979-10-16",
+"home": 110,
+"away": 134,
+"hs": 0,
+"as": 4,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1979-10-17",
+"home": 110,
+"away": 134,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Memorial Stadium"
+}
+],
+"mvp": [
+{
+"id": 122685,
+"name": "Willie Stargell",
+"team": 134
+}
+]
 },
 "1980": {
 "winner": {
@@ -844,7 +5221,70 @@
 "id": 118,
 "name": "Kansas City Royals"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1980-10-14",
+"home": 143,
+"away": 118,
+"hs": 7,
+"as": 6,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1980-10-15",
+"home": 143,
+"away": 118,
+"hs": 6,
+"as": 4,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1980-10-17",
+"home": 118,
+"away": 143,
+"hs": 4,
+"as": 3,
+"inn": 10,
+"park": "Royals Stadium"
+},
+{
+"date": "1980-10-18",
+"home": 118,
+"away": 143,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Royals Stadium"
+},
+{
+"date": "1980-10-19",
+"home": 118,
+"away": 143,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Royals Stadium"
+},
+{
+"date": "1980-10-21",
+"home": 143,
+"away": 118,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Veterans Stadium"
+}
+],
+"mvp": [
+{
+"id": 121836,
+"name": "Mike Schmidt",
+"team": 143
+}
+]
 },
 "1981": {
 "winner": {
@@ -855,7 +5295,80 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1981-10-20",
+"home": 147,
+"away": 119,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1981-10-21",
+"home": 147,
+"away": 119,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1981-10-23",
+"home": 119,
+"away": 147,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1981-10-24",
+"home": 119,
+"away": 147,
+"hs": 8,
+"as": 7,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1981-10-25",
+"home": 119,
+"away": 147,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1981-10-28",
+"home": 147,
+"away": 119,
+"hs": 2,
+"as": 9,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 115222,
+"name": "Pedro Guerrero",
+"team": 119
+},
+{
+"id": 112162,
+"name": "Ron Cey",
+"team": 119
+},
+{
+"id": 124656,
+"name": "Steve Yeager",
+"team": 119
+}
+]
 },
 "1982": {
 "winner": {
@@ -866,7 +5379,79 @@
 "id": 158,
 "name": "Milwaukee Brewers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1982-10-12",
+"home": 138,
+"away": 158,
+"hs": 0,
+"as": 10,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1982-10-13",
+"home": 138,
+"away": 158,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1982-10-15",
+"home": 158,
+"away": 138,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1982-10-16",
+"home": 158,
+"away": 138,
+"hs": 7,
+"as": 5,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1982-10-17",
+"home": 158,
+"away": 138,
+"hs": 6,
+"as": 4,
+"inn": 9,
+"park": "Milwaukee County Stadium"
+},
+{
+"date": "1982-10-19",
+"home": 138,
+"away": 158,
+"hs": 13,
+"as": 1,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1982-10-20",
+"home": 138,
+"away": 158,
+"hs": 6,
+"as": 3,
+"inn": 9,
+"park": "Busch Stadium I"
+}
+],
+"mvp": [
+{
+"id": 120678,
+"name": "Darrell Porter",
+"team": 138
+}
+]
 },
 "1983": {
 "winner": {
@@ -877,7 +5462,61 @@
 "id": 143,
 "name": "Philadelphia Phillies"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1983-10-11",
+"home": 110,
+"away": 143,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1983-10-12",
+"home": 110,
+"away": 143,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Memorial Stadium"
+},
+{
+"date": "1983-10-14",
+"home": 143,
+"away": 110,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1983-10-15",
+"home": 143,
+"away": 110,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1983-10-16",
+"home": 143,
+"away": 110,
+"hs": 0,
+"as": 5,
+"inn": 9,
+"park": "Veterans Stadium"
+}
+],
+"mvp": [
+{
+"id": 113264,
+"name": "Rick Dempsey",
+"team": 110
+}
+]
 },
 "1984": {
 "winner": {
@@ -888,7 +5527,61 @@
 "id": 135,
 "name": "San Diego Padres"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1984-10-09",
+"home": 135,
+"away": 116,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Jack Murphy Stadium"
+},
+{
+"date": "1984-10-10",
+"home": 135,
+"away": 116,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Jack Murphy Stadium"
+},
+{
+"date": "1984-10-12",
+"home": 116,
+"away": 135,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Tiger Stadium"
+},
+{
+"date": "1984-10-13",
+"home": 116,
+"away": 135,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Tiger Stadium"
+},
+{
+"date": "1984-10-14",
+"home": 116,
+"away": 135,
+"hs": 8,
+"as": 4,
+"inn": 9,
+"park": "Tiger Stadium"
+}
+],
+"mvp": [
+{
+"id": 123437,
+"name": "Alan Trammell",
+"team": 116
+}
+]
 },
 "1985": {
 "winner": {
@@ -899,7 +5592,79 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1985-10-19",
+"home": 118,
+"away": 138,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Royals Stadium"
+},
+{
+"date": "1985-10-20",
+"home": 118,
+"away": 138,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Royals Stadium"
+},
+{
+"date": "1985-10-22",
+"home": 138,
+"away": 118,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1985-10-23",
+"home": 138,
+"away": 118,
+"hs": 3,
+"as": 0,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1985-10-24",
+"home": 138,
+"away": 118,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1985-10-26",
+"home": 118,
+"away": 138,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Royals Stadium"
+},
+{
+"date": "1985-10-27",
+"home": 118,
+"away": 138,
+"hs": 11,
+"as": 0,
+"inn": 9,
+"park": "Royals Stadium"
+}
+],
+"mvp": [
+{
+"id": 121604,
+"name": "Bret Saberhagen",
+"team": 118
+}
+]
 },
 "1986": {
 "winner": {
@@ -910,7 +5675,79 @@
 "id": 111,
 "name": "Boston Red Sox"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1986-10-18",
+"home": 121,
+"away": 111,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "1986-10-19",
+"home": 121,
+"away": 111,
+"hs": 3,
+"as": 9,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "1986-10-21",
+"home": 111,
+"away": 121,
+"hs": 1,
+"as": 7,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1986-10-22",
+"home": 111,
+"away": 121,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1986-10-23",
+"home": 111,
+"away": 121,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "1986-10-25",
+"home": 121,
+"away": 111,
+"hs": 6,
+"as": 5,
+"inn": 10,
+"park": "Shea Stadium"
+},
+{
+"date": "1986-10-27",
+"home": 121,
+"away": 111,
+"hs": 8,
+"as": 5,
+"inn": 9,
+"park": "Shea Stadium"
+}
+],
+"mvp": [
+{
+"id": 117191,
+"name": "Ray Knight",
+"team": 121
+}
+]
 },
 "1987": {
 "winner": {
@@ -921,7 +5758,79 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1987-10-17",
+"home": 142,
+"away": 138,
+"hs": 10,
+"as": 1,
+"inn": 9,
+"park": "Hubert H. Humphrey Metrodome"
+},
+{
+"date": "1987-10-18",
+"home": 142,
+"away": 138,
+"hs": 8,
+"as": 4,
+"inn": 9,
+"park": "Hubert H. Humphrey Metrodome"
+},
+{
+"date": "1987-10-20",
+"home": 138,
+"away": 142,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1987-10-21",
+"home": 138,
+"away": 142,
+"hs": 7,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1987-10-22",
+"home": 138,
+"away": 142,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "1987-10-24",
+"home": 142,
+"away": 138,
+"hs": 11,
+"as": 5,
+"inn": 9,
+"park": "Hubert H. Humphrey Metrodome"
+},
+{
+"date": "1987-10-25",
+"home": 142,
+"away": 138,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Hubert H. Humphrey Metrodome"
+}
+],
+"mvp": [
+{
+"id": 123732,
+"name": "Frank Viola",
+"team": 142
+}
+]
 },
 "1988": {
 "winner": {
@@ -932,7 +5841,61 @@
 "id": 133,
 "name": "Oakland Athletics"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "1988-10-15",
+"home": 119,
+"away": 133,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1988-10-16",
+"home": 119,
+"away": 133,
+"hs": 6,
+"as": 0,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "1988-10-18",
+"home": 133,
+"away": 119,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1988-10-19",
+"home": 133,
+"away": 119,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1988-10-20",
+"home": 133,
+"away": 119,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+}
+],
+"mvp": [
+{
+"id": 115861,
+"name": "Orel Hershiser",
+"team": 119
+}
+]
 },
 "1989": {
 "winner": {
@@ -943,7 +5906,52 @@
 "id": 137,
 "name": "San Francisco Giants"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1989-10-14",
+"home": 133,
+"away": 137,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1989-10-15",
+"home": 133,
+"away": 137,
+"hs": 5,
+"as": 1,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1989-10-27",
+"home": 137,
+"away": 133,
+"hs": 7,
+"as": 13,
+"inn": 9,
+"park": "Candlestick Park"
+},
+{
+"date": "1989-10-28",
+"home": 137,
+"away": 133,
+"hs": 6,
+"as": 9,
+"inn": 9,
+"park": "Candlestick Park"
+}
+],
+"mvp": [
+{
+"id": 122775,
+"name": "Dave Stewart",
+"team": 133
+}
+]
 },
 "1990": {
 "winner": {
@@ -954,7 +5962,52 @@
 "id": 133,
 "name": "Oakland Athletics"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1990-10-16",
+"home": 113,
+"away": 133,
+"hs": 7,
+"as": 0,
+"inn": 9,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1990-10-17",
+"home": 113,
+"away": 133,
+"hs": 5,
+"as": 4,
+"inn": 10,
+"park": "Riverfront Stadium"
+},
+{
+"date": "1990-10-19",
+"home": 133,
+"away": 113,
+"hs": 3,
+"as": 8,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+},
+{
+"date": "1990-10-20",
+"home": 133,
+"away": 113,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Oakland-Alameda County Coliseum"
+}
+],
+"mvp": [
+{
+"id": 121206,
+"name": "Jose Rijo",
+"team": 113
+}
+]
 },
 "1991": {
 "winner": {
@@ -965,7 +6018,79 @@
 "id": 144,
 "name": "Atlanta Braves"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1991-10-19",
+"home": 142,
+"away": 144,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Hubert H. Humphrey Metrodome"
+},
+{
+"date": "1991-10-20",
+"home": 142,
+"away": 144,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Hubert H. Humphrey Metrodome"
+},
+{
+"date": "1991-10-22",
+"home": 144,
+"away": 142,
+"hs": 5,
+"as": 4,
+"inn": 12,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1991-10-23",
+"home": 144,
+"away": 142,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1991-10-24",
+"home": 144,
+"away": 142,
+"hs": 14,
+"as": 5,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1991-10-26",
+"home": 142,
+"away": 144,
+"hs": 4,
+"as": 3,
+"inn": 11,
+"park": "Hubert H. Humphrey Metrodome"
+},
+{
+"date": "1991-10-27",
+"home": 142,
+"away": 144,
+"hs": 1,
+"as": 0,
+"inn": 10,
+"park": "Hubert H. Humphrey Metrodome"
+}
+],
+"mvp": [
+{
+"id": 119399,
+"name": "Jack Morris",
+"team": 142
+}
+]
 },
 "1992": {
 "winner": {
@@ -976,7 +6101,70 @@
 "id": 144,
 "name": "Atlanta Braves"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1992-10-17",
+"home": 144,
+"away": 141,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1992-10-18",
+"home": 144,
+"away": 141,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1992-10-20",
+"home": 141,
+"away": 144,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "SkyDome"
+},
+{
+"date": "1992-10-21",
+"home": 141,
+"away": 144,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "SkyDome"
+},
+{
+"date": "1992-10-22",
+"home": 141,
+"away": 144,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "SkyDome"
+},
+{
+"date": "1992-10-24",
+"home": 144,
+"away": 141,
+"hs": 3,
+"as": 4,
+"inn": 11,
+"park": "Atlanta-Fulton County Stadium"
+}
+],
+"mvp": [
+{
+"id": 111232,
+"name": "Pat Borders",
+"team": 141
+}
+]
 },
 "1993": {
 "winner": {
@@ -987,7 +6175,70 @@
 "id": 143,
 "name": "Philadelphia Phillies"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1993-10-16",
+"home": 141,
+"away": 143,
+"hs": 8,
+"as": 5,
+"inn": 9,
+"park": "SkyDome"
+},
+{
+"date": "1993-10-17",
+"home": 141,
+"away": 143,
+"hs": 4,
+"as": 6,
+"inn": 9,
+"park": "SkyDome"
+},
+{
+"date": "1993-10-19",
+"home": 143,
+"away": 141,
+"hs": 3,
+"as": 10,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1993-10-20",
+"home": 143,
+"away": 141,
+"hs": 14,
+"as": 15,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1993-10-21",
+"home": 143,
+"away": 141,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Veterans Stadium"
+},
+{
+"date": "1993-10-23",
+"home": 141,
+"away": 143,
+"hs": 8,
+"as": 6,
+"inn": 9,
+"park": "SkyDome"
+}
+],
+"mvp": [
+{
+"id": 119236,
+"name": "Paul Molitor",
+"team": 141
+}
+]
 },
 "1995": {
 "winner": {
@@ -998,7 +6249,70 @@
 "id": 114,
 "name": "Cleveland Indians"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1995-10-21",
+"home": 144,
+"away": 114,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1995-10-22",
+"home": 144,
+"away": 114,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1995-10-24",
+"home": 114,
+"away": 144,
+"hs": 7,
+"as": 6,
+"inn": 11,
+"park": "Jacobs Field"
+},
+{
+"date": "1995-10-25",
+"home": 114,
+"away": 144,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Jacobs Field"
+},
+{
+"date": "1995-10-26",
+"home": 114,
+"away": 144,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Jacobs Field"
+},
+{
+"date": "1995-10-28",
+"home": 144,
+"away": 114,
+"hs": 1,
+"as": 0,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+}
+],
+"mvp": [
+{
+"id": 114849,
+"name": "Tom Glavine",
+"team": 144
+}
+]
 },
 "1996": {
 "winner": {
@@ -1009,7 +6323,70 @@
 "id": 144,
 "name": "Atlanta Braves"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "1996-10-20",
+"home": 147,
+"away": 144,
+"hs": 1,
+"as": 12,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1996-10-21",
+"home": 147,
+"away": 144,
+"hs": 0,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1996-10-22",
+"home": 144,
+"away": 147,
+"hs": 2,
+"as": 5,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1996-10-23",
+"home": 144,
+"away": 147,
+"hs": 6,
+"as": 8,
+"inn": 10,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1996-10-24",
+"home": 144,
+"away": 147,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Atlanta-Fulton County Stadium"
+},
+{
+"date": "1996-10-26",
+"home": 147,
+"away": 144,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 124123,
+"name": "John Wetteland",
+"team": 147
+}
+]
 },
 "1997": {
 "winner": {
@@ -1020,7 +6397,79 @@
 "id": 114,
 "name": "Cleveland Indians"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "1997-10-18",
+"home": 146,
+"away": 114,
+"hs": 7,
+"as": 4,
+"inn": 9,
+"park": "Pro Player Stadium"
+},
+{
+"date": "1997-10-19",
+"home": 146,
+"away": 114,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Pro Player Stadium"
+},
+{
+"date": "1997-10-21",
+"home": 114,
+"away": 146,
+"hs": 11,
+"as": 14,
+"inn": 9,
+"park": "Jacobs Field"
+},
+{
+"date": "1997-10-22",
+"home": 114,
+"away": 146,
+"hs": 10,
+"as": 3,
+"inn": 9,
+"park": "Jacobs Field"
+},
+{
+"date": "1997-10-23",
+"home": 114,
+"away": 146,
+"hs": 7,
+"as": 8,
+"inn": 9,
+"park": "Jacobs Field"
+},
+{
+"date": "1997-10-25",
+"home": 146,
+"away": 114,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Pro Player Stadium"
+},
+{
+"date": "1997-10-26",
+"home": 146,
+"away": 114,
+"hs": 3,
+"as": 2,
+"inn": 11,
+"park": "Pro Player Stadium"
+}
+],
+"mvp": [
+{
+"id": 115817,
+"name": "Livan Hernandez",
+"team": 146
+}
+]
 },
 "1998": {
 "winner": {
@@ -1031,7 +6480,52 @@
 "id": 135,
 "name": "San Diego Padres"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1998-10-17",
+"home": 147,
+"away": 135,
+"hs": 9,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1998-10-18",
+"home": 147,
+"away": 135,
+"hs": 9,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1998-10-20",
+"home": 135,
+"away": 147,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Qualcomm Stadium"
+},
+{
+"date": "1998-10-21",
+"home": 135,
+"away": 147,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Qualcomm Stadium"
+}
+],
+"mvp": [
+{
+"id": 111515,
+"name": "Scott Brosius",
+"team": 147
+}
+]
 },
 "1999": {
 "winner": {
@@ -1042,7 +6536,52 @@
 "id": 144,
 "name": "Atlanta Braves"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "1999-10-23",
+"home": 144,
+"away": 147,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Turner Field"
+},
+{
+"date": "1999-10-24",
+"home": 144,
+"away": 147,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Turner Field"
+},
+{
+"date": "1999-10-26",
+"home": 147,
+"away": 144,
+"hs": 6,
+"as": 5,
+"inn": 10,
+"park": "Yankee Stadium I"
+},
+{
+"date": "1999-10-27",
+"home": 147,
+"away": 144,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 121250,
+"name": "Mariano Rivera",
+"team": 147
+}
+]
 },
 "2000": {
 "winner": {
@@ -1053,7 +6592,61 @@
 "id": 121,
 "name": "New York Mets"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2000-10-21",
+"home": 147,
+"away": 121,
+"hs": 4,
+"as": 3,
+"inn": 12,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2000-10-22",
+"home": 147,
+"away": 121,
+"hs": 6,
+"as": 5,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2000-10-24",
+"home": 121,
+"away": 147,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "2000-10-25",
+"home": 121,
+"away": 147,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Shea Stadium"
+},
+{
+"date": "2000-10-26",
+"home": 121,
+"away": 147,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Shea Stadium"
+}
+],
+"mvp": [
+{
+"id": 116539,
+"name": "Derek Jeter",
+"team": 147
+}
+]
 },
 "2001": {
 "winner": {
@@ -1064,7 +6657,84 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2001-10-27",
+"home": 109,
+"away": 147,
+"hs": 9,
+"as": 1,
+"inn": 9,
+"park": "Bank One Ballpark"
+},
+{
+"date": "2001-10-28",
+"home": 109,
+"away": 147,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Bank One Ballpark"
+},
+{
+"date": "2001-10-30",
+"home": 147,
+"away": 109,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2001-10-31",
+"home": 147,
+"away": 109,
+"hs": 4,
+"as": 3,
+"inn": 10,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2001-11-01",
+"home": 147,
+"away": 109,
+"hs": 3,
+"as": 2,
+"inn": 12,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2001-11-03",
+"home": 109,
+"away": 147,
+"hs": 15,
+"as": 2,
+"inn": 9,
+"park": "Bank One Ballpark"
+},
+{
+"date": "2001-11-04",
+"home": 109,
+"away": 147,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Bank One Ballpark"
+}
+],
+"mvp": [
+{
+"id": 121811,
+"name": "Curt Schilling",
+"team": 109
+},
+{
+"id": 116615,
+"name": "Randy Johnson",
+"team": 109
+}
+]
 },
 "2002": {
 "winner": {
@@ -1075,7 +6745,79 @@
 "id": 137,
 "name": "San Francisco Giants"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2002-10-19",
+"home": 108,
+"away": 137,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Edison International Field"
+},
+{
+"date": "2002-10-20",
+"home": 108,
+"away": 137,
+"hs": 11,
+"as": 10,
+"inn": 9,
+"park": "Edison International Field"
+},
+{
+"date": "2002-10-22",
+"home": 137,
+"away": 108,
+"hs": 4,
+"as": 10,
+"inn": 9,
+"park": "PacBell Park"
+},
+{
+"date": "2002-10-23",
+"home": 137,
+"away": 108,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "PacBell Park"
+},
+{
+"date": "2002-10-24",
+"home": 137,
+"away": 108,
+"hs": 16,
+"as": 4,
+"inn": 9,
+"park": "PacBell Park"
+},
+{
+"date": "2002-10-26",
+"home": 108,
+"away": 137,
+"hs": 6,
+"as": 5,
+"inn": 9,
+"park": "Edison International Field"
+},
+{
+"date": "2002-10-27",
+"home": 108,
+"away": 137,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Edison International Field"
+}
+],
+"mvp": [
+{
+"id": 136267,
+"name": "Troy Glaus",
+"team": 108
+}
+]
 },
 "2003": {
 "winner": {
@@ -1086,7 +6828,70 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "2003-10-18",
+"home": 147,
+"away": 146,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2003-10-19",
+"home": 147,
+"away": 146,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium I"
+},
+{
+"date": "2003-10-21",
+"home": 146,
+"away": 147,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Pro Player Stadium"
+},
+{
+"date": "2003-10-22",
+"home": 146,
+"away": 147,
+"hs": 4,
+"as": 3,
+"inn": 12,
+"park": "Pro Player Stadium"
+},
+{
+"date": "2003-10-23",
+"home": 146,
+"away": 147,
+"hs": 6,
+"as": 4,
+"inn": 9,
+"park": "Pro Player Stadium"
+},
+{
+"date": "2003-10-25",
+"home": 147,
+"away": 146,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Yankee Stadium I"
+}
+],
+"mvp": [
+{
+"id": 277417,
+"name": "Josh Beckett",
+"team": 146
+}
+]
 },
 "2004": {
 "winner": {
@@ -1097,7 +6902,52 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "2004-10-23",
+"home": 111,
+"away": 138,
+"hs": 11,
+"as": 9,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2004-10-24",
+"home": 111,
+"away": 138,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2004-10-26",
+"home": 138,
+"away": 111,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Busch Stadium I"
+},
+{
+"date": "2004-10-27",
+"home": 138,
+"away": 111,
+"hs": 0,
+"as": 3,
+"inn": 9,
+"park": "Busch Stadium I"
+}
+],
+"mvp": [
+{
+"id": 120903,
+"name": "Manny Ramirez",
+"team": 111
+}
+]
 },
 "2005": {
 "winner": {
@@ -1108,7 +6958,52 @@
 "id": 117,
 "name": "Houston Astros"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "2005-10-22",
+"home": 145,
+"away": 117,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "U.S. Cellular Field"
+},
+{
+"date": "2005-10-23",
+"home": 145,
+"away": 117,
+"hs": 7,
+"as": 6,
+"inn": 9,
+"park": "U.S. Cellular Field"
+},
+{
+"date": "2005-10-25",
+"home": 117,
+"away": 145,
+"hs": 5,
+"as": 7,
+"inn": 14,
+"park": "Minute Maid Park"
+},
+{
+"date": "2005-10-26",
+"home": 117,
+"away": 145,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Minute Maid Park"
+}
+],
+"mvp": [
+{
+"id": 113679,
+"name": "Jermaine Dye",
+"team": 145
+}
+]
 },
 "2006": {
 "winner": {
@@ -1119,7 +7014,61 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2006-10-21",
+"home": 116,
+"away": 138,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Comerica Park"
+},
+{
+"date": "2006-10-22",
+"home": 116,
+"away": 138,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Comerica Park"
+},
+{
+"date": "2006-10-24",
+"home": 138,
+"away": 116,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2006-10-27",
+"home": 138,
+"away": 116,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2006-10-26",
+"home": 138,
+"away": 116,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Busch Stadium"
+}
+],
+"mvp": [
+{
+"id": 275930,
+"name": "David Eckstein",
+"team": 138
+}
+]
 },
 "2007": {
 "winner": {
@@ -1130,7 +7079,52 @@
 "id": 115,
 "name": "Colorado Rockies"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "2007-10-24",
+"home": 111,
+"away": 115,
+"hs": 13,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2007-10-25",
+"home": 111,
+"away": 115,
+"hs": 2,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2007-10-27",
+"home": 115,
+"away": 111,
+"hs": 5,
+"as": 10,
+"inn": 9,
+"park": "Coors Field"
+},
+{
+"date": "2007-10-28",
+"home": 115,
+"away": 111,
+"hs": 3,
+"as": 4,
+"inn": 9,
+"park": "Coors Field"
+}
+],
+"mvp": [
+{
+"id": 136780,
+"name": "Mike Lowell",
+"team": 111
+}
+]
 },
 "2008": {
 "winner": {
@@ -1141,7 +7135,61 @@
 "id": 139,
 "name": "Tampa Bay Rays"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2008-10-22",
+"home": 139,
+"away": 143,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Tropicana Field"
+},
+{
+"date": "2008-10-23",
+"home": 139,
+"away": 143,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Tropicana Field"
+},
+{
+"date": "2008-10-25",
+"home": 143,
+"away": 139,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2008-10-26",
+"home": 143,
+"away": 139,
+"hs": 10,
+"as": 2,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2008-10-27",
+"home": 143,
+"away": 139,
+"hs": 4,
+"as": 3,
+"inn": 9,
+"park": "Citizens Bank Park"
+}
+],
+"mvp": [
+{
+"id": 430935,
+"name": "Cole Hamels",
+"team": 143
+}
+]
 },
 "2009": {
 "winner": {
@@ -1152,7 +7200,70 @@
 "id": 143,
 "name": "Philadelphia Phillies"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "2009-10-28",
+"home": 147,
+"away": 143,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Yankee Stadium"
+},
+{
+"date": "2009-10-29",
+"home": 147,
+"away": 143,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Yankee Stadium"
+},
+{
+"date": "2009-10-31",
+"home": 143,
+"away": 147,
+"hs": 5,
+"as": 8,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2009-11-01",
+"home": 143,
+"away": 147,
+"hs": 4,
+"as": 7,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2009-11-02",
+"home": 143,
+"away": 147,
+"hs": 8,
+"as": 6,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2009-11-04",
+"home": 147,
+"away": 143,
+"hs": 7,
+"as": 3,
+"inn": 9,
+"park": "Yankee Stadium"
+}
+],
+"mvp": [
+{
+"id": 425686,
+"name": "Hideki Matsui",
+"team": 147
+}
+]
 },
 "2010": {
 "winner": {
@@ -1163,7 +7274,61 @@
 "id": 140,
 "name": "Texas Rangers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2010-10-27",
+"home": 137,
+"away": 140,
+"hs": 11,
+"as": 7,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2010-10-28",
+"home": 137,
+"away": 140,
+"hs": 9,
+"as": 0,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2010-10-30",
+"home": 140,
+"away": 137,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Rangers Ballpark in Arlington"
+},
+{
+"date": "2010-10-31",
+"home": 140,
+"away": 137,
+"hs": 0,
+"as": 4,
+"inn": 9,
+"park": "Rangers Ballpark in Arlington"
+},
+{
+"date": "2010-11-01",
+"home": 140,
+"away": 137,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Rangers Ballpark in Arlington"
+}
+],
+"mvp": [
+{
+"id": 121074,
+"name": "Edgar Renteria",
+"team": 137
+}
+]
 },
 "2011": {
 "winner": {
@@ -1174,7 +7339,79 @@
 "id": 140,
 "name": "Texas Rangers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2011-10-19",
+"home": 138,
+"away": 140,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2011-10-20",
+"home": 138,
+"away": 140,
+"hs": 1,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2011-10-22",
+"home": 140,
+"away": 138,
+"hs": 7,
+"as": 16,
+"inn": 9,
+"park": "Rangers Ballpark in Arlington"
+},
+{
+"date": "2011-10-23",
+"home": 140,
+"away": 138,
+"hs": 4,
+"as": 0,
+"inn": 9,
+"park": "Rangers Ballpark in Arlington"
+},
+{
+"date": "2011-10-24",
+"home": 140,
+"away": 138,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Rangers Ballpark in Arlington"
+},
+{
+"date": "2011-10-27",
+"home": 138,
+"away": 140,
+"hs": 10,
+"as": 9,
+"inn": 11,
+"park": "Busch Stadium"
+},
+{
+"date": "2011-10-28",
+"home": 138,
+"away": 140,
+"hs": 6,
+"as": 2,
+"inn": 9,
+"park": "Busch Stadium"
+}
+],
+"mvp": [
+{
+"id": 501896,
+"name": "David Freese",
+"team": 138
+}
+]
 },
 "2012": {
 "winner": {
@@ -1185,7 +7422,52 @@
 "id": 116,
 "name": "Detroit Tigers"
 },
-"result": "4-0"
+"result": "4-0",
+"games": [
+{
+"date": "2012-10-24",
+"home": 137,
+"away": 116,
+"hs": 8,
+"as": 3,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2012-10-25",
+"home": 137,
+"away": 116,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2012-10-27",
+"home": 116,
+"away": 137,
+"hs": 0,
+"as": 2,
+"inn": 9,
+"park": "Comerica Park"
+},
+{
+"date": "2012-10-28",
+"home": 116,
+"away": 137,
+"hs": 3,
+"as": 4,
+"inn": 10,
+"park": "Comerica Park"
+}
+],
+"mvp": [
+{
+"id": 467055,
+"name": "Pablo Sandoval",
+"team": 137
+}
+]
 },
 "2013": {
 "winner": {
@@ -1196,7 +7478,70 @@
 "id": 138,
 "name": "St. Louis Cardinals"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "2013-10-23",
+"home": 111,
+"away": 138,
+"hs": 8,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2013-10-24",
+"home": 111,
+"away": 138,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2013-10-26",
+"home": 138,
+"away": 111,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2013-10-27",
+"home": 138,
+"away": 111,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2013-10-28",
+"home": 138,
+"away": 111,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Busch Stadium"
+},
+{
+"date": "2013-10-30",
+"home": 111,
+"away": 138,
+"hs": 6,
+"as": 1,
+"inn": 9,
+"park": "Fenway Park"
+}
+],
+"mvp": [
+{
+"id": 120074,
+"name": "David Ortiz",
+"team": 111
+}
+]
 },
 "2014": {
 "winner": {
@@ -1207,7 +7552,79 @@
 "id": 118,
 "name": "Kansas City Royals"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2014-10-21",
+"home": 118,
+"away": 137,
+"hs": 1,
+"as": 7,
+"inn": 9,
+"park": "Kauffman Stadium"
+},
+{
+"date": "2014-10-22",
+"home": 118,
+"away": 137,
+"hs": 7,
+"as": 2,
+"inn": 9,
+"park": "Kauffman Stadium"
+},
+{
+"date": "2014-10-24",
+"home": 137,
+"away": 118,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2014-10-25",
+"home": 137,
+"away": 118,
+"hs": 11,
+"as": 4,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2014-10-26",
+"home": 137,
+"away": 118,
+"hs": 5,
+"as": 0,
+"inn": 9,
+"park": "AT&T Park"
+},
+{
+"date": "2014-10-28",
+"home": 118,
+"away": 137,
+"hs": 10,
+"as": 0,
+"inn": 9,
+"park": "Kauffman Stadium"
+},
+{
+"date": "2014-10-29",
+"home": 118,
+"away": 137,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Kauffman Stadium"
+}
+],
+"mvp": [
+{
+"id": 518516,
+"name": "Madison Bumgarner",
+"team": 137
+}
+]
 },
 "2015": {
 "winner": {
@@ -1218,7 +7635,61 @@
 "id": 121,
 "name": "New York Mets"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2015-10-27",
+"home": 118,
+"away": 121,
+"hs": 5,
+"as": 4,
+"inn": 14,
+"park": "Kauffman Stadium"
+},
+{
+"date": "2015-10-28",
+"home": 118,
+"away": 121,
+"hs": 7,
+"as": 1,
+"inn": 9,
+"park": "Kauffman Stadium"
+},
+{
+"date": "2015-10-30",
+"home": 121,
+"away": 118,
+"hs": 9,
+"as": 3,
+"inn": 9,
+"park": "Citi Field"
+},
+{
+"date": "2015-10-31",
+"home": 121,
+"away": 118,
+"hs": 3,
+"as": 5,
+"inn": 9,
+"park": "Citi Field"
+},
+{
+"date": "2015-11-01",
+"home": 121,
+"away": 118,
+"hs": 2,
+"as": 7,
+"inn": 12,
+"park": "Citi Field"
+}
+],
+"mvp": [
+{
+"id": 521692,
+"name": "Salvador Perez",
+"team": 118
+}
+]
 },
 "2016": {
 "winner": {
@@ -1229,7 +7700,79 @@
 "id": 114,
 "name": "Cleveland Indians"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2016-10-25",
+"home": 114,
+"away": 112,
+"hs": 6,
+"as": 0,
+"inn": 9,
+"park": "Progressive Field"
+},
+{
+"date": "2016-10-26",
+"home": 114,
+"away": 112,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Progressive Field"
+},
+{
+"date": "2016-10-28",
+"home": 112,
+"away": 114,
+"hs": 0,
+"as": 1,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "2016-10-29",
+"home": 112,
+"away": 114,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "2016-10-30",
+"home": 112,
+"away": 114,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Wrigley Field"
+},
+{
+"date": "2016-11-01",
+"home": 114,
+"away": 112,
+"hs": 3,
+"as": 9,
+"inn": 9,
+"park": "Progressive Field"
+},
+{
+"date": "2016-11-02",
+"home": 114,
+"away": 112,
+"hs": 7,
+"as": 8,
+"inn": 10,
+"park": "Progressive Field"
+}
+],
+"mvp": [
+{
+"id": 450314,
+"name": "Ben Zobrist",
+"team": 112
+}
+]
 },
 "2017": {
 "winner": {
@@ -1240,7 +7783,79 @@
 "id": 119,
 "name": "Los Angeles Dodgers"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2017-10-24",
+"home": 119,
+"away": 117,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "2017-10-25",
+"home": 119,
+"away": 117,
+"hs": 6,
+"as": 7,
+"inn": 11,
+"park": "Dodger Stadium"
+},
+{
+"date": "2017-10-27",
+"home": 117,
+"away": 119,
+"hs": 5,
+"as": 3,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2017-10-28",
+"home": 117,
+"away": 119,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2017-10-29",
+"home": 117,
+"away": 119,
+"hs": 13,
+"as": 12,
+"inn": 10,
+"park": "Minute Maid Park"
+},
+{
+"date": "2017-10-31",
+"home": 119,
+"away": 117,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "2017-11-01",
+"home": 119,
+"away": 117,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Dodger Stadium"
+}
+],
+"mvp": [
+{
+"id": 543807,
+"name": "George Springer",
+"team": 117
+}
+]
 },
 "2018": {
 "winner": {
@@ -1251,7 +7866,61 @@
 "id": 119,
 "name": "Los Angeles Dodgers"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2018-10-23",
+"home": 111,
+"away": 119,
+"hs": 8,
+"as": 4,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2018-10-24",
+"home": 111,
+"away": 119,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Fenway Park"
+},
+{
+"date": "2018-10-26",
+"home": 119,
+"away": 111,
+"hs": 3,
+"as": 2,
+"inn": 18,
+"park": "Dodger Stadium"
+},
+{
+"date": "2018-10-27",
+"home": 119,
+"away": 111,
+"hs": 6,
+"as": 9,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "2018-10-28",
+"home": 119,
+"away": 111,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Dodger Stadium"
+}
+],
+"mvp": [
+{
+"id": 456665,
+"name": "Steve Pearce",
+"team": 111
+}
+]
 },
 "2019": {
 "winner": {
@@ -1262,7 +7931,79 @@
 "id": 117,
 "name": "Houston Astros"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2019-10-22",
+"home": 117,
+"away": 120,
+"hs": 4,
+"as": 5,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2019-10-23",
+"home": 117,
+"away": 120,
+"hs": 3,
+"as": 12,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2019-10-25",
+"home": 120,
+"away": 117,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Nationals Park"
+},
+{
+"date": "2019-10-26",
+"home": 120,
+"away": 117,
+"hs": 1,
+"as": 8,
+"inn": 9,
+"park": "Nationals Park"
+},
+{
+"date": "2019-10-27",
+"home": 120,
+"away": 117,
+"hs": 1,
+"as": 7,
+"inn": 9,
+"park": "Nationals Park"
+},
+{
+"date": "2019-10-29",
+"home": 117,
+"away": 120,
+"hs": 2,
+"as": 7,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2019-10-30",
+"home": 117,
+"away": 120,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Minute Maid Park"
+}
+],
+"mvp": [
+{
+"id": 544931,
+"name": "Stephen Strasburg",
+"team": 120
+}
+]
 },
 "2020": {
 "winner": {
@@ -1273,7 +8014,70 @@
 "id": 139,
 "name": "Tampa Bay Rays"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "2020-10-20",
+"home": 119,
+"away": 139,
+"hs": 8,
+"as": 3,
+"inn": 9,
+"park": "Globe Life Field"
+},
+{
+"date": "2020-10-21",
+"home": 119,
+"away": 139,
+"hs": 4,
+"as": 6,
+"inn": 9,
+"park": "Globe Life Field"
+},
+{
+"date": "2020-10-23",
+"home": 139,
+"away": 119,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Globe Life Field"
+},
+{
+"date": "2020-10-24",
+"home": 139,
+"away": 119,
+"hs": 8,
+"as": 7,
+"inn": 9,
+"park": "Globe Life Field"
+},
+{
+"date": "2020-10-25",
+"home": 139,
+"away": 119,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Globe Life Field"
+},
+{
+"date": "2020-10-27",
+"home": 119,
+"away": 139,
+"hs": 3,
+"as": 1,
+"inn": 9,
+"park": "Globe Life Field"
+}
+],
+"mvp": [
+{
+"id": 608369,
+"name": "Corey Seager",
+"team": 119
+}
+]
 },
 "2021": {
 "winner": {
@@ -1284,7 +8088,70 @@
 "id": 117,
 "name": "Houston Astros"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "2021-10-26",
+"home": 117,
+"away": 144,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2021-10-27",
+"home": 117,
+"away": 144,
+"hs": 7,
+"as": 2,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2021-10-29",
+"home": 144,
+"away": 117,
+"hs": 2,
+"as": 0,
+"inn": 9,
+"park": "Truist Park"
+},
+{
+"date": "2021-10-30",
+"home": 144,
+"away": 117,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "Truist Park"
+},
+{
+"date": "2021-10-31",
+"home": 144,
+"away": 117,
+"hs": 5,
+"as": 9,
+"inn": 9,
+"park": "Truist Park"
+},
+{
+"date": "2021-11-02",
+"home": 117,
+"away": 144,
+"hs": 0,
+"as": 7,
+"inn": 9,
+"park": "Minute Maid Park"
+}
+],
+"mvp": [
+{
+"id": 624585,
+"name": "Jorge Soler",
+"team": 144
+}
+]
 },
 "2022": {
 "winner": {
@@ -1295,7 +8162,70 @@
 "id": 143,
 "name": "Philadelphia Phillies"
 },
-"result": "4-2"
+"result": "4-2",
+"games": [
+{
+"date": "2022-10-28",
+"home": 117,
+"away": 143,
+"hs": 5,
+"as": 6,
+"inn": 10,
+"park": "Minute Maid Park"
+},
+{
+"date": "2022-10-29",
+"home": 117,
+"away": 143,
+"hs": 5,
+"as": 2,
+"inn": 9,
+"park": "Minute Maid Park"
+},
+{
+"date": "2022-11-01",
+"home": 143,
+"away": 117,
+"hs": 7,
+"as": 0,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2022-11-02",
+"home": 143,
+"away": 117,
+"hs": 0,
+"as": 5,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2022-11-03",
+"home": 143,
+"away": 117,
+"hs": 2,
+"as": 3,
+"inn": 9,
+"park": "Citizens Bank Park"
+},
+{
+"date": "2022-11-05",
+"home": 117,
+"away": 143,
+"hs": 4,
+"as": 1,
+"inn": 9,
+"park": "Minute Maid Park"
+}
+],
+"mvp": [
+{
+"id": 665161,
+"name": "Jeremy Pe\u00f1a",
+"team": 117
+}
+]
 },
 "2023": {
 "winner": {
@@ -1306,7 +8236,61 @@
 "id": 109,
 "name": "Arizona Diamondbacks"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2023-10-27",
+"home": 140,
+"away": 109,
+"hs": 6,
+"as": 5,
+"inn": 11,
+"park": "Globe Life Field"
+},
+{
+"date": "2023-10-28",
+"home": 140,
+"away": 109,
+"hs": 1,
+"as": 9,
+"inn": 9,
+"park": "Globe Life Field"
+},
+{
+"date": "2023-10-30",
+"home": 109,
+"away": 140,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Chase Field"
+},
+{
+"date": "2023-10-31",
+"home": 109,
+"away": 140,
+"hs": 7,
+"as": 11,
+"inn": 9,
+"park": "Chase Field"
+},
+{
+"date": "2023-11-01",
+"home": 109,
+"away": 140,
+"hs": 0,
+"as": 5,
+"inn": 9,
+"park": "Chase Field"
+}
+],
+"mvp": [
+{
+"id": 608369,
+"name": "Corey Seager",
+"team": 140
+}
+]
 },
 "2024": {
 "winner": {
@@ -1317,7 +8301,61 @@
 "id": 147,
 "name": "New York Yankees"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2024-10-25",
+"home": 119,
+"away": 147,
+"hs": 6,
+"as": 3,
+"inn": 10,
+"park": "Dodger Stadium"
+},
+{
+"date": "2024-10-26",
+"home": 119,
+"away": 147,
+"hs": 4,
+"as": 2,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "2024-10-28",
+"home": 147,
+"away": 119,
+"hs": 2,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium"
+},
+{
+"date": "2024-10-29",
+"home": 147,
+"away": 119,
+"hs": 11,
+"as": 4,
+"inn": 9,
+"park": "Yankee Stadium"
+},
+{
+"date": "2024-10-30",
+"home": 147,
+"away": 119,
+"hs": 6,
+"as": 7,
+"inn": 9,
+"park": "Yankee Stadium"
+}
+],
+"mvp": [
+{
+"id": 518692,
+"name": "Freddie Freeman",
+"team": 119
+}
+]
 },
 "2025": {
 "winner": {
@@ -1328,7 +8366,79 @@
 "id": 141,
 "name": "Toronto Blue Jays"
 },
-"result": "4-3"
+"result": "4-3",
+"games": [
+{
+"date": "2025-10-24",
+"home": 141,
+"away": 119,
+"hs": 11,
+"as": 4,
+"inn": 9,
+"park": "Rogers Centre"
+},
+{
+"date": "2025-10-25",
+"home": 141,
+"away": 119,
+"hs": 1,
+"as": 5,
+"inn": 9,
+"park": "Rogers Centre"
+},
+{
+"date": "2025-10-27",
+"home": 119,
+"away": 141,
+"hs": 6,
+"as": 5,
+"inn": 18,
+"park": "Dodger Stadium"
+},
+{
+"date": "2025-10-28",
+"home": 119,
+"away": 141,
+"hs": 2,
+"as": 6,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "2025-10-29",
+"home": 119,
+"away": 141,
+"hs": 1,
+"as": 6,
+"inn": 9,
+"park": "Dodger Stadium"
+},
+{
+"date": "2025-10-31",
+"home": 141,
+"away": 119,
+"hs": 1,
+"as": 3,
+"inn": 9,
+"park": "Rogers Centre"
+},
+{
+"date": "2025-11-01",
+"home": 141,
+"away": 119,
+"hs": 4,
+"as": 5,
+"inn": 11,
+"park": "Rogers Centre"
+}
+],
+"mvp": [
+{
+"id": 808967,
+"name": "Yoshinobu Yamamoto",
+"team": 119
+}
+]
 },
 "2026": {
 "winner": {
@@ -1339,6 +8449,60 @@
 "id": 139,
 "name": "Tampa Bay Rays"
 },
-"result": "4-1"
+"result": "4-1",
+"games": [
+{
+"date": "2026-10-23",
+"home": 158,
+"away": 139,
+"hs": 3,
+"as": 2,
+"inn": 9,
+"park": "American Family Field"
+},
+{
+"date": "2026-10-24",
+"home": 158,
+"away": 139,
+"hs": 5,
+"as": 4,
+"inn": 9,
+"park": "American Family Field"
+},
+{
+"date": "2026-10-26",
+"home": 139,
+"away": 158,
+"hs": 1,
+"as": 10,
+"inn": 9,
+"park": "Tropicana Field"
+},
+{
+"date": "2026-10-27",
+"home": 139,
+"away": 158,
+"hs": 4,
+"as": 3,
+"inn": 12,
+"park": "Tropicana Field"
+},
+{
+"date": "2026-10-28",
+"home": 139,
+"away": 158,
+"hs": 1,
+"as": 4,
+"inn": 9,
+"park": "Tropicana Field"
+}
+],
+"mvp": [
+{
+"id": 661388,
+"name": "William Contreras",
+"team": 158
+}
+]
 }
 }
