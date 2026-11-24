@@ -663,6 +663,11 @@ function renderParks() {
     const d = info[p.key] || {}, S = seasonsIn(p.from, p.to), r = record(S);
     const titles = S.filter((s) => s.champ).map((s) => s.year);
     const now = i === P.length - 1 && p.to >= state.seasons.at(-1).year;
+    // The same name twice: either a return to the same park, or a new park that took the old one's name.
+    const prev = P.slice(0, i).filter((q) => q.name === p.name);
+    const back = prev.find((q) => q.id === p.id);
+    const note = back ? `Back home after ${listify(P.slice(P.indexOf(back) + 1, i).map((q) => `${q.from === q.to ? q.from : `${q.from}–${String(q.to).slice(2)}`} at ${q.name}`))}.`
+      : prev.length ? `A new ballpark that took the name of the ${prev[0].from}–${prev.at(-1).to} original.` : "";
     const span = now ? `${p.from} to today` : p.from === p.to ? `${p.from}` : `${p.from}–${p.to}`;
     return `<article class="park${i % 2 ? " flip" : ""}">
       <div class="park-photo">${d.src ? `<button data-i="${i}"><img src="${esc(d.src)}" alt="${esc(p.name)}" loading="lazy"></button>` : `<div class="park-blank">${esc(p.name)}</div>`}
@@ -670,6 +675,7 @@ function renderParks() {
       <div class="park-body">
         <h4>${esc(p.name)}</h4>
         <div class="park-meta">${span} · ${plural(S.length, "season")}${p.aka?.length ? ` · also ${esc(listify(p.aka))}` : ""}</div>
+        ${note ? `<div class="park-note">${esc(note)}</div>` : ""}
         <div class="park-rec">${num(r.W)}–${num(r.L)} <small>${fmtPct(r.p)}</small>${titles.length ? ` <span class="park-titles">★ ${titles.join(", ")}</span>` : ""}</div>
         ${d.blurb ? `<p>${esc(d.blurb)}</p>` : ""}
         ${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">Read more on Wikipedia</a>` : ""}

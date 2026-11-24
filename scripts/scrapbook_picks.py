@@ -181,6 +181,9 @@ PARK_PHOTOS = {
     (137, "Candlestick Park", 1960): "File:Candlestick Postcard - 01.JPG",
     (138, "Sportsman's Park", 1920): "File:Sportsman's Park 1946 World Series-1.jpg",
     (140, "Griffith Stadium", 1961): "File:Griffith Stadium late 1950s.jpg",
+    # Parks that appear twice get a second, era-appropriate photo so the cards don't repeat.
+    (147, "Yankee Stadium", 1923): "File:Yankee Stadium in 1942.jpg",  # before the 1974-75 rebuild
+    (139, "Tropicana Field", 2026): "File:October 19 2026 Tampa Bay Rays Game 6 American League Champions.jpg",
 }
 
 # Portraits for managers and Hall of Famers whose MLB headshot is the blank silhouette.
