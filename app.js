@@ -463,6 +463,8 @@ const topLegends = () => allLegends().slice(0, LEGEND_CARDS);
 const allLegendsIn = (year) => allLegends().filter((p) => p.from <= year && year <= p.to);
 // A legend's portrait: a curated in-uniform Commons photo, else MLB's own (uniformed) headshot.
 const legendPhoto = (pid) => { const p = ((state.photos[state.team.id] || {}).legends || {})[pid]; return p && p.src ? p : null; };
+// A stand-in portrait for a manager or Hall of Famer whose MLB headshot is the blank silhouette.
+const facePhoto = (pid) => ((state.photos[state.team.id] || {}).faces || {})[pid]?.src || null;
 
 function legendLine(p) {
   const L = p.line || {};
@@ -483,7 +485,7 @@ function renderLegends() {
     return `<article class="tcard" aria-label="${esc(p.name)}">
       <div class="tcard-face" style="--tc:${COLORS[state.team.id]}">
         <div class="tcard-art${photo ? "" : " headshot"}">
-          <img src="${esc(photo ? photo.src : headshot(p.id, 360))}" alt="" loading="lazy">
+          <img src="${esc(photo ? photo.src : headshot(p.id, 360))}" alt="" loading="lazy"${photo?.pos ? ` style="object-position:${esc(photo.pos)}"` : ""}>
           <span class="tcard-rank">${i + 1}</span>
         </div>
         <div class="tcard-plate">${esc(p.name)}<small>${esc(p.pos || "")} · ${p.from}–${p.to}</small></div>
@@ -516,7 +518,7 @@ function renderDugout() {
     const hon = m.titles.length ? `<div class="sk-stars" title="World Series titles">${"★".repeat(m.titles.length)} <span>${plural(m.titles.length, "title")}</span></div>`
       : m.pennants.length ? `<div class="sk-stars pen"><span>${plural(m.pennants.length, "pennant")}</span></div>` : "";
     return `<article class="skipper">
-      <img src="${esc(headshot(m.id, 240))}" alt="" loading="lazy">
+      <img src="${esc(facePhoto(m.id) || headshot(m.id, 240))}" alt="" loading="lazy">
       <div class="sk-body">
         <h5>${esc(m.name)}</h5>
         <div class="sk-years">${spans(m.years)} · ${plural(m.seasons, "season")}</div>
@@ -589,7 +591,7 @@ function renderHof() {
   const shown = hofAll ? list : list.slice(0, HOF_PAGE);
   $("#hof").innerHTML = shown.map((x) => `
     <div class="plaque">
-      <img src="${esc(legendPhoto(x.id)?.src || headshot(x.id, 180))}" alt="" loading="lazy">
+      <img src="${esc(legendPhoto(x.id)?.src || facePhoto(x.id) || headshot(x.id, 180))}" alt="" loading="lazy">
       <h4>${esc(x.name)}</h4>
       <div>Inducted ${x.inducted}${x.pos && x.pos !== "X" ? " · " + esc(x.pos) : ""}</div>
     </div>`).join("");

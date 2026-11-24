@@ -135,6 +135,30 @@
     "blurb": "Chase Field, formerly Bank One Ballpark, is a retractable roof stadium in downtown Phoenix, Arizona, United States. It is the ballpark of Major League Baseball's Arizona Diamondbacks. It opened in 1998, the year the Diamondbacks debuted as an expansion team.",
     "url": "https://en.wikipedia.org/wiki/Chase_Field"
    }
+  },
+  "faces": {
+   "427469": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/427469/headshot/83/current"
+   },
+   "118942": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bob_Melvin_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Melvin_2012.jpg"
+   },
+   "134460": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/134460/headshot/83/current"
+   },
+   "114752": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Gibsonwin3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Gibsonwin3.jpg"
+   },
+   "115330": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Chip_Hale_on_July_13%2C_2018_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Chip_Hale_on_July_13,_2018_(cropped).jpg"
+   },
+   "117950": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/ToreyLovullo.jpg/960px-ToreyLovullo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:ToreyLovullo.jpg"
+   }
   }
  },
  "133": {
@@ -401,9 +425,15 @@
    }
   },
   "parks": {
+   "Columbia Park|1901": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Columbia_Park_Philadelphia.jpg",
+    "file": "https://commons.wikimedia.org/wiki/File:Columbia_Park_Philadelphia.jpg",
+    "blurb": "Columbia Park or Columbia Avenue Grounds was a baseball park in the Brewerytown neighborhood of Philadelphia. It was built in 1901 as the first home of the American League Philadelphia Athletics, who played there for eight seasons, including two games of the 1905 World Series.",
+    "url": "https://en.wikipedia.org/wiki/Columbia_Park"
+   },
    "Shibe Park|1909": {
-    "src": null,
-    "file": null,
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Grand_Stand_Entrance_of_Shibe_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Grand_Stand_Entrance_of_Shibe_Park.jpg",
     "blurb": "Shibe Park, known later as Connie Mack Stadium, was a ballpark located in Philadelphia. It was the home of the Philadelphia Athletics of the American League (AL) from 1909 to 1954 and the Philadelphia Phillies of the National League (NL) from 1938 to 1970.",
     "url": "https://en.wikipedia.org/wiki/Shibe_Park"
    },
@@ -424,6 +454,48 @@
     "file": "https://commons.wikimedia.org/wiki/File:Sutter_Health_Park_aerial_view_2023_%28Quintin_Soloviev%29.jpg",
     "blurb": "Sutter Health Park is a ballpark in West Sacramento, California, directly adjacent to downtown Sacramento. It is the home of the minor league Sacramento River Cats of the Pacific Coast League (PCL) and the temporary home of the Athletics of Major League Baseball (MLB).",
     "url": "https://en.wikipedia.org/wiki/Sutter_Health_Park"
+   }
+  },
+  "faces": {
+   "118082": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Connie_Mack_Portrait_%284x5_cropped%29.jpg/960px-Connie_Mack_Portrait_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Connie_Mack_Portrait_(4x5_cropped).jpg"
+   },
+   "113685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Jimmy-dykes.jpg/960px-Jimmy-dykes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy-dykes.jpg"
+   },
+   "113052": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Al_Dark_1955.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Al_Dark_1955.jpg"
+   },
+   "492579": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Red_Sox_John_McNamara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Boston_Red_Sox_John_McNamara.jpg"
+   },
+   "124335": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dick_Williams_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Dick_Williams_1969.jpg"
+   },
+   "123089": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chuck_Tanner_1971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Chuck_Tanner_1971.jpg"
+   },
+   "429341": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jack_McKeon_Padres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_McKeon_Padres.jpg"
+   },
+   "116218": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Art_howe_1987.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Art_howe_1987.jpg"
+   },
+   "114712": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Bob_Geren_July_16%2C_2018_%2850120693293%29_%28cropped%29.jpg/960px-Bob_Geren_July_16%2C_2018_%2850120693293%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Geren_July_16,_2018_(50120693293)_(cropped).jpg"
+   },
+   "118942": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bob_Melvin_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Melvin_2012.jpg"
    }
   }
  },
@@ -745,6 +817,48 @@
     "blurb": "Truist Park is a baseball stadium in the Atlanta metropolitan area, approximately 10 miles (16 km) northwest of downtown Atlanta in the unincorporated community of Cumberland, in Cobb County, Georgia. Opened in 2017, it is the ballpark of Major League Baseball's Atlanta Braves.",
     "url": "https://en.wikipedia.org/wiki/Truist_Park"
    }
+  },
+  "faces": {
+   "124617": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Harry_Wright_Baseball_Card.jpg/960px-Harry_Wright_Baseball_Card.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Harry_Wright_Baseball_Card.jpg"
+   },
+   "492582": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Frank_Selee_Hall_of_Fame.jpg/960px-Frank_Selee_Hall_of_Fame.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Frank_Selee_Hall_of_Fame.jpg"
+   },
+   "122651": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/George_Stallings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:George_Stallings.jpg"
+   },
+   "118766": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg/960px-Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_McKechnie,_Boston_NL_(baseball)_LCCN2014692163_(cropped).jpg"
+   },
+   "122551": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Billy_Southworth_Cardinals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Billy_Southworth_Cardinals.jpg"
+   },
+   "115167": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/CharlieGrimm.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:CharlieGrimm.png"
+   },
+   "123089": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chuck_Tanner_1971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Chuck_Tanner_1971.jpg"
+   },
+   "427190": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Fredi_Gonz%C3%A1lez_on_July_29%2C_2014.jpg/960px-Fredi_Gonz%C3%A1lez_on_July_29%2C_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Fredi_Gonz%C3%A1lez_on_July_29,_2014.jpg"
+   },
+   "492535": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Brian_Snitker_%288316496%29_%28cropped%29.jpg/960px-Brian_Snitker_%288316496%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Brian_Snitker_(8316496)_(cropped).jpg"
+   },
+   "115386": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Billy_Hamilton_Baseball_Card.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Billy_Hamilton_Baseball_Card.jpg"
+   }
   }
  },
  "110": {
@@ -1014,8 +1128,8 @@
     "url": "https://en.wikipedia.org/wiki/Lloyd_Street_Grounds"
    },
    "Sportsman's Park|1902": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Sportsman%27s_Park_1944.jpg/960px-Sportsman%27s_Park_1944.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Sportsman%27s_Park_1944.jpg",
     "blurb": "Sportsman's Park was the name of several former Major League Baseball ballpark structures in St. Louis, Missouri. All but one of these were located on the same piece of land, at the northwest corner of Grand Boulevard and Dodier Street, on the north side of the city.",
     "url": "https://en.wikipedia.org/wiki/Sportsman's_Park"
    },
@@ -1030,6 +1144,43 @@
     "file": "https://commons.wikimedia.org/wiki/File:OrioleParkatCamdenYardsSummer2025.jpg",
     "blurb": "Oriole Park at Camden Yards, commonly known as Camden Yards, is a ballpark in Baltimore, Maryland, United States. It is the home of Major League Baseball's (MLB) Baltimore Orioles, and the first of the \"retro\" major league ballparks constructed during the 1990s and early 2000s.",
     "url": "https://en.wikipedia.org/wiki/Oriole_Park_at_Camden_Yards"
+   }
+  },
+  "faces": {
+   "118502": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jimmy_McAleer_c1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy_McAleer_c1910.jpg"
+   },
+   "121181": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Branch_Rickey_Cardinals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Branch_Rickey_Cardinals.jpg"
+   },
+   "122022": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/L._Sewell%2C_Cleveland%2C_1924_LOC_npcc.11160_%28cropped%29.jpg/960px-L._Sewell%2C_Cleveland%2C_1924_LOC_npcc.11160_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:L._Sewell,_Cleveland,_1924_LOC_npcc.11160_(cropped).jpg"
+   },
+   "113685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Jimmy-dykes.jpg/960px-Jimmy-dykes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy-dykes.jpg"
+   },
+   "121150": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Paul_Richards_1953.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Paul_Richards_1953.jpg"
+   },
+   "492586": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Earl_Weaver_Orioles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Earl_Weaver_Orioles.jpg"
+   },
+   "119881": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/1982_Nashville_Johnny_Oates.jpg/960px-1982_Nashville_Johnny_Oates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:1982_Nashville_Johnny_Oates.jpg"
+   },
+   "427469": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/427469/headshot/83/current"
+   },
+   "492493": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Brandon_Hyde_%28NHQ201905040007%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Brandon_Hyde_(NHQ201905040007)_(cropped).jpg"
    }
   }
  },
@@ -1368,6 +1519,59 @@
     "blurb": "Fenway Park is a ballpark in Boston, Massachusetts, United States, close to Kenmore Square. Since 1912, it has been the home field of Major League Baseball's (MLB) Boston Red Sox.",
     "url": "https://en.wikipedia.org/wiki/Fenway_Park"
    }
+  },
+  "faces": {
+   "112038": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/Bill_Carrigan_Baseball_Card.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Carrigan_Baseball_Card.jpg"
+   },
+   "115534": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg/960px-Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Stanley_Harris,_Wash._LCCN2016839654_(cropped).jpg"
+   },
+   "524329": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Joe_McCarthy.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Joe_McCarthy.png"
+   },
+   "120031": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/1921_Steve_O%27Neill.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1921_Steve_O%27Neill.jpeg"
+   },
+   "115911": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d1/PinkyHigginsGoudeycard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:PinkyHigginsGoudeycard.jpg"
+   },
+   "124335": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dick_Williams_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Dick_Williams_1969.jpg"
+   },
+   "116575": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/1974_Boston_Red_Sox_Yearbook_Cards_Darrell_Johnson_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1974_Boston_Red_Sox_Yearbook_Cards_Darrell_Johnson_(cropped).jpg"
+   },
+   "116177": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ralph_Houk_1975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ralph_Houk_1975.jpg"
+   },
+   "492579": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Red_Sox_John_McNamara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Boston_Red_Sox_John_McNamara.jpg"
+   },
+   "124318": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jimy_Williams_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimy_Williams_crop.jpg"
+   },
+   "114378": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Terry_Francona_2%2830064738153%29.jpg/960px-Terry_Francona_2%2830064738153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Francona_2(30064738153).jpg"
+   },
+   "123616": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Bobby_Valentine_on_January_28%2C_2017.jpg/960px-Bobby_Valentine_on_January_28%2C_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bobby_Valentine_on_January_28,_2017.jpg"
+   },
+   "133321": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/133321/headshot/83/current"
+   }
   }
  },
  "112": {
@@ -1699,6 +1903,43 @@
     "blurb": "Wrigley Field is a ballpark on the North Side of Chicago, Illinois, United States. It is the home ballpark of Major League Baseball's Chicago Cubs, one of the city's two MLB franchises.",
     "url": "https://en.wikipedia.org/wiki/Wrigley_Field"
    }
+  },
+  "faces": {
+   "492582": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Frank_Selee_Hall_of_Fame.jpg/960px-Frank_Selee_Hall_of_Fame.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Frank_Selee_Hall_of_Fame.jpg"
+   },
+   "524329": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Joe_McCarthy.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Joe_McCarthy.png"
+   },
+   "115167": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/CharlieGrimm.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:CharlieGrimm.png"
+   },
+   "114914": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Preston_Gomez_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Preston_Gomez_1961.jpg"
+   },
+   "117624": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/39/1971_Ticketron_Jim_Lefebvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1971_Ticketron_Jim_Lefebvre.jpg"
+   },
+   "427512": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Tom_Trebelhorn_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Tom_Trebelhorn_cropped.jpg"
+   },
+   "427427": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/RigglemanReds2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:RigglemanReds2016.jpg"
+   },
+   "427309": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg/960px-2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg"
+   },
+   "112736": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/112736/headshot/83/current"
+   }
   }
  },
  "145": {
@@ -2013,6 +2254,32 @@
     "blurb": "Rate Field is a baseball stadium on the South Side of Chicago, Illinois. It is the home ballpark of the Chicago White Sox, one of the city's two Major League Baseball teams, and is owned by the state of Illinois through the Illinois Sports Facilities Authority.",
     "url": "https://en.wikipedia.org/wiki/Rate_Field"
    }
+  },
+  "faces": {
+   "115150": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Clark_Griffith_LCCN2016840561_%28cropped%29.jpg/960px-Clark_Griffith_LCCN2016840561_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Clark_Griffith_LCCN2016840561_(cropped).jpg"
+   },
+   "113685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Jimmy-dykes.jpg/960px-Jimmy-dykes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy-dykes.jpg"
+   },
+   "121150": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Paul_Richards_1953.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Paul_Richards_1953.jpg"
+   },
+   "117914": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Al_Lopez_Indians.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Al_Lopez_Indians.jpg"
+   },
+   "123089": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chuck_Tanner_1971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Chuck_Tanner_1971.jpg"
+   },
+   "118262": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Jerry_Manuel_%28cropped%29.jpg/960px-Jerry_Manuel_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jerry_Manuel_(cropped).jpg"
+   }
   }
  },
  "113": {
@@ -2244,8 +2511,8 @@
   },
   "parks": {
    "League Park|1901": {
-    "src": null,
-    "file": null,
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/00/POTFpostcard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:POTFpostcard.jpg",
     "blurb": "League Park was a Major League baseball park located in Cincinnati, Ohio, United States. It was the home of the Cincinnati Reds from 1884 through 1901. The ballpark was on an asymmetrical block bounded by Findlay Street (south), Western Avenue, York Street (north) and McLean Avenue (west).",
     "url": "https://en.wikipedia.org/wiki/League_Park_(Cincinnati)"
    },
@@ -2272,6 +2539,47 @@
     "file": "https://commons.wikimedia.org/wiki/File:10Cincinnati_2015_%282%29.jpg",
     "blurb": "Great American Ball Park is a baseball stadium in Cincinnati, Ohio, United States. It is the ballpark of Major League Baseball's Cincinnati Reds, and opened on March 31, 2003, replacing Cinergy Field, the Reds' former ballpark from 1970 to 2002.",
     "url": "https://en.wikipedia.org/wiki/Great_American_Ball_Park"
+   }
+  },
+  "faces": {
+   "115424": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ned_Hanlon_Tomlinson_1887.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ned_Hanlon_Tomlinson_1887.jpg"
+   },
+   "115150": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Clark_Griffith_LCCN2016840561_%28cropped%29.jpg/960px-Clark_Griffith_LCCN2016840561_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Clark_Griffith_LCCN2016840561_(cropped).jpg"
+   },
+   "115758": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Jack_Hendricks_newspaper.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_Hendricks_newspaper.png"
+   },
+   "118766": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg/960px-Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_McKechnie,_Boston_NL_(baseball)_LCCN2014692163_(cropped).jpg"
+   },
+   "122022": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/L._Sewell%2C_Cleveland%2C_1924_LOC_npcc.11160_%28cropped%29.jpg/960px-L._Sewell%2C_Cleveland%2C_1924_LOC_npcc.11160_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:L._Sewell,_Cleveland,_1924_LOC_npcc.11160_(cropped).jpg"
+   },
+   "113685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Jimmy-dykes.jpg/960px-Jimmy-dykes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy-dykes.jpg"
+   },
+   "492579": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Red_Sox_John_McNamara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Boston_Red_Sox_John_McNamara.jpg"
+   },
+   "429341": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jack_McKeon_Padres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_McKeon_Padres.jpg"
+   },
+   "110816": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/110816/headshot/83/current"
+   },
+   "114378": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Terry_Francona_2%2830064738153%29.jpg/960px-Terry_Francona_2%2830064738153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Francona_2(30064738153).jpg"
    }
   }
  },
@@ -2540,6 +2848,48 @@
     "blurb": "Progressive Field is a baseball stadium in the downtown area of Cleveland, Ohio. It is the ballpark of the Cleveland Guardians of Major League Baseball and, together with Rocket Arena, is part of the Gateway Sports and Entertainment Complex.",
     "url": "https://en.wikipedia.org/wiki/Progressive_Field"
    }
+  },
+  "faces": {
+   "118502": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jimmy_McAleer_c1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy_McAleer_c1910.jpg"
+   },
+   "120344": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Roger_Peckinpaugh2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Roger_Peckinpaugh2.jpg"
+   },
+   "120031": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/1921_Steve_O%27Neill.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1921_Steve_O%27Neill.jpeg"
+   },
+   "117914": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Al_Lopez_Indians.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Al_Lopez_Indians.jpg"
+   },
+   "113685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Jimmy-dykes.jpg/960px-Jimmy-dykes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy-dykes.jpg"
+   },
+   "113052": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Al_Dark_1955.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Al_Dark_1955.jpg"
+   },
+   "492579": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Red_Sox_John_McNamara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Boston_Red_Sox_John_McNamara.jpg"
+   },
+   "118261": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Charlie_Manuel_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Charlie_Manuel_(cropped).jpg"
+   },
+   "124029": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Eric_Wedge.jpg/960px-Eric_Wedge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Eric_Wedge.jpg"
+   },
+   "114378": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Terry_Francona_2%2830064738153%29.jpg/960px-Terry_Francona_2%2830064738153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Francona_2(30064738153).jpg"
+   }
   }
  },
  "115": {
@@ -2707,10 +3057,28 @@
     "url": "https://en.wikipedia.org/wiki/Mile_High_Stadium"
    },
    "Coors Field|1995": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Coors_Field_July_2015.jpg/960px-Coors_Field_July_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Coors_Field_July_2015.jpg",
     "blurb": "Coors Field is a baseball stadium in downtown Denver, Colorado, United States. It is the ballpark of Major League Baseball's Colorado Rockies. Opened in 1995, the park is located in Denver's Lower Downtown neighborhood, two blocks from Union Station. The stadium has a capacity of 50,144 people for baseball.",
     "url": "https://en.wikipedia.org/wiki/Coors_Field"
+   }
+  },
+  "faces": {
+   "492447": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Jim_Leyland_2013.jpg/960px-Jim_Leyland_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Leyland_2013.jpg"
+   },
+   "116346": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Clint_Hurdle.jpg/960px-Clint_Hurdle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Clint_Hurdle.jpg"
+   },
+   "123432": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Jim_Tracy_%28baseball%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Tracy_(baseball).JPG"
+   },
+   "111034": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Bud-black.jpg/960px-Bud-black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bud-black.jpg"
    }
   }
  },
@@ -2976,6 +3344,39 @@
     "blurb": "Comerica Park is an open-air baseball stadium in Detroit, Michigan, United States. It has been the home of the Detroit Tigers of Major League Baseball (MLB) since its opening in 2000. It was built in the retro-classic style, and has a seating capacity of 41,083.",
     "url": "https://en.wikipedia.org/wiki/Comerica_Park"
    }
+  },
+  "faces": {
+   "122651": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/George_Stallings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:George_Stallings.jpg"
+   },
+   "115534": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg/960px-Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Stanley_Harris,_Wash._LCCN2016839654_(cropped).jpg"
+   },
+   "120031": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/1921_Steve_O%27Neill.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1921_Steve_O%27Neill.jpeg"
+   },
+   "113685": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Jimmy-dykes.jpg/960px-Jimmy-dykes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy-dykes.jpg"
+   },
+   "116177": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ralph_Houk_1975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ralph_Houk_1975.jpg"
+   },
+   "492447": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Jim_Leyland_2013.jpg/960px-Jim_Leyland_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Leyland_2013.jpg"
+   },
+   "114599": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Ron_Gardenhire_2013.jpg/960px-Ron_Gardenhire_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Ron_Gardenhire_2013.jpg"
+   },
+   "134460": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/134460/headshot/83/current"
+   }
   }
  },
  "117": {
@@ -3163,8 +3564,8 @@
   },
   "parks": {
    "Colt Stadium|1962": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Colt_Stadium_1963.jpeg/960px-Colt_Stadium_1963.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Colt_Stadium_1963.jpeg",
     "blurb": "Colt Stadium was a Major League baseball stadium that formerly stood in Houston, Texas. It was the temporary home of the expansion Houston Colt .45s for their first three seasons (1962\u20131964) while the Astrodome was being built, just to the south of it.",
     "url": "https://en.wikipedia.org/wiki/Colt_Stadium"
    },
@@ -3179,6 +3580,31 @@
     "file": "https://commons.wikimedia.org/wiki/File:Houston%2C_Texas_%282024%29_-_09.jpg",
     "blurb": "Daikin Park is a retractable roof stadium in Houston, Texas, United States. It opened in 2000 and is the home ballpark of the Houston Astros of Major League Baseball (MLB). The ballpark has a seating capacity of 41,168, which includes 5,197 club seats and 63 luxury suites, with a natural grass playing field.",
     "url": "https://en.wikipedia.org/wiki/Daikin_Park"
+   }
+  },
+  "faces": {
+   "114914": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Preston_Gomez_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Preston_Gomez_1961.jpg"
+   },
+   "123734": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Bill_Virdon_1965.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Virdon_1965.jpg"
+   },
+   "116218": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Art_howe_1987.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Art_howe_1987.jpg"
+   },
+   "492632": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Terry_Collins_on_August_18%2C_2015_%28cropped%29.jpg/960px-Terry_Collins_on_August_18%2C_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Collins_on_August_18,_2015_(cropped).jpg"
+   },
+   "124318": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jimy_Williams_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimy_Williams_crop.jpg"
+   },
+   "134460": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/134460/headshot/83/current"
    }
   }
  },
@@ -3332,6 +3758,28 @@
     "file": "https://commons.wikimedia.org/wiki/File:Kauffman2017.jpg",
     "blurb": "Kauffman Stadium is a ballpark located in Kansas City, Missouri, and the home of Major League Baseball's Kansas City Royals. It is next door to Arrowhead Stadium, home of the National Football League's Kansas City Chiefs. Both make up the Truman Sports Complex.",
     "url": "https://en.wikipedia.org/wiki/Kauffman_Stadium"
+   }
+  },
+  "faces": {
+   "429341": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jack_McKeon_Padres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_McKeon_Padres.jpg"
+   },
+   "123973": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/06/John_Wathan_Royals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:John_Wathan_Royals.jpg"
+   },
+   "119600": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Tony_Muser_1977.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Tony_Muser_1977.jpg"
+   },
+   "124681": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/NedYost.jpg/960px-NedYost.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:NedYost.jpg"
+   },
+   "118414": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/MikeMathenyphotoday2013.jpg/960px-MikeMathenyphotoday2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:MikeMathenyphotoday2013.jpg"
    }
   }
  },
@@ -3537,6 +3985,13 @@
     "h": 368,
     "url": "https://en.wikipedia.org/wiki/Frank_Tanana"
    },
+   "121640": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Tim_Salmon_Afghanistan.jpg/960px-Tim_Salmon_Afghanistan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Tim_Salmon_Afghanistan.jpg",
+    "w": 1385,
+    "h": 923,
+    "pos": "92% 18%"
+   },
    "660271": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Cleveland_Guardians_vs._Los_Angeles_Angels_%2852968316355%29_%28cropped%29.jpg/960px-Cleveland_Guardians_vs._Los_Angeles_Angels_%2852968316355%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "file": "https://commons.wikimedia.org/wiki/File:Cleveland_Guardians_vs._Los_Angeles_Angels_(52968316355)_(cropped).jpg",
@@ -3580,6 +4035,40 @@
     "file": "https://commons.wikimedia.org/wiki/File:Angelstadiummarch2019.jpg",
     "blurb": "Angel Stadium is a ballpark in Anaheim, California, United States. Since its opening 60 years ago in 1966, it has been the home venue of the Los Angeles Angels of Major League Baseball (MLB), who relocated from Los Angeles to Anaheim following the 1965 season.",
     "url": "https://en.wikipedia.org/wiki/Angel_Stadium"
+   }
+  },
+  "faces": {
+   "121205": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bill_Rigney_1953.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Rigney_1953.jpg"
+   },
+   "124335": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dick_Williams_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Dick_Williams_1969.jpg"
+   },
+   "118451": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Gene_Mauch_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Gene_Mauch_1961.jpg"
+   },
+   "492579": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Red_Sox_John_McNamara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Boston_Red_Sox_John_McNamara.jpg"
+   },
+   "121343": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/BuckRodgers.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:BuckRodgers.png"
+   },
+   "492632": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Terry_Collins_on_August_18%2C_2015_%28cropped%29.jpg/960px-Terry_Collins_on_August_18%2C_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Collins_on_August_18,_2015_(cropped).jpg"
+   },
+   "427309": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg/960px-2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg"
+   },
+   "123965": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Ron_Washington_on_August_14%2C_2015_%28cropped%29.jpg/960px-Ron_Washington_on_August_14%2C_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Ron_Washington_on_August_14,_2015_(cropped).jpg"
    }
   }
  },
@@ -3880,8 +4369,8 @@
   },
   "parks": {
    "Washington Park|1901": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Washington-Park-Entrance%2C-1911.jpg/960px-Washington-Park-Entrance%2C-1911.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Washington-Park-Entrance,-1911.jpg",
     "blurb": "Washington Park is a city owned and operated park located in Park Slope, Brooklyn. Washington Park is both a historic site and a center for recreation, featuring the Old Stone House, a skatepark, basketball courts, a dog run, a multi-use synthetic turf field, and the J. J. Byrne Playground, a child's playground.",
     "url": "https://en.wikipedia.org/wiki/Washington_Park_(Brooklyn)"
    },
@@ -3902,6 +4391,31 @@
     "file": "https://commons.wikimedia.org/wiki/File:Dodger_Stadium_and_Chavez_Ravine_far_view%2C_Chicago_Cubs_at_Los_Angeles_Dodgers%2C_%28April_12%2C_2025%29.jpg",
     "blurb": "Dodger Stadium is a ballpark in the Elysian Park neighborhood of Los Angeles, California, United States. It is the home of the Los Angeles Dodgers of Major League Baseball (MLB). Opened in 1962, it was constructed in less than three years at a cost of US$23 million.",
     "url": "https://en.wikipedia.org/wiki/Dodger_Stadium"
+   }
+  },
+  "faces": {
+   "115424": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ned_Hanlon_Tomlinson_1887.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ned_Hanlon_Tomlinson_1887.jpg"
+   },
+   "121322": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Wilbert_Robinson_1916.jpg/960px-Wilbert_Robinson_1916.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Wilbert_Robinson_1916.jpg"
+   },
+   "122192": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/%28Burt_Shotton%2C_St._Louis_AL_%28baseball%29%29_LOC_14626986002_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:(Burt_Shotton,_St._Louis_AL_(baseball))_LOC_14626986002_(cropped).jpg"
+   },
+   "110193": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Walter_Alston_Dodgers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Walter_Alston_Dodgers.jpg"
+   },
+   "123432": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Jim_Tracy_%28baseball%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Tracy_(baseball).JPG"
+   },
+   "150353": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/150353/headshot/83/current"
    }
   }
  },
@@ -4087,6 +4601,28 @@
     "file": "https://commons.wikimedia.org/wiki/File:LOAN_DEPOT_PARK.jpg",
     "blurb": "LoanDepot Park is a stadium with a retractable roof located in Miami, Florida, United States. It is the ballpark of Major League Baseball's Miami Marlins. It is located on 17 acres (6.9 ha) on the site of the former Miami Orange Bowl in Little Havana about 2 miles (3 km) west of Downtown Miami.",
     "url": "https://en.wikipedia.org/wiki/LoanDepot_Park"
+   }
+  },
+  "faces": {
+   "117389": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/MG_0099_Rene_Lachemann.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:MG_0099_Rene_Lachemann.jpg"
+   },
+   "492447": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Jim_Leyland_2013.jpg/960px-Jim_Leyland_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Leyland_2013.jpg"
+   },
+   "429341": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jack_McKeon_Padres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_McKeon_Padres.jpg"
+   },
+   "427190": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Fredi_Gonz%C3%A1lez_on_July_29%2C_2014.jpg/960px-Fredi_Gonz%C3%A1lez_on_July_29%2C_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Fredi_Gonz%C3%A1lez_on_July_29,_2014.jpg"
+   },
+   "133226": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Mike_Redmond.jpg/960px-Mike_Redmond.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Mike_Redmond.jpg"
    }
   }
  },
@@ -4297,6 +4833,39 @@
     "file": "https://commons.wikimedia.org/wiki/File:American_Family_Field_Taken_By_Isaac_Rowlett.jpg",
     "blurb": "American Family Field is a retractable roof stadium in Milwaukee, Wisconsin. Located southwest of the intersection of Interstate 94 and Brewers Boulevard, it is the ballpark of Major League Baseball's Milwaukee Brewers. It opened in 2001 under the name Miller Park as a replacement for Milwaukee County Stadium.",
     "url": "https://en.wikipedia.org/wiki/American_Family_Field"
+   }
+  },
+  "faces": {
+   "110521": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/George_Bamberger_Orioles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:George_Bamberger_Orioles.jpg"
+   },
+   "121343": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/BuckRodgers.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:BuckRodgers.png"
+   },
+   "117389": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/MG_0099_Rene_Lachemann.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:MG_0099_Rene_Lachemann.jpg"
+   },
+   "427512": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Tom_Trebelhorn_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Tom_Trebelhorn_cropped.jpg"
+   },
+   "117624": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/39/1971_Ticketron_Jim_Lefebvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1971_Ticketron_Jim_Lefebvre.jpg"
+   },
+   "124681": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/NedYost.jpg/960px-NedYost.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:NedYost.jpg"
+   },
+   "121373": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Ron_Roenicke_on_April_1%2C_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ron_Roenicke_on_April_1,_2013.jpg"
+   },
+   "112736": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/112736/headshot/83/current"
    }
   }
  },
@@ -4550,14 +5119,14 @@
   },
   "parks": {
    "League Park|1901": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/American_League_Park_Washington_1905.jpg/960px-American_League_Park_Washington_1905.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:American_League_Park_Washington_1905.jpg",
     "blurb": "American League Park, known by historians as American League Park I, was a baseball park that formerly stood in the Trinidad neighborhood of Washington, D.C., at the corner of Florida Avenue and Trinidad Avenue NE on land previously belonging to the Washington Brick Company.",
     "url": "https://en.wikipedia.org/wiki/American_League_Park"
    },
    "Griffith Stadium|1911": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Griffith_Stadium_during_1925_World_Series.jpg/960px-Griffith_Stadium_during_1925_World_Series.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Griffith_Stadium_during_1925_World_Series.jpg",
     "blurb": "Griffith Stadium was a baseball park located in Washington, D.C., United States. It stood from 1911 to 1965, between Georgia Avenue and 5th Street, and between W Street and Florida Avenue NW.",
     "url": "https://en.wikipedia.org/wiki/Griffith_Stadium"
    },
@@ -4578,6 +5147,43 @@
     "file": "https://commons.wikimedia.org/wiki/File:Target_Field%2C_Minneapolis%2C_Minnesota_%2843167053335%29.jpg",
     "blurb": "Target Field is a baseball stadium in the historic warehouse district of downtown Minneapolis. Since its opening in 2010, the stadium has been the ballpark of Major League Baseball's Minnesota Twins. It is named for Target Corporation, which is headquartered in Minneapolis.",
     "url": "https://en.wikipedia.org/wiki/Target_Field"
+   }
+  },
+  "faces": {
+   "118502": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jimmy_McAleer_c1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimmy_McAleer_c1910.jpg"
+   },
+   "115150": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Clark_Griffith_LCCN2016840561_%28cropped%29.jpg/960px-Clark_Griffith_LCCN2016840561_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Clark_Griffith_LCCN2016840561_(cropped).jpg"
+   },
+   "115534": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg/960px-Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Stanley_Harris,_Wash._LCCN2016839654_(cropped).jpg"
+   },
+   "118929": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Sam_Mele.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Sam_Mele.jpg"
+   },
+   "121205": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bill_Rigney_1953.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Rigney_1953.jpg"
+   },
+   "118451": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Gene_Mauch_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Gene_Mauch_1961.jpg"
+   },
+   "116946": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Tom_Kelly_1987.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Tom_Kelly_1987.jpg"
+   },
+   "114599": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Ron_Gardenhire_2013.jpg/960px-Ron_Gardenhire_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Ron_Gardenhire_2013.jpg"
+   },
+   "408306": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/408306/headshot/83/current"
    }
   }
  },
@@ -4817,10 +5423,35 @@
     "url": "https://en.wikipedia.org/wiki/Shea_Stadium"
    },
    "Citi Field|2009": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Citi_Field_Night_Game.jpg/960px-Citi_Field_Night_Game.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Citi_Field_Night_Game.jpg",
     "blurb": "Citi Field is a baseball stadium located in Flushing Meadows\u2013Corona Park, in the borough of Queens, New York City, United States. Opened in 2009, Citi Field is the home of Major League Baseball's New York Mets.",
     "url": "https://en.wikipedia.org/wiki/Citi_Field"
+   }
+  },
+  "faces": {
+   "110521": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/George_Bamberger_Orioles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:George_Bamberger_Orioles.jpg"
+   },
+   "123616": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Bobby_Valentine_on_January_28%2C_2017.jpg/960px-Bobby_Valentine_on_January_28%2C_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bobby_Valentine_on_January_28,_2017.jpg"
+   },
+   "116218": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Art_howe_1987.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Art_howe_1987.jpg"
+   },
+   "118262": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Jerry_Manuel_%28cropped%29.jpg/960px-Jerry_Manuel_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jerry_Manuel_(cropped).jpg"
+   },
+   "492632": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Terry_Collins_on_August_18%2C_2015_%28cropped%29.jpg/960px-Terry_Collins_on_August_18%2C_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Collins_on_August_18,_2015_(cropped).jpg"
+   },
+   "427469": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/427469/headshot/83/current"
    }
   }
  },
@@ -5174,6 +5805,43 @@
     "blurb": "Yankee Stadium is a baseball stadium located in the Bronx, New York City. It is the home field of the New York Yankees of Major League Baseball.",
     "url": "https://en.wikipedia.org/wiki/Yankee_Stadium"
    }
+  },
+  "faces": {
+   "115150": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Clark_Griffith_LCCN2016840561_%28cropped%29.jpg/960px-Clark_Griffith_LCCN2016840561_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Clark_Griffith_LCCN2016840561_(cropped).jpg"
+   },
+   "122651": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/George_Stallings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:George_Stallings.jpg"
+   },
+   "120344": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Roger_Peckinpaugh2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Roger_Peckinpaugh2.jpg"
+   },
+   "116275": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Miller_Huggins_by_Bain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Miller_Huggins_by_Bain.jpg"
+   },
+   "524329": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Joe_McCarthy.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Joe_McCarthy.png"
+   },
+   "115534": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg/960px-Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Stanley_Harris,_Wash._LCCN2016839654_(cropped).jpg"
+   },
+   "116177": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Ralph_Houk_1975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ralph_Houk_1975.jpg"
+   },
+   "123734": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Bill_Virdon_1965.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Virdon_1965.jpg"
+   },
+   "427469": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/427469/headshot/83/current"
+   }
   }
  },
  "143": {
@@ -5407,8 +6075,8 @@
     "url": "https://en.wikipedia.org/wiki/Baker_Bowl"
    },
    "Connie Mack Stadium|1939": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Shibe_Park_1960.jpg/960px-Shibe_Park_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Shibe_Park_1960.jpg",
     "blurb": "Shibe Park, known later as Connie Mack Stadium, was a ballpark located in Philadelphia. It was the home of the Philadelphia Athletics of the American League (AL) from 1909 to 1954 and the Philadelphia Phillies of the National League (NL) from 1938 to 1970.",
     "url": "https://en.wikipedia.org/wiki/Shibe_Park"
    },
@@ -5419,10 +6087,48 @@
     "url": "https://en.wikipedia.org/wiki/Veterans_Stadium"
    },
    "Citizens Bank Park|2004": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Citizens_Bank_Park_2021.jpg/960px-Citizens_Bank_Park_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Citizens_Bank_Park_2021.jpg",
     "blurb": "Citizens Bank Park is a baseball stadium in Philadelphia, Pennsylvania, United States. Home to Major League Baseball's Philadelphia Phillies, the stadium opened April 3, 2004.",
     "url": "https://en.wikipedia.org/wiki/Citizens_Bank_Park"
+   }
+  },
+  "faces": {
+   "124617": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Harry_Wright_Baseball_Card.jpg/960px-Harry_Wright_Baseball_Card.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Harry_Wright_Baseball_Card.jpg"
+   },
+   "122651": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/George_Stallings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:George_Stallings.jpg"
+   },
+   "122192": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/%28Burt_Shotton%2C_St._Louis_AL_%28baseball%29%29_LOC_14626986002_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:(Burt_Shotton,_St._Louis_AL_(baseball))_LOC_14626986002_(cropped).jpg"
+   },
+   "115534": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg/960px-Stanley_Harris%2C_Wash._LCCN2016839654_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Stanley_Harris,_Wash._LCCN2016839654_(cropped).jpg"
+   },
+   "492687": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Eddie_Sawyer_1950.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Eddie_Sawyer_1950.png"
+   },
+   "120031": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/1921_Steve_O%27Neill.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1921_Steve_O%27Neill.jpeg"
+   },
+   "118451": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Gene_Mauch_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Gene_Mauch_1961.jpg"
+   },
+   "114378": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Terry_Francona_2%2830064738153%29.jpg/960px-Terry_Francona_2%2830064738153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Terry_Francona_2(30064738153).jpg"
+   },
+   "118261": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Charlie_Manuel_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Charlie_Manuel_(cropped).jpg"
    }
   }
  },
@@ -5735,6 +6441,44 @@
     "blurb": "PNC Park is a baseball stadium on the North Shore of Pittsburgh, Pennsylvania. It is the fifth location to serve as the home ballpark of Major League Baseball's Pittsburgh Pirates. Opened during the 2001 MLB season, PNC Park sits along the Allegheny River with a view of the Downtown Pittsburgh skyline.",
     "url": "https://en.wikipedia.org/wiki/PNC_Park"
    }
+  },
+  "faces": {
+   "115424": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Ned_Hanlon_Tomlinson_1887.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Ned_Hanlon_Tomlinson_1887.jpg"
+   },
+   "118082": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Connie_Mack_Portrait_%284x5_cropped%29.jpg/960px-Connie_Mack_Portrait_%284x5_cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Connie_Mack_Portrait_(4x5_cropped).jpg"
+   },
+   "118766": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg/960px-Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_McKechnie,_Boston_NL_(baseball)_LCCN2014692163_(cropped).jpg"
+   },
+   "119599": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Danny_Murtaugh_1960s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Danny_Murtaugh_1960s.jpg"
+   },
+   "123734": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Bill_Virdon_1965.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Virdon_1965.jpg"
+   },
+   "123089": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chuck_Tanner_1971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Chuck_Tanner_1971.jpg"
+   },
+   "492447": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Jim_Leyland_2013.jpg/960px-Jim_Leyland_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Leyland_2013.jpg"
+   },
+   "123432": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/85/Jim_Tracy_%28baseball%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jim_Tracy_(baseball).JPG"
+   },
+   "116346": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Clint_Hurdle.jpg/960px-Clint_Hurdle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Clint_Hurdle.jpg"
+   }
   }
  },
  "135": {
@@ -5939,6 +6683,52 @@
     "file": "https://commons.wikimedia.org/wiki/File:Petco_Park_Padres_Game.jpg",
     "blurb": "Petco Park is a ballpark in San Diego, California. It is the home of the San Diego Padres of Major League Baseball (MLB). The ballpark is located in the East Village neighborhood of downtown San Diego, adjacent to the Gaslamp Quarter.",
     "url": "https://en.wikipedia.org/wiki/Petco_Park"
+   }
+  },
+  "faces": {
+   "114914": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Preston_Gomez_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Preston_Gomez_1961.jpg"
+   },
+   "492579": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Boston_Red_Sox_John_McNamara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Boston_Red_Sox_John_McNamara.jpg"
+   },
+   "113052": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Al_Dark_1955.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Al_Dark_1955.jpg"
+   },
+   "112783": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/71/Roger_Craig_%28coach%29_-_San_Diego_Padres_-_1978.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Roger_Craig_(coach)_-_San_Diego_Padres_-_1978.jpg"
+   },
+   "124335": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dick_Williams_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Dick_Williams_1969.jpg"
+   },
+   "429341": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Jack_McKeon_Padres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_McKeon_Padres.jpg"
+   },
+   "427427": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/RigglemanReds2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:RigglemanReds2016.jpg"
+   },
+   "111136": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Bruce_Bochy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bruce_Bochy.jpg"
+   },
+   "111034": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Bud-black.jpg/960px-Bud-black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bud-black.jpg"
+   },
+   "433477": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Andy_Green_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Andy_Green_(cropped).jpg"
+   },
+   "118942": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bob_Melvin_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Melvin_2012.jpg"
    }
   }
  },
@@ -6314,14 +7104,14 @@
     "url": "https://en.wikipedia.org/wiki/Polo_Grounds"
    },
    "Seals Stadium|1958": {
-    "src": null,
-    "file": null,
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Seals_Stadium_Army-Navy_War_Show.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Seals_Stadium_Army-Navy_War_Show.jpg",
     "blurb": "Seals Stadium was a Minor League Baseball stadium in San Francisco, California, United States; it later became the first home of the major-league San Francisco Giants. Opened in the Mission District in 1931, Seals Stadium was the longtime home of the San Francisco Seals (1931\u20131957) of the Pacific Coast League.",
     "url": "https://en.wikipedia.org/wiki/Seals_Stadium"
    },
    "Candlestick Park|1960": {
-    "src": null,
-    "file": null,
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Candlestick_Postcard_-_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Candlestick_Postcard_-_01.JPG",
     "blurb": "Candlestick Park was an outdoor stadium located in the Hunters Point area of San Francisco, California, United States. It was the home of Major League Baseball's San Francisco Giants, who played there beginning in 1960 through 1999.",
     "url": "https://en.wikipedia.org/wiki/Candlestick_Park"
    },
@@ -6330,6 +7120,32 @@
     "file": "https://commons.wikimedia.org/wiki/File:Oracle_Park_2021.jpg",
     "blurb": "Oracle Park is a ballpark in the South Beach neighborhood of San Francisco, California, United States. Since 2000, it has been the home of the San Francisco Giants of Major League Baseball (MLB).",
     "url": "https://en.wikipedia.org/wiki/Oracle_Park"
+   }
+  },
+  "faces": {
+   "118726": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/John-McGraw-1910_%28retouched%29.jpeg/960px-John-McGraw-1910_%28retouched%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:John-McGraw-1910_(retouched).jpeg"
+   },
+   "121205": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bill_Rigney_1953.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Rigney_1953.jpg"
+   },
+   "113052": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Al_Dark_1955.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Al_Dark_1955.jpg"
+   },
+   "112783": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/71/Roger_Craig_%28coach%29_-_San_Diego_Padres_-_1978.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Roger_Craig_(coach)_-_San_Diego_Padres_-_1978.jpg"
+   },
+   "111136": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Bruce_Bochy_%282011%29.jpg/960px-Bruce_Bochy_%282011%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bruce_Bochy_(2011).jpg"
+   },
+   "118942": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bob_Melvin_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Melvin_2012.jpg"
    }
   }
  },
@@ -6531,6 +7347,40 @@
     "file": "https://commons.wikimedia.org/wiki/File:SafecoFieldTop.jpg",
     "blurb": "T-Mobile Park is a retractable roof ballpark in Seattle, Washington, United States. It is the home stadium of the Seattle Mariners of Major League Baseball and has a seating capacity of 47,368.",
     "url": "https://en.wikipedia.org/wiki/T-Mobile_Park"
+   }
+  },
+  "faces": {
+   "116575": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/1974_Boston_Red_Sox_Yearbook_Cards_Darrell_Johnson_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1974_Boston_Red_Sox_Yearbook_Cards_Darrell_Johnson_(cropped).jpg"
+   },
+   "117389": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/MG_0099_Rene_Lachemann.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:MG_0099_Rene_Lachemann.jpg"
+   },
+   "124335": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dick_Williams_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Dick_Williams_1969.jpg"
+   },
+   "117624": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/39/1971_Ticketron_Jim_Lefebvre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1971_Ticketron_Jim_Lefebvre.jpg"
+   },
+   "118942": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Bob_Melvin_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bob_Melvin_2012.jpg"
+   },
+   "427427": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/RigglemanReds2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:RigglemanReds2016.jpg"
+   },
+   "124029": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Eric_Wedge.jpg/960px-Eric_Wedge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Eric_Wedge.jpg"
+   },
+   "122011": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Scott_Servais.jpg/960px-Scott_Servais.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Scott_Servais.jpg"
    }
   }
  },
@@ -6746,8 +7596,8 @@
     "url": "https://en.wikipedia.org/wiki/Robison_Field"
    },
    "Sportsman's Park|1920": {
-    "src": null,
-    "file": null,
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Sportsman%27s_Park_1946_World_Series-1.jpg/960px-Sportsman%27s_Park_1946_World_Series-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Sportsman%27s_Park_1946_World_Series-1.jpg",
     "blurb": "Sportsman's Park was the name of several former Major League Baseball ballpark structures in St. Louis, Missouri. All but one of these were located on the same piece of land, at the northwest corner of Grand Boulevard and Dodier Street, on the north side of the city.",
     "url": "https://en.wikipedia.org/wiki/Sportsman's_Park"
    },
@@ -6762,6 +7612,32 @@
     "file": "https://commons.wikimedia.org/wiki/File:Busch_Stadium_2022.jpg",
     "blurb": "Busch Stadium is a baseball stadium located in St. Louis, Missouri, United States. It is the home of Major League Baseball's St. Louis Cardinals. It has a seating capacity of 44,383, with 3,706 club seats and 61 luxury suites.",
     "url": "https://en.wikipedia.org/wiki/Busch_Stadium"
+   }
+  },
+  "faces": {
+   "116275": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Miller_Huggins_by_Bain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Miller_Huggins_by_Bain.jpg"
+   },
+   "115758": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Jack_Hendricks_newspaper.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jack_Hendricks_newspaper.png"
+   },
+   "121181": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Branch_Rickey_Cardinals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Branch_Rickey_Cardinals.jpg"
+   },
+   "118766": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg/960px-Bill_McKechnie%2C_Boston_NL_%28baseball%29_LCCN2014692163_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_McKechnie,_Boston_NL_(baseball)_LCCN2014692163_(cropped).jpg"
+   },
+   "122551": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Billy_Southworth_Cardinals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Billy_Southworth_Cardinals.jpg"
+   },
+   "118414": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/MikeMathenyphotoday2013.jpg/960px-MikeMathenyphotoday2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:MikeMathenyphotoday2013.jpg"
    }
   }
  },
@@ -6995,6 +7871,19 @@
     "blurb": "Tropicana Field, nicknamed \"The Trop\", is a domed multi-purpose stadium in the southeastern United States, located in St. Petersburg, Florida. It is the home of the Tampa Bay Rays of Major League Baseball (MLB).",
     "url": "https://en.wikipedia.org/wiki/Tropicana_Field"
    }
+  },
+  "faces": {
+   "121495": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Larry_Rothschild%2CShane_Greene_%2815042831218%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Larry_Rothschild,Shane_Greene_(15042831218)_(cropped).jpg"
+   },
+   "427309": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg/960px-2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:2016-10-20_Joe_Maddon_before_NLCS_Game_5_at_Dodger_Stadium.jpg"
+   },
+   "408211": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/408211/headshot/83/current"
+   }
   }
  },
  "140": {
@@ -7206,8 +8095,8 @@
   },
   "parks": {
    "Griffith Stadium|1961": {
-    "src": null,
-    "file": null,
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Griffith_Stadium_late_1950s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Griffith_Stadium_late_1950s.jpg",
     "blurb": "Griffith Stadium was a baseball park located in Washington, D.C., United States. It stood from 1911 to 1965, between Georgia Avenue and 5th Street, and between W Street and Florida Avenue NW.",
     "url": "https://en.wikipedia.org/wiki/Griffith_Stadium"
    },
@@ -7234,6 +8123,31 @@
     "file": "https://commons.wikimedia.org/wiki/File:GlobeLifeField2021.jpg",
     "blurb": "Globe Life Field is a retractable roof stadium in Arlington, Texas, United States. It is the home ballpark of Major League Baseball's Texas Rangers. It is located just south of the Rangers' former home ballpark, Globe Life Park.",
     "url": "https://en.wikipedia.org/wiki/Globe_Life_Field"
+   }
+  },
+  "faces": {
+   "116575": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/1974_Boston_Red_Sox_Yearbook_Cards_Darrell_Johnson_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:1974_Boston_Red_Sox_Yearbook_Cards_Darrell_Johnson_(cropped).jpg"
+   },
+   "123616": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Bobby_Valentine_on_January_28%2C_2017.jpg/960px-Bobby_Valentine_on_January_28%2C_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Bobby_Valentine_on_January_28,_2017.jpg"
+   },
+   "119881": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/1982_Nashville_Johnny_Oates.jpg/960px-1982_Nashville_Johnny_Oates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:1982_Nashville_Johnny_Oates.jpg"
+   },
+   "427469": {
+    "src": "https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/427469/headshot/83/current"
+   },
+   "123965": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Ron_Washington_on_August_14%2C_2015_%28cropped%29.jpg/960px-Ron_Washington_on_August_14%2C_2015_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Ron_Washington_on_August_14,_2015_(cropped).jpg"
+   },
+   "110529": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Jeff_Banister_2015.jpg/960px-Jeff_Banister_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Jeff_Banister_2015.jpg"
    }
   }
  },
@@ -7441,6 +8355,24 @@
     "file": "https://commons.wikimedia.org/wiki/File:Rogers_Centre_%28500_Level%29_-_Toronto%2C_ON.jpg",
     "blurb": "Rogers Centre is a retractable roof stadium in downtown Toronto, Ontario, Canada, situated at the base of the CN Tower near the northern shore of Lake Ontario. Opened in 1989 on the former Railway Lands, it is home to the Toronto Blue Jays of Major League Baseball (MLB).",
     "url": "https://en.wikipedia.org/wiki/Rogers_Centre"
+   }
+  },
+  "faces": {
+   "124318": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jimy_Williams_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Jimy_Williams_crop.jpg"
+   },
+   "114650": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Cito.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Cito.jpg"
+   },
+   "114744": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/John_Gibbons_2014_%28cropped%29.jpg/960px-John_Gibbons_2014_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:John_Gibbons_2014_(cropped).jpg"
+   },
+   "119271": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Charlie_Montoyo_during_warmups%2C_July_19%2C_2023_%28cropped%29.jpg/960px-Charlie_Montoyo_during_warmups%2C_July_19%2C_2023_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Charlie_Montoyo_during_warmups,_July_19,_2023_(cropped).jpg"
    }
   }
  },
@@ -7665,6 +8597,32 @@
     "file": "https://commons.wikimedia.org/wiki/File:Nationals_Park_8.16.19_-_7.jpg",
     "blurb": "Nationals Park is a baseball stadium along the Anacostia River in the Navy Yard neighborhood of Washington, D.C. It is the ballpark of Major League Baseball's Washington Nationals. It was completed in 2008, and was the first LEED-certified green major professional sports stadium in the United States.",
     "url": "https://en.wikipedia.org/wiki/Nationals_Park"
+   }
+  },
+  "faces": {
+   "118451": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Gene_Mauch_1961.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Gene_Mauch_1961.jpg"
+   },
+   "124335": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dick_Williams_1969.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Dick_Williams_1969.jpg"
+   },
+   "123734": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Bill_Virdon_1965.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:Bill_Virdon_1965.jpg"
+   },
+   "121343": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/BuckRodgers.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:BuckRodgers.png"
+   },
+   "427427": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/RigglemanReds2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "file": "https://commons.wikimedia.org/wiki/File:RigglemanReds2016.jpg"
+   },
+   "118363": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Dave_Martinez_%28cropped%29.jpg/960px-Dave_Martinez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "file": "https://commons.wikimedia.org/wiki/File:Dave_Martinez_(cropped).jpg"
    }
   }
  }

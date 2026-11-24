@@ -6256,7 +6256,12 @@
     "years": "1934–1961",
     "blurb": "Powel Crosley Jr. was an American inventor, industrialist, and entrepreneur. He was also a pioneer in radio broadcasting and owner of the Cincinnati Reds major league baseball team.",
     "url": "https://en.wikipedia.org/wiki/Powel_Crosley_Jr.",
-    "photo": null,
+    "photo": {
+     "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Powel_Crosley%2C_Jr._c._1940_%28crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "file": "https://commons.wikimedia.org/wiki/File:Powel_Crosley,_Jr._c._1940_(crop).jpg",
+     "w": 406,
+     "h": 478
+    },
     "call": null
    },
    {
@@ -8425,7 +8430,12 @@
     "years": "1962–1976",
     "blurb": "Roy Mark Hofheinz, popularly known as Judge Hofheinz or \"the Judge\", was a Texas state representative from 1935 to 1937, county judge of Harris County, Texas from 1937 to 1944, and mayor of the city of Houston from 1953 to 1956.",
     "url": "https://en.wikipedia.org/wiki/Roy_Hofheinz",
-    "photo": null,
+    "photo": {
+     "src": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Roy_Hofheinz_%28Judge%2C_mayor%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "file": "https://commons.wikimedia.org/wiki/File:Roy_Hofheinz_(Judge,_mayor).jpg",
+     "w": 378,
+     "h": 379
+    },
     "call": null
    },
    {
@@ -9916,7 +9926,12 @@
     "years": "1950–1979",
     "blurb": "Walter Francis O'Malley was an American sports executive who owned the Brooklyn / Los Angeles Dodgers team in Major League Baseball from 1950 to 1979.",
     "url": "https://en.wikipedia.org/wiki/Walter_O'Malley",
-    "photo": null,
+    "photo": {
+     "src": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Walter_Francis_O%27Malley_%281903-1979%29_in_1926_with_background_removed.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "file": "https://commons.wikimedia.org/wiki/File:Walter_Francis_O%27Malley_(1903-1979)_in_1926_with_background_removed.png",
+     "w": 382,
+     "h": 550
+    },
     "call": null
    },
    {
@@ -13390,7 +13405,12 @@
     "years": "1978–",
     "blurb": "The Phillie Phanatic is the official mascot for the Philadelphia Phillies Major League Baseball team. He is a large, furry, green creature with a party horn tongue.",
     "url": "https://en.wikipedia.org/wiki/Phillie_Phanatic",
-    "photo": null,
+    "photo": {
+     "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Phillie_Phanatic_participates_in_Star_Wars_Night.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "file": "https://commons.wikimedia.org/wiki/File:Phillie_Phanatic_participates_in_Star_Wars_Night.JPG",
+     "w": 645,
+     "h": 430
+    },
     "call": null
    }
   ]

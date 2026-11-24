@@ -54,7 +54,7 @@ LEGEND_PHOTOS = {
     121222: None,  # Cal Ripken Jr.
     117501: None,  # Barry Larkin
     110987: None,  # Craig Biggio
-    121640: None,  # Tim Salmon
+    121640: 'File:Tim Salmon Afghanistan.jpg',  # Tim Salmon, in his Angels jersey on a visit to troops
     114133: None,  # Chuck Finley
     121604: None,  # Bret Saberhagen
     122111: None,  # Gary Sheffield
@@ -137,7 +137,6 @@ PARK_TITLES = {
     "The Ballpark at Arlington": "Globe Life Park in Arlington",
     "The Kingdome": "Kingdome",
     "loanDepot park": "LoanDepot Park",
-    "Columbia Park": "Columbia Park (Philadelphia)",
     "Municipal Stadium": "Municipal Stadium (Kansas City)",
     "Exposition Park": "Exposition Park (Pittsburgh)",
     "Memorial Stadium": "Memorial Stadium (Baltimore)",
@@ -153,6 +152,135 @@ PARK_TITLES = {
     (147, "Yankee Stadium", 1976): "Yankee Stadium (1923)",
     (142, "League Park", 1901): "American League Park",
     (113, "League Park", 1901): "League Park (Cincinnati)",
+}
+
+# Where to aim the crop (CSS object-position) for a portrait whose subject is off-centre.
+PHOTO_FOCUS = {
+    "File:Tim Salmon Afghanistan.jpg": "92% 18%",  # Salmon is on the right
+}
+
+# Commons photo for a ballpark whose Wikipedia article has no usable lead image.
+# Keys are (team id, name, first season) as in data/history.json.
+PARK_PHOTOS = {
+    (133, "Shibe Park", 1909): "File:Grand Stand Entrance of Shibe Park.jpg",
+    (110, "Sportsman's Park", 1902): "File:Sportsman's Park 1944.jpg",
+    (113, "League Park", 1901): "File:POTFpostcard.jpg",  # the Palace of the Fans, built on the League Park site
+    (115, "Coors Field", 1995): "File:Coors Field July 2015.jpg",
+    (117, "Colt Stadium", 1962): "File:Colt Stadium 1963.jpeg",
+    (119, "Washington Park", 1901): "File:Washington-Park-Entrance,-1911.jpg",
+    (142, "League Park", 1901): "File:American League Park Washington 1905.jpg",
+    (142, "Griffith Stadium", 1911): "File:Griffith Stadium during 1925 World Series.jpg",
+    (121, "Citi Field", 2009): "File:Citi Field Night Game.jpg",
+    (143, "Connie Mack Stadium", 1939): "File:Shibe Park 1960.jpg",
+    (143, "Citizens Bank Park", 2004): "File:Citizens Bank Park 2021.jpg",
+    (137, "Seals Stadium", 1958): "File:Seals Stadium Army-Navy War Show.jpg",
+    (137, "Candlestick Park", 1960): "File:Candlestick Postcard - 01.JPG",
+    (138, "Sportsman's Park", 1920): "File:Sportsman's Park 1946 World Series-1.jpg",
+    (140, "Griffith Stadium", 1961): "File:Griffith Stadium late 1950s.jpg",
+}
+
+# Portraits for managers and Hall of Famers whose MLB headshot is the blank silhouette.
+# A Commons file, or "mlb83" for MLB's newer headshot set. Keys: person id, or (team id, person id).
+FACE_PHOTOS = {
+    117950: 'File:ToreyLovullo.jpg',  # Torey Lovullo
+    118942: 'File:Bob Melvin 2012.jpg',  # Bob Melvin
+    114752: 'File:Gibsonwin3.jpg',  # Kirk Gibson
+    427469: "mlb83",  # Buck Showalter
+    115330: 'File:Chip Hale on July 13, 2018 (cropped).jpg',  # Chip Hale
+    118082: 'File:Connie Mack Portrait (4x5 cropped).jpg',  # Connie Mack
+    124335: 'File:Dick Williams 1969.jpg',  # Dick Williams
+    116218: 'File:Art howe 1987.jpg',  # Art Howe
+    114712: 'File:Bob Geren July 16, 2018 (50120693293) (cropped).jpg',  # Bob Geren
+    113052: 'File:Al Dark 1955.jpg',  # Alvin Dark
+    115386: 'File:Billy Hamilton Baseball Card.jpg',  # Billy Hamilton
+    492582: 'File:Frank Selee Hall of Fame.jpg',  # Frank Selee
+    124617: 'File:Harry Wright Baseball Card.jpg',  # Harry Wright
+    492535: 'File:Brian Snitker (8316496) (cropped).jpg',  # Brian Snitker
+    122651: 'File:George Stallings.jpg',  # George Stallings
+    118766: 'File:Bill McKechnie, Boston NL (baseball) LCCN2014692163 (cropped).jpg',  # Bill McKechnie
+    492586: 'File:Earl Weaver Orioles.jpg',  # Earl Weaver
+    118502: 'File:Jimmy McAleer c1910.jpg',  # Jimmy McAleer
+    492493: 'File:Brandon Hyde (NHQ201905040007) (cropped).jpg',  # Brandon Hyde
+    121150: 'File:Paul Richards 1953.jpg',  # Paul Richards
+    122022: 'File:L. Sewell, Cleveland, 1924 LOC npcc.11160 (cropped).jpg',  # Luke Sewell
+    114378: 'File:Terry Francona 2(30064738153).jpg',  # Terry Francona
+    115911: 'File:PinkyHigginsGoudeycard.jpg',  # Pinky Higgins
+    112038: 'File:Bill Carrigan Baseball Card.jpg',  # Bill Carrigan
+    133321: "mlb83",  # Alex Cora
+    115167: 'File:CharlieGrimm.png',  # Charlie Grimm
+    427309: 'File:2016-10-20 Joe Maddon before NLCS Game 5 at Dodger Stadium.jpg',  # Joe Maddon
+    427427: 'File:RigglemanReds2016.jpg',  # Jim Riggleman
+    113685: 'File:Jimmy-dykes.jpg',  # Jimmy Dykes
+    117914: 'File:Al Lopez Indians.jpg',  # Al Lopez
+    118262: 'File:Jerry Manuel (cropped).jpg',  # Jerry Manuel
+    123089: 'File:Chuck Tanner 1971.jpg',  # Chuck Tanner
+    115758: 'File:Jack Hendricks newspaper.png',  # Jack Hendricks
+    110816: "mlb83",  # David Bell
+    124029: 'File:Eric Wedge.jpg',  # Eric Wedge
+    120344: 'File:Roger Peckinpaugh2.jpg',  # Roger Peckinpaugh
+    111034: 'File:Bud-black.jpg',  # Bud Black
+    116346: 'File:Clint Hurdle.jpg',  # Clint Hurdle
+    123432: 'File:Jim Tracy (baseball).JPG',  # Jim Tracy
+    492447: 'File:Jim Leyland 2013.jpg',  # Jim Leyland
+    115534: 'File:Stanley Harris, Wash. LCCN2016839654 (cropped).jpg',  # Bucky Harris
+    120031: "File:1921 Steve O'Neill.jpeg",  # Steve O'Neill
+    123734: 'File:Bill Virdon 1965.jpg',  # Bill Virdon
+    134460: "mlb83",  # A.J. Hinch
+    124681: 'File:NedYost.jpg',  # Ned Yost III
+    119600: 'File:Tony Muser 1977.jpg',  # Tony Muser
+    123973: 'File:John Wathan Royals.jpg',  # John Wathan
+    121205: 'File:Bill Rigney 1953.jpg',  # Bill Rigney
+    118451: 'File:Gene Mauch 1961.jpg',  # Gene Mauch
+    121343: 'File:BuckRodgers.png',  # Buck Rodgers
+    121322: 'File:Wilbert Robinson 1916.jpg',  # Wilbert Robinson
+    110193: 'File:Walter Alston Dodgers.jpg',  # Walter Alston
+    150353: "mlb83",  # Dave Roberts
+    115424: 'File:Ned Hanlon Tomlinson 1887.jpg',  # Ned Hanlon
+    427190: 'File:Fredi González on July 29, 2014.jpg',  # Fredi González
+    117389: 'File:MG 0099 Rene Lachemann.jpg',  # Rene Lachemann
+    429341: 'File:Jack McKeon Padres.jpg',  # Jack McKeon
+    133226: 'File:Mike Redmond.jpg',  # Mike Redmond
+    112736: "mlb83",  # Craig Counsell
+    427512: 'File:Tom Trebelhorn cropped.jpg',  # Tom Trebelhorn
+    121373: 'File:Ron Roenicke on April 1, 2013.jpg',  # Ron Roenicke
+    110521: 'File:George Bamberger Orioles.jpg',  # George Bamberger
+    116946: 'File:Tom Kelly 1987.jpg',  # Tom Kelly
+    114599: 'File:Ron Gardenhire 2013.jpg',  # Ron Gardenhire
+    115150: 'File:Clark Griffith LCCN2016840561 (cropped).jpg',  # Clark Griffith
+    408306: "mlb83",  # Rocco Baldelli
+    118929: 'File:Sam Mele.jpg',  # Sam Mele
+    492632: 'File:Terry Collins on August 18, 2015 (cropped).jpg',  # Terry Collins
+    123616: 'File:Bobby Valentine on January 28, 2017.jpg',  # Bobby Valentine
+    524329: 'File:Joe McCarthy.png',  # Joe McCarthy
+    116275: 'File:Miller Huggins by Bain.jpg',  # Miller Huggins
+    116177: 'File:Ralph Houk 1975.jpg',  # Ralph Houk
+    118261: 'File:Charlie Manuel (cropped).jpg',  # Charlie Manuel
+    492687: 'File:Eddie Sawyer 1950.png',  # Eddie Sawyer
+    122192: 'File:(Burt Shotton, St. Louis AL (baseball)) LOC 14626986002 (cropped).jpg',  # Burt Shotton
+    119599: 'File:Danny Murtaugh 1960s.jpg',  # Danny Murtaugh
+    (135, 111136): 'File:Bruce Bochy.jpg',  # Bruce Bochy
+    (137, 111136): 'File:Bruce Bochy (2011).jpg',  # Bruce Bochy
+    433477: 'File:Andy Green (cropped).jpg',  # Andy Green
+    492579: 'File:Boston Red Sox John McNamara.jpg',  # John McNamara
+    114914: 'File:Preston Gomez 1961.jpg',  # Preston Gomez
+    118726: 'File:John-McGraw-1910 (retouched).jpeg',  # John McGraw
+    112783: 'File:Roger Craig (coach) - San Diego Padres - 1978.jpg',  # Roger Craig
+    122011: 'File:Scott Servais.jpg',  # Scott Servais
+    116575: 'File:1974 Boston Red Sox Yearbook Cards Darrell Johnson (cropped).jpg',  # Darrell Johnson
+    117624: 'File:1971 Ticketron Jim Lefebvre.jpg',  # Jim Lefebvre
+    122551: 'File:Billy Southworth Cardinals.jpg',  # Billy Southworth
+    118414: 'File:MikeMathenyphotoday2013.jpg',  # Mike Matheny
+    121181: 'File:Branch Rickey Cardinals.jpg',  # Branch Rickey
+    408211: "mlb83",  # Kevin Cash
+    121495: 'File:Larry Rothschild,Shane Greene (15042831218) (cropped).jpg',  # Larry Rothschild
+    123965: 'File:Ron Washington on August 14, 2015 (cropped).jpg',  # Ron Washington
+    119881: 'File:1982 Nashville Johnny Oates.jpg',  # Johnny Oates
+    110529: 'File:Jeff Banister 2015.jpg',  # Jeff Banister
+    114650: 'File:Cito.jpg',  # Cito Gaston
+    114744: 'File:John Gibbons 2014 (cropped).jpg',  # John Gibbons
+    119271: 'File:Charlie Montoyo during warmups, July 19, 2023 (cropped).jpg',  # Charlie Montoyo
+    124318: 'File:Jimy Williams crop.jpg',  # Jimy Williams
+    118363: 'File:Dave Martinez (cropped).jpg',  # Dave Martinez
 }
 
 # Scrapbook photos per franchise: (Commons file, year or None, title, caption or None).

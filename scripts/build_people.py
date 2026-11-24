@@ -11,7 +11,7 @@ Usage: python3 scripts/build_people.py      (run after build_champions.py)
 import concurrent.futures as cf, json, os, sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from build_photos import CACHE, summary, commons_image, first_sentences  # noqa: E402
+from build_photos import CACHE, summary, commons_image, first_sentences, commons_files  # noqa: E402
 import hashlib, time, urllib.request  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
@@ -239,11 +239,21 @@ def managers(tid, champs):
 
 # Lead photos that don't suit the card (e.g. a childhood portrait): show initials instead.
 NO_PHOTO = {"Gussie Busch"}
+# Commons portraits for people whose Wikipedia article has no usable lead photo.
+PHOTO_FILES = {
+    "Powel Crosley Jr.": "File:Powel Crosley, Jr. c. 1940 (crop).jpg",
+    "Roy Hofheinz": "File:Roy Hofheinz (Judge, mayor).jpg",
+    "Walter O'Malley": "File:Walter Francis O'Malley (1903-1979) in 1926 with background removed.png",
+    "Phillie Phanatic": "File:Phillie Phanatic participates in Star Wars Night.JPG",
+}
 
 
 def person(name, title, role, years):
     s = summary(title)
     im = commons_image(s) if s.get("title") and name not in NO_PHOTO else None
+    if not im and name in PHOTO_FILES:
+        f = commons_files([PHOTO_FILES[name]]).get(PHOTO_FILES[name])
+        im = f and {k: f[k] for k in ("src", "file", "w", "h")}
     return {"name": name, "role": role, "years": years, "blurb": first_sentences(s.get("extract"), 260),
             "url": (s.get("content_urls") or {}).get("desktop", {}).get("page"), "photo": im, "call": CALLS.get(name)}
 

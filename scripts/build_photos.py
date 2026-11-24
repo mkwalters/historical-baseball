@@ -201,7 +201,7 @@ def park_item(title):
 
 
 def main():
-    from scrapbook_picks import SCRAPBOOK, LEGEND_PHOTOS, PARK_TITLES
+    from scrapbook_picks import SCRAPBOOK, LEGEND_PHOTOS, PARK_TITLES, PARK_PHOTOS, FACE_PHOTOS, PHOTO_FOCUS
 
     def pick(tid, pid):
         """A curated portrait: (team, player) first, for players who starred for two clubs, then player."""
@@ -231,13 +231,16 @@ def main():
                 out.setdefault(tid, {"archive": [], "legends": {}})["legends"][str(pid)] = ph
 
     # hand-picked Commons files: scrapbook pages and in-uniform legend portraits
-    files = commons_files([p[0] for picks in SCRAPBOOK.values() for p in picks] + [f for f in LEGEND_PHOTOS.values() if f])
+    files = commons_files([p[0] for picks in SCRAPBOOK.values() for p in picks] + [f for f in LEGEND_PHOTOS.values() if f]
+                          + list(PARK_PHOTOS.values()) + [f for f in FACE_PHOTOS.values() if f.startswith("File:")])
     for (tid, pid, _, _) in names:
         f = pick(tid, pid)
         if f is None or (f != "keep" and f not in files):
             out[tid]["legends"].pop(str(pid), None)  # fall back to MLB's headshot
         elif f != "keep":
             out[tid]["legends"][str(pid)] = {"src": files[f]["src"], "file": files[f]["file"], "w": files[f]["w"], "h": files[f]["h"]}
+            if f in PHOTO_FOCUS:
+                out[tid]["legends"][str(pid)]["pos"] = PHOTO_FOCUS[f]
     for tid, picks in SCRAPBOOK.items():
         arc = out.setdefault(str(tid), {"archive": [], "legends": {}})["archive"]
         have = {a["src"] for a in arc}
@@ -257,8 +260,22 @@ def main():
         for p in v.get("ballparks", []):
             title = PARK_TITLES.get((int(tid), p["name"], p["from"])) or PARK_TITLES.get(p["name"]) or p["name"]
             it = park_item(title)
+            f = files.get(PARK_PHOTOS.get((int(tid), p["name"], p["from"])))
+            if it and f:  # hand-picked photo for a park whose article has none we can use
+                it.update(src=f["src"], file=f["file"])
             if it:
                 parks[f"{p['name']}|{p['from']}"] = it
+    # faces: managers and Hall of Famers whose MLB headshot is the blank silhouette
+    people = json.load(open(os.path.join(ROOT, "data", "people.json")))
+    for tid in out:
+        ids = [m["id"] for m in people.get(tid, {}).get("managers", [])] + [h["id"] for h in history.get(tid, {}).get("hof", [])]
+        faces = out[tid].setdefault("faces", {})
+        for pid in ids:
+            f = FACE_PHOTOS.get((int(tid), pid), FACE_PHOTOS.get(pid))
+            if f == "mlb83":
+                faces[str(pid)] = {"src": f"https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/{pid}/headshot/83/current"}
+            elif f in files:
+                faces[str(pid)] = {"src": files[f]["src"], "file": files[f]["file"]} | ({"pos": PHOTO_FOCUS[f]} if f in PHOTO_FOCUS else {})
     with open(os.path.join(ROOT, "data", "photos.json"), "w") as fh:
         json.dump(out, fh, indent=1)
     for tid, v in out.items():
