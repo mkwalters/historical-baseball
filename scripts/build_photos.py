@@ -20,6 +20,12 @@ CACHE = os.environ.get("DTM_CACHE", os.path.join(ROOT, ".cache"))
 os.makedirs(CACHE, exist_ok=True)
 UA = {"User-Agent": "DugoutTimeMachine/0.1 (personal non-commercial baseball history prototype)"}
 
+# Article titles shown under a friendlier name: {article: (title, caption)}.
+RETITLE = {
+    "Merkle's Boner": ("Fred Merkle", "Rookie Fred Merkle of the New York Giants made a notorious base-running mistake "
+                                      "in a game against the Chicago Cubs on September 23, 1908."),
+}
+
 # (article title, year or None). Titles that don't resolve or lack a free image are skipped.
 MOMENTS = {
     109: [("Chase Field", 1998)],
@@ -124,7 +130,8 @@ def archive_item(title, year):
     im = commons_image(s)
     if not im:
         return None
-    return {"title": s.get("title", title), "year": year, "caption": first_sentences(s.get("extract")),
+    name, caption = RETITLE.get(title, (s.get("title", title), first_sentences(s.get("extract"))))
+    return {"title": name, "year": year, "caption": caption,
             "url": (s.get("content_urls") or {}).get("desktop", {}).get("page"), **im}
 
 
