@@ -22,7 +22,18 @@ Each club's almanac is read **one chapter at a time**: a numbered progress strip
 | **Home Fields** | Every ballpark the club called home, as postcards, with its years, the club's record there and the titles won there. |
 | **The Scrapbook** | 360-odd hand-picked public-domain and freely licensed photos across the 30 clubs, filterable by decade, with a lightbox you can page through. |
 | **Modern Stars** | The club's best players of the last 20 seasons, ranked by real WAR earned with the club. A player needs at least 4 seasons there to qualify, unless he played for the club in the latest season. Ten modern cards, then a season-by-season WAR heatmap of the top 15, with the best single season, the longest stay and the best player on the latest club. |
-| **The League** | A title-drought scoreboard, a wall of every champion's pennant since 1903 (pick one to see the series game by game), and the Honor Roll: a sortable table of titles, pennants, Hall of Famers, retired numbers and major awards for all thirty clubs. |
+
+**The League** is a second book, read the same way (progress strip, Back and Next, arrow keys, `#view=league&page=climb`). It compares the thirty clubs:
+
+| Bulletin | What it shows |
+|---|---|
+| **All-Time Standings** | Every club ranked by winning percentage, as bars either side of .500, with won–lost and games over or under. Switch between all time, since 1969, since 2000 and the last ten seasons. |
+| **The Long Climb** | A line for every club: games over .500, added up season after season. The two leaders and the two cellar-dwellers are lit to start; hover any line to read it, click it (or a logo below) to keep it lit. |
+| **Decade by Decade** | A heatmap of each club's winning percentage in every decade, blue for winners and red for losers, with stars for World Series won. |
+| **Banner Years & Bad Ones** | The fifteen best and fifteen worst seasons since 1901 (100 games or more). |
+| **The Long Wait** | A title-drought scoreboard. |
+| **Champions** | A wall of every champion's pennant since 1903; pick one to see the series game by game. |
+| **Honor Roll** | A sortable table of titles, pennants, Hall of Famers, retired numbers and major awards. |
 
 ## Run
 
@@ -36,7 +47,7 @@ Deep links work: `#team=147`, `#team=147&page=october`, `#view=league`.
 
 ## Code
 
-Three files, no dependencies: `index.html` (the static skeleton of every chapter), `styles.css` and `app.js` (an ES module). `app.js` runs top to bottom in this order: helpers, data access, state, boot, front page, search, routing, chapters, one `render…` function per chapter, the lightbox, the league page. Anything in the page marked `data-club="<team id>"` (optionally with `data-page`) opens that club when clicked.
+Three files, no dependencies: `index.html` (the static skeleton of every chapter), `styles.css` and `app.js` (an ES module). `app.js` runs top to bottom in this order: helpers, data access, state, boot, front page, search, books (`makeBook` runs the chapter-at-a-time reading for both the club and the League), routing, one `render…` function per club chapter, the lightbox, the League's bulletins. Anything in the page marked `data-club="<team id>"` (optionally with `data-page`) opens that club when clicked.
 
 `scripts/bundle_artifact.mjs` builds `dist/`, an offline copy with the API responses and images embedded, for hosts that block outside requests. It sets `window.ALMANAC_BUNDLE`, which is how `app.js` knows to read `data/bundle/` instead of calling the API. `dist/` is not rebuilt automatically: re-run the script after changing the site.
 
@@ -53,6 +64,7 @@ Live per-season data comes from `statsapi.mlb.com`. The history layers are baked
 | `data/people.json` | `scripts/build_people.py` | every manager by season from the Stats API, plus hand-picked broadcasters, owners and executives |
 | `data/modern.json` | `scripts/build_modern.py` | each club's top 15 players of the last 20 completed seasons by WAR (the Stats API's `sabermetrics` stats), counting players with 4+ seasons there or on the latest club, with WAR by season and a stat line with the club |
 | `data/retired.json` | `scripts/build_retired.py` | retired numbers, parsed from Wikipedia's list |
+| `data/league.json` | `scripts/build_league.py` | every club's wins and losses in every season, for the League's charts |
 
 **Legend value** is a WAR-style estimate, since the Stats API has no WAR. It is built from each player's seasons with the franchise and normalised to each season's league:
 - **Hitters:** batting runs from fixed wOBA weights, plus a position adjustment and replacement credit.

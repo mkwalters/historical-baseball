@@ -65,9 +65,9 @@
             <p id="club-sub" class="club-sub"></p>
           </div>
         </header>
-        <nav class="progress" id="progress" aria-label="Chapters"></nav>
+        <nav class="progress" aria-label="Chapters"></nav>
 
-        <div id="pages">
+        <div class="pages">
           <!-- The Ledger -->
           <section class="page sheet" data-page="ledger" data-label="The Ledger">
             <header class="sheet-head">
@@ -224,41 +224,102 @@
 
         </div>
 
-        <div class="pager" id="pager">
-          <button class="pager-btn pager-prev" id="prev"><span aria-hidden="true">←</span> <span class="pager-label"></span></button>
-          <span class="pager-pos" id="pager-pos"></span>
-          <button class="pager-btn pager-next" id="next"><span class="pager-label"></span> <span aria-hidden="true">→</span></button>
+        <div class="pager">
+          <button class="pager-btn pager-prev"><span aria-hidden="true">←</span> <span class="pager-label"></span></button>
+          <span class="pager-pos"></span>
+          <button class="pager-btn pager-next"><span class="pager-label"></span> <span aria-hidden="true">→</span></button>
         </div>
       </div>
     </section>
 
     <!-- ================= LEAGUE ================= -->
     <section id="view-league" class="view" hidden>
-      <section class="sheet">
-        <header class="sheet-head">
-          <span class="kicker">League Bulletin</span>
-          <h3>The Long Wait</h3>
-          <p class="sheet-lede">Years since each club last won the World Series. Click a club to open its almanac.</p>
-        </header>
-        <div id="droughts" class="board"></div>
-      </section>
-      <section class="sheet">
-        <header class="sheet-head">
-          <span class="kicker">League Bulletin</span>
-          <h3>Wall of Champions</h3>
-          <p class="sheet-lede">Every World Series winner since 1903, shown with today's logos. Pick a pennant to see how the series went.</p>
-        </header>
-        <div id="wall" class="wall"></div>
-      </section>
-      <section class="sheet">
-        <header class="sheet-head">
-          <span class="kicker">League Bulletin</span>
-          <h3>The Honor Roll</h3>
-          <p class="sheet-lede">Thirty clubs, side by side. Pick a column heading to sort by it, or a club to open its almanac.</p>
-        </header>
-        <div class="honors-wrap"><table id="honors" class="honors"></table></div>
-        <p class="fineprint">Pennants count World Series appearances since 1903. Hall of Famers are those enshrined with the club.</p>
-      </section>
+      <header class="club-banner league-banner">
+        <div>
+          <h2>The League</h2>
+          <p class="club-sub">Thirty clubs, a century and a half, and the arithmetic of who won.</p>
+        </div>
+      </header>
+      <nav class="progress" aria-label="League chapters"></nav>
+      <div class="pages">
+        <section class="page sheet" data-page="standings" data-label="All-Time Standings">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>The All-Time Standings</h3>
+            <p class="sheet-lede">Every game each club has ever played, boiled down to one number. Bars show how far above or below .500 a club stands. Pick a club to open its almanac.</p>
+          </header>
+          <div id="st-range" class="chips" role="group" aria-label="Seasons to count"></div>
+          <div id="standings" class="standings"></div>
+          <p class="fineprint" id="standings-note"></p>
+        </section>
+        <section class="page sheet" data-page="climb" data-label="The Long Climb">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>The Long Climb</h3>
+            <p class="sheet-lede">Games over .500, added up season after season. A rising line is a club banking wins; a falling one is spending them. Point at a line to read it, and pick clubs below to keep them lit.</p>
+          </header>
+          <div class="climb-wrap">
+            <svg id="climb" role="img" aria-label="Cumulative games over .500 for every club, by season"></svg>
+            <div id="climb-tip" class="tooltip" hidden></div>
+          </div>
+          <div id="climb-clubs" class="climb-clubs" role="group" aria-label="Clubs to highlight"></div>
+          <p class="fineprint"><button class="linkish" id="climb-reset">Back to the leaders and the cellar</button> · The numbers behind every line are in the All-Time Standings.</p>
+        </section>
+        <section class="page sheet" data-page="decades" data-label="Decade by Decade">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>Decade by Decade</h3>
+            <p class="sheet-lede">Each club’s winning percentage in every decade it has played. Blue decades were winners, red ones losers, and the stars count the World Series won.</p>
+          </header>
+          <div class="dec-wrap">
+            <div id="decades-grid" class="dec" role="table" aria-label="Winning percentage by club and decade"></div>
+            <div id="dec-tip" class="tooltip" hidden></div>
+          </div>
+          <div id="dec-key" class="dec-key"></div>
+        </section>
+        <section class="page sheet" data-page="banner" data-label="Banner Years">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>Banner Years &amp; Bad Ones</h3>
+            <p class="sheet-lede">The best and worst single seasons since 1901, by winning percentage, among seasons of at least 100 games.</p>
+          </header>
+          <div class="banner-cols">
+            <div><h4 class="subhead"><span>The Fifteen Best</span></h4><div id="best-seasons" class="standings seasons-list"></div></div>
+            <div><h4 class="subhead"><span>The Fifteen Worst</span></h4><div id="worst-seasons" class="standings seasons-list"></div></div>
+          </div>
+          <p class="fineprint">★ marks a World Series champion. Clubs are listed under the names they play under today.</p>
+        </section>
+        <section class="page sheet" data-page="wait" data-label="The Long Wait">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>The Long Wait</h3>
+            <p class="sheet-lede">Years since each club last won the World Series. Pick a club to open its almanac.</p>
+          </header>
+          <div id="droughts" class="board"></div>
+        </section>
+        <section class="page sheet" data-page="wall" data-label="Champions">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>Wall of Champions</h3>
+            <p class="sheet-lede">Every World Series winner since 1903, shown with today’s logos. Pick a pennant to see how the series went.</p>
+          </header>
+          <div id="wall" class="wall"></div>
+        </section>
+        <section class="page sheet" data-page="honors" data-label="Honor Roll">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>The Honor Roll</h3>
+            <p class="sheet-lede">Thirty clubs, side by side. Pick a column heading to sort by it, or a club to open its almanac.</p>
+          </header>
+          <div class="honors-wrap"><table id="honors" class="honors"></table></div>
+          <p class="fineprint">Pennants count World Series appearances since 1903. Hall of Famers are those enshrined with the club.</p>
+        </section>
+      </div>
+      <div class="pager">
+        <button class="pager-btn pager-prev"><span aria-hidden="true">←</span> <span class="pager-label"></span></button>
+        <span class="pager-pos"></span>
+        <button class="pager-btn pager-next"><span class="pager-label"></span> <span aria-hidden="true">→</span></button>
+      </div>
     </section>
   </main>
 

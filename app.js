@@ -91,9 +91,9 @@ async function get(path) {
 
 // ---------- state ----------
 const state = {
-  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {}, modern: {},
+  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {}, modern: {}, records: {},
   view: "franchise", team: null, failed: false, seasons: [], eras: [], parks: [], archive: [],
-  page: "ledger", pages: [], decade: null, pinned: null, honorSort: { key: "titles", dir: -1 },
+  decade: null, pinned: null, honorSort: { key: "titles", dir: -1 }, since: 0, climbPins: null,
 };
 const teamById = (id) => state.teams.find((t) => t.id === id);
 // "New York" for the Yankees; the Athletics' full name has no city in it, so fall back to where they play.
@@ -104,12 +104,12 @@ async function init() {
     const b = await json("data/bundle/teams.json");
     Object.assign(BUNDLE, { teams: { teams: b.teams || [] }, logos: b.logos || {} });
   }
-  const [teamsRes, champions, legends, photos, history, people, retired, modern] = await Promise.all([
+  const [teamsRes, champions, legends, photos, history, people, retired, modern, records] = await Promise.all([
     get(`/teams?sportId=1&season=${new Date().getFullYear()}`),
     json("data/champions.json"), json("data/legends.json"), json("data/photos.json"), json("data/history.json"),
-    json("data/people.json"), json("data/retired.json"), json("data/modern.json"),
+    json("data/people.json"), json("data/retired.json"), json("data/modern.json"), json("data/league.json"),
   ]);
-  Object.assign(state, { champions, legends, photos, history, people, retired, modern });
+  Object.assign(state, { champions, legends, photos, history, people, retired, modern, records });
   const divOrder = (t) => { const i = DIVISIONS.findIndex(([id]) => id === t.division?.id); return i < 0 ? 99 : i; };
   state.teams = teamsRes.teams.filter((t) => t.sport?.id === 1)
     .sort((a, b) => divOrder(a) - divOrder(b) || a.teamName.localeCompare(b.teamName));
@@ -117,13 +117,13 @@ async function init() {
   renderPicker();
   renderFrontSnaps();
   renderLeague();
+  league.setup();
+  league.go(null, { scroll: false });
   setupSearch();
   $$(".tab").forEach((b) => (b.onclick = () => showView(b.dataset.view)));
   $("#home-link").onclick = (e) => { e.preventDefault(); goHome(); };
   $("#surprise").onclick = () => openClub(shuffle(state.teams.filter((t) => t !== state.team))[0].id);
   $("#reshuffle").onclick = renderFrontSnaps;
-  $("#prev").onclick = () => step(-1);
-  $("#next").onclick = () => (state.page === state.pages.at(-1) ? goPage(state.pages[0]) : step(1));
   document.addEventListener("keydown", onKey);
   // Anything marked data-club opens that club's almanac (optionally at data-page).
   document.addEventListener("click", (e) => {
@@ -246,23 +246,95 @@ function setupSearch() {
 }
 
 // =====================================================================
+// BOOKS: a set of chapters read one at a time, with a progress strip above and a pager below.
+// The club almanac is one book and the League is another.
+// =====================================================================
+function makeBook(root, { kicker, noun, onShow = () => {} }) {
+  const book = {
+    page: null, pages: [],
+    el: (k) => $(`.page[data-page="${k}"]`, root),
+    label: (k) => book.el(k).dataset.label,
+    // (Re)count the chapters: any marked data-skip are left out.
+    setup() {
+      book.pages = $$(".page", root).filter((el) => !el.dataset.skip).map((el) => el.dataset.page);
+      book.pages.forEach((k, n) => { const el = $(".kicker", book.el(k)); if (el) el.textContent = kicker(n); });
+      $(".progress", root).innerHTML = `<div class="progress-track"><div class="progress-fill"></div></div>` +
+        book.pages.map((k, i) => `<button class="pstop" data-k="${k}" title="${esc(book.label(k))}"><i>${i + 1}</i><span>${esc(book.label(k))}</span></button>`).join("");
+      $$(".pstop", root).forEach((b) => (b.onclick = () => book.go(b.dataset.k)));
+    },
+    go(k, { scroll = true } = {}) {
+      if (!book.pages.includes(k)) k = book.pages[0];
+      const from = book.pages.indexOf(book.page), to = book.pages.indexOf(k);
+      book.page = k;
+      for (const el of $$(".page", root)) {
+        const on = el.dataset.page === k;
+        el.hidden = !on;
+        if (on) {
+          el.classList.remove("turn-fwd", "turn-back");
+          void el.offsetWidth; // restart the animation
+          el.classList.add(to >= from ? "turn-fwd" : "turn-back");
+        }
+      }
+      $$(".pstop", root).forEach((b, i) => {
+        b.classList.toggle("current", i === to);
+        b.classList.toggle("done", i < to);
+        if (i === to) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+      });
+      $(".progress-fill", root).style.width = `${(to / Math.max(1, book.pages.length - 1)) * 100}%`;
+      const prev = book.pages[to - 1], next = book.pages[to + 1];
+      $(".pager-prev", root).hidden = !prev;
+      if (prev) $(".pager-prev .pager-label", root).textContent = book.label(prev);
+      $(".pager-next .pager-label", root).textContent = next ? "Next: " + book.label(next) : "Back to the start";
+      $(".pager-pos", root).textContent = `${noun} ${to + 1} of ${book.pages.length}`;
+      onShow(k);
+      syncURL();
+      if (scroll) { // a new chapter starts at its top, just under the progress strip
+        const top = $(".pages", root).getBoundingClientRect().top + window.scrollY - $(".progress", root).offsetHeight - 18;
+        if (window.scrollY > top) window.scrollTo({ top, behavior: "smooth" });
+      }
+    },
+    step(d) {
+      const i = book.pages.indexOf(book.page) + d;
+      if (i >= 0 && i < book.pages.length) book.go(book.pages[i]);
+    },
+    // Redraw whatever on the current chapter measures itself (charts can't while hidden).
+    refresh() { if (book.page) onShow(book.page); },
+  };
+  $(".pager-prev", root).onclick = () => book.step(-1);
+  $(".pager-next", root).onclick = () => (book.page === book.pages.at(-1) ? book.go(book.pages[0]) : book.step(1));
+  return book;
+}
+const club = makeBook($("#franchise"), { kicker: (n) => `Chapter the ${ORD[n]}`, noun: "Chapter", onShow: (k) => { if (k === "ledger") renderTimeline(); } });
+const league = makeBook($("#view-league"), { kicker: (n) => `League Bulletin No. ${n + 1}`, noun: "Bulletin", onShow: (k) => { if (k === "climb") renderClimb(); } });
+const openBook = () => (state.view === "league" ? league : state.team && !state.failed ? club : null);
+const markSkip = (k, skip) => { if (skip) club.el(k).dataset.skip = "1"; else delete club.el(k).dataset.skip; };
+
+function onKey(e) {
+  const book = openBook();
+  if (!book || $("dialog[open]") || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (/input|textarea|select/i.test(document.activeElement?.tagName || "")) return;
+  if (e.key === "ArrowRight") { book.step(1); e.preventDefault(); }
+  if (e.key === "ArrowLeft") { book.step(-1); e.preventDefault(); }
+}
+
+// =====================================================================
 // ROUTING: the address bar holds the club, the chapter and the view
-//   #team=147 · #team=147&page=october · #view=league
+//   #team=147 · #team=147&page=october · #view=league · #view=league&page=climb
 // =====================================================================
 // True while the page is catching up with the address bar (first load, Back/Forward), so that
 // catching up doesn't itself add history entries.
-let quiet = false;
+let quiet = true;
 function hashFor() {
-  const p = new URLSearchParams();
+  const p = new URLSearchParams(), book = openBook();
   if (state.team) p.set("team", state.team.id);
   if (state.view === "league") p.set("view", "league");
-  else if (state.team && state.page !== state.pages[0]) p.set("page", state.page);
+  if (book?.pages.length && book.page !== book.pages[0]) p.set("page", book.page);
   return p.toString();
 }
 function syncURL() {
   const t = state.team;
-  document.title = state.view === "league" ? `The League · ${SITE}`
-    : t && state.pages.length ? `${t.name}: ${pageLabel(state.page)} · ${SITE}` : SITE;
+  document.title = state.view === "league" ? `The League: ${league.label(league.page)} · ${SITE}`
+    : t && club.pages.length ? `${t.name}: ${club.label(club.page)} · ${SITE}` : SITE;
   if (quiet) return;
   const hash = hashFor();
   if (hash === location.hash.slice(1)) return;
@@ -272,11 +344,12 @@ async function applyRoute() {
   quiet = true;
   try {
     const q = new URLSearchParams(location.hash.slice(1));
-    const id = +q.get("team"), page = q.get("page") || "ledger";
-    state.view = q.get("view") === "league" ? "league" : "franchise";
+    const id = +q.get("team"), page = q.get("page"), inLeague = q.get("view") === "league";
+    state.view = inLeague ? "league" : "franchise";
+    if (inLeague) league.go(page, { scroll: false });
     if (teamById(id)) {
-      if (state.team?.id !== id || !state.seasons.length) await selectTeam(id, page);
-      else goPage(page, { scroll: false });
+      if (state.team?.id !== id || !state.seasons.length) await selectTeam(id, inLeague ? "ledger" : page);
+      else if (!inLeague) club.go(page, { scroll: false });
     } else closeClub();
     layout();
     syncURL();
@@ -295,7 +368,7 @@ function layout() {
   $("#rail").hidden = fr && !open;
   $$(".rail-btn").forEach((b) => b.classList.toggle("active", +b.dataset.club === state.team?.id));
   $("#rail .active")?.scrollIntoView({ block: "nearest", inline: "center" });
-  if (fr && open && state.page === "ledger") renderTimeline(); // it can't measure itself while hidden
+  openBook()?.refresh();
 }
 function showView(v) {
   state.view = v;
@@ -303,7 +376,8 @@ function showView(v) {
   syncURL();
 }
 function closeClub() {
-  Object.assign(state, { team: null, failed: false, seasons: [], pages: [] });
+  Object.assign(state, { team: null, failed: false, seasons: [] });
+  club.pages = [];
 }
 // Back to the front page: no club selected.
 function goHome() {
@@ -314,65 +388,8 @@ function goHome() {
 function openClub(id, page = "ledger") {
   for (const d of $$("dialog[open]")) d.close();
   state.view = "franchise";
-  if (state.team?.id === id && state.seasons.length) { layout(); goPage(page); }
+  if (state.team?.id === id && state.seasons.length) { layout(); club.go(page); }
   else selectTeam(id, page).then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-}
-
-// =====================================================================
-// CHAPTERS: one at a time, with a progress strip above and a pager below
-// =====================================================================
-const pageEl = (k) => $(`.page[data-page="${k}"]`);
-const pageLabel = (k) => pageEl(k).dataset.label;
-const markSkip = (k, skip) => { if (skip) pageEl(k).dataset.skip = "1"; else delete pageEl(k).dataset.skip; };
-
-function setupPages() {
-  state.pages = $$(".page").filter((el) => !el.dataset.skip).map((el) => el.dataset.page);
-  state.pages.forEach((k, n) => { const kicker = $(".kicker", pageEl(k)); if (kicker) kicker.textContent = `Chapter the ${ORD[n]}`; });
-  $("#progress").innerHTML = `<div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>` +
-    state.pages.map((k, i) => `<button class="pstop" data-k="${k}" title="${esc(pageLabel(k))}"><i>${i + 1}</i><span>${esc(pageLabel(k))}</span></button>`).join("");
-  $$("#progress .pstop").forEach((b) => (b.onclick = () => goPage(b.dataset.k)));
-}
-
-function goPage(k, { scroll = true } = {}) {
-  if (!state.pages.includes(k)) k = state.pages[0];
-  const from = state.pages.indexOf(state.page), to = state.pages.indexOf(k);
-  state.page = k;
-  for (const el of $$(".page")) {
-    const on = el.dataset.page === k;
-    el.hidden = !on;
-    if (on) {
-      el.classList.remove("turn-fwd", "turn-back");
-      void el.offsetWidth; // restart the animation
-      el.classList.add(to >= from ? "turn-fwd" : "turn-back");
-    }
-  }
-  $$("#progress .pstop").forEach((b, i) => {
-    b.classList.toggle("current", i === to);
-    b.classList.toggle("done", i < to);
-    if (i === to) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
-  });
-  $("#progress-fill").style.width = `${(to / Math.max(1, state.pages.length - 1)) * 100}%`;
-  const prev = state.pages[to - 1], next = state.pages[to + 1];
-  $("#prev").hidden = !prev;
-  if (prev) $("#prev .pager-label").textContent = pageLabel(prev);
-  $("#next .pager-label").textContent = next ? "Next: " + pageLabel(next) : "Back to the start";
-  $("#pager-pos").textContent = `Chapter ${to + 1} of ${state.pages.length}`;
-  if (k === "ledger") renderTimeline();
-  syncURL();
-  if (scroll) {
-    const top = $("#club-banner").getBoundingClientRect().bottom + window.scrollY;
-    if (window.scrollY > top) window.scrollTo({ top, behavior: "smooth" }); // a new chapter starts at its top
-  }
-}
-function step(d) {
-  const i = state.pages.indexOf(state.page) + d;
-  if (i >= 0 && i < state.pages.length) goPage(state.pages[i]);
-}
-function onKey(e) {
-  if (!state.team || state.view !== "franchise" || $("dialog[open]") || e.altKey || e.ctrlKey || e.metaKey) return;
-  if (/input|textarea|select/i.test(document.activeElement?.tagName || "")) return;
-  if (e.key === "ArrowRight") { step(1); e.preventDefault(); }
-  if (e.key === "ArrowLeft") { step(-1); e.preventDefault(); }
 }
 
 // =====================================================================
@@ -380,7 +397,8 @@ function onKey(e) {
 // =====================================================================
 async function selectTeam(id, page = "ledger") {
   const team = teamById(id);
-  Object.assign(state, { team, failed: false, seasons: [], pages: [], decade: null, pinned: null });
+  Object.assign(state, { team, failed: false, seasons: [], decade: null, pinned: null });
+  club.pages = [];
   hofAll = false;
   document.documentElement.style.setProperty("--team", color(id));
   $("#club-logo").src = logo(id);
@@ -433,9 +451,9 @@ async function selectTeam(id, page = "ledger") {
   renderParks();
   renderArchive();
   renderModern();
-  setupPages();
+  club.setup();
   $("#franchise").classList.remove("loading");
-  goPage(page, { scroll: false });
+  club.go(page, { scroll: false });
   renderSeasonCard();
 }
 
@@ -503,7 +521,7 @@ function parkName(n) {
 // ---------- the ledger (SVG timeline) ----------
 function renderTimeline() {
   const svg = $("#timeline"), S = state.seasons;
-  if (!S.length || pageEl("ledger").hidden) return;
+  if (!S.length || club.el("ledger").hidden || $("#franchise").hidden || $("#view-franchise").hidden) return;
   const W = Math.max(300, Math.round(svg.clientWidth || 1000)), H = Math.round(svg.clientHeight || 330);
   const top = 20, bandH = 22, axisH = 18, bandsTop = H - bandH * 2 - 2;
   const plotH = bandsTop - top - axisH, mid = top + plotH / 2;
@@ -629,7 +647,7 @@ function renderSeasonCard() {
 let resizeTimer;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => { if (state.seasons.length && !$("#view-franchise").hidden) renderTimeline(); }, 150);
+  resizeTimer = setTimeout(() => openBook()?.refresh(), 150);
 });
 
 // Almanac facts under the ledger: golden decade, lean years, longest run of winning seasons.
@@ -1168,6 +1186,201 @@ function renderLeague() {
   $("#wall").onclick = (e) => { const b = e.target.closest("[data-year]"); if (b) openSeries(+b.dataset.year); };
   $("#series-close").onclick = () => $("#series").close();
   renderHonors();
+
+  // The record-book chapters need data/league.json; without it they are left out.
+  const clubs = leagueClubs();
+  for (const k of ["standings", "climb", "decades", "banner"]) { if (clubs.length) delete league.el(k).dataset.skip; else league.el(k).dataset.skip = "1"; }
+  if (!clubs.length) return;
+  renderStandings();
+  setupClimb();
+  renderDecades();
+  renderBanner();
+}
+
+// ---------- the record books: every club's every season ----------
+// [{ t, seasons: [{y, w, l, cum}], W, L, p }] where cum is games over .500 through that season
+let leagueMemo = null;
+function leagueClubs() {
+  return (leagueMemo ||= state.teams.map((t) => {
+    let cum = 0;
+    const seasons = (state.records[t.id] || []).map(([y, w, l]) => ({ y, w, l, cum: (cum += w - l) }));
+    const W = seasons.reduce((a, s) => a + s.w, 0), L = seasons.reduce((a, s) => a + s.l, 0);
+    return { t, seasons, W, L, p: pct(W, L) };
+  }).filter((c) => c.seasons.length));
+}
+const signed = (n) => (n > 0 ? "+" : n < 0 ? "−" : "") + num(Math.abs(n));
+const latestSeason = () => Math.max(...leagueClubs().map((c) => c.seasons.at(-1).y));
+const isChamp = (id, y) => state.champions[y]?.winner.id === id;
+
+// ---------- all-time standings ----------
+function renderStandings() {
+  const last = latestSeason(), first = Math.min(...leagueClubs().map((c) => c.seasons[0].y));
+  const ranges = [[0, "All time"], [1969, "Since 1969"], [2000, "Since 2000"], [last - 9, "Last ten seasons"]];
+  $("#st-range").innerHTML = ranges.map(([y, label]) => `<button data-y="${y}" class="${state.since === y ? "on" : ""}" aria-pressed="${state.since === y}">${label}</button>`).join("");
+  $$("#st-range button").forEach((b) => (b.onclick = () => { state.since = +b.dataset.y; renderStandings(); $(`#st-range button[data-y="${state.since}"]`).focus(); }));
+  const rows = leagueClubs().map((c) => {
+    const S = c.seasons.filter((s) => s.y >= state.since);
+    const W = S.reduce((a, s) => a + s.w, 0), L = S.reduce((a, s) => a + s.l, 0);
+    return { t: c.t, from: S[0]?.y, n: S.length, W, L, p: pct(W, L) };
+  }).filter((r) => r.n).sort((a, b) => b.p - a.p);
+  const maxDev = Math.max(0.03, ...rows.map((r) => Math.abs(r.p - 0.5)));
+  $("#standings").innerHTML = `<div class="st-head"><span></span><span></span><span>Club</span><span class="st-axis"><i>${fmtPct(0.5 - maxDev)}</i><i>.500</i><i>${fmtPct(0.5 + maxDev)}</i></span><span>Pct.</span><span>Won–Lost</span><span>± .500</span></div>` +
+    rows.map((r, i) => `
+    <button class="strow" data-club="${r.t.id}" title="${esc(r.t.name)}: ${num(r.W)}–${num(r.L)}, ${fmtPct(r.p)}">
+      <span class="st-rank">${i + 1}</span>
+      <img src="${logo(r.t.id)}" alt="" loading="lazy">
+      <span class="st-name">${esc(r.t.teamName)} <small>${plural(r.n, "season")}</small></span>
+      <span class="st-bar"><i class="${r.p >= 0.5 ? "up" : "down"}" style="width:${(Math.abs(r.p - 0.5) / maxDev) * 50}%"></i></span>
+      <span class="st-pct">${fmtPct(r.p)}</span>
+      <span class="st-rec">${num(r.W)}–${num(r.L)}</span>
+      <span class="st-diff">${signed(r.W - r.L)}</span>
+    </button>`).join("");
+  const winners = rows.filter((r) => r.p > 0.5).length;
+  $("#standings-note").textContent = `Counting ${Math.max(first, state.since)}–${last}. ${Word(winners)} of ${rows.length} clubs are over .500 for the stretch.`;
+}
+
+// ---------- the long climb: cumulative games over .500 ----------
+function setupClimb() {
+  const C = leagueClubs();
+  const byEnd = [...C].sort((a, b) => b.seasons.at(-1).cum - a.seasons.at(-1).cum);
+  const leaders = () => new Set([...byEnd.slice(0, 2), ...byEnd.slice(-2)].map((c) => c.t.id));
+  state.climbPins ||= leaders();
+  $("#climb-clubs").innerHTML = C.map((c) => `<button class="rail-btn" data-pick="${c.t.id}" title="${esc(c.t.name)}" aria-label="${esc(c.t.name)}" aria-pressed="false" style="--tc:${color(c.t.id)}"><img alt="" src="${logo(c.t.id)}" loading="lazy"></button>`).join("");
+  $("#climb-clubs").onclick = (e) => { const b = e.target.closest("[data-pick]"); if (b) toggleClimbPin(+b.dataset.pick); };
+  $("#climb-reset").onclick = () => { state.climbPins = leaders(); renderClimb(); };
+}
+function toggleClimbPin(id) {
+  if (!state.climbPins.delete(id)) state.climbPins.add(id);
+  renderClimb();
+}
+function renderClimb() {
+  const svg = $("#climb"), C = leagueClubs();
+  if (!C.length || !state.climbPins || league.el("climb").hidden || $("#view-league").hidden) return;
+  const W = Math.max(300, Math.round(svg.clientWidth)), H = Math.round(svg.clientHeight || 440), small = W < 560;
+  const m = { l: 46, r: small ? 112 : 118, t: 12, b: 24 };
+  const y0 = Math.min(...C.map((c) => c.seasons[0].y)), y1 = latestSeason();
+  const all = C.flatMap((c) => c.seasons.map((s) => s.cum));
+  const tick = Math.max(...all) - Math.min(...all) > 2400 ? 500 : 250;
+  const lo = Math.floor(Math.min(...all, 0) / tick) * tick, hi = Math.ceil(Math.max(...all, 0) / tick) * tick;
+  const x = (yr) => m.l + ((yr - y0) / (y1 - y0)) * (W - m.l - m.r);
+  const y = (v) => m.t + ((hi - v) / (hi - lo)) * (H - m.t - m.b);
+  const pins = state.climbPins;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+
+  let out = "";
+  for (let v = lo; v <= hi; v += tick) {
+    out += `<line class="${v === 0 ? "zero" : "grid"}" x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}"/><text class="tick" x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end">${v === 0 ? ".500" : signed(v)}</text>`;
+  }
+  for (let yr = Math.ceil(y0 / 20) * 20; yr <= y1; yr += small ? 40 : 20) out += `<text class="tick" x="${x(yr)}" y="${H - 6}" text-anchor="middle">${yr}</text>`;
+  const path = (c) => c.seasons.map((s, i) => `${i ? "L" : "M"}${x(s.y).toFixed(1)} ${y(s.cum).toFixed(1)}`).join("");
+  // everyone in the background, the pinned clubs on top in their own colors
+  for (const c of C) if (!pins.has(c.t.id)) out += `<path class="cl" data-id="${c.t.id}" d="${path(c)}"/>`;
+  const lit = C.filter((c) => pins.has(c.t.id)).sort((a, b) => b.seasons.at(-1).cum - a.seasons.at(-1).cum);
+  for (const c of lit) out += `<path class="cl on" data-id="${c.t.id}" d="${path(c)}" style="stroke:${color(c.t.id)}"/>`;
+  // end labels, nudged apart so they never sit on top of each other
+  let floor = -Infinity;
+  for (const c of lit) {
+    const end = c.seasons.at(-1), ly = Math.max(y(end.cum) + 4, floor + 13);
+    floor = ly;
+    out += `<circle cx="${x(end.y)}" cy="${y(end.cum)}" r="3.5" fill="${color(c.t.id)}" stroke="var(--card)" stroke-width="1.5"/>` +
+      `<text class="end" x="${x(end.y) + 8}" y="${ly}"><tspan class="end-name">${esc(c.t.teamName)}</tspan> ${signed(end.cum)}</text>`;
+  }
+  out += `<circle id="climb-dot" r="4.5" hidden/>`;
+  svg.innerHTML = out;
+  $$("#climb-clubs [data-pick]").forEach((b) => b.setAttribute("aria-pressed", String(pins.has(+b.dataset.pick))));
+
+  // hover: the line nearest the pointer, in that season
+  const tip = $("#climb-tip"), wrap = $(".climb-wrap"), dot = $("#climb-dot");
+  let hot = null;
+  const clear = () => { tip.hidden = true; dot.setAttribute("hidden", ""); $(".cl.hot", svg)?.classList.remove("hot"); hot = null; };
+  svg.onpointermove = (e) => {
+    const r = svg.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+    const yr = Math.round(y0 + ((px - m.l) / (W - m.l - m.r)) * (y1 - y0));
+    let best = null;
+    for (const c of C) {
+      const s = c.seasons.find((q) => q.y === yr);
+      if (!s) continue;
+      const d = Math.abs(y(s.cum) - py);
+      if (d < 28 && (!best || d < best.d)) best = { c, s, d };
+    }
+    if (!best) return clear();
+    if (hot !== best.c.t.id) {
+      $(".cl.hot", svg)?.classList.remove("hot");
+      $(`.cl[data-id="${best.c.t.id}"]`, svg).classList.add("hot");
+      hot = best.c.t.id;
+    }
+    dot.removeAttribute("hidden");
+    dot.setAttribute("cx", x(best.s.y)); dot.setAttribute("cy", y(best.s.cum));
+    tip.innerHTML = `<b>${esc(best.c.t.teamName)}</b> through ${best.s.y}<br>${best.s.cum === 0 ? "Dead even at .500" : `${num(Math.abs(best.s.cum))} games ${best.s.cum > 0 ? "over" : "under"} .500`}` +
+      `<br><span class="muted">${best.s.y}: ${best.s.w}–${best.s.l}${isChamp(best.c.t.id, best.s.y) ? " · ★ World Champions" : ""}</span>`;
+    tip.style.left = Math.min(r.width - 110, Math.max(110, x(best.s.y))) + "px";
+    tip.style.top = y(best.s.cum) - 6 + "px";
+    tip.hidden = false;
+  };
+  svg.onpointerleave = clear;
+  svg.onclick = () => { if (hot != null) toggleClimbPin(hot); };
+}
+
+// ---------- decade by decade: a heatmap of winning percentage ----------
+const DEC_SPAN = 0.12; // the color scale runs from .380 to .620
+function decColor(p) {
+  const dev = p - 0.5, t = Math.min(1, Math.abs(dev) / DEC_SPAN);
+  if (t < 0.06) return { bg: "var(--dec-mid)", dark: false };
+  const mix = Math.round(14 + t * 86);
+  return { bg: `color-mix(in srgb, var(${dev > 0 ? "--dec-up" : "--dec-down"}) ${mix}%, var(--dec-mid))`, dark: mix > 52 };
+}
+function renderDecades() {
+  const C = [...leagueClubs()].sort((a, b) => b.p - a.p);
+  const first = Math.floor(Math.min(...C.map((c) => c.seasons[0].y)) / 10) * 10, decades = [];
+  for (let d = first; d <= latestSeason(); d += 10) decades.push(d);
+  const head = (d, i) => (i === 0 || d % 100 === 0 ? d : "’" + String(d).slice(2));
+  const cell = (c, d) => {
+    const S = c.seasons.filter((s) => s.y >= d && s.y < d + 10);
+    if (!S.length) return `<span class="dc dc-out" role="cell"></span>`;
+    const W = S.reduce((a, s) => a + s.w, 0), L = S.reduce((a, s) => a + s.l, 0), p = pct(W, L);
+    const titles = S.filter((s) => isChamp(c.t.id, s.y)).length, k = decColor(p);
+    const what = `${c.t.teamName}, ${yrs(S[0].y, S.at(-1).y)}: ${num(W)}–${num(L)} (${fmtPct(p)})${titles ? `, ${plural(titles, "title")}` : ""}`;
+    return `<span class="dc${k.dark ? " dark" : ""}" role="cell" style="background:${k.bg}" data-tip="${esc(what)}" aria-label="${esc(what)}">${titles ? `★${titles > 1 ? `<small>${titles}</small>` : ""}` : ""}</span>`;
+  };
+  const grid = $("#decades-grid");
+  grid.style.setProperty("--cols", decades.length);
+  grid.innerHTML = `<div class="dec-row dec-head" role="row"><span role="columnheader"></span>${decades.map((d, i) => `<span class="dec-y" role="columnheader">${head(d, i)}</span>`).join("")}<span class="dec-tot" role="columnheader">All</span></div>` +
+    C.map((c) => `<div class="dec-row" role="row">
+      <button class="dec-name" role="rowheader" data-club="${c.t.id}" title="${esc(c.t.name)}"><img src="${logo(c.t.id)}" alt="" loading="lazy"><span>${esc(c.t.teamName)}</span></button>
+      ${decades.map((d) => cell(c, d)).join("")}<span class="dec-tot" role="cell">${fmtPct(c.p)}</span></div>`).join("");
+  const steps = [-0.12, -0.08, -0.04, 0, 0.04, 0.08, 0.12];
+  $("#dec-key").innerHTML = `<span class="mk-k">Winning percentage in the decade</span>` +
+    steps.map((d, i) => `<span class="mk"><i class="dc" style="background:${decColor(0.5 + d).bg}"></i>${i === 0 ? "≤ " : i === steps.length - 1 ? "≥ " : ""}${fmtPct(0.5 + d)}</span>`).join("") +
+    `<span class="mk">★ World Series won</span>`;
+  const tip = $("#dec-tip"), wrap = $(".dec-wrap");
+  grid.onpointerover = (e) => {
+    const c = e.target.closest(".dc[data-tip]");
+    if (!c) { tip.hidden = true; return; }
+    const r = c.getBoundingClientRect(), wr = wrap.getBoundingClientRect();
+    const [who, rest] = c.dataset.tip.split(": ");
+    tip.innerHTML = `<b>${esc(who)}</b><br>${esc(rest)}`;
+    tip.style.left = `${Math.min(wr.width - 120, Math.max(120, r.left - wr.left + r.width / 2))}px`;
+    tip.style.top = `${r.top - wr.top}px`;
+    tip.hidden = false;
+  };
+  grid.onpointerleave = () => (tip.hidden = true);
+}
+
+// ---------- banner years: the best and worst single seasons ----------
+function renderBanner() {
+  const all = leagueClubs().flatMap((c) => c.seasons.filter((s) => s.y >= 1901 && s.w + s.l >= 100).map((s) => ({ ...s, t: c.t, p: pct(s.w, s.l) })));
+  const list = (rows, cls) => rows.map((s, i) => `
+    <button class="strow" data-club="${s.t.id}" title="Open the ${esc(s.t.teamName)} almanac">
+      <span class="st-rank">${i + 1}</span>
+      <img src="${logo(s.t.id)}" alt="" loading="lazy">
+      <span class="st-name">${s.y} ${esc(s.t.teamName)}${isChamp(s.t.id, s.y) ? ` <b class="st-star" title="World Champions">★</b>` : ""}</span>
+      <span class="st-bar whole"><i class="${cls}" style="width:${s.p * 100}%"></i></span>
+      <span class="st-rec">${s.w}–${s.l}</span>
+      <span class="st-pct">${fmtPct(s.p)}</span>
+    </button>`).join("");
+  all.sort((a, b) => b.p - a.p);
+  $("#best-seasons").innerHTML = list(all.slice(0, 15), "up");
+  $("#worst-seasons").innerHTML = list(all.slice(-15).reverse(), "down");
 }
 
 // One World Series, told from the winner's side, in a dialog.

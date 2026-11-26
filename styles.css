@@ -557,10 +557,10 @@ button.wpen:hover, button.wpen:focus-visible { transform: translateY(-3px) scale
 .park a { font: 11px var(--type); color: var(--ink-faint); }
 
 /* ---------- scrapbook decade chips ---------- */
-.decades { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: -4px 0 16px; }
-.decades button { background: #fbf5e6; border: 1px solid var(--rule); border-radius: 20px; padding: 3px 12px; font: 12px var(--type); color: var(--ink-soft); }
-.decades button small { color: var(--ink-faint); }
-.decades button.on { background: var(--ink); border-color: var(--ink); color: #fbf3e2; }
+.decades, .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: -4px 0 16px; }
+.decades button, .chips button { background: #fbf5e6; border: 1px solid var(--rule); border-radius: 20px; padding: 3px 12px; font: 12px var(--type); color: var(--ink-soft); }
+.decades button small, .chips button small { color: var(--ink-faint); }
+.decades button.on, .chips button.on { background: var(--ink); border-color: var(--ink); color: #fbf3e2; }
 .decades button.on small { color: #cdbb92; }
 
 /* ---------- lightbox navigation ---------- */
@@ -763,4 +763,99 @@ button.wpen:hover, button.wpen:focus-visible { transform: translateY(-3px) scale
   .season-card { grid-template-columns: 1fr; padding: 12px; }
   .sc-head { justify-content: center; gap: 18px; }
   .sc-facts div { grid-template-columns: 1fr; gap: 0; margin-top: 4px; }
+}
+
+/* =====================================================================
+   The League: chapters of comparisons
+   Chart colors: blue above .500, red below, parchment-gray at the midpoint.
+   ===================================================================== */
+:root { --dec-up: #1e4a7a; --dec-down: #a3302a; --dec-mid: #e6dcc6; }
+.league-banner { border-left-color: var(--red); }
+.league-banner h2 { letter-spacing: .02em; }
+.chips { margin-top: 0; }
+
+/* ranked rows with a bar: standings, best and worst seasons */
+.standings { max-width: 980px; margin: 0 auto; }
+.strow, .st-head {
+  display: grid; grid-template-columns: 26px 30px minmax(120px, 190px) minmax(80px, 1fr) 54px 120px 70px; gap: 10px; align-items: center;
+  width: 100%; padding: 4px 6px; text-align: left;
+}
+.strow { background: none; border: 0; border-bottom: 1px dotted var(--rule); }
+.strow:hover, .strow:focus-visible { background: #fdf8ea; }
+.st-head { font: 10.5px var(--type); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); border-bottom: 2px solid var(--ink); padding-bottom: 5px; }
+.st-head span:nth-last-child(-n+3) { text-align: right; }
+.st-axis { display: flex; justify-content: space-between; letter-spacing: .04em; }
+.st-axis i { font-style: normal; }
+.st-rank { font: 12px var(--type); color: var(--ink-faint); text-align: right; }
+.strow img { width: 28px; height: 28px; object-fit: contain; }
+.st-name { font: 900 16px/1.2 var(--headline); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st-name small { font: 11px var(--type); color: var(--ink-faint); font-weight: normal; margin-left: 4px; }
+.st-star { color: var(--gold); font-weight: normal; }
+/* the bar: a track with .500 down the middle; winners grow right, losers left */
+.st-bar { position: relative; height: 14px; background: linear-gradient(var(--ink-faint), var(--ink-faint)) center / 1px 100% no-repeat; }
+.st-bar i { position: absolute; top: 1px; bottom: 1px; }
+.st-bar i.up { left: 50%; background: var(--dec-up); border-radius: 0 4px 4px 0; }
+.st-bar i.down { right: 50%; background: var(--dec-down); border-radius: 4px 0 0 4px; }
+.st-bar.whole { background: var(--paper-2); border-radius: 0 4px 4px 0; }
+.st-bar.whole i { left: 0; right: auto; top: 0; bottom: 0; border-radius: 0 4px 4px 0; }
+.st-pct { font: 15px var(--slab); text-align: right; }
+.st-rec, .st-diff { font: 13px var(--type); color: var(--ink-soft); text-align: right; white-space: nowrap; }
+.banner-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 34px; }
+.seasons-list .strow { grid-template-columns: 22px 26px minmax(110px, 170px) minmax(40px, 1fr) 62px 44px; gap: 8px; }
+.seasons-list .strow img { width: 24px; height: 24px; }
+.seasons-list .st-name { font-size: 15px; }
+
+/* the long climb */
+.climb-wrap { position: relative; }
+#climb { width: 100%; height: 460px; display: block; touch-action: pan-y; cursor: crosshair; }
+#climb .grid { stroke: var(--rule); stroke-width: .6; stroke-dasharray: 2 4; }
+#climb .zero { stroke: var(--ink-soft); stroke-width: 1; }
+#climb .tick { fill: var(--ink-faint); font: 11px "Special Elite", monospace; }
+#climb .cl { fill: none; stroke: #b9aa88; stroke-width: 1.1; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; }
+#climb .cl.on { stroke-width: 2.4; }
+#climb .cl.hot { stroke: var(--ink) !important; stroke-width: 2.4; }
+#climb .end { fill: var(--ink-soft); font: 11px "Special Elite", monospace; }
+#climb .end-name { fill: var(--ink); font: 700 12px "Libre Baskerville", serif; }
+#climb-dot { fill: var(--ink); stroke: var(--card); stroke-width: 2; pointer-events: none; }
+.climb-clubs { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; margin: 12px auto 4px; max-width: 760px; }
+.climb-clubs .rail-btn[aria-pressed="true"] { filter: none; border-color: var(--tc); box-shadow: 0 0 0 2px var(--card), 0 0 0 4px var(--tc); }
+
+/* decade by decade */
+.dec-wrap { position: relative; max-width: 1000px; margin: 0 auto; }
+.dec-row { display: grid; grid-template-columns: minmax(118px, 160px) repeat(var(--cols), minmax(0, 1fr)) 44px; gap: 2px; align-items: center; margin-bottom: 2px; }
+.dec-head { margin-bottom: 4px; }
+.dec-y, .dec-head .dec-tot { font: 10px var(--type); color: var(--ink-faint); text-align: center; letter-spacing: .02em; }
+.dec-name { display: flex; align-items: center; gap: 7px; background: none; border: 0; padding: 0; text-align: left; min-width: 0; font: 13px var(--body); }
+.dec-name:hover span { color: var(--red); text-decoration: underline; }
+.dec-name img { width: 20px; height: 20px; object-fit: contain; flex: none; }
+.dec-name span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dc { display: grid; place-items: center; height: 24px; border-radius: 2px; font: 11px/1 var(--body); color: var(--ink); }
+.dc.dark { color: #fff; }
+.dc small { font: 9px var(--type); }
+.dc[data-tip]:hover { outline: 2px solid var(--ink); }
+.dc-out { height: 1px; background: none; border-bottom: 1px dotted var(--rule); }
+.dec-tot { font: 12px var(--slab); text-align: right; }
+.dec-key { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 12px; margin-top: 14px; font: 11px var(--type); color: var(--ink-soft); }
+.dec-key .dc { width: 20px; height: 13px; display: inline-block; }
+
+@media (max-width: 1000px) {
+  .banner-cols { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .strow, .st-head { grid-template-columns: 20px 24px 96px minmax(0, 1fr) 44px; gap: 6px; padding: 4px 2px; }
+  .strow .st-rec, .strow .st-diff, .st-head span:nth-last-child(-n+2) { display: none; }
+  .strow img { width: 22px; height: 22px; }
+  .st-name { font-size: 14px; }
+  .st-name small { display: none; }
+  .st-axis i:not(:nth-child(2)) { display: none; }
+  .st-axis { justify-content: center; }
+  .seasons-list .strow { grid-template-columns: 18px 22px minmax(0, 1fr) 46px 56px 40px; gap: 6px; }
+  .seasons-list .strow .st-rec { display: block; }
+  #climb { height: 360px; }
+  .dec-row { grid-template-columns: 24px repeat(var(--cols), minmax(0, 1fr)) 30px; gap: 1px; }
+  .dec-name span { display: none; }
+  .dc { height: 18px; font-size: 9px; }
+  .dc small { display: none; }
+  .dec-y { font-size: 8px; letter-spacing: -.04em; }
+  .dec-tot { font-size: 10px; }
 }
