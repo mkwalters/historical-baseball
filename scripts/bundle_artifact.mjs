@@ -161,7 +161,8 @@ fs.mkdirSync(path.join(DIST, "data", "bundle"), { recursive: true });
 const logos = {};
 await pool(teams, 6, async (t) => { logos[t.id] = await svg(`https://www.mlbstatic.com/team-logos/${t.id}.svg`); });
 fs.writeFileSync(path.join(DIST, "data/bundle/teams.json"), JSON.stringify({
-  teams: teams.map((t) => ({ ...pick(t, ["id", "name", "teamName", "franchiseName", "locationName", "firstYearOfPlay", "abbreviation"]), sport: { id: 1 } })),
+  teams: teams.map((t) => ({ ...pick(t, ["id", "name", "teamName", "franchiseName", "locationName", "firstYearOfPlay", "abbreviation"]),
+    sport: { id: 1 }, league: pick(t.league, ["id", "name"]), division: pick(t.division, ["id", "name"]) })),
   logos,
 }));
 
@@ -233,7 +234,8 @@ for (const t of teams) {
 }
 
 // static files
-for (const f of ["styles.css", "app.js", "data/champions.json", "data/legends.json", "data/history.json", "data/modern.json"]) {
+for (const f of ["styles.css", "app.js", "data/champions.json", "data/legends.json", "data/history.json", "data/modern.json", "data/people.json", "data/retired.json"]) {
+  if (!fs.existsSync(path.join(ROOT, f))) continue;
   fs.mkdirSync(path.dirname(path.join(DIST, f)), { recursive: true });
   fs.copyFileSync(path.join(ROOT, f), path.join(DIST, f));
 }
@@ -242,5 +244,6 @@ fs.writeFileSync(path.join(DIST, "data/photos.json"), "{}"); // per-team photos 
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8")
   .replace(/<!doctype html>\s*/i, "").replace(/<\/?html[^>]*>\s*/gi, "").replace(/<\/?head>\s*/gi, "").replace(/<\/?body>\s*/gi, "")
   .replace(/<meta charset[^>]*>\s*/i, "").replace(/<meta name="viewport"[^>]*>\s*/i, "").replace(/<link rel="icon"[^>]*>\s*/i, "");
-fs.writeFileSync(path.join(DIST, "index.html"), html);
+// app.js reads this flag to know it should stay offline and use data/bundle/
+fs.writeFileSync(path.join(DIST, "index.html"), `<script>window.ALMANAC_BUNDLE = true;</script>\n` + html);
 console.log(`total bundle ${Math.round(total / 1024)} MB`);

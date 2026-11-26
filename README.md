@@ -2,23 +2,27 @@
 
 *A franchise almanac of the grand old game.* Pick a ball club and leaf through its whole history: every season, its legends, its ballparks and its brightest days. It's meant to be a fun ten minutes for a baseball fan.
 
-## What's inside (v3)
+## What's inside (Vol. IV)
 
-The page is styled like an old almanac: parchment, wood-type headlines, bunting and a manual scoreboard. Each club's almanac is read **one chapter at a time**: a numbered progress strip runs across the top, and Back and Next buttons sit in the bottom corners. The arrow keys turn pages too, and the address bar remembers the chapter (`#team=147&page=legends`).
+The page is styled like an old almanac: parchment, wood-type headlines, bunting and a manual scoreboard.
+
+**The front page** lists the thirty clubs by division, deals a random club on request, and lays out four loose photos from four clubs' scrapbooks (reshuffled every visit). **Look up a name** in the masthead searches every legend, modern star, Hall of Famer, retired number, award winner, manager and broadcaster across all thirty clubs, and opens the right club at the right chapter.
+
+Each club's almanac is read **one chapter at a time**: a numbered progress strip sticks to the top, and Back and Next buttons sit under each chapter. The arrow keys turn pages too. The address bar remembers the club and chapter (`#team=147&page=legends`), and the browser's Back and Forward buttons walk through the chapters you've read.
 
 | Chapter | What it shows |
 |---|---|
-| **The Ledger** | The scoreboard (all-time record, titles, pennants, best and worst seasons, drought, Hall of Famers), then every season as a bar (distance from .500), with the club's names and ballparks underneath. Hover a year for its record, skipper, stars and awards. Below it: the golden decade, the lean years, the longest run of winning seasons. |
+| **The Ledger** | The scoreboard (all-time record, titles, pennants, best and worst seasons, drought, Hall of Famers), then every season as a bar (distance from .500), with the club's names and ballparks underneath. Hover a year for its record, skipper, stars and awards; click (or tap) one to pin its **season card**, with the year's rank among all the club's seasons, its World Series result, team ERA, home runs and average, and any scrapbook photos from that year. Below it: the golden decade, the lean years, the longest run of winning seasons. |
 | **Legends** | The top 10 players by an era-adjusted, WAR-style "legend value", as tobacco cards, plus the next three in line. Every portrait shows the player **in this club's uniform**: a hand-picked Commons photo, or MLB's own headshot. |
 | **The Dugout & the Booth** | The longest-serving managers with their records and titles, every manager in club history, and the club's voices and builders: broadcasters (with their signature calls), owners, executives and a few beloved characters. |
 | **Numbers on the Wall** | Retired numbers as banners hung from the rafters. Jackie Robinson's 42 hangs in gold on the Dodgers' wall. |
 | **In Cooperstown** | Bronze plaques for every Hall of Famer enshrined with the club. |
 | **The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year, plus Gold Gloves and Silver Sluggers listed by player. |
-| **October** | Every World Series the club won: the opponent, the series score, each game's result, where it was clinched, the World Series MVP, the manager, the stars on the roster and a photo when one exists. Clubs without a title skip the chapter. |
+| **October** | Every World Series the club won: the opponent, the series score, each game's result, where it was clinched, the World Series MVP, the manager, the stars on the roster and a photo when one exists. Pennants that ended in a World Series loss follow, a line apiece with the game scores. Clubs that have never reached the Series skip the chapter. |
 | **Home Fields** | Every ballpark the club called home, as postcards, with its years, the club's record there and the titles won there. |
 | **The Scrapbook** | 360-odd hand-picked public-domain and freely licensed photos across the 30 clubs, filterable by decade, with a lightbox you can page through. |
 | **Modern Stars** | The club's best players of the last 20 seasons, ranked by real WAR earned with the club. A player needs at least 4 seasons there to qualify, unless he played for the club in the latest season. Ten modern cards, then a season-by-season WAR heatmap of the top 15, with the best single season, the longest stay and the best player on the latest club. |
-| **The League** | A title-drought scoreboard and a wall of every champion's pennant since 1903. |
+| **The League** | A title-drought scoreboard, a wall of every champion's pennant since 1903 (pick one to see the series game by game), and the Honor Roll: a sortable table of titles, pennants, Hall of Famers, retired numbers and major awards for all thirty clubs. |
 
 ## Run
 
@@ -29,6 +33,12 @@ cd ~/src/baseball && python3 -m http.server 8765   # then open http://localhost:
 ```
 
 Deep links work: `#team=147`, `#team=147&page=october`, `#view=league`.
+
+## Code
+
+Three files, no dependencies: `index.html` (the static skeleton of every chapter), `styles.css` and `app.js` (an ES module). `app.js` runs top to bottom in this order: helpers, data access, state, boot, front page, search, routing, chapters, one `render…` function per chapter, the lightbox, the league page. Anything in the page marked `data-club="<team id>"` (optionally with `data-page`) opens that club when clicked.
+
+`scripts/bundle_artifact.mjs` builds `dist/`, an offline copy with the API responses and images embedded, for hosts that block outside requests. It sets `window.ALMANAC_BUNDLE`, which is how `app.js` knows to read `data/bundle/` instead of calling the API. `dist/` is not rebuilt automatically: re-run the script after changing the site.
 
 ## Data
 

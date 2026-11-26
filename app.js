@@ -1,9 +1,14 @@
-// The Grandstand Almanac v3 — a franchise almanac. Vanilla JS + the public MLB Stats API.
+// The Grandstand Almanac, Vol. IV — a franchise almanac. Vanilla JS + the public MLB Stats API.
+//
+// Layout of this file:
+//   helpers · data access · state · boot · front page · search · routing · chapters (pages)
+//   · the club (one render function per chapter) · lightbox · the league page
 const API = "https://statsapi.mlb.com/api/v1";
+const SITE = "The Grandstand Almanac";
 
-// Bundle mode: when data/bundle/ exists (see scripts/bundle_artifact.mjs) the page runs fully offline,
-// reading pre-fetched API responses and embedded images instead of calling outside hosts.
-const BUNDLE = { on: false, teams: null, logos: {}, team: {}, imgs: {} };
+// Bundle mode: scripts/bundle_artifact.mjs builds a copy of the site that runs fully offline, reading
+// pre-fetched API responses and embedded images instead of calling outside hosts. It sets this flag.
+const BUNDLE = { on: !!window.ALMANAC_BUNDLE, teams: null, logos: {}, team: {}, imgs: {} };
 const SILHOUETTE = "data:image/svg+xml," + encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80"><rect width="60" height="80" fill="#c9b994"/><circle cx="30" cy="30" r="13" fill="#8a7a60"/><path d="M8 80c0-18 10-28 22-28s22 10 22 28z" fill="#8a7a60"/></svg>`);
 const logo = (id) => (BUNDLE.on ? BUNDLE.logos[id] || "" : `https://www.mlbstatic.com/team-logos/${id}.svg`);
@@ -26,10 +31,13 @@ const COLORS = {
   121: "#002d72", 147: "#0c2340", 143: "#e81828", 134: "#27251f", 135: "#2f241d", 137: "#d9481a",
   136: "#0c2c56", 138: "#c41e3a", 139: "#092c5c", 140: "#003278", 141: "#134a8e", 120: "#ab0003",
 };
+const color = (id) => COLORS[id] || "#1e3557";
+// Division ids in the order a fan reads the standings.
+const DIVISIONS = [[201, "American League", "East"], [202, "American League", "Central"], [200, "American League", "West"],
+  [204, "National League", "East"], [205, "National League", "Central"], [203, "National League", "West"]];
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-const h = (html) => { const t = document.createElement("template"); t.innerHTML = html.trim(); return t.content.firstElementChild; };
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const pct = (w, l) => (w + l ? w / (w + l) : 0);
 const fmtPct = (p) => p.toFixed(3).replace(/^0/, "");
@@ -39,16 +47,23 @@ const listify = (a) => (a.length <= 1 ? a.join("") : a.slice(0, -1).join(", ") +
 const json = (url) => fetch(url).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
 const WORDS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
 const word = (n) => WORDS[n] ?? String(n);
+const Word = (n) => word(n).replace(/^[a-z]/, (c) => c.toUpperCase());
 const ORD = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth"];
-// "1903, 1904, 1905, 1910" -> "1903–05, 1910"
+const nth = (n) => n + (n % 100 >= 11 && n % 100 <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] || "th");
+const yrs = (a, b) => (a === b ? `${a}` : `${a}–${String(b).slice(Math.floor(a / 100) === Math.floor(b / 100) ? 2 : 0)}`);
+const range = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
+// [1903, 1904, 1905, 1910] -> "1903–05, 1910"
 function spans(years) {
   const out = [];
   for (const y of years) {
     const last = out.at(-1);
     if (last && y === last[1] + 1) last[1] = y; else out.push([y, y]);
   }
-  return out.map(([a, b]) => (a === b ? `${a}` : `${a}–${String(b).slice(Math.floor(a / 100) === Math.floor(b / 100) ? 2 : 0)}`)).join(", ");
+  return out.map(([a, b]) => yrs(a, b)).join(", ");
 }
+// "José Ramírez" -> "jose ramirez", for matching what people type
+const fold = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
 // ---------- fetch with in-memory + session cache ----------
 const memo = new Map();
@@ -77,84 +92,242 @@ async function get(path) {
 // ---------- state ----------
 const state = {
   teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {}, modern: {},
-  team: null, seasons: [], eras: [], parks: [], archive: [],
-  barW: 1, page: "ledger", pages: [], decade: null,
+  view: "franchise", team: null, failed: false, seasons: [], eras: [], parks: [], archive: [],
+  page: "ledger", pages: [], decade: null, pinned: null, honorSort: { key: "titles", dir: -1 },
 };
+const teamById = (id) => state.teams.find((t) => t.id === id);
+// "New York" for the Yankees; the Athletics' full name has no city in it, so fall back to where they play.
+const cityOf = (t) => (t.name.endsWith(t.teamName) ? t.name.slice(0, -t.teamName.length).trim() : t.franchiseName) || t.locationName || "";
 
 async function init() {
-  const b = await json("data/bundle/teams.json");
-  if (b.teams) Object.assign(BUNDLE, { on: true, teams: { teams: b.teams }, logos: b.logos || {} });
+  if (BUNDLE.on) {
+    const b = await json("data/bundle/teams.json");
+    Object.assign(BUNDLE, { teams: { teams: b.teams || [] }, logos: b.logos || {} });
+  }
   const [teamsRes, champions, legends, photos, history, people, retired, modern] = await Promise.all([
     get(`/teams?sportId=1&season=${new Date().getFullYear()}`),
     json("data/champions.json"), json("data/legends.json"), json("data/photos.json"), json("data/history.json"),
     json("data/people.json"), json("data/retired.json"), json("data/modern.json"),
   ]);
   Object.assign(state, { champions, legends, photos, history, people, retired, modern });
-  state.teams = teamsRes.teams.filter((t) => t.sport?.id === 1).sort((a, b) => a.teamName.localeCompare(b.teamName));
+  const divOrder = (t) => { const i = DIVISIONS.findIndex(([id]) => id === t.division?.id); return i < 0 ? 99 : i; };
+  state.teams = teamsRes.teams.filter((t) => t.sport?.id === 1)
+    .sort((a, b) => divOrder(a) - divOrder(b) || a.teamName.localeCompare(b.teamName));
+
   renderPicker();
+  renderFrontSnaps();
   renderLeague();
+  setupSearch();
   $$(".tab").forEach((b) => (b.onclick = () => showView(b.dataset.view)));
   $("#home-link").onclick = (e) => { e.preventDefault(); goHome(); };
+  $("#surprise").onclick = () => openClub(shuffle(state.teams.filter((t) => t !== state.team))[0].id);
+  $("#reshuffle").onclick = renderFrontSnaps;
   $("#prev").onclick = () => step(-1);
   $("#next").onclick = () => (state.page === state.pages.at(-1) ? goPage(state.pages[0]) : step(1));
   document.addEventListener("keydown", onKey);
-
-  const params = new URLSearchParams(location.hash.slice(1));
-  const teamId = +(params.get("team") || 0);
-  if (teamId && state.teams.some((t) => t.id === teamId)) await selectTeam(teamId, params.get("page") || "ledger");
-  if (params.get("view") === "league") showView("league");
+  // Anything marked data-club opens that club's almanac (optionally at data-page).
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest("[data-club]");
+    if (el) { e.preventDefault(); openClub(+el.dataset.club, el.dataset.page); }
+  });
+  window.addEventListener("popstate", applyRoute);
+  await applyRoute();
 }
 
+// A portrait that fails to load becomes the silhouette; a scrapbook photo that fails just leaves the page.
+document.addEventListener("error", (e) => {
+  const img = e.target;
+  if (img.tagName !== "IMG" || img.dataset.failed) return;
+  img.dataset.failed = "1";
+  const snap = img.closest(".snap, .oct-photo, .sc-photo");
+  if (snap) snap.hidden = true;
+  else if (img.closest(".tcard-art, .mcard-art, .skipper, .plaque, .voice-photo")) img.src = SILHOUETTE;
+}, true);
+
+// =====================================================================
+// FRONT PAGE: the club picker and a few loose photos
+// =====================================================================
 function renderPicker() {
-  const el = $("#picker");
-  el.innerHTML = "";
-  for (const t of state.teams) {
-    const b = h(`<button class="team-btn" title="${esc(t.name)}" data-id="${t.id}"><img alt="${esc(t.name)}" src="${logo(t.id)}" loading="lazy"></button>`);
-    b.onclick = () => { showView("franchise"); selectTeam(t.id); };
-    el.append(b);
-  }
+  const club = (t) => `<button class="club" data-club="${t.id}" style="--tc:${color(t.id)}">
+      <img alt="" src="${logo(t.id)}" loading="lazy"><span><b>${esc(t.teamName)}</b><small>${esc(cityOf(t))}</small></span></button>`;
+  const groups = DIVISIONS.map(([id, league, div]) => ({ league, div, teams: state.teams.filter((t) => t.division?.id === id) })).filter((g) => g.teams.length);
+  const grouped = groups.reduce((n, g) => n + g.teams.length, 0) === state.teams.length;
+  $("#picker").innerHTML = grouped
+    ? groups.map((g) => `<section class="division"><h3><small>${esc(g.league)}</small> ${esc(g.div)}</h3>${g.teams.map(club).join("")}</section>`).join("")
+    : `<section class="division flat">${state.teams.map(club).join("")}</section>`;
+  // the rail: the same clubs as one row of logos, with a gap between divisions
+  $("#rail").innerHTML = state.teams.map((t, i) => {
+    const gap = i && grouped && t.division?.id !== state.teams[i - 1].division?.id;
+    return `<button class="rail-btn${gap ? " gap" : ""}" data-club="${t.id}" title="${esc(t.name)}" aria-label="${esc(t.name)}"><img alt="" src="${logo(t.id)}" loading="lazy"></button>`;
+  }).join("");
 }
 
-// Back to the front page: no club selected, team picker on top.
-function goHome() {
-  Object.assign(state, { team: null, seasons: [] });
-  $$(".team-btn").forEach((b) => b.classList.remove("active"));
-  $("#franchise").hidden = true;
-  $("#franchise-empty").hidden = false;
-  showView("franchise");
-  try { history.replaceState(null, "", location.pathname + location.search); } catch {}
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-function showView(v) {
-  $$(".tab").forEach((b) => b.classList.toggle("active", b.dataset.view === v));
-  $("#view-franchise").hidden = v !== "franchise";
-  $("#view-league").hidden = v !== "league";
-  document.body.classList.toggle("paging", v === "franchise" && !!state.team);
-  if (v === "franchise" && state.page === "ledger" && state.seasons.length) renderTimeline();
-  updateHash(v);
-}
-function updateHash(view = "franchise") {
-  const p = new URLSearchParams();
-  if (state.team) p.set("team", state.team.id);
-  if (view === "league") p.set("view", "league");
-  else if (state.team && state.page !== state.pages[0]) p.set("page", state.page);
-  try { history.replaceState(null, "", "#" + p.toString()); } catch {}
+// Four photos from four different clubs' scrapbooks, reshuffled on every visit.
+let frontPicks = [];
+function renderFrontSnaps() {
+  const perTeam = state.teams.map((t) => ((state.photos[t.id] || {}).archive || []).map((a) => ({ ...a, team: t }))).filter((l) => l.length);
+  $("#front-scrap").hidden = perTeam.length < 4;
+  if (perTeam.length < 4) return;
+  frontPicks = shuffle(perTeam).slice(0, 4).map((l) => shuffle(l)[0]);
+  $("#front-snaps").innerHTML = frontPicks.map((a, i) => `
+    <button class="snap" data-i="${i}" style="--rot:${[-1.6, 1.1, -0.7, 1.7][i]}deg">
+      <img src="${esc(a.src)}" alt="${esc(a.title)}" loading="lazy">
+      <span class="snap-cap">${a.year ? `<b>${a.year}</b>` : ""}${esc(a.title)}<i>${esc(a.team.name)}</i></span>
+    </button>`).join("");
+  $$("#front-snaps .snap").forEach((b) => (b.onclick = () => openLightbox(frontPicks, +b.dataset.i)));
 }
 
 // =====================================================================
-// PAGES: one chapter at a time, with a progress strip and a Next button
+// SEARCH: every name in the almanac, across all thirty clubs
+// =====================================================================
+// Which chapter a hit opens, best first.
+const SEARCH_PAGES = ["legends", "modern", "hof", "numbers", "trophies", "dugout"];
+let searchIndex = null;
+function buildSearchIndex() {
+  const byKey = new Map();
+  const add = (t, name, page, tag) => {
+    if (!name) return;
+    const key = t.id + "|" + fold(name);
+    const e = byKey.get(key) || { team: t, name, folded: fold(name), page, tags: [] };
+    if (SEARCH_PAGES.indexOf(page) < SEARCH_PAGES.indexOf(e.page)) e.page = page;
+    if (tag && !e.tags.includes(tag)) e.tags.push(tag);
+    byKey.set(key, e);
+  };
+  for (const t of state.teams) {
+    (state.legends[t.id] || []).forEach((p, i) => add(t, p.name, "legends", i < LEGEND_CARDS ? `Legend No. ${i + 1}` : "Legend"));
+    ((state.modern[t.id] || {}).players || []).forEach((p, i) => add(t, p.name, "modern", i < MODERN_CARDS ? `Modern star No. ${i + 1}` : "Modern star"));
+    ((state.history[t.id] || {}).hof || []).forEach((p) => add(t, p.name, "hof", "Hall of Fame"));
+    (state.retired[t.id] || []).forEach((r) => add(t, r.name, "numbers", /^\d+$/.test(r.no) ? `No. ${r.no} retired` : "Honored on the wall"));
+    for (const a of (state.history[t.id] || {}).awards || []) if (BIG_AWARDS.has(a.award)) add(t, a.name, "trophies", a.award === "Cy Young" ? "Cy Young" : a.award === "MVP" ? "MVP" : "Rookie of the Year");
+    const P = state.people[t.id] || {};
+    (P.managers || []).forEach((m) => add(t, m.name, "dugout", "Manager"));
+    (P.people || []).forEach((p) => add(t, p.name, "dugout", p.role));
+  }
+  return [...byKey.values()];
+}
+function search(q) {
+  q = fold(q.trim());
+  if (q.length < 2) return [];
+  searchIndex ||= buildSearchIndex();
+  const starts = (s) => s.startsWith(q) || s.includes(" " + q);
+  const clubs = state.teams.filter((t) => starts(fold(t.name))).map((t) => ({ team: t, name: t.name, club: true, tags: ["Open the almanac"] }));
+  const hits = searchIndex.filter((e) => e.folded.includes(q))
+    .map((e) => ({ ...e, score: (e.folded.startsWith(q) ? 0 : starts(e.folded) ? 1 : 2) * 10 + SEARCH_PAGES.indexOf(e.page) }))
+    .sort((a, b) => a.score - b.score || a.name.localeCompare(b.name));
+  return [...clubs, ...hits].slice(0, 9);
+}
+function setupSearch() {
+  const input = $("#search-input"), list = $("#search-results");
+  let hits = [], active = -1;
+  const close = () => { list.hidden = true; input.setAttribute("aria-expanded", "false"); active = -1; };
+  const mark = () => $$("li", list).forEach((li, i) => li.setAttribute("aria-selected", i === active));
+  const pick = (hit) => { input.value = ""; close(); input.blur(); openClub(hit.team.id, hit.page); };
+  const render = () => {
+    hits = search(input.value);
+    active = hits.length ? 0 : -1;
+    list.innerHTML = hits.length
+      ? hits.map((x, i) => `<li role="option" data-i="${i}"><img src="${logo(x.team.id)}" alt=""><span><b>${esc(x.name)}</b><small>${x.club ? "" : esc(x.team.teamName) + " · "}${esc(x.tags.slice(0, 3).join(" · "))}</small></span></li>`).join("")
+      : `<li class="none">Nobody by that name in the almanac.</li>`;
+    list.hidden = input.value.trim().length < 2;
+    input.setAttribute("aria-expanded", String(!list.hidden));
+    mark();
+  };
+  input.addEventListener("input", render);
+  input.addEventListener("focus", () => { if (input.value.trim().length >= 2) render(); });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { close(); return; }
+    if (list.hidden || !hits.length) return;
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { active = (active + (e.key === "ArrowDown" ? 1 : -1) + hits.length) % hits.length; mark(); e.preventDefault(); }
+    if (e.key === "Enter" && hits[active]) { pick(hits[active]); e.preventDefault(); }
+  });
+  list.addEventListener("mousedown", (e) => e.preventDefault()); // keep focus in the input while clicking a result
+  list.addEventListener("click", (e) => { const li = e.target.closest("li[data-i]"); if (li) pick(hits[+li.dataset.i]); });
+  document.addEventListener("click", (e) => { if (!e.target.closest("#search")) close(); });
+}
+
+// =====================================================================
+// ROUTING: the address bar holds the club, the chapter and the view
+//   #team=147 · #team=147&page=october · #view=league
+// =====================================================================
+// True while the page is catching up with the address bar (first load, Back/Forward), so that
+// catching up doesn't itself add history entries.
+let quiet = false;
+function hashFor() {
+  const p = new URLSearchParams();
+  if (state.team) p.set("team", state.team.id);
+  if (state.view === "league") p.set("view", "league");
+  else if (state.team && state.page !== state.pages[0]) p.set("page", state.page);
+  return p.toString();
+}
+function syncURL() {
+  const t = state.team;
+  document.title = state.view === "league" ? `The League · ${SITE}`
+    : t && state.pages.length ? `${t.name}: ${pageLabel(state.page)} · ${SITE}` : SITE;
+  if (quiet) return;
+  const hash = hashFor();
+  if (hash === location.hash.slice(1)) return;
+  try { history.pushState(null, "", hash ? "#" + hash : location.pathname + location.search); } catch {}
+}
+async function applyRoute() {
+  quiet = true;
+  try {
+    const q = new URLSearchParams(location.hash.slice(1));
+    const id = +q.get("team"), page = q.get("page") || "ledger";
+    state.view = q.get("view") === "league" ? "league" : "franchise";
+    if (teamById(id)) {
+      if (state.team?.id !== id || !state.seasons.length) await selectTeam(id, page);
+      else goPage(page, { scroll: false });
+    } else closeClub();
+    layout();
+    syncURL();
+  } finally { quiet = false; }
+}
+
+// Show the right parts of the page for the current view, club and load state.
+function layout() {
+  const fr = state.view === "franchise", open = !!state.team;
+  $$(".tab").forEach((b) => { const on = b.dataset.view === state.view; b.classList.toggle("active", on); b.setAttribute("aria-pressed", String(on)); });
+  $("#view-franchise").hidden = !fr;
+  $("#view-league").hidden = fr;
+  $("#front").hidden = open;
+  $("#franchise").hidden = !open || state.failed;
+  $("#notice").hidden = !state.failed;
+  $("#rail").hidden = fr && !open;
+  $$(".rail-btn").forEach((b) => b.classList.toggle("active", +b.dataset.club === state.team?.id));
+  $("#rail .active")?.scrollIntoView({ block: "nearest", inline: "center" });
+  if (fr && open && state.page === "ledger") renderTimeline(); // it can't measure itself while hidden
+}
+function showView(v) {
+  state.view = v;
+  layout();
+  syncURL();
+}
+function closeClub() {
+  Object.assign(state, { team: null, failed: false, seasons: [], pages: [] });
+}
+// Back to the front page: no club selected.
+function goHome() {
+  closeClub();
+  showView("franchise");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function openClub(id, page = "ledger") {
+  for (const d of $$("dialog[open]")) d.close();
+  state.view = "franchise";
+  if (state.team?.id === id && state.seasons.length) { layout(); goPage(page); }
+  else selectTeam(id, page).then(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+}
+
+// =====================================================================
+// CHAPTERS: one at a time, with a progress strip above and a pager below
 // =====================================================================
 const pageEl = (k) => $(`.page[data-page="${k}"]`);
 const pageLabel = (k) => pageEl(k).dataset.label;
+const markSkip = (k, skip) => { if (skip) pageEl(k).dataset.skip = "1"; else delete pageEl(k).dataset.skip; };
 
 function setupPages() {
   state.pages = $$(".page").filter((el) => !el.dataset.skip).map((el) => el.dataset.page);
-  let n = 0;
-  for (const k of state.pages) {
-    const kicker = $(".kicker", pageEl(k));
-    if (kicker) kicker.textContent = `Chapter the ${ORD[n++]}`;
-  }
+  state.pages.forEach((k, n) => { const kicker = $(".kicker", pageEl(k)); if (kicker) kicker.textContent = `Chapter the ${ORD[n]}`; });
   $("#progress").innerHTML = `<div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>` +
     state.pages.map((k, i) => `<button class="pstop" data-k="${k}" title="${esc(pageLabel(k))}"><i>${i + 1}</i><span>${esc(pageLabel(k))}</span></button>`).join("");
   $$("#progress .pstop").forEach((b) => (b.onclick = () => goPage(b.dataset.k)));
@@ -169,26 +342,26 @@ function goPage(k, { scroll = true } = {}) {
     el.hidden = !on;
     if (on) {
       el.classList.remove("turn-fwd", "turn-back");
-      void el.offsetWidth;
+      void el.offsetWidth; // restart the animation
       el.classList.add(to >= from ? "turn-fwd" : "turn-back");
     }
   }
   $$("#progress .pstop").forEach((b, i) => {
     b.classList.toggle("current", i === to);
     b.classList.toggle("done", i < to);
-    b.setAttribute("aria-current", i === to ? "step" : "false");
+    if (i === to) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
   });
   $("#progress-fill").style.width = `${(to / Math.max(1, state.pages.length - 1)) * 100}%`;
   const prev = state.pages[to - 1], next = state.pages[to + 1];
   $("#prev").hidden = !prev;
-  $("#next").hidden = state.pages.length < 2;
   if (prev) $("#prev .pager-label").textContent = pageLabel(prev);
   $("#next .pager-label").textContent = next ? "Next: " + pageLabel(next) : "Back to the start";
+  $("#pager-pos").textContent = `Chapter ${to + 1} of ${state.pages.length}`;
   if (k === "ledger") renderTimeline();
-  updateHash();
+  syncURL();
   if (scroll) {
-    const top = $("#franchise").getBoundingClientRect().top + window.scrollY - 6;
-    if (window.scrollY > top || to > 0) window.scrollTo({ top, behavior: "smooth" });
+    const top = $("#club-banner").getBoundingClientRect().bottom + window.scrollY;
+    if (window.scrollY > top) window.scrollTo({ top, behavior: "smooth" }); // a new chapter starts at its top
   }
 }
 function step(d) {
@@ -196,38 +369,42 @@ function step(d) {
   if (i >= 0 && i < state.pages.length) goPage(state.pages[i]);
 }
 function onKey(e) {
-  if (!state.team || $("#view-franchise").hidden || lb.open || e.altKey || e.ctrlKey || e.metaKey) return;
+  if (!state.team || state.view !== "franchise" || $("dialog[open]") || e.altKey || e.ctrlKey || e.metaKey) return;
   if (/input|textarea|select/i.test(document.activeElement?.tagName || "")) return;
   if (e.key === "ArrowRight") { step(1); e.preventDefault(); }
   if (e.key === "ArrowLeft") { step(-1); e.preventDefault(); }
 }
 
 // =====================================================================
-// FRANCHISE
+// THE CLUB
 // =====================================================================
 async function selectTeam(id, page = "ledger") {
-  const team = state.teams.find((t) => t.id === id);
-  Object.assign(state, { team, seasons: [], decade: null });
-  await ensureBundle(id);
-  if (state.team?.id !== id) return;
-  document.documentElement.style.setProperty("--team", COLORS[id] || "#1e3557");
-  $$(".team-btn").forEach((b) => b.classList.toggle("active", +b.dataset.id === id));
-  $("#franchise-empty").hidden = true;
-  $("#franchise").hidden = false;
-  $$(".page").forEach((el) => (el.hidden = el.dataset.page !== "ledger")); // only the first chapter while loading
-  document.body.classList.add("paging");
-  $("#hero-sub").textContent = "Opening the record books…";
-  $("#scoreboard").innerHTML = "";
-  $("#timeline").innerHTML = "";
+  const team = teamById(id);
+  Object.assign(state, { team, failed: false, seasons: [], pages: [], decade: null, pinned: null });
+  hofAll = false;
+  document.documentElement.style.setProperty("--team", color(id));
+  $("#club-logo").src = logo(id);
+  $("#club-name").textContent = team.name;
+  $("#club-sub").textContent = "Opening the record books…";
+  $("#franchise").classList.add("loading");
+  layout();
+
+  let hit, pit, hist;
+  try {
+    await ensureBundle(id);
+    [hit, pit, hist] = await Promise.all([
+      get(`/teams/${id}/stats?stats=yearByYear&group=hitting&sportId=1`),
+      get(`/teams/${id}/stats?stats=yearByYear&group=pitching&sportId=1`),
+      get(`/teams/${id}/history`),
+    ]);
+  } catch (err) {
+    console.error(err);
+    if (state.team?.id === id) rainDelay(`Couldn't fetch the ${team.teamName} record books from the MLB Stats API.`, () => selectTeam(id, page));
+    return;
+  }
+  if (state.team?.id !== id) return; // switched clubs mid-load
+
   state.archive = ((state.photos[id] || {}).archive || []).slice();
-
-  const [hit, pit, hist] = await Promise.all([
-    get(`/teams/${id}/stats?stats=yearByYear&group=hitting&sportId=1`),
-    get(`/teams/${id}/stats?stats=yearByYear&group=pitching&sportId=1`),
-    get(`/teams/${id}/history`),
-  ]);
-  if (state.team?.id !== id) return; // switched teams mid-load
-
   const hitBy = new Map(hit.stats[0].splits.map((s) => [+s.season, s.stat]));
   state.eras = hist.teams
     .map((t) => ({ season: +t.season, name: t.name, nick: t.teamName || t.clubName || team.teamName, city: t.franchiseName || t.locationName || "" }))
@@ -242,8 +419,8 @@ async function selectTeam(id, page = "ledger") {
     })
     .filter((s) => s.w + s.l > 0)
     .sort((a, b) => a.year - b.year);
-
   state.parks = clipParks((state.history[id] || {}).ballparks || []);
+  state.pinned = defaultPin();
 
   renderHero();
   renderEras();
@@ -257,7 +434,17 @@ async function selectTeam(id, page = "ledger") {
   renderArchive();
   renderModern();
   setupPages();
+  $("#franchise").classList.remove("loading");
   goPage(page, { scroll: false });
+  renderSeasonCard();
+}
+
+// Something couldn't be fetched: say so, and offer another go.
+function rainDelay(text, retry) {
+  state.failed = true;
+  $("#notice").innerHTML = `<p class="empty-big">Rain delay</p><p>${esc(text)}</p>${retry ? `<button class="btn">Try again</button>` : ""}`;
+  if (retry) $("#notice .btn").onclick = retry;
+  layout();
 }
 
 function eraAt(y) {
@@ -280,7 +467,6 @@ function clipParks(parks) {
     .map((p) => ({ ...p, key: `${p.name}|${p.from}`, from: Math.max(p.from, first), to: Math.min(p.to, last) }))
     .filter((p) => p.from <= p.to && seasonsIn(p.from, p.to).length);
 }
-const markSkip = (k, skip) => { if (skip) pageEl(k).dataset.skip = "1"; else delete pageEl(k).dataset.skip; };
 // Empty a skipped chapter so nothing from the previous club lingers in it.
 const clearPage = (k, ...ids) => ids.forEach((id) => ($("#" + id).innerHTML = ""));
 
@@ -294,7 +480,7 @@ function renderHero() {
   const lastTitle = champs.at(-1)?.year, thisYear = S.at(-1).year;
   const formerly = [...new Set(state.eras.map((e) => e.name))].filter((n) => n !== t.name);
   const hof = (state.history[t.id] || {}).hof || [];
-  $("#hero-sub").textContent = `${t.name} · Est. ${S[0].year} · ${S.length} seasons of baseball` + (formerly.length ? ` · formerly the ${listify(formerly)}` : "");
+  $("#club-sub").textContent = `Est. ${S[0].year} · ${S.length} seasons of baseball` + (!formerly.length ? "" : formerly.length <= 2 ? ` · formerly the ${listify(formerly)}` : ` · ${word(formerly.length)} other names along the way`);
   const cell = (label, val, sub = "") =>
     `<div class="sb-cell"><div class="sb-label">${label}</div><div class="sb-val${String(val).length > 9 ? " sb-long" : ""}">${val}</div><div class="sb-sub">${sub}</div></div>`;
   $("#scoreboard").innerHTML = [
@@ -356,8 +542,9 @@ function renderTimeline() {
   S.forEach((s) => { const last = names.at(-1); if (last && last.label === s.name) last.to = s.year; else names.push({ label: s.name, from: s.year, to: s.year }); });
   band(names, bandsTop, "", ["#efe2c2", "#e4d3ab"]);
   band(state.parks.map((p) => ({ label: p.name, from: p.from, to: p.to })), bandsTop + bandH, "park", ["#f6edd6", "#ebdfc1"]);
-  S.forEach((s, i) => (out += `<rect class="hit" data-i="${i}" x="${i * bw}" y="0" width="${bw}" height="${bandsTop}"/>`));
+  S.forEach((s, i) => (out += `<rect class="hit${i === state.pinned ? " pinned" : ""}" data-i="${i}" x="${i * bw}" y="0" width="${bw}" height="${bandsTop}"/>`));
   svg.innerHTML = out;
+  svg.onclick = (e) => { const i = e.target.dataset?.i; if (i != null) pinSeason(+i); };
 
   const tip = $("#tooltip"), wrap = $(".timeline-wrap");
   svg.onpointermove = (e) => {
@@ -374,11 +561,69 @@ function renderTimeline() {
       (greats.length ? `<br><span class="muted">Legends: ${esc(greats.join(", "))}</span>` : "") +
       (aw.length ? `<br><span class="muted">${esc(aw.join(" · "))}</span>` : "") +
       (photoYears.has(s.year) ? `<br><span class="muted">A photograph survives in the scrapbook</span>` : "");
+    if (e.pointerType === "touch") { tip.hidden = true; return; } // a tap pins the season card instead
     tip.style.left = Math.min(r.width - 110, Math.max(110, e.clientX - r.left)) + "px";
     tip.style.top = e.clientY - r.top + "px";
     tip.hidden = false;
   };
   svg.onpointerleave = () => (tip.hidden = true);
+}
+
+// ---------- the season card: one year, pinned under the ledger ----------
+// Start on the most recent title; a club still waiting for one starts on its best full season.
+function defaultPin() {
+  const S = state.seasons;
+  const champ = S.findLastIndex((s) => s.champ);
+  if (champ >= 0) return champ;
+  const full = S.filter((s) => s.w + s.l >= 100);
+  return full.length ? S.indexOf(full.reduce((a, b) => (b.pct > a.pct ? b : a))) : S.length - 1;
+}
+function pinSeason(i) {
+  if (!state.seasons[i]) return;
+  state.pinned = i;
+  $$("#timeline .hit").forEach((r) => r.classList.toggle("pinned", +r.dataset.i === i));
+  renderSeasonCard();
+}
+// "4-3-1" (wins, losses, ties) from the winner's side -> "4–3–1", or "3–4–1" from the loser's
+function seriesScore(c, won = true) {
+  const [a, b, t] = (c.result || "").split("-");
+  return (won ? `${a}–${b}` : `${b}–${a}`) + (t ? `–${t}` : "");
+}
+function renderSeasonCard() {
+  const S = state.seasons, i = state.pinned, s = S[i], el = $("#season-card");
+  if (!s) { el.innerHTML = ""; return; }
+  const c = state.champions[s.year];
+  const rank = S.filter((x) => x.pct > s.pct).length + 1;
+  const park = state.parks.find((p) => p.from <= s.year && s.year <= p.to);
+  const mgr = managersIn(s.year).map((m) => m.name);
+  const greats = allLegendsIn(s.year).map((p) => p.name);
+  const aw = awardsIn(s.year).map((a) => `${a.name} (${a.award})`);
+  const photos = state.archive.filter((a) => a.year === s.year);
+  const flag = s.champ ? `<p class="sc-flag champ">★ World Champions: beat the ${esc(c.loser.name)}, ${seriesScore(c)}</p>`
+    : s.pennant ? `<p class="sc-flag">Pennant winners: lost the World Series to the ${esc(c.winner.name)}, ${seriesScore(c, false)}</p>` : "";
+  const row = (k, v) => (v ? `<div><dt>${k}</dt><dd>${v}</dd></div>` : "");
+  const line = [s.era && `${s.era} team ERA`, s.hr != null && `${num(s.hr)} home runs`, s.avg && `${s.avg} team average`].filter(Boolean).join(" · ");
+  el.innerHTML = `
+    <div class="sc-head">
+      <button class="sc-nav" id="sc-prev" aria-label="Previous season"${i === 0 ? " disabled" : ""}>‹</button>
+      <div class="sc-year"><b>${s.year}</b><span>${esc(s.name)}</span></div>
+      <button class="sc-nav" id="sc-next" aria-label="Next season"${i === S.length - 1 ? " disabled" : ""}>›</button>
+    </div>
+    <div class="sc-body">
+      <div class="sc-rec"><b>${s.w}–${s.l}</b><span>${fmtPct(s.pct)} · ${rank === 1 ? "the best" : nth(rank) + "-best"} record of ${S.length} seasons</span></div>
+      ${flag}
+      <dl class="sc-facts">
+        ${row(mgr.length > 1 ? "Skippers" : "Skipper", esc(listify(mgr)))}
+        ${row("Home field", park ? esc(park.name) : "")}
+        ${row("Legends on the roster", esc(listify(greats)))}
+        ${row("Hardware", esc(listify(aw)))}
+        ${row("By the numbers", esc(line))}
+      </dl>
+    </div>
+    ${photos.length ? `<div class="sc-photos">${photos.slice(0, 2).map((a) => `<button class="sc-photo" data-i="${state.archive.indexOf(a)}" title="${esc(a.title)}"><img src="${esc(a.src)}" alt="${esc(a.title)}" loading="lazy"></button>`).join("")}</div>` : ""}`;
+  $("#sc-prev").onclick = () => { pinSeason(i - 1); $("#sc-prev").focus(); };
+  $("#sc-next").onclick = () => { pinSeason(i + 1); $("#sc-next").focus(); };
+  $$("#season-card .sc-photo").forEach((b) => (b.onclick = () => openLightbox(state.archive, +b.dataset.i)));
 }
 
 let resizeTimer;
@@ -423,41 +668,49 @@ function renderEras() {
 // =====================================================================
 // OCTOBER: every World Series the club played in
 // =====================================================================
+// One World Series as the given club lived it: [{n, us, them, home, res, inn, park}, ...]
+function seriesGames(c, tid) {
+  return (c.games || []).map((g, i) => {
+    const home = g.home === tid, us = home ? g.hs : g.as, them = home ? g.as : g.hs;
+    return { n: i + 1, us, them, home, res: us > them ? "W" : us < them ? "L" : "T", inn: g.inn, park: g.park };
+  });
+}
+const gameChips = (games) => games.map((g) => `<span class="oct-g ${g.res.toLowerCase()}" title="Game ${g.n}${g.park ? " at " + esc(g.park) : ""}${g.inn > 9 ? `, ${g.inn} innings` : ""}">`
+  + `<small>G${g.n}${g.home ? "" : " @"}</small><b>${g.res}</b> ${g.us}–${g.them}${g.inn > 9 ? `<sup>${g.inn}</sup>` : ""}</span>`).join("");
+const clinchLine = (g) => (g ? `Clinched in Game ${g.n}${g.park ? ` at ${esc(parkName(g.park))}` : ""}, ${g.us}–${g.them}${g.inn > 9 ? ` in ${g.inn} innings` : ""}.` : "");
+
 function renderOctober() {
-  // World Series titles only, with the series told game by game.
   const tid = state.team.id;
-  const S = state.seasons.filter((s) => s.champ);
-  markSkip("october", !S.length);
-  if (!S.length) return clearPage("october", "october");
-  const pennants = state.seasons.filter((s) => s.pennant && !s.champ).length;
-  $("#october-lede").textContent = (S.length === 1 ? `One World Series championship, in ${S[0].year}`
-    : `${word(S.length)[0].toUpperCase() + word(S.length).slice(1)} World Series championships, from ${S[0].year} to ${S.at(-1).year}`)
-    + (pennants ? `, and ${plural(pennants, "other trip")} to the Fall Classic.` : ".");
+  const won = state.seasons.filter((s) => s.champ), lost = state.seasons.filter((s) => s.pennant && !s.champ);
+  markSkip("october", !won.length && !lost.length);
+  $("#october-lost-wrap").hidden = !lost.length;
+  $("#oct-key").hidden = !won.length && !lost.length;
+  if (!won.length) $("#october").innerHTML = "";
+  if (!lost.length) $("#october-lost").innerHTML = "";
+  if (!won.length && !lost.length) return;
+  const trips = plural(lost.length, won.length ? "other trip" : "trip");
+  $("#october-lede").textContent = !won.length ? `No championship yet, but ${trips} to the Fall Classic.`
+    : (won.length === 1 ? `One World Series championship, in ${won[0].year}` : `${Word(won.length)} World Series championships, from ${won[0].year} to ${won.at(-1).year}`)
+      + (lost.length ? `, and ${trips} to the Fall Classic.` : ".");
+
+  // Titles, newest first, each told game by game.
   const photoFor = (y) => state.archive.find((a) => a.year === y && /world series/i.test(a.title)) || state.archive.find((a) => a.year === y);
-  const ORDN = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"];
-  $("#october").innerHTML = S.slice().reverse().map((s) => {
+  $("#october").innerHTML = won.slice().reverse().map((s) => {
     const c = state.champions[s.year], [a, b, t] = (c.result || "").split("-");
-    const games = (c.games || []).map((g, i) => {
-      const home = g.home === tid, us = home ? g.hs : g.as, them = home ? g.as : g.hs;
-      return { n: i + 1, us, them, home, res: us > them ? "W" : us < them ? "L" : "T", inn: g.inn, park: g.park };
-    });
-    const last = games.at(-1);
+    const games = seriesGames(c, tid);
     const sweep = +b === 0 && !t;
     const runs = games.reduce((r, g) => [r[0] + g.us, r[1] + g.them], [0, 0]);
     const mgr = managersIn(s.year).map((m) => m.name);
     const stars = allLegendsIn(s.year).map((p) => p.name);
     const mvp = (c.mvp || []).filter((m) => m.team === tid).map((m) => m.name);
     const ph = photoFor(s.year);
-    const chips = games.map((g) => `<span class="oct-g ${g.res.toLowerCase()}" title="Game ${g.n}${g.park ? " at " + esc(g.park) : ""}${g.inn > 9 ? `, ${g.inn} innings` : ""}">`
-      + `<small>G${g.n}${g.home ? "" : " @"}</small><b>${g.res}</b> ${g.us}–${g.them}${g.inn > 9 ? `<sup>${g.inn}</sup>` : ""}</span>`).join("");
-    const clinch = last ? `Clinched in Game ${last.n}${last.park ? ` at ${esc(last.park)}` : ""}, ${last.us}–${last.them}${last.inn > 9 ? ` in ${last.inn} innings` : ""}.` : "";
     return `<article class="oct won">
       <div class="oct-year"><span>${s.year}</span><i>★</i></div>
       <div class="oct-body">
-        <div class="oct-flag">${sweep ? `A ${ORDN[+a] ? ORDN[+a].toLowerCase() + "-game " : ""}sweep` : +a + +b === 7 ? "Won in seven" : "World Champions"}</div>
-        <h4>Beat the ${esc(c.loser.name)}, <span class="oct-score">${a}–${b}${t ? `–${t}` : ""}</span></h4>
-        ${chips ? `<div class="oct-games">${chips}</div>` : ""}
-        <p>${clinch}${!games.length ? "" : runs[0] > runs[1] ? ` Outscored them ${runs[0]}–${runs[1]} over the series.`
+        <div class="oct-flag">${sweep ? `A ${WORDS[+a] ? WORDS[+a] + "-game " : ""}sweep` : +a + +b === 7 ? "Won in seven" : "World Champions"}</div>
+        <h4>Beat the ${esc(c.loser.name)}, <span class="oct-score">${seriesScore(c)}</span></h4>
+        ${games.length ? `<div class="oct-games">${gameChips(games)}</div>` : ""}
+        <p>${clinchLine(games.at(-1))}${!games.length ? "" : runs[0] > runs[1] ? ` Outscored them ${runs[0]}–${runs[1]} over the series.`
           : runs[0] < runs[1] ? ` Won it despite being outscored ${runs[1]}–${runs[0]}.` : ` Runs were even over the series, ${runs[0]}–${runs[1]}.`}</p>
         <p>${esc(s.name)} · ${s.w}–${s.l} in the regular season${mgr.length ? ` · managed by ${esc(listify(mgr))}` : ""}</p>
         ${mvp.length ? `<p class="oct-mvp">World Series MVP: ${esc(listify(mvp))}</p>` : ""}
@@ -467,6 +720,17 @@ function renderOctober() {
     </article>`;
   }).join("");
   $$("#october .oct-photo").forEach((b) => (b.onclick = () => openLightbox(state.archive, +b.dataset.i)));
+
+  // Pennants that ended one step short: a line apiece.
+  $("#october-lost").innerHTML = lost.slice().reverse().map((s) => {
+    const c = state.champions[s.year], games = seriesGames(c, tid);
+    return `<div class="oct-l">
+      <b>${s.year}</b>
+      <div><span class="oct-l-what">Lost to the ${esc(c.winner.name)}, <span class="oct-score">${seriesScore(c, false)}</span></span>
+        <small>${esc(s.name)} · ${s.w}–${s.l}</small></div>
+      <div class="oct-games">${gameChips(games)}</div>
+    </div>`;
+  }).join("");
 }
 
 // =====================================================================
@@ -500,7 +764,7 @@ function renderLegends() {
   $("#legends").innerHTML = L.map((p, i) => {
     const photo = legendPhoto(p.id);
     return `<article class="tcard" aria-label="${esc(p.name)}">
-      <div class="tcard-face" style="--tc:${COLORS[state.team.id]}">
+      <div class="tcard-face" style="--tc:${color(state.team.id)}">
         <div class="tcard-art${photo ? "" : " headshot"}">
           <img src="${esc(photo ? photo.src : headshot(p.id, 360))}" alt="" loading="lazy"${photo?.pos ? ` style="object-position:${esc(photo.pos)}"` : ""}>
           <span class="tcard-rank">${i + 1}</span>
@@ -510,7 +774,7 @@ function renderLegends() {
       <div class="tcard-back">
         <h4>${esc(p.name)}</h4>
         ${p.nick ? `<div class="tcard-nick">“${esc(p.nick)}”</div>` : ""}
-        <div class="tcard-meta">${plural(p.seasons, "season")} with the club</div>
+        <div class="tcard-meta">${plural(p.seasons, "season")} with the club${p.value ? ` · worth about ${Math.round(p.value)} wins` : ""}</div>
         <div class="tcard-line">${legendLine(p)}</div>
         ${photo ? `<a class="credit" href="${esc(photo.file)}" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>` : ""}
       </div>
@@ -562,7 +826,7 @@ function renderModern() {
   const P = M?.players || [];
   markSkip("modern", !P.length);
   if (!P.length) return;
-  const tc = COLORS[state.team.id];
+  const tc = color(state.team.id);
   const club = state.team.teamName;
   $("#modern-lede").textContent = `The best players to wear the ${club} uniform in the last twenty seasons (${M.from}–${M.to}), ranked by WAR, the wins each was worth above a replacement player. Only seasons with this club count, and a player needs at least ${word(M.min)} of them to qualify, unless he's on the ${M.to} club, so a short stay in the past doesn't put anyone on the list.`;
 
@@ -644,8 +908,6 @@ function renderModern() {
   $("#modern-how").textContent = `WAR (wins above replacement) comes from the MLB Stats API. It counts batting, baserunning, fielding and the position a player plays, or for a pitcher the runs he allowed and the innings he covered, and turns them into wins over a freely available replacement. ` +
     `Only the ${M.from}–${M.to} seasons count, and only the part spent with this club: a player traded in midseason keeps only what he did here. A player qualifies with ${word(M.min)} or more seasons here (a season counts if he played in at least one game for the club), or if he played for the club in ${M.to}, so today's stars are in the running however new they are. Pitchers' batting is left out, except for two-way players.`;
 }
-const yrs = (a, b) => (a === b ? `${a}` : `${a}–${String(b).slice(Math.floor(a / 100) === Math.floor(b / 100) ? 2 : 0)}`);
-const range = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 
 // =====================================================================
 // THE DUGOUT & THE BOOTH
@@ -756,21 +1018,21 @@ function renderTrophies() {
   const A = (state.history[state.team.id] || {}).awards || [];
   const groups = [["MVP", "Most Valuable Player", "#d4a830"], ["Cy Young", "Cy Young Award", "#c9c9c9"], ["Rookie of the Year", "Rookie of the Year", "#c27a3a"]];
   markSkip("trophies", !A.length);
-  const html = groups.map(([key, label, color]) => {
+  const html = groups.map(([key, label, fill]) => {
     const list = A.filter((a) => a.award === key);
-    return `<div class="trophy-col"><h4>${TROPHY(color)}${label}<small>${list.length}</small></h4>
-      ${list.length ? `<ul class="trophy-list">${list.map((a) => `<li><b>${a.season}</b><span>${esc(a.name)}</span></li>`).join("")}</ul>`
+    return `<div class="trophy-col"><h4>${TROPHY(fill)}${label}<small>${list.length}</small></h4>
+      ${list.length ? `<ul class="trophy-list by-year">${list.map((a) => `<li><b>${a.season}</b><span>${esc(a.name)}</span></li>`).join("")}</ul>`
         : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
   });
-  // Gold Gloves (since 1958) and Silver Sluggers (since 1980) come by the dozen, so list them by player.
+  // Gold Gloves (since 1957) and Silver Sluggers (since 1980) come by the dozen, so list them by player.
   const multi = [["Gold Glove", "Gold Gloves", "#e3b23c", "Fielding's top honor, since 1957"], ["Silver Slugger", "Silver Sluggers", "#b8bcc2", "The best bat at each position, since 1980"]];
-  html.push(...multi.map(([key, label, color, note]) => {
+  html.push(...multi.map(([key, label, fill, note]) => {
     const list = A.filter((a) => a.award === key), by = new Map();
     for (const a of list) by.set(a.id, [...(by.get(a.id) || []), a]);
     const rows = [...by.values()].sort((x, y) => y.length - x.length || x[0].season - y[0].season);
-    return `<div class="trophy-col"><h4>${TROPHY(color)}${label}<small>${list.length}</small></h4>
+    return `<div class="trophy-col wide"><h4>${TROPHY(fill)}${label}<small>${list.length}</small></h4>
       <p class="trophy-note">${note}</p>
-      ${rows.length ? `<ul class="trophy-list">${rows.map((r) => `<li><b>${r.length > 1 ? "×" + r.length : ""}</b><span>${esc(r[0].name)}</span><i>${esc(spans(r.map((a) => a.season)))}</i></li>`).join("")}</ul>`
+      ${rows.length ? `<ul class="trophy-list">${rows.map((r) => `<li><b>${r.length > 1 ? "×" + r.length : ""}</b><span>${esc(r[0].name)} <i>${esc(spans(r.map((a) => a.season)))}</i></span></li>`).join("")}</ul>`
         : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
   }));
   $("#trophies").innerHTML = html.join("");
@@ -839,7 +1101,8 @@ function renderArchive() {
 
 const lb = $("#lightbox");
 const LB = { list: [], i: 0 };
-lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+// a click on the backdrop closes a dialog
+for (const d of $$("dialog")) d.addEventListener("click", (e) => { if (e.target === d) d.close(); });
 lb.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") { lbStep(1); e.preventDefault(); }
   if (e.key === "ArrowLeft") { lbStep(-1); e.preventDefault(); }
@@ -866,6 +1129,8 @@ function showLightbox(i) {
   $("#lb-wiki").textContent = /commons\.wikimedia/.test(a.url || "") ? "See it on Wikimedia Commons" : "Read the full story on Wikipedia";
   $("#lb-file").href = a.file || "#";
   $("#lb-file").hidden = !a.file;
+  $("#lb-club").hidden = !a.team;
+  if (a.team) { $("#lb-club").dataset.club = a.team.id; $("#lb-club").textContent = `Open the ${a.team.teamName} scrapbook`; }
   const many = LB.list.length > 1;
   $("#lb-prev").hidden = $("#lb-next").hidden = !many;
   $("#lb-count").textContent = many ? `${i + 1} of ${LB.list.length}` : "";
@@ -874,35 +1139,86 @@ function showLightbox(i) {
 // =====================================================================
 // LEAGUE
 // =====================================================================
+const HONORS = [["titles", "Titles"], ["pennants", "Pennants"], ["hof", "Hall of Famers"], ["retired", "Retired Nos."], ["mvp", "MVPs"], ["cy", "Cy Youngs"], ["roy", "Rookies of the Year"]];
 function renderLeague() {
-  const C = state.champions, years = Object.keys(C).map(Number);
+  const C = state.champions, years = Object.keys(C).map(Number).sort((a, b) => a - b);
   const thisYear = Math.max(...years, new Date().getFullYear() - 1);
   const rows = state.teams.map((t) => {
     const won = years.filter((y) => C[y].winner.id === t.id), last = won.at(-1);
-    const start = Math.max(1903, t.firstYearOfPlay ? +t.firstYearOfPlay : 1903);
+    const start = Math.max(1903, +t.firstYearOfPlay || 1903);
     return { t, titles: won.length, last, drought: last ? thisYear - last : thisYear - start + 1, never: !last };
   }).sort((a, b) => b.drought - a.drought);
   const max = rows[0].drought;
   $("#droughts").innerHTML = rows.map((r) => `
-    <div class="brow" data-id="${r.t.id}">
+    <button class="brow" data-club="${r.t.id}">
       <img src="${logo(r.t.id)}" alt="" loading="lazy">
-      <div class="bname">${esc(r.t.teamName)} <small>· ${plural(r.titles, "title")}</small></div>
-      <div class="bbar-wrap"><div class="bbar" style="width:${(r.drought / max) * 100}%"></div></div>
-      <div class="bval"><b>${r.drought}</b>${r.never ? "never" : "since " + r.last}</div>
-    </div>`).join("");
-  $$("#droughts .brow").forEach((el) => (el.onclick = () => { showView("franchise"); selectTeam(+el.dataset.id); window.scrollTo({ top: 0, behavior: "smooth" }); }));
+      <span class="bname">${esc(r.t.teamName)} <small>· ${plural(r.titles, "title")}</small></span>
+      <span class="bbar-wrap"><span class="bbar" style="width:${(r.drought / max) * 100}%"></span></span>
+      <span class="bval"><b>${r.drought}</b>${r.never ? "never" : "since " + r.last}</span>
+    </button>`).join("");
 
   const wall = [];
   for (let y = thisYear; y >= 1903; y--) {
     const c = C[y];
     if (!c) { wall.push(`<div class="wpen gap" title="No World Series">${y}<br>no series</div>`); continue; }
-    wall.push(`<div class="wpen" style="--pc:${COLORS[c.winner.id] || "#1e3557"}" title="${y}: ${esc(c.winner.name)} def. ${esc(c.loser.name)} (${c.result})">
-      <img src="${logo(c.winner.id)}" alt="${esc(c.winner.name)}" loading="lazy"><span>${y}</span></div>`);
+    wall.push(`<button class="wpen" data-year="${y}" style="--pc:${color(c.winner.id)}" title="${y}: ${esc(c.winner.name)} def. ${esc(c.loser.name)} (${seriesScore(c)})">
+      <img src="${logo(c.winner.id)}" alt="${esc(c.winner.name)}" loading="lazy"><span>${y}</span></button>`);
   }
   $("#wall").innerHTML = wall.join("");
+  $("#wall").onclick = (e) => { const b = e.target.closest("[data-year]"); if (b) openSeries(+b.dataset.year); };
+  $("#series-close").onclick = () => $("#series").close();
+  renderHonors();
+}
+
+// One World Series, told from the winner's side, in a dialog.
+function openSeries(year) {
+  const c = state.champions[year];
+  if (!c) return;
+  const games = seriesGames(c, c.winner.id);
+  const mvp = (c.mvp || []).map((m) => m.name);
+  const club = (x, page) => (teamById(x.id) ? `<button class="btn btn-small" data-club="${x.id}" data-page="${page}">The ${esc(teamById(x.id).teamName)} almanac</button>` : "");
+  $("#series-body").innerHTML = `
+    <span class="kicker">The ${year} World Series</span>
+    <div class="series-clubs" style="--pc:${color(c.winner.id)}">
+      <img src="${logo(c.winner.id)}" alt=""><b>${seriesScore(c)}</b><img class="lost" src="${logo(c.loser.id)}" alt="">
+    </div>
+    <h3>${esc(c.winner.name)} over the ${esc(c.loser.name)}</h3>
+    ${games.length ? `<div class="oct-games">${gameChips(games)}</div><p>${clinchLine(games.at(-1))}</p>` : ""}
+    ${mvp.length ? `<p class="oct-mvp">World Series MVP: ${esc(listify(mvp))}</p>` : ""}
+    <div class="series-links">${club(c.winner, "october")}${club(c.loser, "october")}</div>`;
+  $("#series").showModal();
+}
+
+// Thirty clubs side by side: sortable by any column.
+function renderHonors() {
+  const C = Object.values(state.champions);
+  const count = (id, award) => ((state.history[id] || {}).awards || []).filter((a) => a.award === award).length;
+  const rows = state.teams.map((t) => ({
+    t, name: t.teamName, est: +t.firstYearOfPlay || 0,
+    titles: C.filter((c) => c.winner.id === t.id).length,
+    pennants: C.filter((c) => c.winner.id === t.id || c.loser.id === t.id).length,
+    hof: ((state.history[t.id] || {}).hof || []).length,
+    retired: (state.retired[t.id] || []).length,
+    mvp: count(t.id, "MVP"), cy: count(t.id, "Cy Young"), roy: count(t.id, "Rookie of the Year"),
+  }));
+  const { key, dir } = state.honorSort;
+  rows.sort((a, b) => (typeof a[key] === "string" ? a[key].localeCompare(b[key]) : a[key] - b[key]) * dir || b.titles - a.titles || a.name.localeCompare(b.name));
+  const best = Object.fromEntries(HONORS.map(([k]) => [k, Math.max(...rows.map((r) => r[k]))]));
+  const th = (k, label, cls = "") => `<th class="${cls}" aria-sort="${key === k ? (dir > 0 ? "ascending" : "descending") : "none"}"><button data-k="${k}">${label}${key === k ? `<i>${dir > 0 ? "▲" : "▼"}</i>` : ""}</button></th>`;
+  $("#honors").innerHTML = `<thead><tr>${th("name", "Club", "hclub")}${th("est", "Est.")}${HONORS.map(([k, l]) => th(k, l)).join("")}</tr></thead><tbody>` +
+    rows.map((r) => `<tr data-club="${r.t.id}"><th class="hclub" scope="row"><img src="${logo(r.t.id)}" alt="" loading="lazy">${esc(r.name)}</th><td>${r.est || ""}</td>` +
+      HONORS.map(([k]) => `<td class="${k === key ? "sorted" : ""}${r[k] && r[k] === best[k] ? " best" : ""}">${r[k] || "<span>–</span>"}</td>`).join("") + `</tr>`).join("") + `</tbody>`;
+  $("#honors thead").onclick = (e) => {
+    const b = e.target.closest("button[data-k]");
+    if (!b) return;
+    const k = b.dataset.k, text = k === "name";
+    state.honorSort = { key: k, dir: state.honorSort.key === k ? -state.honorSort.dir : text || k === "est" ? 1 : -1 };
+    renderHonors();
+    $(`#honors button[data-k="${k}"]`).focus();
+  };
 }
 
 init().catch((err) => {
   console.error(err);
-  $("#franchise-empty").innerHTML = `<p class="empty-big">Rain delay</p><p>Couldn't reach the MLB Stats API. ${esc(err.message)}</p>`;
+  rainDelay("Couldn't reach the MLB Stats API, so the almanac can't open just now.", () => location.reload());
 });
