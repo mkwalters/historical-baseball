@@ -9,7 +9,8 @@ SCRAPBOOK (scripts/scrapbook_picks.py) lists Commons files picked by hand for ea
 Legends get a Commons portrait **in the club's uniform**: the Wikipedia lead photo when it
 is one, else the file in LEGEND_PHOTOS, else nothing (the page then uses MLB's headshot,
 which is always in uniform). Every ballpark the club called home gets its Wikipedia
-photo and a short description.
+photo and a short description. Modern Stars who finished their careers with another club get the
+file in MODERN_PHOTOS (MLB's headshot would show the other club's uniform).
 
 Usage: python3 scripts/build_photos.py
 """
@@ -208,7 +209,7 @@ def park_item(title):
 
 
 def main():
-    from scrapbook_picks import SCRAPBOOK, LEGEND_PHOTOS, PARK_TITLES, PARK_PHOTOS, FACE_PHOTOS, PHOTO_FOCUS
+    from scrapbook_picks import SCRAPBOOK, LEGEND_PHOTOS, PARK_TITLES, PARK_PHOTOS, FACE_PHOTOS, PHOTO_FOCUS, MODERN_PHOTOS
 
     def pick(tid, pid):
         """A curated portrait: (team, player) first, for players who starred for two clubs, then player."""
@@ -239,7 +240,8 @@ def main():
 
     # hand-picked Commons files: scrapbook pages and in-uniform legend portraits
     files = commons_files([p[0] for picks in SCRAPBOOK.values() for p in picks] + [f for f in LEGEND_PHOTOS.values() if f]
-                          + [f for f in PARK_PHOTOS.values() if isinstance(f, str)] + [f for f in FACE_PHOTOS.values() if f.startswith("File:")])
+                          + [f for f in PARK_PHOTOS.values() if isinstance(f, str)] + [f for f in FACE_PHOTOS.values() if f.startswith("File:")]
+                          + [f for f in MODERN_PHOTOS.values() if f])
     for (tid, pid, _, _) in names:
         f = pick(tid, pid)
         if f is None or (f != "keep" and f not in files):
@@ -284,6 +286,13 @@ def main():
                 faces[str(pid)] = {"src": f"https://img.mlbstatic.com/mlb-photos/image/upload/w_240,q_auto:best/v1/people/{pid}/headshot/83/current"}
             elif f in files:
                 faces[str(pid)] = {"src": files[f]["src"], "file": files[f]["file"]} | ({"pos": PHOTO_FOCUS[f]} if f in PHOTO_FOCUS else {})
+    # modern stars who finished their careers elsewhere: a Commons photo in this club's uniform
+    for (tid, pid), f in MODERN_PHOTOS.items():
+        if f is None:  # MLB's headshot shows another club (a late minor-league deal): no photo
+            out.setdefault(str(tid), {"archive": [], "legends": {}}).setdefault("modern", {})[str(pid)] = {"src": None}
+        elif f in files:
+            out.setdefault(str(tid), {"archive": [], "legends": {}}).setdefault("modern", {})[str(pid)] = \
+                {"src": files[f]["src"], "file": files[f]["file"], "w": files[f]["w"], "h": files[f]["h"]} | ({"pos": PHOTO_FOCUS[f]} if f in PHOTO_FOCUS else {})
     with open(os.path.join(ROOT, "data", "photos.json"), "w") as fh:
         json.dump(out, fh, indent=1)
     for tid, v in out.items():

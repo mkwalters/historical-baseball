@@ -501,11 +501,88 @@ body:not(.paging) .pager { display: none; }
   .num-banner { width: 96px; }
 }
 
+/* ---------- modern stars: today's cards, a WAR heatmap ---------- */
+.mstats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 0 auto 26px; max-width: 860px; }
+.mstat { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px 10px 12px; background: #fbf5e6; border: 1px solid var(--rule); border-top: 4px solid var(--team); }
+.mstat-k { font: 11px var(--type); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.mstat-v { font: 34px/1.1 var(--slab); color: var(--ink); margin: 4px 0 2px; }
+.mstat-v small { font: 12px var(--type); letter-spacing: .1em; text-transform: uppercase; margin-left: 5px; color: var(--ink-soft); }
+.mstat-who { font: italic 14px var(--headline); }
+
+.mcards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+.mcard { display: flex; flex-direction: column; }
+.mcard-face {
+  position: relative; background: #fff; padding: 7px; border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.08), 0 4px 10px rgba(60,40,10,.22); transition: transform .2s, box-shadow .2s;
+}
+.mcard:hover .mcard-face { transform: translateY(-6px); box-shadow: 0 12px 22px rgba(60,40,10,.3); }
+.mcard-art {
+  position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 3px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--tc) 55%, #fff), var(--tc));
+}
+.mcard-art img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
+.mcard-art.headshot img { object-position: center 8%; }
+/* a glossy sheen, like a modern card stock */
+.mcard-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(125deg, rgba(255,255,255,.28), transparent 38%); pointer-events: none; }
+.mcard-art.none { display: grid; place-items: center; }
+.mcard-mono { font: 54px var(--slab); color: rgba(255,255,255,.88); letter-spacing: .04em; text-shadow: 0 2px 0 rgba(0,0,0,.18); }
+.mcard-rank {
+  position: absolute; top: 7px; left: 7px; min-width: 30px; height: 30px; padding: 0 6px; border-radius: 4px; z-index: 1;
+  background: #fff; color: var(--tc); display: grid; place-items: center; font: 17px var(--slab); box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.mcard-now {
+  position: absolute; top: 9px; right: 0; z-index: 1; background: var(--gold); color: #fff; padding: 3px 7px 3px 9px;
+  font: 9px var(--type); letter-spacing: .12em; text-transform: uppercase; clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%);
+}
+.mcard-band {
+  position: relative; margin: -22px -7px 0 -7px; padding: 8px 12px 9px; background: var(--tc); color: #fff;
+  clip-path: polygon(0 10px, 100% 0, 100% 100%, 0 100%); display: flex; flex-direction: column; gap: 1px; z-index: 1;
+}
+.mcard-name { font: 15px/1.15 var(--slab); letter-spacing: .02em; padding-top: 8px; padding-right: 50px; }
+.mcard-pos { font: 10px var(--type); letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.mcard-war {
+  position: absolute; right: 10px; bottom: 12px; z-index: 2; width: 52px; height: 52px; border-radius: 50%;
+  background: #fff; color: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3); border: 2px solid var(--tc);
+}
+.mcard-war b { font: 16px/1 var(--slab); }
+.mcard-war small { font: 8px var(--type); letter-spacing: .14em; color: var(--ink-soft); margin-top: 2px; }
+.mcard-back { padding: 12px 4px 0; text-align: center; }
+.mcard-meta { font: 12px var(--type); color: var(--ink-soft); }
+.mcard-line { font-size: 12.5px; margin-top: 5px; }
+.mcard-peak { font: italic 12.5px var(--headline); color: var(--ink-soft); margin-top: 3px; }
+
+.mheat-wrap { position: relative; max-width: 940px; margin: 0 auto; }
+.mheat { font: 12px var(--body); }
+.mh-row { display: grid; grid-template-columns: minmax(130px, 190px) repeat(var(--cols), minmax(0, 1fr)) 46px; gap: 2px; align-items: center; margin-bottom: 2px; }
+.mh-row.mh-cut { margin-bottom: 10px; }
+.mh-head { margin-bottom: 4px; }
+.mh-y { font: 10px var(--type); color: var(--ink-faint); text-align: center; }
+.mh-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 8px; }
+.mh-name b { display: inline-block; width: 18px; font: 11px var(--type); color: var(--ink-faint); }
+.mh-tot { font: 13px var(--slab); text-align: right; }
+.mh-head .mh-tot { font: 10px var(--type); color: var(--ink-faint); letter-spacing: .08em; }
+.mh-c { display: grid; place-items: center; height: 22px; border-radius: 2px; background: color-mix(in srgb, var(--tc) var(--mix, 0%), #fbf5e6); }
+.mh-s3, .mh-s4 { color: #fff; }
+.mh-out { background: transparent; border-bottom: 1px dotted var(--rule); border-radius: 0; height: 12px; align-self: center; }
+.mh-neg { background: repeating-linear-gradient(135deg, #fbf5e6 0 3px, var(--down) 3px 5px); }
+.mh-c i { font: normal 10px/1 var(--type); letter-spacing: -.02em; }
+.mh-c.mh-peak { outline: 1.5px solid var(--ink); outline-offset: 0; }
+.mh-c[data-y]:hover { outline: 2px solid var(--ink); }
+.mheat-key { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 14px; margin-top: 12px; font: 11px var(--type); color: var(--ink-soft); }
+.mk-k { letter-spacing: .12em; text-transform: uppercase; }
+.mk { display: inline-flex; align-items: center; gap: 5px; }
+.mk .mh-c { width: 18px; height: 12px; display: inline-block; }
+.mk .mh-out { height: 8px; }
+.mq { font: 12px var(--type); color: var(--ink-faint); margin: 10px 0 0; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 1000px) {
   /* three across; the tenth card sits centered on its own row */
   .legends { display: flex; flex-wrap: wrap; justify-content: center; }
   .legends .tcard { width: calc((100% - 40px) / 3); }
+  .mcards { display: flex; flex-wrap: wrap; justify-content: center; }
+  .mcards .mcard { width: calc((100% - 40px) / 3); }
 }
 @media (max-width: 760px) {
   .masthead h1 { font-size: 36px; }
@@ -516,6 +593,15 @@ body:not(.paging) .pager { display: none; }
   .sheet-head h3 { font-size: 26px; }
   .legends { gap: 14px; }
   .legends .tcard { width: calc((100% - 14px) / 2); }
+  .mcards { gap: 14px; }
+  .mcards .mcard { width: calc((100% - 14px) / 2); }
+  .mh-row { grid-template-columns: 92px repeat(var(--cols), minmax(0, 1fr)) 32px; gap: 1px; }
+  .mh-name { font-size: 11px; padding-right: 4px; }
+  .mh-name b { display: none; }
+  .mh-c { height: 16px; }
+  .mh-c i { display: none; }
+  .mh-tot { font-size: 11px; }
+  .mstat-v { font-size: 28px; }
   #timeline { height: 280px; }
   .brow { grid-template-columns: 34px 1fr 100px; }
   .brow .bbar-wrap { display: none; }

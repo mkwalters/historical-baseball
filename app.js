@@ -76,7 +76,7 @@ async function get(path) {
 
 // ---------- state ----------
 const state = {
-  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {},
+  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {}, modern: {},
   team: null, seasons: [], eras: [], parks: [], archive: [],
   barW: 1, page: "ledger", pages: [], decade: null,
 };
@@ -84,12 +84,12 @@ const state = {
 async function init() {
   const b = await json("data/bundle/teams.json");
   if (b.teams) Object.assign(BUNDLE, { on: true, teams: { teams: b.teams }, logos: b.logos || {} });
-  const [teamsRes, champions, legends, photos, history, people, retired] = await Promise.all([
+  const [teamsRes, champions, legends, photos, history, people, retired, modern] = await Promise.all([
     get(`/teams?sportId=1&season=${new Date().getFullYear()}`),
     json("data/champions.json"), json("data/legends.json"), json("data/photos.json"), json("data/history.json"),
-    json("data/people.json"), json("data/retired.json"),
+    json("data/people.json"), json("data/retired.json"), json("data/modern.json"),
   ]);
-  Object.assign(state, { champions, legends, photos, history, people, retired });
+  Object.assign(state, { champions, legends, photos, history, people, retired, modern });
   state.teams = teamsRes.teams.filter((t) => t.sport?.id === 1).sort((a, b) => a.teamName.localeCompare(b.teamName));
   renderPicker();
   renderLeague();
@@ -255,6 +255,7 @@ async function selectTeam(id, page = "ledger") {
   renderTrophies();
   renderParks();
   renderArchive();
+  renderModern();
   setupPages();
   goPage(page, { scroll: false });
 }
@@ -520,6 +521,131 @@ function renderLegends() {
     ? `<span class="also-k">Also in the conversation</span> ${more.map((p) => `<span class="also-p">${esc(p.name)} <small>${p.from}–${p.to}</small></span>`).join("")}`
     : "";
 }
+
+// =====================================================================
+// MODERN STARS (the last twenty seasons, ranked by WAR)
+// =====================================================================
+const MODERN_CARDS = 10;
+const fmtWar = (w) => (w < 0 ? "−" : "") + Math.abs(w).toFixed(1);
+const rate = (x) => x.toFixed(3).replace(/^0/, "");
+// A modern star's portrait: a hand-checked Commons photo in this club's uniform, else MLB's headshot
+// when the club was his last stop (so it shows this uniform), else none (the card shows his initials).
+function modernPhoto(p) {
+  const c = ((state.photos[state.team.id] || {}).modern || {})[p.id];
+  if (c) return c.src ? { src: c.src, file: c.file, pos: c.pos } : null; // {src: null}: the headshot shows another club
+  if (p.home) return { src: headshot(p.id, 360), headshot: true };
+  return null;
+}
+function modernPos(p) {
+  if (p.pos === "TWP") return "Two-way";
+  if (p.kind === "pitcher" && p.line) return p.line.gs >= p.line.g / 2 ? "SP" : "RP";
+  return p.pos || "";
+}
+function modernLine(p) {
+  const L = p.line || {};
+  if (p.kind === "pitcher") {
+    const rec = L.sv >= 100 ? `${num(L.sv)} saves` : `${L.w}–${L.l}`;
+    return `${rec} · ${L.era.toFixed(2)} ERA · ${num(L.k)} K`;
+  }
+  let t = `${num(L.hr)} HR · ${rate(L.avg)} AVG · ${rate(L.ops)} OPS`;
+  if (L.sb >= 150) t += ` · ${num(L.sb)} SB`;
+  if (p.line2) t += `; on the mound ${p.line2.w}–${p.line2.l}, ${p.line2.era.toFixed(2)} ERA`;
+  return t;
+}
+const initials = (name) => name.split(" ").filter((w) => !SUFFIX.test(w)).map((w) => w[0]).slice(0, 3).join("");
+// sequential steps of the club's color for the heatmap: [lower bound, mix %]
+const HEAT = [[0, 16], [2, 34], [4, 56], [6, 78], [8, 100]];
+const heatStep = (w) => HEAT.reduce((k, [lo], i) => (w >= lo ? i : k), 0);
+
+function renderModern() {
+  const M = state.modern[state.team.id];
+  const P = M?.players || [];
+  markSkip("modern", !P.length);
+  if (!P.length) return;
+  const tc = COLORS[state.team.id];
+  const club = state.team.teamName;
+  $("#modern-lede").textContent = `The best players to wear the ${club} uniform in the last twenty seasons (${M.from}–${M.to}), ranked by WAR, the wins each was worth above a replacement player. Only seasons with this club count, and a player needs at least ${word(M.min)} of them to qualify, unless he's on the ${M.to} club, so a short stay in the past doesn't put anyone on the list.`;
+
+  // three superlatives
+  const marks = [];
+  if (M.best) marks.push(["Best single season", fmtWar(M.best.war), "WAR", `${M.best.name}, ${M.best.year}`]);
+  if (M.leader) marks.push([`Best of the ${M.to} club`, fmtWar(M.leader.war), "WAR", `${M.leader.name}, ${plural(M.leader.seasons, "season")} here`]);
+  if (M.longest) marks.push(["Longest stay", M.longest.seasons, "seasons", `${M.longest.name}, ${yrs(M.longest.from, M.longest.to)}`]);
+  $("#modern-marks").innerHTML = marks.map(([k, v, unit, who]) =>
+    `<div class="mstat"><span class="mstat-k">${esc(k)}</span><span class="mstat-v">${esc(v)}<small>${esc(unit)}</small></span><span class="mstat-who">${esc(who)}</span></div>`).join("");
+
+  // the cards
+  $("#modern").innerHTML = P.slice(0, MODERN_CARDS).map((p, i) => {
+    const ph = modernPhoto(p);
+    const art = ph
+      ? `<img src="${esc(ph.src)}" alt="" loading="lazy"${ph.pos ? ` style="object-position:${esc(ph.pos)}"` : ""}>`
+      : `<span class="mcard-mono" aria-hidden="true">${esc(initials(p.name))}</span>`;
+    return `<article class="mcard" style="--tc:${tc}" aria-label="${esc(p.name)}, ${fmtWar(p.war)} WAR">
+      <div class="mcard-face">
+        <div class="mcard-art${ph?.headshot ? " headshot" : ""}${ph ? "" : " none"}">
+          ${art}
+          <span class="mcard-rank">${i + 1}</span>
+          ${p.active ? `<span class="mcard-now">On the ${M.to} club</span>` : ""}
+        </div>
+        <div class="mcard-band">
+          <span class="mcard-name">${esc(p.name)}</span>
+          <span class="mcard-pos">${esc(modernPos(p))}</span>
+        </div>
+        <div class="mcard-war"><b>${fmtWar(p.war)}</b><small>WAR</small></div>
+      </div>
+      <div class="mcard-back">
+        <div class="mcard-meta">${yrs(p.from, p.to)} · ${plural(p.seasons, "season")}</div>
+        <div class="mcard-line">${modernLine(p)}</div>
+        <div class="mcard-peak">Best year: ${p.peak[0]}, ${fmtWar(p.peak[1])} WAR</div>
+        ${ph && !ph.headshot ? `<a class="credit" href="${esc(ph.file)}" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>` : ""}
+      </div>
+    </article>`;
+  }).join("");
+
+  // the heatmap: one row per player, one column per season
+  const years = range(M.from, M.to);
+  $("#mheat-note").textContent = `WAR in each season with the club, darker for bigger years. Each player's best season is labeled. Hover a square for the number.`;
+  const cell = (p, y) => {
+    const w = p.yr.get(y);
+    if (w == null) return `<span class="mh-c mh-out" role="cell" aria-label="${y}: not with the club"></span>`;
+    const neg = w < 0, k = heatStep(w), pk = y === p.peak[0];
+    const bg = neg ? "" : ` style="--mix:${HEAT[k][1]}%"`;
+    return `<span class="mh-c${neg ? " mh-neg" : ` mh-s${k}`}${pk ? " mh-peak" : ""}" role="cell" data-y="${y}" data-w="${w}" data-n="${esc(p.name)}"${bg} aria-label="${y}: ${fmtWar(w)} WAR">${pk ? `<i>${fmtWar(w)}</i>` : ""}</span>`;
+  };
+  const rows = P.map((p) => ({ ...p, yr: new Map(p.years) }));
+  $("#mheat").style.setProperty("--tc", tc);
+  $("#mheat").style.setProperty("--cols", years.length);
+  $("#mheat").innerHTML =
+    `<div class="mh-row mh-head" role="row"><span class="mh-name" role="columnheader"></span>${years.map((y) =>
+      `<span class="mh-y" role="columnheader">${y === M.from || y === M.to || (y % 5 === 0 && y - M.from > 2 && M.to - y > 2) ? `’${String(y).slice(2)}` : ""}</span>`).join("")}<span class="mh-tot" role="columnheader">WAR</span></div>` +
+    rows.map((p, i) => `<div class="mh-row${i === MODERN_CARDS - 1 ? " mh-cut" : ""}" role="row">
+      <span class="mh-name" role="rowheader"><b>${i + 1}</b> ${esc(p.name)}</span>
+      ${years.map((y) => cell(p, y)).join("")}
+      <span class="mh-tot" role="cell">${fmtWar(p.war)}</span></div>`).join("");
+  $("#mheat-key").innerHTML = `<span class="mk-k">WAR in a season</span>` +
+    HEAT.map(([lo], i) => `<span class="mk"><i class="mh-c mh-s${i}" style="--mix:${HEAT[i][1]}%;--tc:${tc}"></i>${i === HEAT.length - 1 ? `${lo}+` : `${lo}–${HEAT[i + 1][0]}`}</span>`).join("") +
+    `<span class="mk"><i class="mh-c mh-neg"></i>Below zero</span><span class="mk"><i class="mh-c mh-out"></i>Not with the club</span>`;
+  const tip = $("#mtip"), wrap = $(".mheat-wrap");
+  $("#mheat").onmouseover = (e) => {
+    const c = e.target.closest(".mh-c[data-y]");
+    if (!c) { tip.hidden = true; return; }
+    const r = c.getBoundingClientRect(), wr = wrap.getBoundingClientRect();
+    tip.innerHTML = `<b>${fmtWar(+c.dataset.w)}</b> WAR<br>${esc(c.dataset.n)}, ${c.dataset.y}`;
+    tip.style.left = `${r.left - wr.left + r.width / 2}px`;
+    tip.style.top = `${r.top - wr.top}px`;
+    tip.hidden = false;
+  };
+  $("#mheat").onmouseleave = () => (tip.hidden = true);
+
+  const more = P.slice(MODERN_CARDS);
+  $("#modern-also").innerHTML = (more.length
+    ? `<span class="also-k">Next in line</span> ${more.map((p) => `<span class="also-p">${esc(p.name)} <small>${fmtWar(p.war)} WAR</small></span>`).join("")}`
+    : "") + `<p class="mq">${plural(M.qualified, "player")} qualified: ${word(M.min)} or more seasons with the club since ${M.from}, or a place on the ${M.to} club.</p>`;
+  $("#modern-how").textContent = `WAR (wins above replacement) comes from the MLB Stats API. It counts batting, baserunning, fielding and the position a player plays, or for a pitcher the runs he allowed and the innings he covered, and turns them into wins over a freely available replacement. ` +
+    `Only the ${M.from}–${M.to} seasons count, and only the part spent with this club: a player traded in midseason keeps only what he did here. A player qualifies with ${word(M.min)} or more seasons here (a season counts if he played in at least one game for the club), or if he played for the club in ${M.to}, so today's stars are in the running however new they are. Pitchers' batting is left out, except for two-way players.`;
+}
+const yrs = (a, b) => (a === b ? `${a}` : `${a}–${String(b).slice(Math.floor(a / 100) === Math.floor(b / 100) ? 2 : 0)}`);
+const range = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 
 // =====================================================================
 // THE DUGOUT & THE BOOTH

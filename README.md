@@ -17,6 +17,7 @@ The page is styled like an old almanac: parchment, wood-type headlines, bunting 
 | **October** | Every World Series the club won: the opponent, the series score, each game's result, where it was clinched, the World Series MVP, the manager, the stars on the roster and a photo when one exists. Clubs without a title skip the chapter. |
 | **Home Fields** | Every ballpark the club called home, as postcards, with its years, the club's record there and the titles won there. |
 | **The Scrapbook** | 360-odd hand-picked public-domain and freely licensed photos across the 30 clubs, filterable by decade, with a lightbox you can page through. |
+| **Modern Stars** | The club's best players of the last 20 seasons, ranked by real WAR earned with the club. A player needs at least 4 seasons there to qualify, unless he played for the club in the latest season. Ten modern cards, then a season-by-season WAR heatmap of the top 15, with the best single season, the longest stay and the best player on the latest club. |
 | **The League** | A title-drought scoreboard and a wall of every champion's pennant since 1903. |
 
 ## Run
@@ -40,6 +41,7 @@ Live per-season data comes from `statsapi.mlb.com`. The history layers are baked
 | `data/history.json` | `scripts/build_history.py` | ballparks by season (merged across renamings), MVP/Cy Young/ROY/Gold Glove/Silver Slugger winners, Hall of Famers |
 | `data/photos.json` | `scripts/build_photos.py` (run after legends) | scrapbook photos, in-uniform legend portraits and ballpark photos (picks live in `scripts/scrapbook_picks.py`) |
 | `data/people.json` | `scripts/build_people.py` | every manager by season from the Stats API, plus hand-picked broadcasters, owners and executives |
+| `data/modern.json` | `scripts/build_modern.py` | each club's top 15 players of the last 20 completed seasons by WAR (the Stats API's `sabermetrics` stats), counting players with 4+ seasons there or on the latest club, with WAR by season and a stat line with the club |
 | `data/retired.json` | `scripts/build_retired.py` | retired numbers, parsed from Wikipedia's list |
 
 **Legend value** is a WAR-style estimate, since the Stats API has no WAR. It is built from each player's seasons with the franchise and normalised to each season's league:
@@ -48,6 +50,8 @@ Live per-season data comes from `statsapi.mlb.com`. The history layers are baked
 - **Wins:** runs convert to wins using that era's runs-per-win.
 
 It ignores defense and park effects, but it lines up with the usual franchise leaders: Ruth, Mantle and Gehrig; Mays, Bonds and Ott; Cobb, Wagner, Musial, Aaron.
+
+**Modern Stars** uses the WAR the Stats API publishes (batting, baserunning, fielding and position, or pitching), not the Legend estimate. A player qualifies with 4 or more seasons with the club in the window, or by playing for it in the latest season. Only seasons with the club count, a player traded midseason keeps only his share, and pitchers' batting is left out (except for two-way players). The window moves forward on its own: re-run `build_modern.py` after each season. A card shows MLB's headshot only when the club was the player's last stop, so the uniform is right. Otherwise it uses the Commons photo in `MODERN_PHOTOS`, or a plain card with his initials.
 
 **Photos** come only from Wikimedia Commons, which means public domain or freely licensed. There are two sources. The first is the lead image of a hand-picked list of Wikipedia articles per club (`MOMENTS`, plus the World Series article for every pennant). The second is `SCRAPBOOK` in `scripts/scrapbook_picks.py`: Commons files chosen by eye from searches on every name the club has played under, its ballparks, its legends and its famous moments, each with a caption. Library of Congress (Bain News Service) glass negatives and 1909–1913 tobacco cards cover the early years.
 

@@ -148,6 +148,7 @@ function trimPost(d, tid) {
 const champions = readJSON("data/champions.json");
 const legends = readJSON("data/legends.json");
 const history = readJSON("data/history.json");
+const modern = fs.existsSync(path.join(ROOT, "data/modern.json")) ? readJSON("data/modern.json") : {};
 const photos = fs.existsSync(path.join(ROOT, "data/photos.json")) ? readJSON("data/photos.json") : {};
 const year = new Date().getFullYear();
 const teamsRes = await get(`/teams?sportId=1&season=${year}`);
@@ -206,6 +207,16 @@ for (const t of teams) {
     }
     imgs[p.id] = await image(headshot(p.id, 360), { width: 360, quality: 72 });
   });
+  // modern stars: a hand-picked Commons portrait, else MLB's headshot when the club was the player's last stop
+  outPhotos.modern = {};
+  await pool(((modern[tid] || {}).players || []).slice(0, 10), 1, async (p) => {
+    const mp = ph.modern?.[p.id];
+    if (mp) {
+      const src = await image(wikiThumb(mp.src, 500, mp.w), { width: 420, quality: 70, wiki: true });
+      if (src) { outPhotos.modern[p.id] = { ...mp, src }; return; }
+    }
+    if (p.home && !imgs[p.id]) imgs[p.id] = await image(headshot(p.id, 360), { width: 360, quality: 72 });
+  });
   // scrapbook
   const arch = await pool(ph.archive || [], 1, async (a) => {
     const src = await image(a.src, { width: 820, quality: 64, wiki: true });
@@ -222,7 +233,7 @@ for (const t of teams) {
 }
 
 // static files
-for (const f of ["styles.css", "app.js", "data/champions.json", "data/legends.json", "data/history.json"]) {
+for (const f of ["styles.css", "app.js", "data/champions.json", "data/legends.json", "data/history.json", "data/modern.json"]) {
   fs.mkdirSync(path.dirname(path.join(DIST, f)), { recursive: true });
   fs.copyFileSync(path.join(ROOT, f), path.join(DIST, f));
 }

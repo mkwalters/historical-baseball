@@ -154,8 +154,222 @@ PARK_TITLES = {
     (113, "League Park", 1901): "League Park (Cincinnati)",
 }
 
+# Modern Stars (data/modern.json) whose last MLB club was another one, keyed (team id, person id):
+# a Commons photo of the player in this club's uniform. Players not listed here who finished with
+# the club use MLB's headshot; the rest get a plain card with their initials. None turns off a
+# headshot that shows another club anyway (a player who signed a late minor-league deal elsewhere).
+MODERN_PHOTOS = {
+    (109, 444482): "File:David Peralta (48053116843) (cropped).jpg",  # ARI David Peralta
+    (109, 457708): "File:Opening Day 074 Justin Upton cropped.jpg",  # ARI Justin Upton
+    (109, 471083): "File:Diamondbacks' Catchers - 1st Day of Spring Training (cropped).jpg",  # ARI Miguel Montero
+    (109, 571578): "File:Corbinpat.jpg",  # ARI Patrick Corbin
+    (109, 502671): "File:The Arizona Diamondbacks visit Auckland.jpg",  # ARI Paul Goldschmidt
+    (109, 572041): "File:CINvARI - A.J. Pollock (45306438792) (upper body crop).jpg",  # ARI Pollock 3
+    (133, 474463): "File:BrettAnderson warmup.jpg",  # ATH Brett Anderson
+    (133, 424825): "File:Coco Crisp Oakland 2015.jpg",  # ATH Coco Crisp
+    (133, 518626): "File:Josh Donaldson 20130625.jpg",  # ATH Josh Donaldson
+    (133, 502210): "File:Josh Reddick April 2014.jpg",  # ATH Josh Reddick
+    (133, 407885): "File:Mellis.jpg",  # ATH Mark Ellis
+    (133, 656305): "File:Matt Chapman ST 2017.jpg",  # ATH Matt Chapman
+    (133, 621566): "File:Matt Olson.jpg",  # ATH Matt Olson
+    (133, 543760): "File:Marcus Semien (49593957826) (cropped).jpg",  # ATH Semien 2
+    (133, 543243): "File:Sonny Gray August 20, 2013 (cropped).jpg",  # ATH Sonny Gray
+    (144, 518692): "File:Freddie Freeman Braves versus Rangers in TX Sept 2014.jpg",  # ATL Freddie Freeman
+    (144, 518792): "File:Jason Heyward Braves at Rangers in Texas in Sept 2014.jpg",  # ATL Jason Heyward
+    (144, 608331): "File:Max Fried Braves 2024 (cropped).png",  # ATL Max Fried
+    (139, 502042): "File:Chris Archer 001.jpg",  # Archer 3
+    (110, 430945): "File:Baltimore Orioles bird and Adam Jones (7359704372).jpg",  # BAL Adam Jones
+    (110, 406878): "File:Brian Roberts.jpg",  # BAL Brian Roberts
+    (110, 592518): "File:Manny Machado (40210236595).jpg",  # BAL Machado 3
+    (110, 446308): "File:Baltimore Orioles catcher Matt Wieters (32).jpg",  # BAL Matt Wieters
+    (110, 656775): "File:Cedric Mullins (52251783906) (cropped).jpg",  # BAL Mullins 2
+    (110, 455976): "File:Nick Markakis (51005404383) (cropped).jpg",  # BAL Nick Markakis
+    (110, 668939): "File:Adley Rutschman cropped from Pre Game Warmup (52802968734).jpg",  # BAL Rutschman 0
+    (111, 605141): "File:Mookie Betts on September 27, 2016 (2).jpg",  # BOS Betts 3
+    (111, 593428): "File:Xander Bogaerts vs Orioles 2018.jpg",  # BOS Bogaerts 3
+    (111, 646240): "File:Rafael Devers.jpg",  # BOS Devers 0
+    (111, 453056): "File:Red Sox 094 Jacoby Ellsbury.jpg",  # BOS Jacoby Ellsbury
+    (111, 452657): "File:Jon Lester (51007018867) (cropped).jpg",  # BOS Jon Lester
+    (111, 277417): "File:JoshBeckett.jpg",  # BOS Josh Beckett
+    (111, 519242): "File:Chris Sale in 2017 (37215240281) (cropped).jpg",  # BOS Sale 1
+    (111, 425903): "File:Kevin Youkilis 5.14.08.jpg",  # BOS Youkilis 3
+    (112, 150093): "File:Alfonso Soriano at Cubs at Giants 2010-08-10 1.JPG",  # CHC Alfonso Soriano
+    (112, 592178): "File:Kris Bryant on September 1, 2018 (1).jpg",  # CHC Bryant 0
+    (112, 595879): "File:Javier Báez with the Iowa Cubs in 2014.jpg",  # CHC Javier Báez
+    (112, 452657): "File:Cubs lefty Jon Lester throws a bullpen session at Wrigley Field. (30321445760).jpg",  # CHC Jon Lester
+    (112, 543294): "File:Cubs starter Kyle Hendricks delivers a pitch during the first inning of World Series Game 7. (30706461946).jpg",  # CHC Kyle Hendricks
+    (112, 519203): "File:Anthony Rizzo on September 1, 2018 (1).jpg",  # CHC Rizzo 3
+    (113, 408252): "File:Brandon phillips 10 1 2009 swing 7889 (cropped).jpg",  # CIN Brandon Phillips
+    (113, 456701): "File:Homer Bailey1.jpg",  # CIN Homer Bailey
+    (113, 457803): "File:Jay Bruce Debut 052708 006.JPG",  # CIN Jay Bruce
+    (113, 456501): "File:Johnny Cueto1.jpg",  # CIN Johnny Cueto
+    (113, 622491): "File:58 luis castillo 2022.jpg",  # CIN Luis Castillo
+    (113, 452672): "File:Ryan Hanigan 2009.jpg",  # CIN Ryan Hanigan
+    (113, 453943): "File:Todd Frazier.jpg",  # CIN Todd Frazier
+    (114, 471911): "File:Carlos Carrasco (36058223683).jpg",  # CLE Carlos Carrasco
+    (114, 446372): "File:Indians starter Corey Kluber delivers a pitch during the first inning of World Series Game 7. (30110828584) (cropped).jpg",  # CLE Corey Kluber
+    (114, 543401): "File:Cleveland Indians vs. Seattle Mariners (40827680993).jpg",  # CLE Jason Kipnis
+    (114, 596019): "File:Francisco Lindor (42669753281).jpg",  # CLE Lindor 1
+    (114, 488726): "File:Cleveland Indians vs. New York Yankees (14439038187).jpg",  # CLE Michael Brantley
+    (114, 467793): "File:Indians DH Carlos Santana takes batting practice at Wrigley Field. (30343443110).jpg",  # CLE Santana 0
+    (114, 669456): "File:Shanebieber2019.jpg",  # CLE Shane Bieber
+    (114, 425783): "File:Indians (3872581769).jpg",  # CLE Shin-Soo Choo
+    (115, 471865): "File:Colorado Rockies (23777694373).jpg",  # COL Carlos González
+    (115, 608566): "File:German Marquez (51269492034) (cropped).jpg",  # COL Germán Márquez
+    (115, 592351): "File:Jon Gray Colorado Rockies (46922102604) (cropped).jpg",  # COL Jon Gray
+    (115, 407822): "File:Jorgedelarosa.JPG",  # COL Jorge De La Rosa
+    (115, 571448): "File:Colorado Rockies (40704345544).jpg",  # COL Nolan Arenado
+    (115, 596115): "File:Colorado Rockies (40704344964).jpg",  # COL Trevor Story
+    (115, 453064): "File:Colorado Rockies (24404651725).jpg",  # COL Troy Tulowitzki
+    (115, 434622): "File:Ubaldo Jimenez3 cropped.jpg",  # COL Ubaldo Jiménez
+    (145, 493351): "File:Alexei Ramirez Minute Maid Park Houston May 2015.jpg",  # CWS Alexei Ramirez
+    (145, 519242): "File:Chris Sale as reliever in 2011.jpg",  # CWS Chris Sale
+    (145, 425856): "File:AAAA5262 Gavin Floyd.jpg",  # CWS Gavin Floyd
+    (145, 433579): "File:John Danks 2008.jpg",  # CWS John Danks
+    (145, 547989): "File:Jose Abreu White Sox May 2014.jpg",  # CWS José Abreu
+    (145, 608337): "File:Lucas Giolito pitching for the Chicago White Sox in 2019 (cropped).jpg",  # CWS Lucas Giolito
+    (145, 279824): "File:Buehrle56.jpg",  # CWS Mark Buehrle
+    (145, 500779): "File:Jose Quintana (7896662566).jpg",  # CWS Quintana 3
+    (145, 641313): "File:20170718 Dodgers-WhiteSox Tim Anderson tagging out Chris Taylor.jpg",  # CWS Tim Anderson
+    (145, 660162): "File:Yoan Moncada (48026200548) (cropped).jpg",  # CWS Yoán Moncada
+    (147, 429664): "File:Robinson Canó on first base line in September 2012.jpg",  # Canó 4
+    (116, 434671): "File:Aníbal Sánchez (2012-09-09).jpg",  # DET Aníbal Sánchez
+    (116, 457706): "File:Austin Jackson 2010.jpg",  # DET Austin Jackson
+    (116, 435079): "File:Ian Kinsler with Detroit Tigers (32272177186) (cropped).jpg",  # DET Ian Kinsler
+    (116, 502110): "File:J D Martinez.jpg",  # DET J.D. Martinez
+    (116, 453286): "File:Max Scherzer pregame tigers at royals 2010 06 04 3.JPG",  # DET Max Scherzer
+    (116, 519144): "File:Rick Porcello (2011).jpg",  # DET Rick Porcello
+    (116, 669373): "File:DET at LAA 2025 - Skubal (11) (cropped v2).jpg",  # DET Skubal 1
+    (117, 608324): "File:Astros at Camden Yards - Alex Bregman (52087865757) (cropped).jpg",  # HOU Alex Bregman
+    (117, 572971): "File:Dallas Keuchel (51004239453) (cropped).jpg",  # HOU Dallas Keuchel
+    (117, 543807): "File:George Springer (30062652747).jpg",  # HOU George Springer
+    (117, 434378): "File:Justin Verlander 2018 (cropped).jpg",  # HOU Justin Verlander
+    (117, 663656): "File:Kyle Tucker visits Fort Hood, Texas (cropped).png",  # HOU Kyle Tucker
+    (118, 444876): "File:Kansas City Royals shortstop Alcides Escobar.jpg",  # KC Alcides Escobar
+    (118, 518633): "File:Kansas City Royals starting pitcher Danny Duffy (23).jpg",  # KC Danny Duffy
+    (118, 430203): "File:David DeJesus (51009126713) (cropped).jpg",  # KC David DeJesus
+    (118, 456715): "File:Lorenzo Cain 8-11-2012.jpg",  # KC Lorenzo Cain
+    (118, 593160): "File:Whit Merrifield on June 6, 2016.jpg",  # KC Merrifield 3
+    (118, 519058): "File:Mike Moustakas 2018 (cropped).jpg",  # KC Moustakas 1
+    (108, 592743): "File:Andrelton Simmons (29228566298) (cropped).jpg",  # LAA Andrelton Simmons
+    (108, 430947): "File:Erick Aybar (1424194458) (cropped).jpg",  # LAA Erick Aybar
+    (108, 572070): "File:Garrett Richards June 2013.jpg",  # LAA Garrett Richards
+    (108, 435062): "File:Howie Kendrick (1423315681) (cropped).jpg",  # LAA Howie Kendrick
+    (108, 450308): "File:JeredWeaverAngels.jpg",  # LAA Jered Weaver
+    (108, 594777): "File:Kole Calhoun 2017.jpg",  # LAA Kole Calhoun
+    (108, 660271): "File:Cleveland Guardians vs. Los Angeles Angels (52968316355) (cropped).jpg",  # LAA Shohei Ohtani
+    (108, 116338): "File:Los Angeles Angels right fielder Torii Hunter (48).jpg",  # LAA Torii Hunter
+    (119, 608369): "File:20170718 Dodgers-WhiteSox Corey Seager between innings.jpg",  # LAD Corey Seager
+    (119, 457759): "File:20170718 Dodgers-WhiteSox Justin Turner at third.jpg",  # LAD Justin Turner
+    (119, 461314): "File:Matt Kemp at Petco Park.jpg",  # LAD Matt Kemp
+    (146, 592885): "File:Christian Yelich (51004638957) (cropped).jpg",  # MIA Christian Yelich
+    (146, 519317): "File:Picture of Giancarlo Stanton during Marlins Fanfest 2012.jpg",  # MIA Giancarlo Stanton
+    (146, 435178): "File:4TH Josh Johnson.jpg",  # MIA Josh Johnson
+    (146, 542303): "File:Marcell Ozuna in 2014.jpg",  # MIA Ozuna 0
+    (146, 592663): "File:J. T. Realmuto (41036506640) (cropped).jpg",  # MIA Realmuto 2
+    (146, 445060): "File:Ricky Nolasco Marlins.JPG",  # MIA Ricky Nolasco
+    (158, 460576): "File:Gomez2014a.jpg",  # MIL Carlos Gómez
+    (158, 669203): "File:Corbin Burnes (43423890531) (cropped).jpg",  # MIL Corbin Burnes
+    (158, 642547): "File:Freddy Peralta (ugxsLdIwcXI).png",  # MIL Freddy Peralta
+    (158, 518960): "File:Jonathan Lucroy (14272041403) (cropped).jpg",  # MIL Jonathan Lucroy
+    (158, 425902): "File:PrinceFielderWarmingUpAtlanta.jpg",  # MIL Prince Fielder
+    (158, 430001): "File:Rickie Weeks.jpg",  # MIL Rickie Weeks Jr.
+    (142, 572821): "File:Brian Dozier, Detroit Tigers 6, Minnesota Twins 4, Comerica Park, Detroit, Michigan (21534398869) (cropped).jpg",  # MIN Brian Dozier
+    (142, 452655): "File:DenardSpan2.jpg",  # MIN Denard Span
+    (142, 593871): "File:Jorge Polanco (34448794360) (cropped).jpg",  # MIN Jorge Polanco
+    (142, 621244): "File:Jose Berrios (32618974737) (cropped).jpg",  # MIN José Berríos
+    (142, 596146): "File:Kepler - Minnesota Twins - Target Field - MLB (48221419621).jpg",  # MIN Max Kepler
+    (142, 435044): "File:Scott Baker Twins.jpg",  # MIN Scott Baker
+    (142, 408047): "File:0923 398c Justin Morneau.jpg",  # Morneau 1
+    (121, 136860): "File:Carlos Beltrán.jpg",  # NYM Beltrán 2
+    (121, 607043): "File:Brandon Nimmo batting for the Mets in 2020 (50191191757).jpg",  # NYM Brandon Nimmo
+    (121, 594798): "File:Jacob deGrom, New York Mets Spring training, March 7, 2014 (13023488203).jpg",  # NYM Jacob deGrom
+    (121, 643446): "File:Jeff McNeil in the infield, August 13, 2022 (cropped).jpg",  # NYM McNeil 1
+    (121, 624424): "File:Mets Michael Conforto scores from the Nationals vs. Mets at Nationals Park, August 4, 2020 (All-Pro Reels Photography) (50190937506) (cropped).jpg",  # NYM Michael Conforto
+    (121, 624413): "File:Pete Alonso Mets 2024.png",  # NYM Pete Alonso
+    (121, 592789): "File:Noah Syndergaard (20697486276) (Cropped).jpg",  # NYM Syndergaard 0
+    (147, 116539): "File:Derek Jeter batting 9-3-2005 New York Yankees.JPG",  # NYY Derek Jeter
+    (143, 430935): "File:Cole Hamels 2008 v Reds.JPG",  # PHI Cole Hamels
+    (143, 276519): "File:Baseball jimmy rollins 2004.jpg",  # PHI Rollins 1
+    (143, 400284): "File:Chase Utley (18851643656).jpg",  # PHI Utley 2
+    (143, 425664): "File:MG 3426 Shane Victorino.jpg",  # PHI Victorino 1
+    (134, 457705): "File:Andrew McCutchen, April 2014.JPG",  # PIT Andrew McCutchen
+    (134, 465041): "File:Francisco Cervelli on April 15, 2017 (cropped).jpg",  # PIT Francisco Cervelli
+    (134, 543037): "File:Colepittsburgh.jpg",  # PIT Gerrit Cole
+    (134, 543281): "File:Josh Harrison Pirates.jpg",  # PIT Josh Harrison
+    (134, 435522): "File:PittsburghPirates2010.jpg",  # PIT Neil Walker
+    (134, 430904): "File:Paul Maholm on June 18, 2010.jpg",  # PIT Paul Maholm
+    (134, 516782): "File:Starling Marte (19623406281) (cropped).jpg",  # PIT Starling Marte
+    (146, 434670): "File:Hanley Ramirez 01.JPG",  # Ramirez 4
+    (135, 408236): "File:Adrian Gonzalez.jpg",  # SD González 0
+    (135, 673490): "File:Ha-seong Kim August 2021.jpg",  # SD Ha-Seong Kim
+    (135, 571976): "File:Wil Myers 6.19.21.jpg",  # SD Myers 0
+    (135, 461416): "File:San Diego Padres Will Venable bunts (7063543353).jpg",  # SD Will Venable
+    (136, 443558): "File:Nelson Cruz on May 19, 2015.jpg",  # SEA Cruz 3
+    (136, 429664): "File:Robinson Canó with Mariners in Houston on July 2, 2014.jpg",  # SEA Robinson Canó
+    (137, 474832): "File:Giants at Blue Jays (8740463954).jpg",  # SF Brandon Belt
+    (137, 543063): "File:Ccrawford2023.jpg",  # SF Brandon Crawford
+    (137, 518516): "File:SF Giants Madison Bumgarner (9699133362).jpg",  # SF Madison Bumgarner
+    (137, 573262): "File:Mike Yastrzemski (49593460788) (cropped).jpg",  # SF Mike Yastrzemski
+    (137, 467055): "File:Pablo Sandoval at bat at 2010 NLDS Game 2 1.JPG",  # SF Sandoval 0
+    (137, 453311): "File:Tim Lincecum at Padres at Giants 2010-08-15 2.JPG",  # SF Tim Lincecum
+    (137, 400083): "File:Andrés Torres at bat at 2010 NLDS Game 2 3.JPG",  # SF Torres 4
+    (138, 407812): "File:Matt Holliday, St. Louis Cardinals 0, Los Angeles Dodgers 0, Dodger Stadium, Los Angeles, California (14517906385).jpg",  # STL Matt Holliday
+    (138, 571945): "File:MilesMikolas2018.jpg",  # STL Miles Mikolas
+    (138, 571448): "File:2025 Astros-Cardinals Apr 14 - Nolan Arenado.png",  # STL Nolan Arenado
+    (138, 502671): "File:Paul Goldschmidt, St. Louis Cardinals.jpg",  # STL Paul Goldschmidt
+    (138, 669242): "File:Tommy Edman, St. Louis Cardinals.jpg",  # STL Tommy Edman
+    (139, 425834): "File:BJUpton-atbat.jpg",  # TB B.J. Upton
+    (139, 450314): "File:Ben Zobrist (51005409433) (cropped).jpg",  # TB Ben Zobrist
+    (139, 664040): "File:Brandon Lowe, Texas Rangers 9, Tampa Bay Rays 3, Tropicana Field, St. Petersburg, Florida (53626969910).jpg",  # TB Brandon Lowe
+    (139, 408307): "File:Carl Crawford.jpg",  # TB Carl Crawford
+    (139, 456034): "File:Tampa Bay Rays starting pitcher David Price (14) (5821108571).jpg",  # TB David Price
+    (139, 448306): "File:James Shields 2010 16.jpg",  # TB James Shields
+    (139, 595281): "File:Kevin Kiermaier at bat, July 7, 2018 (cropped).jpg",  # TB Kevin Kiermaier
+    (139, 446334): "File:Evan Longoria april 2014.jpg",  # TB Longoria 0
+    (140, 502706): "File:Derek Holland.jpg",  # TEX Derek Holland
+    (140, 462101): "File:Elvis Andrus Texas Rangers baseball May 2016.jpg",  # TEX Elvis Andrus
+    (140, 435079): "File:Ian Kinsler, Texas Rangers (9648094408) (cropped).jpg",  # TEX Ian Kinsler
+    (140, 543760): "File:Marcus Semien, Texas Rangers 9, Tampa Bay Rays 3, Tropicana Field, St. Petersburg, Florida (53626863859).jpg",  # TEX Marcus Semien
+    (140, 443558): "File:Nelson Cruz.jpg",  # TEX Nelson Cruz
+    (140, 506433): "File:Yu Darvish on March 13, 2012 (4).jpg",  # TEX Yu Darvish
+    (141, 666182): "File:Bo Bichette at bat, March 25, 2019 (cropped).jpg",  # TOR Bichette 2
+    (141, 518626): "File:Josh Donaldson 2017.jpg",  # TOR Donaldson 3
+    (141, 429665): "File:Edwin Elpidio Encarnación in 2012.jpg",  # TOR Encarnación 0
+    (141, 592332): "File:Kevin Gausman (52065414862) (cropped).jpg",  # TOR Gausman 2
+    (141, 457918): "File:J.A. Happ 2013.jpg",  # TOR Happ 2
+    (141, 430832): "File:Jose Bautista of the Toronto Blue Jays, June 30, 2012.jpg",  # TOR José Bautista
+    (141, 573186): "File:Blue Jays starter Marcus Stroman delivers a pitch against the Yankees (cropped).jpg",  # TOR Marcus Stroman
+    (146, 462564): "File:Dan Uggla Wrigley Field.JPG",  # Uggla 2
+    (120, 547180): "File:Bryce Harper Nationals vs. Phillies at Nationals Park, August 25, 2020 (All-Pro Reels Photography) (50271580782).jpg",  # WSH Bryce Harper
+    (120, 461829): "File:Gio Gonzalez on April 12, 2012.jpg",  # WSH Gio Gonzalez
+    (120, 435622): "File:Washington Nationals shortstop Ian Desmond.jpg",  # WSH Ian Desmond
+    (120, 519455): "File:Washington Nationals starting pitcher Jordan Zimmermann (27).jpg",  # WSH Jordan Zimmermann
+    (120, 665742): "File:Juan Soto celebrates after hitting a double from Nationals vs. Braves at Nationals Park, September 13th, 2020 (All-Pro Reels Photography - Patrick Rouin).jpg",  # WSH Juan Soto
+    (120, 453286): "File:Max Scherzer Nationals vs. Blue Jays at Nationals Park, July 29, 2020 (All-Pro Reels Photography) (50170231906).jpg",  # WSH Max Scherzer
+    (120, 543685): "File:Anthony Rendon (14430676940).jpg",  # WSH Rendon 3
+    (120, 607208): "File:Washington Nationals shortstop Trea Turner (7) from Tampa Bay Rays vs Washington Nationals at Nationals Park. June 30, 2021 - Washington ,DC, (All-Pro Reels Photography)(2) (51296241189) (cropped).jpg",  # WSH Trea Turner
+}
+
 # Where to aim the crop (CSS object-position) for a portrait whose subject is off-centre.
 PHOTO_FOCUS = {
+    "File:J. T. Realmuto (41036506640) (cropped).jpg": "75% 0%",  # MIA Realmuto 2 (Modern Stars)
+    "File:Jason Heyward Braves at Rangers in Texas in Sept 2014.jpg": "30% 0%",  # ATL Jason Heyward (Modern Stars)
+    "File:Sonny Gray August 20, 2013 (cropped).jpg": "85% 25%",  # ATH Sonny Gray (Modern Stars)
+    "File:Erick Aybar (1424194458) (cropped).jpg": "50% 0%",  # LAA Erick Aybar (Modern Stars)
+    "File:Washington Nationals starting pitcher Jordan Zimmermann (27).jpg": "78% 30%",  # WSH Jordan Zimmermann (Modern Stars)
+    "File:The Arizona Diamondbacks visit Auckland.jpg": "30% 20%",  # ARI Paul Goldschmidt (Modern Stars)
+    "File:Baltimore Orioles bird and Adam Jones (7359704372).jpg": "75% 30%",  # BAL Adam Jones (Modern Stars)
+    "File:Colorado Rockies (40704345544).jpg": "60% 30%",  # COL Nolan Arenado (Modern Stars)
+    "File:Colorado Rockies (23777694373).jpg": "70% 25%",  # COL Carlos González (Modern Stars)
+    "File:Colorado Rockies (40704344964).jpg": "40% 30%",  # COL Trevor Story (Modern Stars)
+    "File:Cleveland Indians vs. Seattle Mariners (40827680993).jpg": "60% 30%",  # CLE Jason Kipnis (Modern Stars)
+    "File:PittsburghPirates2010.jpg": "70% 30%",  # PIT Neil Walker (Modern Stars)
+    "File:Derek Jeter batting 9-3-2005 New York Yankees.JPG": "65% 25%",  # NYY Derek Jeter (Modern Stars)
+    "File:Giants at Blue Jays (8740463954).jpg": "45% 35%",  # SF Brandon Belt (Modern Stars)
+    "File:Matt Holliday, St. Louis Cardinals 0, Los Angeles Dodgers 0, Dodger Stadium, Los Angeles, California (14517906385).jpg": "35% 30%",  # STL Matt Holliday (Modern Stars)
+    "File:Carl Crawford.jpg": "40% 30%",  # TB Carl Crawford (Modern Stars)
+    "File:Brandon Lowe, Texas Rangers 9, Tampa Bay Rays 3, Tropicana Field, St. Petersburg, Florida (53626969910).jpg": "45% 30%",  # TB Brandon Lowe (Modern Stars)
     "File:Tim Salmon Afghanistan.jpg": "92% 18%",  # Salmon is on the right
 }
 
