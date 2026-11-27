@@ -91,7 +91,7 @@ async function get(path) {
 
 // ---------- state ----------
 const state = {
-  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {}, modern: {}, records: {},
+  teams: [], champions: {}, legends: {}, photos: {}, history: {}, people: {}, retired: {}, modern: {}, records: {}, nohitters: [],
   view: "franchise", team: null, failed: false, seasons: [], eras: [], parks: [], archive: [],
   decade: null, pinned: null, honorSort: { key: "titles", dir: -1 }, since: 0, climbPins: null,
 };
@@ -104,12 +104,13 @@ async function init() {
     const b = await json("data/bundle/teams.json");
     Object.assign(BUNDLE, { teams: { teams: b.teams || [] }, logos: b.logos || {} });
   }
-  const [teamsRes, champions, legends, photos, history, people, retired, modern, records] = await Promise.all([
+  const [teamsRes, champions, legends, photos, history, people, retired, modern, records, nohitters] = await Promise.all([
     get(`/teams?sportId=1&season=${new Date().getFullYear()}`),
     json("data/champions.json"), json("data/legends.json"), json("data/photos.json"), json("data/history.json"),
     json("data/people.json"), json("data/retired.json"), json("data/modern.json"), json("data/league.json"),
+    json("data/nohitters.json"),
   ]);
-  Object.assign(state, { champions, legends, photos, history, people, retired, modern, records });
+  Object.assign(state, { champions, legends, photos, history, people, retired, modern, records, nohitters: Array.isArray(nohitters) ? nohitters : [] });
   const divOrder = (t) => { const i = DIVISIONS.findIndex(([id]) => id === t.division?.id); return i < 0 ? 99 : i; };
   state.teams = teamsRes.teams.filter((t) => t.sport?.id === 1)
     .sort((a, b) => divOrder(a) - divOrder(b) || a.teamName.localeCompare(b.teamName));
@@ -125,10 +126,12 @@ async function init() {
   $("#surprise").onclick = () => openClub(shuffle(state.teams.filter((t) => t !== state.team))[0].id);
   $("#reshuffle").onclick = renderFrontSnaps;
   document.addEventListener("keydown", onKey);
-  // Anything marked data-club opens that club's almanac (optionally at data-page).
+  // Anything marked data-club opens that club's almanac (optionally at data-page); data-game opens a no-hitter's scorecard.
   document.addEventListener("click", (e) => {
     const el = e.target.closest("[data-club]");
-    if (el) { e.preventDefault(); openClub(+el.dataset.club, el.dataset.page); }
+    if (el) { e.preventDefault(); openClub(+el.dataset.club, el.dataset.page); return; }
+    const game = e.target.closest("[data-game]");
+    if (game) openGame(+game.dataset.game);
   });
   window.addEventListener("popstate", applyRoute);
   await applyRoute();
@@ -198,6 +201,7 @@ function buildSearchIndex() {
     ((state.modern[t.id] || {}).players || []).forEach((p, i) => add(t, p.name, "modern", i < MODERN_CARDS ? `Modern star No. ${i + 1}` : "Modern star"));
     ((state.history[t.id] || {}).hof || []).forEach((p) => add(t, p.name, "hof", "Hall of Fame"));
     (state.retired[t.id] || []).forEach((r) => add(t, r.name, "numbers", /^\d+$/.test(r.no) ? `No. ${r.no} retired` : "Honored on the wall"));
+    for (const g of state.nohitters) if (g.t === t.id) for (const [name] of g.p) add(t, name, "trophies", g.pg ? "Perfect game" : g.p.length > 1 ? "Combined no-hitter" : "No-hitter");
     for (const a of (state.history[t.id] || {}).awards || []) if (BIG_AWARDS.has(a.award)) add(t, a.name, "trophies", a.award === "Cy Young" ? "Cy Young" : a.award === "MVP" ? "MVP" : "Rookie of the Year");
     const P = state.people[t.id] || {};
     (P.managers || []).forEach((m) => add(t, m.name, "dugout", "Manager"));
@@ -1035,7 +1039,8 @@ const TROPHY = (fill) => `<svg viewBox="0 0 32 32" aria-hidden="true"><path fill
 function renderTrophies() {
   const A = (state.history[state.team.id] || {}).awards || [];
   const groups = [["MVP", "Most Valuable Player", "#d4a830"], ["Cy Young", "Cy Young Award", "#c9c9c9"], ["Rookie of the Year", "Rookie of the Year", "#c27a3a"]];
-  markSkip("trophies", !A.length);
+  const nh = state.nohitters.filter((g) => g.t === state.team.id), nhAgainst = state.nohitters.filter((g) => g.o === state.team.id);
+  markSkip("trophies", !A.length && !nh.length && !nhAgainst.length);
   const html = groups.map(([key, label, fill]) => {
     const list = A.filter((a) => a.award === key);
     return `<div class="trophy-col"><h4>${TROPHY(fill)}${label}<small>${list.length}</small></h4>
@@ -1053,7 +1058,97 @@ function renderTrophies() {
       ${rows.length ? `<ul class="trophy-list">${rows.map((r) => `<li><b>${r.length > 1 ? "×" + r.length : ""}</b><span>${esc(r[0].name)} <i>${esc(spans(r.map((a) => a.season)))}</i></span></li>`).join("")}</ul>`
         : `<p class="trophy-empty">The shelf awaits its first.</p>`}</div>`;
   }));
+  if (state.nohitters.length) html.push(noHitShelves(nh, nhAgainst));
   $("#trophies").innerHTML = html.join("");
+}
+
+// ---------- no-hitters: the club's own, and the ones thrown at it ----------
+const GAME_TYPE = { F: "Wild Card Series", D: "Division Series", L: "League Championship Series", W: "World Series" };
+const GAME_TAG = { F: "Wild Card", D: "Division Series", L: "LCS", W: "World Series" };
+const BALL = `<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12.5" fill="#fbf7ee" stroke="#2a2118" stroke-width="1.2"/><path fill="none" stroke="#a3302a" stroke-width="1.3" stroke-dasharray="1.6 1.4" d="M8.2 6.6c3.6 2.6 5.2 5.8 5.2 9.4s-1.6 6.8-5.2 9.4M23.8 6.6c-3.6 2.6-5.2 5.8-5.2 9.4s1.6 6.8 5.2 9.4"/></svg>`;
+const surname = (n) => n.replace(/,? (Jr\.|Sr\.|II|III|IV)$/, "").split(" ").at(-1);
+const nhWho = (g) => (g.p.length === 1 ? g.p[0][0] : listify(g.p.map((p) => surname(p[0]))));
+const nhLost = (g) => g.r[0] < g.r[1];
+const longDate = (d, opts = {}) => new Date(d + "T12:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", ...opts });
+function nhTags(g) {
+  const tags = [];
+  if (g.pg) tags.push(`<em class="perfect">Perfect</em>`);
+  if (g.p.length > 1) tags.push(`<em>Combined</em>`);
+  if (g.gt !== "R") tags.push(`<em class="october">${GAME_TAG[g.gt] || "Postseason"}</em>`);
+  if (nhLost(g)) tags.push(`<em>Lost ${g.r[0]}–${g.r[1]}</em>`);
+  return tags.join("");
+}
+function noHitShelves(thrown, against) {
+  const perfect = thrown.filter((g) => g.pg).length;
+  const row = (g, mine) => `<li><button class="nh-row${g.pg ? " pg" : ""}" data-game="${g.pk}">
+      <b>${g.d.slice(0, 4)}</b>
+      <span class="nh-who">${esc(nhWho(g))}${mine ? "" : ` <small>${esc(g.tn)}</small>`}
+        <i>${mine ? `${g.r[0]}–${g.r[1]} ${g.home ? "vs." : "at"} ${esc(g.on)}` : longDate(g.d, { year: undefined })}</i>
+        ${mine ? "" : `<span class="nh-tags">${nhTags(g)}</span>`}</span>
+      ${mine ? `<span class="nh-tags">${nhTags(g)}</span>` : ""}</button></li>`;
+  const note = thrown.length
+    ? `${Word(thrown.length)} since 1901${perfect ? `, ${perfect === thrown.length ? "every one" : word(perfect)} of them perfect` : ""}. Pick one for its line score.`
+    : "None yet since 1901.";
+  return `<div class="trophy-col nohit"><h4>${BALL}No-Hitters<small>${thrown.length}</small></h4>
+      <p class="trophy-note">${note}</p>
+      ${thrown.length ? `<ul class="trophy-list nh-list">${thrown.map((g) => row(g, true)).join("")}</ul>` : `<p class="trophy-empty">The shelf awaits its first.</p>`}
+    </div>
+    <div class="trophy-col nohit against"><h4>${BALL}No-Hit By<small>${against.length}</small></h4>
+      <p class="trophy-note">The other side of the ledger: nights this club never got a hit.</p>
+      ${against.length ? `<ul class="trophy-list nh-list">${against.map((g) => row(g, false)).join("")}</ul>` : `<p class="trophy-empty">Never once, since 1901.</p>`}
+    </div>`;
+}
+
+// A no-hitter's scorecard: the line score (fetched live; every game since 1901 has one) and the pitching line.
+let gameAsk = 0;
+async function openGame(pk) {
+  const g = state.nohitters.find((x) => x.pk === pk);
+  if (!g) return;
+  const ask = ++gameAsk;
+  const nohit = { id: g.t, name: g.tn }, victim = { id: g.o, name: g.on };
+  const [away, home] = g.home ? [victim, nohit] : [nohit, victim];
+  const club = (x) => (teamById(x.id) ? `<button class="btn btn-small" data-club="${x.id}" data-page="trophies">The ${esc(teamById(x.id).teamName)} almanac</button>` : "");
+  const kind = g.pg ? "A perfect game" : g.p.length > 1 ? "A combined no-hitter" : "A no-hitter";
+  const story = [
+    g.gt !== "R" ? `Thrown in the ${GAME_TYPE[g.gt] || "postseason"}.` : "",
+    nhLost(g) ? `No hits allowed, and lost all the same, ${g.r[1]}–${g.r[0]}.` : "",
+    g.p.length > 1 ? `${Word(g.p.length)} pitchers shared it.` : "",
+  ].filter(Boolean).join(" ");
+  $("#series-body").innerHTML = `
+    <span class="kicker">${kind} · ${longDate(g.d, { weekday: "long" })}</span>
+    <div class="series-clubs" style="--pc:${color(g.t)}">
+      <img src="${logo(g.t)}" alt=""><b>${g.r[0]}–${g.r[1]}</b><img class="lost" src="${logo(g.o)}" alt="">
+    </div>
+    <h3>${esc(nhWho(g))}</h3>
+    <p>${esc(g.tn)} ${g.home ? "vs." : "at"} ${esc(g.on)}${story ? `. ${story}` : "."}</p>
+    <div class="linescore" id="linescore"><p class="ls-wait">Fetching the line score…</p></div>
+    <div class="ls-arms">${g.p.map(([name, id, ip]) => `<figure><img src="${headshot(id, 96)}" alt="" loading="lazy"><figcaption>${esc(name)}<small data-arm="${id}">${ip} IP</small></figcaption></figure>`).join("")}</div>
+    <div class="series-links">${club(nohit)}${club(victim)}</div>`;
+  $("#series").showModal();
+  try {
+    const [ls, box] = await Promise.all([get(`/game/${pk}/linescore`), get(`/game/${pk}/boxscore`).catch(() => null)]);
+    if (ask !== gameAsk) return;
+    const inn = ls.innings || [];
+    const cell = (v) => (v === undefined || v === null ? "x" : v);
+    const line = (side, team) => {
+      const T = ls.teams?.[side] || {};
+      const zero = team.id === g.o ? " zero" : "";
+      const abbr = box?.teams?.[side]?.team?.abbreviation || teamById(team.id)?.abbreviation || team.name; // the club's letters that day
+      return `<tr><th title="${esc(team.name)}">${esc(abbr)}</th>${inn.map((i) => `<td>${cell(i[side]?.runs)}</td>`).join("")}
+        <td class="tot">${T.runs ?? ""}</td><td class="tot${zero}">${T.hits ?? ""}</td><td class="tot">${T.errors ?? ""}</td></tr>`;
+    };
+    $("#linescore").innerHTML = inn.length ? `<table><thead><tr><th></th>${inn.map((i) => `<th>${i.num}</th>`).join("")}<th>R</th><th>H</th><th>E</th></tr></thead>
+      <tbody>${line("away", away)}${line("home", home)}</tbody></table>` : "";
+    // Strikeouts and walks for each pitcher, where the box score keeps them.
+    const side = box?.teams?.[g.home ? "home" : "away"];
+    for (const [, id, ip] of g.p) {
+      const s = side?.players?.[`ID${id}`]?.stats?.pitching;
+      const el = $(`#series-body [data-arm="${id}"]`);
+      if (s && el) el.textContent = [`${ip} IP`, s.strikeOuts != null && `${s.strikeOuts} K`, s.baseOnBalls != null && `${s.baseOnBalls} BB`].filter(Boolean).join(" · ");
+    }
+  } catch {
+    if (ask === gameAsk) $("#linescore").innerHTML = "";
+  }
 }
 
 // =====================================================================
@@ -1186,6 +1281,8 @@ function renderLeague() {
   $("#wall").onclick = (e) => { const b = e.target.closest("[data-year]"); if (b) openSeries(+b.dataset.year); };
   $("#series-close").onclick = () => $("#series").close();
   renderHonors();
+  if (state.nohitters.length) { delete league.el("nohitters").dataset.skip; renderNoHitLedger(); }
+  else league.el("nohitters").dataset.skip = "1";
 
   // The record-book chapters need data/league.json; without it they are left out.
   const clubs = leagueClubs();
@@ -1367,6 +1464,55 @@ function renderDecades() {
 }
 
 // ---------- banner years: the best and worst single seasons ----------
+// ---------- the no-hit ledger: a block for every no-hitter, then each club's thrown vs. suffered ----------
+function renderNoHitLedger() {
+  const N = state.nohitters, first = 1901;
+  const last = Math.max(new Date().getFullYear() - (new Date().getMonth() < 3 ? 1 : 0), ...N.map((g) => +g.d.slice(0, 4)));
+  const byYear = new Map();
+  for (const g of N) { const y = +g.d.slice(0, 4); byYear.set(y, [...(byYear.get(y) || []), g]); }
+  const most = Math.max(...[...byYear.values()].map((a) => a.length));
+  const busiest = [...byYear].filter(([, a]) => a.length === most).map(([y]) => y);
+  const perfect = N.filter((g) => g.pg).length;
+  const quiet = range(first, last).filter((y) => !byYear.has(y)).length;
+  $("#nh-lede").textContent = `${num(N.length)} no-hitters since ${first}, ${perfect} of them perfect. ` +
+    `The busiest ${busiest.length > 1 ? `seasons were ${listify(busiest.map(String))}, with ${most} apiece` : `season was ${busiest[0]}, with ${most}`}; ${quiet} seasons had none at all.`;
+  const label = (g) => `${nhWho(g)}, ${g.tn}: ${g.r[0]}–${g.r[1]} ${g.home ? "vs." : "at"} ${g.on}, ${longDate(g.d)}${g.pg ? " (perfect game)" : ""}`;
+  $("#nh-years").style.setProperty("--rows", most);
+  $("#nh-years").innerHTML = range(first, last).map((y) => {
+    const games = byYear.get(y) || [];
+    return `<div class="nh-year${y % 10 === 0 ? " tick" : ""}" data-y="${y}">${games.map((g) =>
+      `<button class="nh-unit${g.pg ? " pg" : ""}" data-game="${g.pk}" aria-label="${esc(label(g))}"></button>`).join("")}
+      ${y % 20 === 0 || y === first ? `<span class="nh-yl">${y}</span>` : ""}</div>`;
+  }).join("");
+  const tip = $("#nh-tip"), wrap = $(".nh-wrap"), years = $("#nh-years");
+  years.onpointermove = (e) => {
+    const col = e.target.closest(".nh-year");
+    if (!col) { tip.hidden = true; return; }
+    const y = +col.dataset.y, games = byYear.get(y) || [], hot = e.target.closest(".nh-unit")?.dataset.game;
+    tip.innerHTML = `<b>${y}</b> · ${games.length ? plural(games.length, "no-hitter") : "no no-hitters"}` +
+      games.map((g) => `<br><span class="${String(g.pk) === hot ? "hot" : ""}">${g.pg ? "★ " : ""}${esc(nhWho(g))} <small>(${esc(teamById(g.t)?.teamName || g.tn)})</small></span>`).join("");
+    const wr = wrap.getBoundingClientRect(), r = col.getBoundingClientRect();
+    tip.style.left = `${Math.min(wr.width - 110, Math.max(110, r.left - wr.left + r.width / 2))}px`;
+    const top = col.querySelector(".nh-unit:last-of-type"); // column-reverse: the last block sits highest
+    tip.style.top = `${(top ? top.getBoundingClientRect().top : r.bottom) - wr.top - 4}px`;
+    tip.hidden = false;
+  };
+  years.onpointerleave = () => (tip.hidden = true);
+
+  // Thrown vs. suffered, a club per row: thrown runs right in blue, suffered left in red.
+  const rows = state.teams.map((t) => ({ t, by: N.filter((g) => g.t === t.id), vs: N.filter((g) => g.o === t.id) }))
+    .sort((a, b) => b.by.length - b.vs.length - (a.by.length - a.vs.length) || b.by.length - a.by.length);
+  const max = Math.max(...rows.map((r) => Math.max(r.by.length, r.vs.length)));
+  $("#nh-ledger").innerHTML = `<div class="nhl-head"><span></span><span>Club</span><span class="nhl-l">No-hit by others</span><span class="nhl-r">Thrown</span><span>Net</span></div>` +
+    rows.map((r) => `<button class="nhl-row" data-club="${r.t.id}" data-page="trophies" title="${esc(r.t.name)}: threw ${r.by.length}, no-hit ${plural(r.vs.length, "time")}">
+      <img src="${logo(r.t.id)}" alt="" loading="lazy">
+      <span class="nhl-name">${esc(r.t.teamName)}</span>
+      <span class="nhl-bar nhl-l"><i style="width:${(r.vs.length / max) * 100}%"></i><b>${r.vs.length}</b></span>
+      <span class="nhl-bar nhl-r"><i style="width:${(r.by.length / max) * 100}%"></i><b>${r.by.length}</b></span>
+      <span class="nhl-net">${signed(r.by.length - r.vs.length)}</span>
+    </button>`).join("");
+}
+
 function renderBanner() {
   const all = leagueClubs().flatMap((c) => c.seasons.filter((s) => s.y >= 1901 && s.w + s.l >= 100).map((s) => ({ ...s, t: c.t, p: pct(s.w, s.l) })));
   const list = (rows, cls) => rows.map((s, i) => `

@@ -17,7 +17,7 @@ Each club's almanac is read **one chapter at a time**: a numbered progress strip
 | **The Dugout & the Booth** | The longest-serving managers with their records and titles, every manager in club history, and the club's voices and builders: broadcasters (with their signature calls), owners, executives and a few beloved characters. |
 | **Numbers on the Wall** | Retired numbers as banners hung from the rafters. Jackie Robinson's 42 hangs in gold on the Dodgers' wall. |
 | **In Cooperstown** | Bronze plaques for every Hall of Famer enshrined with the club. |
-| **The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year, plus Gold Gloves and Silver Sluggers listed by player. |
+| **The Trophy Case** | MVPs, Cy Youngs and Rookies of the Year, plus Gold Gloves and Silver Sluggers listed by player. Then the club's **no-hitters** since 1901 (perfect, combined and postseason ones marked) and the ones thrown against it. Pick one for its scorecard: the inning-by-inning line score and each pitcher's line. |
 | **October** | Every World Series the club won: the opponent, the series score, each game's result, where it was clinched, the World Series MVP, the manager, the stars on the roster and a photo when one exists. Pennants that ended in a World Series loss follow, a line apiece with the game scores. Clubs that have never reached the Series skip the chapter. |
 | **Home Fields** | Every ballpark the club called home, as postcards, with its years, the club's record there and the titles won there. |
 | **The Scrapbook** | 360-odd hand-picked public-domain and freely licensed photos across the 30 clubs, filterable by decade, with a lightbox you can page through. |
@@ -31,6 +31,7 @@ Each club's almanac is read **one chapter at a time**: a numbered progress strip
 | **The Long Climb** | A line for every club: games over .500, added up season after season. The two leaders and the two cellar-dwellers are lit to start; hover any line to read it, click it (or a logo below) to keep it lit. |
 | **Decade by Decade** | A heatmap of each club's winning percentage in every decade, blue for winners and red for losers, with stars for World Series won. |
 | **Banner Years & Bad Ones** | The fifteen best and fifteen worst seasons since 1901 (100 games or more). |
+| **The No-Hit Ledger** | A block for every no-hitter since 1901, stacked by season (gold for perfect games; pick one for its scorecard), then every club's no-hitters thrown against those suffered. |
 | **The Long Wait** | A title-drought scoreboard. |
 | **Champions** | A wall of every champion's pennant since 1903; pick one to see the series game by game. |
 | **Honor Roll** | A sortable table of titles, pennants, Hall of Famers, retired numbers and major awards. |
@@ -65,6 +66,7 @@ Live per-season data comes from `statsapi.mlb.com`. The history layers are baked
 | `data/modern.json` | `scripts/build_modern.py` | each club's top 15 players of the last 20 completed seasons by WAR (the Stats API's `sabermetrics` stats), counting players with 4+ seasons there or on the latest club, with WAR by season and a stat line with the club |
 | `data/retired.json` | `scripts/build_retired.py` | retired numbers, parsed from Wikipedia's list |
 | `data/league.json` | `scripts/build_league.py` | every club's wins and losses in every season, for the League's charts |
+| `data/nohitters.json` | `scripts/build_nohitters.py` (run after league) | every no-hitter since 1901: date, clubs (names that day), score, pitchers with innings, perfect/postseason flags. Found in each club's pitching game logs (0 hits over 9+ innings); the Stats API's game logs start in 1901 and leave out the 1914–15 Federal League |
 
 **Legend value** is a WAR-style estimate, since the Stats API has no WAR. It is built from each player's seasons with the franchise and normalised to each season's league:
 - **Hitters:** batting runs from fixed wOBA weights, plus a position adjustment and replacement credit.

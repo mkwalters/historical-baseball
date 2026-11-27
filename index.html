@@ -158,7 +158,7 @@
             <header class="sheet-head">
               <span class="kicker"></span>
               <h3>The Trophy Case</h3>
-              <p class="sheet-lede">Most Valuable Players, Cy Young winners, Rookies of the Year, Gold Gloves and Silver Sluggers in club colors.</p>
+              <p class="sheet-lede">Most Valuable Players, Cy Young winners, Rookies of the Year, Gold Gloves and Silver Sluggers, plus every no-hitter since 1901, thrown and suffered.</p>
             </header>
             <div id="trophies" class="trophies"></div>
           </section>
@@ -288,6 +288,22 @@
             <div><h4 class="subhead"><span>The Fifteen Worst</span></h4><div id="worst-seasons" class="standings seasons-list"></div></div>
           </div>
           <p class="fineprint">★ marks a World Series champion. Clubs are listed under the names they play under today.</p>
+        </section>
+        <section class="page sheet" data-page="nohitters" data-label="No-Hitters">
+          <header class="sheet-head">
+            <span class="kicker"></span>
+            <h3>The No-Hit Ledger</h3>
+            <p class="sheet-lede" id="nh-lede">Every no-hitter since 1901, season by season, and which clubs have thrown the most and been on the wrong end most often.</p>
+          </header>
+          <h4 class="subhead"><span>Season by Season</span></h4>
+          <div class="nh-wrap">
+            <div id="nh-years" class="nh-years" aria-label="No-hitters in each season since 1901"></div>
+            <div id="nh-tip" class="tooltip" hidden></div>
+          </div>
+          <p class="fineprint">One block per no-hitter; gold blocks are perfect games. Pick a block for its line score.</p>
+          <h4 class="subhead"><span>Thrown &amp; Suffered</span></h4>
+          <div id="nh-ledger" class="nh-ledger"></div>
+          <p class="fineprint">Clubs under today’s names. The 1914–15 Federal League’s five no-hitters aren’t counted.</p>
         </section>
         <section class="page sheet" data-page="wait" data-label="The Long Wait">
           <header class="sheet-head">

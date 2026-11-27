@@ -295,6 +295,47 @@ main { max-width: 1180px; margin: 0 auto; padding: 18px 16px 10px; }
 .trophy-note { font: italic 13px var(--body); color: var(--ink-soft); margin: -2px 0 6px; }
 .trophy-list i { font: 12px var(--type); font-style: normal; color: var(--ink-faint); margin-left: 4px; }
 
+/* no-hitters: the club's own shelf (wide) and the ones thrown against it */
+.trophy-col.nohit { grid-column: span 4; }
+.trophy-col.nohit.against { grid-column: span 2; }
+.nh-list { columns: 2 280px; column-gap: 22px; }
+.nohit.against .nh-list { columns: 1; }
+.trophy-list.nh-list li { padding: 0; display: block; }
+.nh-row { display: flex; align-items: baseline; gap: 10px; width: 100%; padding: 5px 4px; background: none; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.nh-row:hover { background: color-mix(in srgb, var(--team, var(--gold)) 10%, transparent); }
+.nh-row b { font: 13px var(--type); color: var(--red); min-width: 36px; flex: none; }
+.nh-who { flex: 1; min-width: 0; font-size: 14px; }
+.nh-who small { font: 12px var(--body); color: var(--ink-soft); }
+.nh-row .nh-who i { display: block; margin: 1px 0 0; font: 12px var(--type); color: var(--ink-faint); }
+.nh-tags { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; flex: none; max-width: 45%; }
+.nh-who .nh-tags { justify-content: flex-start; max-width: none; margin-top: 3px; }
+.nh-who .nh-tags:empty { display: none; }
+.nh-tags em { font: 10px/1 var(--type); font-style: normal; text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; padding: 3px 5px; border: 1px solid var(--rule); color: var(--ink-soft); }
+.nh-tags em.perfect { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.nh-tags em.october { border-color: var(--red); color: var(--red); }
+
+/* a no-hitter's scorecard, in the series dialog */
+.linescore { margin: 14px 0 4px; overflow-x: auto; }
+.linescore table { border-collapse: collapse; margin: 0 auto; background: #fbf5e6; border: 2px solid var(--ink); font: 14px var(--type); }
+.linescore th, .linescore td { border: 1px solid var(--rule); padding: 5px 6px; min-width: 22px; text-align: center; }
+.linescore thead th { font-size: 11px; color: var(--ink-soft); background: rgba(42, 33, 24, .05); }
+.linescore tbody th { text-align: left; font: 14px var(--slab); padding-right: 10px; }
+.linescore td.tot { font-weight: 700; }
+.linescore tr > :nth-last-child(3) { border-left: 2px solid var(--ink); }
+.linescore td.zero { color: var(--red); box-shadow: inset 0 0 0 2px var(--red); border-radius: 50%; }
+.ls-wait { font-style: italic; }
+@media (max-width: 760px) {
+  .series-body { padding-left: 14px; padding-right: 14px; }
+  .linescore table { font-size: 12px; }
+  .linescore th, .linescore td { padding: 4px 2px; min-width: 17px; }
+  .linescore tbody th { font-size: 12px; padding-right: 4px; }
+}
+.ls-arms { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 14px; }
+.ls-arms figure { margin: 0; width: 96px; }
+.ls-arms img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: var(--card); border: 2px solid var(--rule); }
+.ls-arms figcaption { font: 700 13px/1.2 var(--headline); margin-top: 4px; }
+.ls-arms small { display: block; font: 11px var(--type); color: var(--ink-faint); margin-top: 2px; }
+
 /* ---------- scrapbook ---------- */
 .scrapbook { columns: 3 260px; column-gap: 24px; padding-top: 10px; }
 .snap {
@@ -736,6 +777,8 @@ button.wpen:hover, button.wpen:focus-visible { transform: translateY(-3px) scale
 
 @media (max-width: 1000px) {
   .trophy-col, .trophy-col.wide { grid-column: span 3; }
+  .trophy-col.nohit, .trophy-col.nohit.against { grid-column: 1 / -1; }
+  .nohit.against .nh-list { columns: 2 260px; }
   .season-card { grid-template-columns: 170px minmax(0, 1fr); }
   .sc-photos { grid-column: 1 / -1; justify-content: center; margin-top: 6px; }
   .front-snaps { grid-template-columns: repeat(2, 1fr); }
@@ -759,7 +802,7 @@ button.wpen:hover, button.wpen:focus-visible { transform: translateY(-3px) scale
   .club-banner { gap: 12px; padding: 10px 12px; border-left-width: 6px; }
   .club-banner img { width: 48px; height: 48px; }
   .club-sub { font-size: 13px; }
-  .trophy-col, .trophy-col.wide { grid-column: 1 / -1; }
+  .trophy-col, .trophy-col.wide, .trophy-col.nohit, .trophy-col.nohit.against { grid-column: 1 / -1; }
   .season-card { grid-template-columns: 1fr; padding: 12px; }
   .sc-head { justify-content: center; gap: 18px; }
   .sc-facts div { grid-template-columns: 1fr; gap: 0; margin-top: 4px; }
@@ -859,3 +902,42 @@ button.wpen:hover, button.wpen:focus-visible { transform: translateY(-3px) scale
   .dec-y { font-size: 8px; letter-spacing: -.04em; }
   .dec-tot { font-size: 10px; }
 }
+
+/* ---------- league: the no-hit ledger ---------- */
+.nh-wrap { position: relative; max-width: 1000px; margin: 0 auto 26px; }
+.nh-years { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; column-gap: 1px; height: calc(var(--rows, 9) * 15px + 2px); border-bottom: 2px solid var(--ink); }
+.nh-year { position: relative; display: flex; flex-direction: column-reverse; gap: 2px; padding-bottom: 2px; }
+.nh-year:hover { background: rgba(42, 33, 24, .07); }
+.nh-year.tick::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 4px; border-left: 1px solid var(--ink); }
+.nh-yl { position: absolute; top: calc(100% + 8px); left: 0; transform: translateX(-50%); font: 11px var(--type); color: var(--ink-soft); }
+.nh-unit { display: block; width: 100%; height: 13px; padding: 0; border: 0; border-radius: 2px; background: var(--dec-up); cursor: pointer; }
+.nh-unit.pg { background: var(--gold); }
+.nh-unit:hover, .nh-unit:focus-visible { outline: 2px solid var(--ink); outline-offset: 0; }
+#nh-tip .hot { font-weight: 700; }
+#nh-tip small { color: var(--ink-soft); }
+
+.nh-ledger { max-width: 760px; margin: 0 auto; }
+.nhl-head, .nhl-row { display: grid; grid-template-columns: 34px 120px 1fr 1fr 52px; align-items: center; }
+.nhl-head { font: 11px var(--type); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-faint); padding-bottom: 4px; border-bottom: 2px solid var(--ink); }
+.nhl-head .nhl-l { text-align: right; padding-right: 8px; }
+.nhl-head .nhl-r { padding-left: 8px; }
+.nhl-head > :last-child { text-align: right; }
+.nhl-row { width: 100%; padding: 3px 0; background: none; border: 0; border-bottom: 1px dotted var(--rule); font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.nhl-row:hover { background: rgba(42, 33, 24, .06); }
+.nhl-row img { width: 22px; height: 22px; object-fit: contain; }
+.nhl-name { font: 700 15px var(--headline); }
+.nhl-bar { display: flex; align-items: center; gap: 6px; height: 22px; }
+.nhl-bar.nhl-l { flex-direction: row-reverse; border-right: 1px solid var(--ink); }
+.nhl-bar i { display: block; height: 12px; min-width: 2px; }
+.nhl-l i { background: var(--dec-down); border-radius: 4px 0 0 4px; }
+.nhl-r i { background: var(--dec-up); border-radius: 0 4px 4px 0; }
+.nhl-bar b { font: 12px var(--type); color: var(--ink-soft); }
+.nhl-net { font: 15px var(--slab); text-align: right; }
+@media (max-width: 760px) {
+  .nh-years { height: calc(var(--rows, 9) * 11px + 2px); column-gap: 0; }
+  .nh-year { gap: 1px; }
+  .nh-unit { height: 10px; border-radius: 1px; }
+  .nhl-head, .nhl-row { grid-template-columns: 26px 84px 1fr 1fr 34px; }
+  .nhl-name { font-size: 13px; }
+}
+.nh-year:first-child .nh-yl { transform: none; }

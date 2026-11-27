@@ -234,7 +234,7 @@ for (const t of teams) {
 }
 
 // static files
-for (const f of ["styles.css", "app.js", "data/champions.json", "data/legends.json", "data/history.json", "data/modern.json", "data/people.json", "data/retired.json", "data/league.json"]) {
+for (const f of ["styles.css", "app.js", "data/champions.json", "data/legends.json", "data/history.json", "data/modern.json", "data/people.json", "data/retired.json", "data/league.json", "data/nohitters.json"]) {
   if (!fs.existsSync(path.join(ROOT, f))) continue;
   fs.mkdirSync(path.dirname(path.join(DIST, f)), { recursive: true });
   fs.copyFileSync(path.join(ROOT, f), path.join(DIST, f));
